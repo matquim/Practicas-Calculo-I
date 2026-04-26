@@ -525,82 +525,6 @@ n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
 \end{split}\]</div>
 <p>Ejemplo:</p>
 <p>Con el siguiente código se calcula la representación del número 5.75</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">mostrar_representacion_flotante</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="c1"># Empaquetar el número como flotante de 64 bits</span>
-    <span class="n">packed_x</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;d&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-    <span class="c1"># Convertir a un entero de 64 bits para ver los bits</span>
-    <span class="n">int_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">packed_x</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;big&#39;</span><span class="p">)</span>
-    <span class="c1"># Convertir a binario</span>
-    <span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">binario_flotante</span>
-
-<span class="n">numero_real</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real en su expresión decimal: &quot;</span><span class="p">))</span>
-<span class="n">binario_flotante</span> <span class="o">=</span> <span class="n">mostrar_representacion_flotante</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El número 4.0 en binario (IEEE 754, 64 bits) es:
-0100000000010000000000000000000000000000000000000000000000000000
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">graficar_numeros_en_recta_real</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="c1"># Crear una figura y un eje</span>
-    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-
-    <span class="c1"># Graficar los números en la recta real</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">a</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s2">&quot;r-o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;a = </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">b</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;b-o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;b = </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-
-    <span class="c1"># Configuración de la recta real</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Recta Real&#39;</span><span class="p">)</span>
-
-    <span class="c1"># Etiquetas para los números</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
-
-    <span class="c1"># Distancia: |a-b|</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">((</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;|</span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s1">-(</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s1">)|= </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
-
-    <span class="c1"># Rango de la gráfica en el eje x</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-
-    <span class="c1"># Título y leyenda</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Representación de Números en la Recta Real&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-
-    <span class="c1"># Mostrar la gráfica</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Ingresar los números directamente en lugar de utilizar input()</span>
-<span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribe un número a: &quot;</span><span class="p">))</span>
-<span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Escribe un número b: &quot;</span><span class="p">))</span>
-
-<span class="n">graficar_numeros_en_recta_real</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Escribe un número a: -3
-Escribe un número b: -6
-</pre></div>
-</div>
-<img alt="_images/67cbe9efd08a49520061def565913d2a088b2024ef5734ba3656a36157b1fd44.png" src="_images/67cbe9efd08a49520061def565913d2a088b2024ef5734ba3656a36157b1fd44.png" />
-</div>
-</div>
 </section>
 </section>
 
@@ -697,8 +621,8 @@ By Oscar Enrique Pérez González, Juan Felipe Huan Lew Yee, Laura Michelle Jim�
     
 <div class="extra_footer">
   <div>
-<img src="https://github.com/felipelewyee/Cuantica-I/blob/master/logo_unam.png?raw=true" alt="logo_UNAM", style="width: 5%">
-<img src="https://github.com/felipelewyee/Cuantica-I/blob/master/logoFacultadQuimica.jpg?raw=true" alt="logo_FQ", style="width: 5%">
+<img src="https://github.com/matquim/Cuantica-I/blob/master/logo_unam.png?raw=true" alt="logo_UNAM", style="width: 5%">
+<img src="https://github.com/matquim/Cuantica-I/blob/master/logoFacultadQuimica.jpg?raw=true" alt="logo_FQ", style="width: 5%">
     <br>© D.R. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO 2022<br>Universidad Nacional Autónoma de México<br>Facultad de Química<br>Prohibida la reproducción total o parcial por cualquier medio, sin la autorización escrita del titular de los derechos patrimoniales.<br>Hecho en México<br>
 </div>
 
