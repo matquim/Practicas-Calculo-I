@@ -19,7 +19,7 @@ launch_buttons:
   thebe                     : true
 
 repository:
-  url                       : https://github.com/oscarrepez/Practicas-Calculo-1
+  url                       : https://github.com/matquim/Practicas-Calculo-I
   branch                    : master
 
 latex:
