@@ -4,8 +4,8 @@ author: Oscar Enrique Pérez González, Juan Felipe Huan Lew Yee, Laura Michelle
 html:
   extra_footer : |
       <div>
-      <img src="https://github.com/matquim/Practicas-Calculo-I/blob/master/logo_unam.png?raw=true" alt="logo_UNAM", style="width: 5%">
-      <img src="https://github.com/matquim/Practicas-Calculo-I/blob/master/logoFacultadQuimica.jpg?raw=true" alt="logo_FQ", style="width: 5%">
+      <img src="https://raw.githubusercontent.com/matquim/Practicas-Calculo-I/refs/heads/main/logo_unam.png" alt="logo_UNAM", style="width: 5%">
+      <img src="https://raw.githubusercontent.com/matquim/Practicas-Calculo-I/refs/heads/main/logoFacultadQuimica.jpg" alt="logo_FQ", style="width: 5%">
           <br>© D.R. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO 2022<br>Universidad Nacional Autónoma de México<br>Facultad de Química<br>Prohibida la reproducción total o parcial por cualquier medio, sin la autorización escrita del titular de los derechos patrimoniales.<br>Hecho en México<br>
       </div>
 logo: logo.png
