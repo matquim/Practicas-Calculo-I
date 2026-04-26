@@ -10,4 +10,5 @@ parts:
   numbered: true
   chapters:
   - file: practica1_fixed2
+  - file: practica1_fixeda
 
