@@ -1,0 +1,39 @@
+name: deploy-book
+
+on:
+  # Se ejecuta al hacer push a la rama main
+  push:
+    branches:
+      - main
+  # Permite ejecución manual desde la pestaña Actions
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-book:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependencias
+        run: |
+          pip install jupyter-book
+          pip install -r requirements.txt # Si tienes librerías adicionales
+
+      - name: Construir el libro
+        run: |
+          jupyter-book build .
+
+      - name: Desplegar en GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_build/html
