@@ -408,7 +408,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">4.1. Representación de Números Reales en Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">4.2. Convertir un número real en un número flotante</a></li>
 </ul>
             </nav>
         </div>
@@ -451,81 +450,6 @@ n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
 </div>
 </div>
 </div>
-</section>
-<section id="convertir-un-numero-real-en-un-numero-flotante">
-<h2><span class="section-number">4.2. </span>Convertir un número real en un número flotante<a class="headerlink" href="#convertir-un-numero-real-en-un-numero-flotante" title="Link to this heading">#</a></h2>
-<p>Convertir un número real a uno flotante (IEEE754) para su almacenamiento en la computadora consiste en determinar los elementos: signo (<span class="math notranslate nohighlight">\(s\)</span>), exponente (<span class="math notranslate nohighlight">\(e\)</span>) y fracción (<span class="math notranslate nohighlight">\(f\)</span>) para su represnetación en la forma expresada en la sección anterior. A continuación se describe, con un ejemplo, el algoritmo que permite determinar estos elementos:</p>
-<p><em>Cálculo de <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(e\)</span> y <span class="math notranslate nohighlight">\(f\)</span> para el número <span class="math notranslate nohighlight">\(5.75\)</span>.</em></p>
-<ol class="arabic simple">
-<li><p>Determinar el signo.</p></li>
-</ol>
-<ul class="simple">
-<li><p>Si es número es positivo el bit que almacena el signo es 0.</p></li>
-<li><p>Si es número es negativo el bit es 1.</p></li>
-</ul>
-<p><em>El número <span class="math notranslate nohighlight">\(5.75\)</span> es positivo por lo que <span class="math notranslate nohighlight">\(s=1\)</span>.</em></p>
-<ol class="arabic simple" start="2">
-<li><p>Convertir el número a binario.</p></li>
-</ol>
-<ul class="simple">
-<li><p>Si el número tiene una parte entera, convertirla a binario.</p></li>
-<li><p>Si el número tiene una parte fraccionaria, multiplícarlo por 2 repetidamente y extraer el binario de la parte entera resultante (sólo puede ser 0 o 1) hasta conseguir la precisión deseada o hasta que el número se reduzca a cero.</p></li>
-</ul>
-<p><em>El número <span class="math notranslate nohighlight">\(5.75\)</span> tiene como parte entera <span class="math notranslate nohighlight">\(5\)</span> y parte farcccionaria  <span class="math notranslate nohighlight">\(0.75\)</span>.</em>
-<em>El número <span class="math notranslate nohighlight">\(5\)</span> en binario es: <span class="math notranslate nohighlight">\(101\)</span></em>
-<em>El número 0.75 se convierte a binario multiplicando por 2:</em></p>
-<p><span class="math notranslate nohighlight">\(0.75 \times 2 = 1.5\)</span></p>
-<p><span class="math notranslate nohighlight">\(0.5  \times 2 = 1.0\)</span></p>
-<p><em>Por lo que el número <span class="math notranslate nohighlight">\(0.75\)</span> en binario es <span class="math notranslate nohighlight">\(0.11\)</span>.</em></p>
-<p><strong>Conclusión:</strong> <em>El número <span class="math notranslate nohighlight">\(5.75\)</span> en binario es <span class="math notranslate nohighlight">\(101.11\)</span></em></p>
-<ol class="arabic simple" start="3">
-<li><p>Normalizar el número.</p></li>
-</ol>
-<ul class="simple">
-<li><p>Escribir el número en notación científica binaria:
-<span class="math notranslate nohighlight">\(1.(mantisa) \times 2^{exponente}\)</span>.</p></li>
-<li><p>Mover el punto decimal de la representación binaria hasta que haya un solo bit 1 a la izquierda del punto. Contar cuántos lugares se movió el punto (ese es el exponente) y ajusta el número de bits después del punto (esa es la mantisa).</p></li>
-</ul>
-<p><em>El número <span class="math notranslate nohighlight">\(101.11\)</span> se convierte en <span class="math notranslate nohighlight">\(1.0111\times 2^{2}\)</span></em></p>
-<p><em>Como el punto decimal se movió dos lugares, el exponente es <span class="math notranslate nohighlight">\(2\)</span> y la mantisa es <span class="math notranslate nohighlight">\(0111\)</span></em></p>
-<ol class="arabic simple" start="4">
-<li><p>Calcular el exponente con sesgo.</p></li>
-</ol>
-<ul class="simple">
-<li><p>Puesto que el exponente se almacena en 11 bits, el sesgo es de 1023, esto quiere decir que el exponente que se almacena en binario está dado por:</p></li>
-</ul>
-<p><span class="math notranslate nohighlight">\(e = \textit{exponente real} + 1023\)</span></p>
-<p>*Convertir el exponente ajustado al sego en representación binaria de 11 bits.</p>
-<ul class="simple">
-<li><p>Si la representación binaria no ocupa 11 bits, se rellena con ceros.</p></li>
-</ul>
-<p><em>El exponente real del número <span class="math notranslate nohighlight">\(5.75\)</span> es <span class="math notranslate nohighlight">\(2\)</span>, por lo que el exponente segado está dado por:</em></p>
-<p><span class="math notranslate nohighlight">\(e= 2+1023=1025\)</span></p>
-<p><em>El número <span class="math notranslate nohighlight">\(1025\)</span> en binario es <span class="math notranslate nohighlight">\(10000000001\)</span>. Como ocupa 11 bits no es necesario completar con ceros.</em></p>
-<ol class="arabic simple" start="5">
-<li><p>Obtener la fracción o mantisa.</p></li>
-</ol>
-<ul class="simple">
-<li><p>Tomar la parte fraccionaria de la representaciónn binaria normalizada, es decir lo que queda después del punto decimal y ajustar la mantisa para completar 52 bits. Si son menos, rellenar con ceros.</p></li>
-</ul>
-<p><em>La parte fraccionaria del número <span class="math notranslate nohighlight">\(5.75\)</span> es <span class="math notranslate nohighlight">\(0111\)</span> por lo que la mantisa con 52 bits es:</em></p>
-<p><span class="math notranslate nohighlight">\(0111000000000000000000000000000000000000000000000000\)</span></p>
-<ol class="arabic simple" start="6">
-<li><p>La representación final consiste de 64 bits distribuídos de la siguiente forma:</p></li>
-</ol>
-<p>INSERTAR IMAGEN</p>
-<p><em>La representación del número 5.75 es:</em></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-0 &amp;  &amp; 10000000001 &amp; 0111000000000\\
-  &amp;  &amp;             &amp; 0000000000000\\
-  &amp;  &amp;             &amp; 0000000000000\\
-  &amp;  &amp;             &amp; 0000000000000
-\end{aligned}
-\end{split}\]</div>
-<p>Ejemplo:</p>
-<p>Con el siguiente código se calcula la representación del número 5.75</p>
 </section>
 </section>
 
@@ -585,7 +509,6 @@ n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">4.1. Representación de Números Reales en Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">4.2. Convertir un número real en un número flotante</a></li>
 </ul>
   </nav></div>
 
