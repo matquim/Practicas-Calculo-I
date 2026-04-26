@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -53,7 +50,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -68,7 +65,6 @@
     <link rel="prev" title="2. Tutorial Avanzado" href="Tutorial-Avanzado.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -84,8 +80,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -93,6 +100,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -100,8 +108,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -117,8 +125,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -148,11 +155,15 @@
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -182,14 +193,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -353,16 +359,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -387,33 +401,33 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">4. Representación de Números Reales en Python</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">4.1. Convertir un número real en un número flotante</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-flotantes">4.2. Operaciones con flotantes.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-1-uso-de-numeros-de-punto-flotante-en-python">4.3. Práctica 1.1. Uso de Números de Punto Flotante en Python.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-campo-de-los-numeros-reales">4.4. Propiedades de campo de los números reales</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-2-los-numeros-flotantes-son-un-campo">4.5. Práctica 1.2. ¿Los números flotantes son un campo?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-orden-de-los-numero-reales">4.6. Propiedades de orden de los número reales.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto">4.7. Valor absoluto</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales">4.8. Valor absoluto de la diferencia de dos números reales.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-3-distancia-entre-dos-numeros-reales">4.9. Práctica 1.3. Distancia entre dos números reales.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">3. Representación de Números Reales en Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">3.1. Convertir un número real en un número flotante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-flotantes">3.2. Operaciones con flotantes.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-1-uso-de-numeros-de-punto-flotante-en-python">3.3. Práctica 1.1. Uso de Números de Punto Flotante en Python.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-campo-de-los-numeros-reales">3.4. Propiedades de campo de los números reales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-2-los-numeros-flotantes-son-un-campo">3.5. Práctica 1.2. ¿Los números flotantes son un campo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-orden-de-los-numero-reales">3.6. Propiedades de orden de los número reales.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto">3.7. Valor absoluto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales">3.8. Valor absoluto de la diferencia de dos números reales.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-3-distancia-entre-dos-numeros-reales">3.9. Práctica 1.3. Distancia entre dos números reales.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">5. Funciones en Python.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">5.1. 2. Iterar sobre una lista de números.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecutar-codigo-repetidamente">5.2. 3. Ejecutar código repetidamente.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-cadena-de-texto">5.3. 4. Iterar sobre una cadena de texto</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumar-numeros-de-una-lista">5.4. 5. Sumar números de una lista</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">3. Funciones en Python.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">3.1. 2. Iterar sobre una lista de números.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecutar-codigo-repetidamente">3.2. 3. Ejecutar código repetidamente.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-cadena-de-texto">3.3. 4. Iterar sobre una cadena de texto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumar-numeros-de-una-lista">3.4. 5. Sumar números de una lista</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sucesiones">6. Sucesiones</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">6.1. Ejercicios</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-sucesiones">6.2. Gráficas de Sucesiones</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.2.1. Ejercicios</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sucesiones">3. Sucesiones</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">3.1. Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-sucesiones">3.2. Gráficas de Sucesiones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2.1. Ejercicios</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limite-de-una-sucesion">6.3. Límite de una sucesión</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-2">6.4. Práctica 3.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limite-de-una-sucesion">3.3. Límite de una sucesión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-2">3.4. Práctica 3.2</a></li>
 </ul>
 </li>
 </ul>
@@ -432,7 +446,7 @@
 <h1><span class="section-number">3. </span>Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.<a class="headerlink" href="#uso-del-condicional-if" title="Link to this heading">#</a></h1>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="representacion-de-numeros-reales-en-python">
-<h1><span class="section-number">4. </span>Representación de Números Reales en Python<a class="headerlink" href="#representacion-de-numeros-reales-en-python" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3. </span>Representación de Números Reales en Python<a class="headerlink" href="#representacion-de-numeros-reales-en-python" title="Link to this heading">#</a></h1>
 <p>Los números que la computadora puede representar, en particular usando el lenguaje de Python, es limitada comparada con la cardinalidad del conjunto de números reales. Por ejemplo, la representación exacta del número  <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> requiere que almacenemos una cantidad infinita de números decimales, lo mismo que los números <span class="math notranslate nohighlight">\(\frac{1}{3}= 0.\bar{3}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{7}= 0.\overline{142857}\)</span>, etc.</p>
 <p>El número de bits en donde la computadora almacena información, en particular un número real, es limitado y fijo para una computadora dada. Para poder almacenar el rango más grande posible de números dado un número fijo de bits, se utilizan números de  <em><strong>punto flotante</strong></em>  (también llamados <em>flotantes</em>). En casi todas las plataformas en donde se utiliza Pyhton, los flotantes se almacenan con doble precisión (IEEE754), esto quiere decir que se designan un total de 64 bits para almacenar cada uno de ellos. Los números de punto flotante son una aproximación computacional a los números reales.</p>
 <p>Un número flotante asigna una cantidad fija de bits a tres partes distintas de un número real:</p>
@@ -461,7 +475,7 @@ n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
 </div>
 </div>
 <section id="convertir-un-numero-real-en-un-numero-flotante">
-<h2><span class="section-number">4.1. </span>Convertir un número real en un número flotante<a class="headerlink" href="#convertir-un-numero-real-en-un-numero-flotante" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>Convertir un número real en un número flotante<a class="headerlink" href="#convertir-un-numero-real-en-un-numero-flotante" title="Link to this heading">#</a></h2>
 <p>Convertir un número real a uno flotante (IEEE754) para su almacenamiento en la computadora consiste en determinar los elementos: signo (<span class="math notranslate nohighlight">\(s\)</span>), exponente (<span class="math notranslate nohighlight">\(e\)</span>) y fracción (<span class="math notranslate nohighlight">\(f\)</span>) para su represnetación en la forma expresada en la sección anterior. A continuación se describe, con un ejemplo, el algoritmo que permite determinar estos elementos:</p>
 <p><em>Cálculo de <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(e\)</span> y <span class="math notranslate nohighlight">\(f\)</span> para el número <span class="math notranslate nohighlight">\(5.75\)</span>.</em></p>
 <ol class="arabic simple">
@@ -563,16 +577,16 @@ n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
 <span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">binario_flotante</span> <span class="o">=</span> <span class="n">mostrar_representacion_flotante</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="nn">File ~/anaconda3/envs/jb/lib/python3.13/site-packages/ipykernel/kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/ipykernel/kernelbase.py:1402,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1400</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1401</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1402</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1403</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1404</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1405</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_get_shell_context_var</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_shell_parent_ident</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1406</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1407</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1408</span> <span class="p">)</span>
 
 <span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
@@ -581,7 +595,7 @@ n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
 </div>
 </section>
 <section id="operaciones-con-flotantes">
-<h2><span class="section-number">4.2. </span>Operaciones con flotantes.<a class="headerlink" href="#operaciones-con-flotantes" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.2. </span>Operaciones con flotantes.<a class="headerlink" href="#operaciones-con-flotantes" title="Link to this heading">#</a></h2>
 <p>Podemos realizar las siguientes operaciones aritméticas con Python</p>
 <ol class="arabic simple">
 <li><p>Suma</p></li>
@@ -637,7 +651,7 @@ El resultado de la potencia:  1.4 ^ 2.4 = 2.2423700574830967
 </div>
 </section>
 <section id="practica-1-1-uso-de-numeros-de-punto-flotante-en-python">
-<h2><span class="section-number">4.3. </span>Práctica 1.1. Uso de Números de Punto Flotante en Python.<a class="headerlink" href="#practica-1-1-uso-de-numeros-de-punto-flotante-en-python" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.3. </span>Práctica 1.1. Uso de Números de Punto Flotante en Python.<a class="headerlink" href="#practica-1-1-uso-de-numeros-de-punto-flotante-en-python" title="Link to this heading">#</a></h2>
 <p><strong>Objetivo:</strong> Que el estudiante comprenda cómo los números reales se operan en Python, cómo se representan, almacenan y los errores que pueden surgir debido a las limitaciones de la representación de números flotantes en binario.</p>
 <p>Un ejemplo clásico de errores que surgen por la rerpesentación de números reales en el estándar IEEE754 es la representación de los números <span class="math notranslate nohighlight">\(0.1\)</span> y el número <span class="math notranslate nohighlight">\(0.2\)</span>, entre otros.</p>
 <p><strong>Actividades</strong></p>
@@ -740,7 +754,7 @@ El producto de 2.3 por 4.5 es igual a 10.35
 </div>
 </section>
 <section id="propiedades-de-campo-de-los-numeros-reales">
-<h2><span class="section-number">4.4. </span>Propiedades de campo de los números reales<a class="headerlink" href="#propiedades-de-campo-de-los-numeros-reales" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.4. </span>Propiedades de campo de los números reales<a class="headerlink" href="#propiedades-de-campo-de-los-numeros-reales" title="Link to this heading">#</a></h2>
 <p>Los números reales cumplen con las siguientes propiedades de campo :</p>
 <ul class="simple">
 <li><p><strong>Cerradura</strong> de la suma y del producto:</p></li>
@@ -774,7 +788,7 @@ El producto de 2.3 por 4.5 es igual a 10.35
 <p>Para cualesquiera tres números <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span> <span class="math notranslate nohighlight">\(\in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(a\cdot(b+c)=a\cdot b + a\cdot b\)</span></p>
 </section>
 <section id="practica-1-2-los-numeros-flotantes-son-un-campo">
-<h2><span class="section-number">4.5. </span>Práctica 1.2. ¿Los números flotantes son un campo?<a class="headerlink" href="#practica-1-2-los-numeros-flotantes-son-un-campo" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.5. </span>Práctica 1.2. ¿Los números flotantes son un campo?<a class="headerlink" href="#practica-1-2-los-numeros-flotantes-son-un-campo" title="Link to this heading">#</a></h2>
 <p><strong>Objetivo:</strong> Que el estudiante comprenda las propiedades de campo que cumplen los números reales y cuáles sí y cuáles no cumplen los números de punto flotante en Python.</p>
 <p><strong>Actividad</strong></p>
 <p>Utiliza los códigos de Python que te permitan responder las siguientes preguntas:</p>
@@ -981,7 +995,7 @@ Los números flotantes cumplen la propiedad distributiva
 </div>
 </section>
 <section id="propiedades-de-orden-de-los-numero-reales">
-<h2><span class="section-number">4.6. </span>Propiedades de orden de los número reales.<a class="headerlink" href="#propiedades-de-orden-de-los-numero-reales" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.6. </span>Propiedades de orden de los número reales.<a class="headerlink" href="#propiedades-de-orden-de-los-numero-reales" title="Link to this heading">#</a></h2>
 <p>Los números reales cumplen con las siguientes propiedades de orden:</p>
 <p>Para cuales quiera dos números reales, <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> se sólo se cumple cualquiera de las tres afirmaciones siguientes:</p>
 <p><span class="math notranslate nohighlight">\(a&lt;b\)</span>, <span class="math notranslate nohighlight">\(a&gt;b\)</span>, ó <span class="math notranslate nohighlight">\(a=b\)</span></p>
@@ -1030,7 +1044,7 @@ El número 1.2 es igual que 1.2
 </div>
 </section>
 <section id="valor-absoluto">
-<h2><span class="section-number">4.7. </span>Valor absoluto<a class="headerlink" href="#valor-absoluto" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.7. </span>Valor absoluto<a class="headerlink" href="#valor-absoluto" title="Link to this heading">#</a></h2>
 <p>El valor absoluto de un número real es siempre un número positivo que geométricamente nos da la distancia de dicho número real al origen, se define como:</p>
 <p><span class="math notranslate nohighlight">\(
 |x| = \left\{
@@ -1059,7 +1073,7 @@ El valor absoluto del número real -4.7 es: 4.7
 </div>
 </section>
 <section id="valor-absoluto-de-la-diferencia-de-dos-numeros-reales">
-<h2><span class="section-number">4.8. </span>Valor absoluto de la diferencia de dos números reales.<a class="headerlink" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.8. </span>Valor absoluto de la diferencia de dos números reales.<a class="headerlink" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales" title="Link to this heading">#</a></h2>
 <p>Dados dos números reales, <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span>, ocurre que</p>
 <p><span class="math notranslate nohighlight">\(
 |a-b|=|b-a|
@@ -1118,7 +1132,7 @@ Escribe un número b: -6
 </div>
 </section>
 <section id="practica-1-3-distancia-entre-dos-numeros-reales">
-<h2><span class="section-number">4.9. </span>Práctica 1.3. Distancia entre dos números reales.<a class="headerlink" href="#practica-1-3-distancia-entre-dos-numeros-reales" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.9. </span>Práctica 1.3. Distancia entre dos números reales.<a class="headerlink" href="#practica-1-3-distancia-entre-dos-numeros-reales" title="Link to this heading">#</a></h2>
 <p><strong>Objetivo:</strong> Que el estudiante comprenda las propiedades de campo que cumplen los números reales y cuáles sí y cuáles no cumplen los números de punto flotante en Python.</p>
 <p><strong>Actividad</strong></p>
 <p>Utiliza los códigos de Python que te permitan responder las siguientes preguntas:</p>
@@ -1133,7 +1147,7 @@ Escribe un número b: -6
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="funciones-en-python">
-<h1><span class="section-number">5. </span>Funciones en Python.<a class="headerlink" href="#funciones-en-python" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3. </span>Funciones en Python.<a class="headerlink" href="#funciones-en-python" title="Link to this heading">#</a></h1>
 <p>Una función de variable real es una relación entre dos conjuntos, en la cual a cada número real (del dominio de la función) se le asigna exactamente un número real (del codominio). Formalmente, una función de variable real se puede expresar como:</p>
 <p><span class="math notranslate nohighlight">\(f: \mathbb D \subset \mathbb R \longmapsto \mathbb  R\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(\mathbb D\)</span> es un subconjunto de los números reales y la función f asigna a cada número real <span class="math notranslate nohighlight">\(x\)</span> del conjunto <span class="math notranslate nohighlight">\(\mathbb D\)</span> a un solo valor real, denominado <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
@@ -1182,7 +1196,7 @@ rosa
 </div>
 </div>
 <section id="iterar-sobre-una-lista-de-numeros">
-<h2><span class="section-number">5.1. </span>2. Iterar sobre una lista de números.<a class="headerlink" href="#iterar-sobre-una-lista-de-numeros" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>2. Iterar sobre una lista de números.<a class="headerlink" href="#iterar-sobre-una-lista-de-numeros" title="Link to this heading">#</a></h2>
 <p>En el siguiente código se ha declarado la lista</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
 </pre></div>
@@ -1211,7 +1225,7 @@ rosa
 </div>
 </section>
 <section id="ejecutar-codigo-repetidamente">
-<h2><span class="section-number">5.2. </span>3. Ejecutar código repetidamente.<a class="headerlink" href="#ejecutar-codigo-repetidamente" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.2. </span>3. Ejecutar código repetidamente.<a class="headerlink" href="#ejecutar-codigo-repetidamente" title="Link to this heading">#</a></h2>
 <p>Si sólo se desea ejecutar líneas de código de forma repetida, podemos usar</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">paso</span><span class="p">)</span>
 </pre></div>
@@ -1286,7 +1300,7 @@ Hola 19
 </div>
 </section>
 <section id="iterar-sobre-una-cadena-de-texto">
-<h2><span class="section-number">5.3. </span>4. Iterar sobre una cadena de texto<a class="headerlink" href="#iterar-sobre-una-cadena-de-texto" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.3. </span>4. Iterar sobre una cadena de texto<a class="headerlink" href="#iterar-sobre-una-cadena-de-texto" title="Link to this heading">#</a></h2>
 <p>En el siguiente código se ha declarado una cadena de caracteres:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cadena</span><span class="o">=</span><span class="s2">&quot;HolaMundo&quot;</span>
 </pre></div>
@@ -1316,7 +1330,7 @@ o
 </div>
 </section>
 <section id="sumar-numeros-de-una-lista">
-<h2><span class="section-number">5.4. </span>5. Sumar números de una lista<a class="headerlink" href="#sumar-numeros-de-una-lista" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.4. </span>5. Sumar números de una lista<a class="headerlink" href="#sumar-numeros-de-una-lista" title="Link to this heading">#</a></h2>
 <p>En el siguiente código se ha declarado la lista de números:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
 </pre></div>
@@ -1345,7 +1359,7 @@ o
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="sucesiones">
-<h1><span class="section-number">6. </span>Sucesiones<a class="headerlink" href="#sucesiones" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">3. </span>Sucesiones<a class="headerlink" href="#sucesiones" title="Link to this heading">#</a></h1>
 <p>Una sucesión <span class="math notranslate nohighlight">\(S_n\)</span> es una función cuyo dominio es el conjunto de números naturales  <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> y el contradominio es el conjunto de números reales <span class="math notranslate nohighlight">\(\mathbb R\)</span>:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
@@ -1401,7 +1415,7 @@ Para 20 el valor de Sn=1/n es: 0.05
 </div>
 </div>
 <section id="ejercicios">
-<h2><span class="section-number">6.1. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
 <p>Escribe códigos que evalúen los términos de las siguientes sucesiones:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\displaystyle \alpha_n =1+\frac{1}{n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
@@ -1417,7 +1431,7 @@ Para 20 el valor de Sn=1/n es: 0.05
 </ol>
 </section>
 <section id="graficas-de-sucesiones">
-<h2><span class="section-number">6.2. </span>Gráficas de Sucesiones<a class="headerlink" href="#graficas-de-sucesiones" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.2. </span>Gráficas de Sucesiones<a class="headerlink" href="#graficas-de-sucesiones" title="Link to this heading">#</a></h2>
 <p>Al igual que para una función, podemos trazar la gráfica de una suceción.</p>
 <p>En el siguiente ejemplo se calculan los términos de la sucesión <span class="math notranslate nohighlight">\(S_n=\frac{1}{n}\)</span>, con <span class="math notranslate nohighlight">\(n \leq 20\)</span> y se grafica la función.</p>
 <div class="cell docutils container">
@@ -1448,7 +1462,7 @@ Para 20 el valor de Sn=1/n es: 0.05
 </div>
 </div>
 <section id="id1">
-<h3><span class="section-number">6.2.1. </span>Ejercicios<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<h3><span class="section-number">3.2.1. </span>Ejercicios<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 <p>Escribe el código que calcule y grafique cada una de las siguientes sucesiones:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\displaystyle \alpha_n =1+\frac{1}{n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
@@ -1465,15 +1479,15 @@ Para 20 el valor de Sn=1/n es: 0.05
 </section>
 </section>
 <section id="limite-de-una-sucesion">
-<h2><span class="section-number">6.3. </span>Límite de una sucesión<a class="headerlink" href="#limite-de-una-sucesion" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.3. </span>Límite de una sucesión<a class="headerlink" href="#limite-de-una-sucesion" title="Link to this heading">#</a></h2>
 <p>Una sucesión <span class="math notranslate nohighlight">\(S_n\)</span> converge hacia el número <span class="math notranslate nohighlight">\(L\)</span>, y escribimos:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a7355fdf-6a76-4e81-b05b-6175eb3a827d">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-a7355fdf-6a76-4e81-b05b-6175eb3a827d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ca64edb3-18dc-49b5-89c2-dd0478d15dbd">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-ca64edb3-18dc-49b5-89c2-dd0478d15dbd" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle \lim_{n \to \infty}{S_n}=L
 \end{equation}\]</div>
 <p>Si ocurre que para cualquier valor razonablemente pequeño <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> existe un número natural <span class="math notranslate nohighlight">\(N\)</span> tal que para todos los términos <span class="math notranslate nohighlight">\(S_n\)</span> que siguen (es decir, se cumple que <span class="math notranslate nohighlight">\(n&gt;N\)</span>) ocurre que</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9a5e805c-3e62-4624-8259-f151747b0fab">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-9a5e805c-3e62-4624-8259-f151747b0fab" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-28ebcab8-4126-4eb8-9843-94b0c862d63d">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-28ebcab8-4126-4eb8-9843-94b0c862d63d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle |S_n-L|&lt;\epsilon
 \end{equation}\]</div>
 <p>##Práctica 3.1.</p>
@@ -1482,8 +1496,8 @@ Para 20 el valor de Sn=1/n es: 0.05
 <ol class="arabic simple">
 <li><p>Obtén los primeros 15 términos de la sucesión</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-af46a8d1-3ed9-412b-bf79-0ed3d1c3d800">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-af46a8d1-3ed9-412b-bf79-0ed3d1c3d800" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-db296593-e1c3-4154-b360-378b4a9312e4">
+<span class="eqno">(3.3)<a class="headerlink" href="#equation-db296593-e1c3-4154-b360-378b4a9312e4" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle S_n= 1-\frac{1}{n}
 \end{equation}\]</div>
 <ol class="arabic simple" start="2">
@@ -1568,12 +1582,12 @@ Para 20 el valor de Sn=1/n es: 0.05
 </div>
 </section>
 <section id="practica-3-2">
-<h2><span class="section-number">6.4. </span>Práctica 3.2<a class="headerlink" href="#practica-3-2" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.4. </span>Práctica 3.2<a class="headerlink" href="#practica-3-2" title="Link to this heading">#</a></h2>
 <p><strong>Actividades.</strong></p>
 <p>Para las siguientes sucesiones:</p>
 <p>a) <span class="math notranslate nohighlight">\(\displaystyle S_n =\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-25209d4b-6cd6-4c70-b447-c6aad636ed58">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-25209d4b-6cd6-4c70-b447-c6aad636ed58" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8bf3a1dd-ef6a-4db4-b6e5-899b199e27da">
+<span class="eqno">(3.4)<a class="headerlink" href="#equation-8bf3a1dd-ef6a-4db4-b6e5-899b199e27da" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle S_n= 1-\frac{1}{n}
 \end{equation}\]</div>
 <ol class="arabic simple" start="2">
@@ -1634,8 +1648,7 @@ Para 20 el valor de Sn=1/n es: 0.05
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1645,33 +1658,33 @@ Para 20 el valor de Sn=1/n es: 0.05
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">3. Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">4. Representación de Números Reales en Python</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">4.1. Convertir un número real en un número flotante</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-flotantes">4.2. Operaciones con flotantes.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-1-uso-de-numeros-de-punto-flotante-en-python">4.3. Práctica 1.1. Uso de Números de Punto Flotante en Python.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-campo-de-los-numeros-reales">4.4. Propiedades de campo de los números reales</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-2-los-numeros-flotantes-son-un-campo">4.5. Práctica 1.2. ¿Los números flotantes son un campo?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-orden-de-los-numero-reales">4.6. Propiedades de orden de los número reales.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto">4.7. Valor absoluto</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales">4.8. Valor absoluto de la diferencia de dos números reales.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-3-distancia-entre-dos-numeros-reales">4.9. Práctica 1.3. Distancia entre dos números reales.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">3. Representación de Números Reales en Python</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">3.1. Convertir un número real en un número flotante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-flotantes">3.2. Operaciones con flotantes.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-1-uso-de-numeros-de-punto-flotante-en-python">3.3. Práctica 1.1. Uso de Números de Punto Flotante en Python.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-campo-de-los-numeros-reales">3.4. Propiedades de campo de los números reales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-2-los-numeros-flotantes-son-un-campo">3.5. Práctica 1.2. ¿Los números flotantes son un campo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-orden-de-los-numero-reales">3.6. Propiedades de orden de los número reales.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto">3.7. Valor absoluto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales">3.8. Valor absoluto de la diferencia de dos números reales.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-3-distancia-entre-dos-numeros-reales">3.9. Práctica 1.3. Distancia entre dos números reales.</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">5. Funciones en Python.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">5.1. 2. Iterar sobre una lista de números.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecutar-codigo-repetidamente">5.2. 3. Ejecutar código repetidamente.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-cadena-de-texto">5.3. 4. Iterar sobre una cadena de texto</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumar-numeros-de-una-lista">5.4. 5. Sumar números de una lista</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-en-python">3. Funciones en Python.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">3.1. 2. Iterar sobre una lista de números.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecutar-codigo-repetidamente">3.2. 3. Ejecutar código repetidamente.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-cadena-de-texto">3.3. 4. Iterar sobre una cadena de texto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumar-numeros-de-una-lista">3.4. 5. Sumar números de una lista</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sucesiones">6. Sucesiones</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">6.1. Ejercicios</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-sucesiones">6.2. Gráficas de Sucesiones</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.2.1. Ejercicios</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sucesiones">3. Sucesiones</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">3.1. Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-sucesiones">3.2. Gráficas de Sucesiones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.2.1. Ejercicios</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limite-de-una-sucesion">6.3. Límite de una sucesión</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-2">6.4. Práctica 3.2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limite-de-una-sucesion">3.3. Límite de una sucesión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-2">3.4. Práctica 3.2</a></li>
 </ul>
 </li>
 </ul>
@@ -1724,8 +1737,8 @@ By Oscar Enrique Pérez González, Juan Felipe Huan Lew Yee, Laura Michelle Jim�
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
