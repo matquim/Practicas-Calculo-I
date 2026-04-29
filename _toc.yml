@@ -12,3 +12,7 @@ parts:
   - file: practica1_fixed2
   - file: practica1_fixed2a
 
+- caption: Funciones:
+  numbered: true
+  chapters:
+  - file: Calculo_1_Practica_3_Corregida
