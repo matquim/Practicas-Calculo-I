@@ -13,4 +13,5 @@ parts:
     - file: practica2b
     - file: practica2c
     - file: Calculo_1_Practica_3_Corregida
+    - file: practica3
 
