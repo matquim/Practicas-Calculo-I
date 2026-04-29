@@ -1,0 +1,966 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Sucesiones &#8212; Practicas Cálculo I</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'practica2c';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Operaciones simbólicas" href="Calculo_1_Practica_3_Corregida.html" />
+    <link rel="prev" title="Funciones en Python." href="practica2b.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Practicas Cálculo I - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Practicas Cálculo I - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Prácticas Cálculo I
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tutorial-Basico.html">Tutorial Básico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial-Avanzado.html">Tutorial Avanzado</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas Sencillos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="practica2a.html">Representación de Números Reales en Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practica2b.html">Funciones en Python.</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Sucesiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Calculo_1_Practica_3_Corregida.html">Operaciones simbólicas</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/practica2c.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/practica2c.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/practica2c.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Sucesiones</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-sucesiones">Gráficas de Sucesiones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ejercicios</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limite-de-una-sucesion">Límite de una sucesión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-2">Práctica 3.2</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="sucesiones">
+<h1>Sucesiones<a class="headerlink" href="#sucesiones" title="Link to this heading">#</a></h1>
+<p>Una sucesión <span class="math notranslate nohighlight">\(S_n\)</span> es una función cuyo dominio es el conjunto de números naturales  <span class="math notranslate nohighlight">\(\mathbb{N}\)</span> y el contradominio es el conjunto de números reales <span class="math notranslate nohighlight">\(\mathbb R\)</span>:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+S_n: \mathbb N \longmapsto \mathbb D \subset R
+\end{equation*}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\begin{equation*}
+S_n=f(n)
+\end{equation*}
+\]</div>
+<p>Por ejemplo:</p>
+<p>\begin{aligned}
+S_n      &amp; = \frac{1}{n}\
+\alpha_n &amp; = n\
+\beta_n  &amp; = (-1)^{n}\
+\gamma_n &amp; = 2n
+\end{aligned}</p>
+<p>##Cálculo de los términos de una sucesión.</p>
+<p>Para calcular los términos de una sucesión podemos utilizar el ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<p>En la siguiente celda de código se calculan los términos se la sucesión <span class="math notranslate nohighlight">\(S_n=\frac{1}{n}\)</span> para valores de <span class="math notranslate nohighlight">\(n\leq20\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+  <span class="n">Sn</span><span class="o">=</span><span class="mi">1</span><span class="o">/</span><span class="n">n</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Para&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s2">&quot;el valor de Sn=1/n es:&quot;</span><span class="p">,</span><span class="n">Sn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Para 1 el valor de Sn=1/n es: 1.0
+Para 2 el valor de Sn=1/n es: 0.5
+Para 3 el valor de Sn=1/n es: 0.3333333333333333
+Para 4 el valor de Sn=1/n es: 0.25
+Para 5 el valor de Sn=1/n es: 0.2
+Para 6 el valor de Sn=1/n es: 0.16666666666666666
+Para 7 el valor de Sn=1/n es: 0.14285714285714285
+Para 8 el valor de Sn=1/n es: 0.125
+Para 9 el valor de Sn=1/n es: 0.1111111111111111
+Para 10 el valor de Sn=1/n es: 0.1
+Para 11 el valor de Sn=1/n es: 0.09090909090909091
+Para 12 el valor de Sn=1/n es: 0.08333333333333333
+Para 13 el valor de Sn=1/n es: 0.07692307692307693
+Para 14 el valor de Sn=1/n es: 0.07142857142857142
+Para 15 el valor de Sn=1/n es: 0.06666666666666667
+Para 16 el valor de Sn=1/n es: 0.0625
+Para 17 el valor de Sn=1/n es: 0.058823529411764705
+Para 18 el valor de Sn=1/n es: 0.05555555555555555
+Para 19 el valor de Sn=1/n es: 0.05263157894736842
+Para 20 el valor de Sn=1/n es: 0.05
+</pre></div>
+</div>
+</div>
+</div>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
+<p>Escribe códigos que evalúen los términos de las siguientes sucesiones:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \alpha_n =1+\frac{1}{n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \beta_n  = (-1)^n\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \gamma_n = \sin\Big(13+\frac{1}{n^2}\Big)\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \delta_n=\frac{1}{n^2}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \theta_n=\frac{n}{n+1}\)</span>, con <span class="math notranslate nohighlight">\(n\leq15\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle S_n=\frac{n+3}{n^3+4}\)</span>, con <span class="math notranslate nohighlight">\(n\leq25\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle R_n=\frac{n!}{n^n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle M_n=\frac{2n}{3n^2+2n+1}\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle Q_n=3n^n\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle W_n=\frac{3^n+(-1)^n}{3^{n+1}+(-1)^{n+1}}\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+</ol>
+</section>
+<section id="graficas-de-sucesiones">
+<h2>Gráficas de Sucesiones<a class="headerlink" href="#graficas-de-sucesiones" title="Link to this heading">#</a></h2>
+<p>Al igual que para una función, podemos trazar la gráfica de una suceción.</p>
+<p>En el siguiente ejemplo se calculan los términos de la sucesión <span class="math notranslate nohighlight">\(S_n=\frac{1}{n}\)</span>, con <span class="math notranslate nohighlight">\(n \leq 20\)</span> y se grafica la función.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pylab</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Declaración de las listas donde se almacenarán los valores de la Sucesión</span>
+<span class="n">Sn</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">n</span> <span class="o">=</span><span class="p">[]</span>
+
+<span class="c1"># Ciclo for para el cáculo de cada término k desde 1 hasta 20</span>
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">):</span>
+  <span class="n">Sn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">k</span><span class="p">)</span>
+  <span class="n">n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Sn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">Sn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1.0, 0.5, 0.3333333333333333, 0.25, 0.2, 0.16666666666666666, 0.14285714285714285, 0.125, 0.1111111111111111, 0.1, 0.09090909090909091, 0.08333333333333333, 0.07692307692307693, 0.07142857142857142, 0.06666666666666667, 0.0625, 0.058823529411764705, 0.05555555555555555, 0.05263157894736842, 0.05]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fb586d1d030&gt;
+</pre></div>
+</div>
+<img alt="_images/18cc165b834058588246d5827168100edf2d51d889952ac37466bf3f0e70e575.png" src="_images/18cc165b834058588246d5827168100edf2d51d889952ac37466bf3f0e70e575.png" />
+</div>
+</div>
+<section id="id1">
+<h3>Ejercicios<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Escribe el código que calcule y grafique cada una de las siguientes sucesiones:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \alpha_n =1+\frac{1}{n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \beta_n  = (-1)^n\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \gamma_n = \sin\Big(13+\frac{1}{n^2}\Big)\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \delta_n=\frac{1}{n^2}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \theta_n=\frac{n}{n+1}\)</span>, con <span class="math notranslate nohighlight">\(n\leq15\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle S_n=\frac{n+3}{n^3+4}\)</span>, con <span class="math notranslate nohighlight">\(n\leq25\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle R_n=\frac{n!}{n^n}\)</span>, con <span class="math notranslate nohighlight">\(n\leq10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle M_n=\frac{2n}{3n^2+2n+1}\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle Q_n=3n^n\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\displaystyle W_n=\frac{3^n+(-1)^n}{3^{n+1}+(-1)^{n+1}}\)</span>, con <span class="math notranslate nohighlight">\(n\leq20\)</span></p></li>
+</ol>
+</section>
+</section>
+<section id="limite-de-una-sucesion">
+<h2>Límite de una sucesión<a class="headerlink" href="#limite-de-una-sucesion" title="Link to this heading">#</a></h2>
+<p>Una sucesión <span class="math notranslate nohighlight">\(S_n\)</span> converge hacia el número <span class="math notranslate nohighlight">\(L\)</span>, y escribimos:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fde704fd-1410-408a-b3f8-d01b61f60a38">
+<span class="eqno">(1)<a class="headerlink" href="#equation-fde704fd-1410-408a-b3f8-d01b61f60a38" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\displaystyle \lim_{n \to \infty}{S_n}=L
+\end{equation}\]</div>
+<p>Si ocurre que para cualquier valor razonablemente pequeño <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> existe un número natural <span class="math notranslate nohighlight">\(N\)</span> tal que para todos los términos <span class="math notranslate nohighlight">\(S_n\)</span> que siguen (es decir, se cumple que <span class="math notranslate nohighlight">\(n&gt;N\)</span>) ocurre que</p>
+<div class="amsmath math notranslate nohighlight" id="equation-bae660b9-2730-4261-b1d7-9a6ae1b521dd">
+<span class="eqno">(2)<a class="headerlink" href="#equation-bae660b9-2730-4261-b1d7-9a6ae1b521dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\displaystyle |S_n-L|&lt;\epsilon
+\end{equation}\]</div>
+<p>##Práctica 3.1.</p>
+<p><strong>Objetivo:</strong> Que el estudiante identifique el concepto de límite mediante el cálculo de los términos de una sucesión y su gráfica. Que el estudiante reconozca y analice la definición de límite de una sucesión de Cauchy a através del cálculo del término <span class="math notranslate nohighlight">\(S_n\)</span> de la sucesión que cumple con la condición <span class="math notranslate nohighlight">\(|S_n-L|&lt;\epsilon\)</span> para cualquier valor de <span class="math notranslate nohighlight">\(\epsilon\)</span> pequeño.</p>
+<p><strong>Actividades.</strong></p>
+<ol class="arabic simple">
+<li><p>Obtén los primeros 15 términos de la sucesión</p></li>
+</ol>
+<div class="amsmath math notranslate nohighlight" id="equation-ad612052-2b0d-48d7-8575-2c1e9742b964">
+<span class="eqno">(3)<a class="headerlink" href="#equation-ad612052-2b0d-48d7-8575-2c1e9742b964" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\displaystyle S_n= 1-\frac{1}{n}
+\end{equation}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Obtén de la suceción usando los puntos calculados. De acuerdo a la gráfica, ¿a qué valor se acercan los términos de la sucesión con el incremento de <span class="math notranslate nohighlight">\(n\)</span>?, es decir, ¿cuál dirías que es el límite <span class="math notranslate nohighlight">\(L\)</span> de la sucesión?</p></li>
+<li><p>Dado el valor de <span class="math notranslate nohighlight">\(\epsilon=1\times 10^{-2}\)</span>, calcula tantos términos de la sucesión <span class="math notranslate nohighlight">\(S_n\)</span> como necesites para encontrar el que cumpla que
+\begin{equation}
+\displaystyle |S_n-L|&lt;\epsilon
+\end{equation}</p></li>
+<li><p>Escribe un código que imprima únicamente el término <span class="math notranslate nohighlight">\(S_n\)</span> que cumple la condición anterior.</p></li>
+<li><p>Toma valores más pequeños de <span class="math notranslate nohighlight">\(\epsilon\)</span>, a saber, <span class="math notranslate nohighlight">\(1\times 10^{-3}\)</span>,  <span class="math notranslate nohighlight">\(1\times 10^{-4}\)</span> y <span class="math notranslate nohighlight">\(1\times 10^{-6}\)</span> y halla el término Sn que cumple la condición <span class="math notranslate nohighlight">\(|S_n-L|&lt;\epsilon\)</span> en cada caso.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pylab</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="c1"># Actividad 1</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">Sucesion_1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+  <span class="k">return</span> <span class="mi">1</span><span class="o">-</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 0.0
+2 0.5
+3 0.6666666666666667
+4 0.75
+5 0.8
+6 0.8333333333333334
+7 0.8571428571428572
+8 0.875
+9 0.8888888888888888
+10 0.9
+11 0.9090909090909091
+12 0.9166666666666666
+13 0.9230769230769231
+14 0.9285714285714286
+15 0.9333333333333333
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 2</span>
+<span class="n">n</span>  <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Sn</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">16</span><span class="p">):</span>
+  <span class="n">n</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+  <span class="n">Sn</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Sn</span><span class="p">)</span>
+
+<span class="n">scatter</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">Sn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+[0.0, 0.5, 0.6666666666666667, 0.75, 0.8, 0.8333333333333334, 0.8571428571428572, 0.875, 0.8888888888888888, 0.9, 0.9090909090909091, 0.9166666666666666, 0.9230769230769231, 0.9285714285714286, 0.9333333333333333]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fb586b88b50&gt;
+</pre></div>
+</div>
+<img alt="_images/5a5a66f00838e415b0f93b14de9f1a7c5fe1d6274815218ea09802fc0399e4d7.png" src="_images/5a5a66f00838e415b0f93b14de9f1a7c5fe1d6274815218ea09802fc0399e4d7.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 3</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-2</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">120</span><span class="p">):</span>
+  <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El término </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> de la sucesión es </span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">, |</span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">L</span><span class="si">}</span><span class="s2">|=</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El término 1 de la sucesión es 0.0, |0.0-1|=1.0
+El término 2 de la sucesión es 0.5, |0.5-1|=0.5
+El término 3 de la sucesión es 0.6666666666666667, |0.6666666666666667-1|=0.33333333333333326
+El término 4 de la sucesión es 0.75, |0.75-1|=0.25
+El término 5 de la sucesión es 0.8, |0.8-1|=0.19999999999999996
+El término 6 de la sucesión es 0.8333333333333334, |0.8333333333333334-1|=0.16666666666666663
+El término 7 de la sucesión es 0.8571428571428572, |0.8571428571428572-1|=0.1428571428571428
+El término 8 de la sucesión es 0.875, |0.875-1|=0.125
+El término 9 de la sucesión es 0.8888888888888888, |0.8888888888888888-1|=0.11111111111111116
+El término 10 de la sucesión es 0.9, |0.9-1|=0.09999999999999998
+El término 11 de la sucesión es 0.9090909090909091, |0.9090909090909091-1|=0.09090909090909094
+El término 12 de la sucesión es 0.9166666666666666, |0.9166666666666666-1|=0.08333333333333337
+El término 13 de la sucesión es 0.9230769230769231, |0.9230769230769231-1|=0.07692307692307687
+El término 14 de la sucesión es 0.9285714285714286, |0.9285714285714286-1|=0.0714285714285714
+El término 15 de la sucesión es 0.9333333333333333, |0.9333333333333333-1|=0.06666666666666665
+El término 16 de la sucesión es 0.9375, |0.9375-1|=0.0625
+El término 17 de la sucesión es 0.9411764705882353, |0.9411764705882353-1|=0.05882352941176472
+El término 18 de la sucesión es 0.9444444444444444, |0.9444444444444444-1|=0.05555555555555558
+El término 19 de la sucesión es 0.9473684210526316, |0.9473684210526316-1|=0.05263157894736836
+El término 20 de la sucesión es 0.95, |0.95-1|=0.050000000000000044
+El término 21 de la sucesión es 0.9523809523809523, |0.9523809523809523-1|=0.04761904761904767
+El término 22 de la sucesión es 0.9545454545454546, |0.9545454545454546-1|=0.045454545454545414
+El término 23 de la sucesión es 0.9565217391304348, |0.9565217391304348-1|=0.04347826086956519
+El término 24 de la sucesión es 0.9583333333333334, |0.9583333333333334-1|=0.04166666666666663
+El término 25 de la sucesión es 0.96, |0.96-1|=0.040000000000000036
+El término 26 de la sucesión es 0.9615384615384616, |0.9615384615384616-1|=0.038461538461538436
+El término 27 de la sucesión es 0.962962962962963, |0.962962962962963-1|=0.03703703703703698
+El término 28 de la sucesión es 0.9642857142857143, |0.9642857142857143-1|=0.0357142857142857
+El término 29 de la sucesión es 0.9655172413793104, |0.9655172413793104-1|=0.03448275862068961
+El término 30 de la sucesión es 0.9666666666666667, |0.9666666666666667-1|=0.033333333333333326
+El término 31 de la sucesión es 0.967741935483871, |0.967741935483871-1|=0.032258064516129004
+El término 32 de la sucesión es 0.96875, |0.96875-1|=0.03125
+El término 33 de la sucesión es 0.9696969696969697, |0.9696969696969697-1|=0.030303030303030276
+El término 34 de la sucesión es 0.9705882352941176, |0.9705882352941176-1|=0.02941176470588236
+El término 35 de la sucesión es 0.9714285714285714, |0.9714285714285714-1|=0.02857142857142858
+El término 36 de la sucesión es 0.9722222222222222, |0.9722222222222222-1|=0.02777777777777779
+El término 37 de la sucesión es 0.972972972972973, |0.972972972972973-1|=0.027027027027026973
+El término 38 de la sucesión es 0.9736842105263158, |0.9736842105263158-1|=0.02631578947368418
+El término 39 de la sucesión es 0.9743589743589743, |0.9743589743589743-1|=0.02564102564102566
+El término 40 de la sucesión es 0.975, |0.975-1|=0.025000000000000022
+El término 41 de la sucesión es 0.975609756097561, |0.975609756097561-1|=0.024390243902439046
+El término 42 de la sucesión es 0.9761904761904762, |0.9761904761904762-1|=0.023809523809523836
+El término 43 de la sucesión es 0.9767441860465116, |0.9767441860465116-1|=0.023255813953488413
+El término 44 de la sucesión es 0.9772727272727273, |0.9772727272727273-1|=0.022727272727272707
+El término 45 de la sucesión es 0.9777777777777777, |0.9777777777777777-1|=0.022222222222222254
+El término 46 de la sucesión es 0.9782608695652174, |0.9782608695652174-1|=0.021739130434782594
+El término 47 de la sucesión es 0.9787234042553191, |0.9787234042553191-1|=0.021276595744680882
+El término 48 de la sucesión es 0.9791666666666666, |0.9791666666666666-1|=0.02083333333333337
+El término 49 de la sucesión es 0.9795918367346939, |0.9795918367346939-1|=0.020408163265306145
+El término 50 de la sucesión es 0.98, |0.98-1|=0.020000000000000018
+El término 51 de la sucesión es 0.9803921568627451, |0.9803921568627451-1|=0.019607843137254943
+El término 52 de la sucesión es 0.9807692307692307, |0.9807692307692307-1|=0.019230769230769273
+El término 53 de la sucesión es 0.9811320754716981, |0.9811320754716981-1|=0.018867924528301883
+El término 54 de la sucesión es 0.9814814814814815, |0.9814814814814815-1|=0.01851851851851849
+El término 55 de la sucesión es 0.9818181818181818, |0.9818181818181818-1|=0.018181818181818188
+El término 56 de la sucesión es 0.9821428571428571, |0.9821428571428571-1|=0.017857142857142905
+El término 57 de la sucesión es 0.9824561403508771, |0.9824561403508771-1|=0.01754385964912286
+El término 58 de la sucesión es 0.9827586206896551, |0.9827586206896551-1|=0.017241379310344862
+El término 59 de la sucesión es 0.9830508474576272, |0.9830508474576272-1|=0.016949152542372836
+El término 60 de la sucesión es 0.9833333333333333, |0.9833333333333333-1|=0.01666666666666672
+El término 61 de la sucesión es 0.9836065573770492, |0.9836065573770492-1|=0.016393442622950838
+El término 62 de la sucesión es 0.9838709677419355, |0.9838709677419355-1|=0.016129032258064502
+El término 63 de la sucesión es 0.9841269841269842, |0.9841269841269842-1|=0.015873015873015817
+El término 64 de la sucesión es 0.984375, |0.984375-1|=0.015625
+El término 65 de la sucesión es 0.9846153846153847, |0.9846153846153847-1|=0.01538461538461533
+El término 66 de la sucesión es 0.9848484848484849, |0.9848484848484849-1|=0.015151515151515138
+El término 67 de la sucesión es 0.9850746268656716, |0.9850746268656716-1|=0.014925373134328401
+El término 68 de la sucesión es 0.9852941176470589, |0.9852941176470589-1|=0.014705882352941124
+El término 69 de la sucesión es 0.9855072463768116, |0.9855072463768116-1|=0.01449275362318836
+El término 70 de la sucesión es 0.9857142857142858, |0.9857142857142858-1|=0.014285714285714235
+El término 71 de la sucesión es 0.9859154929577465, |0.9859154929577465-1|=0.014084507042253502
+El término 72 de la sucesión es 0.9861111111111112, |0.9861111111111112-1|=0.01388888888888884
+El término 73 de la sucesión es 0.9863013698630136, |0.9863013698630136-1|=0.013698630136986356
+El término 74 de la sucesión es 0.9864864864864865, |0.9864864864864865-1|=0.013513513513513487
+El término 75 de la sucesión es 0.9866666666666667, |0.9866666666666667-1|=0.013333333333333308
+El término 76 de la sucesión es 0.9868421052631579, |0.9868421052631579-1|=0.013157894736842146
+El término 77 de la sucesión es 0.987012987012987, |0.987012987012987-1|=0.012987012987012991
+El término 78 de la sucesión es 0.9871794871794872, |0.9871794871794872-1|=0.012820512820512775
+El término 79 de la sucesión es 0.9873417721518988, |0.9873417721518988-1|=0.012658227848101222
+El término 80 de la sucesión es 0.9875, |0.9875-1|=0.012499999999999956
+El término 81 de la sucesión es 0.9876543209876543, |0.9876543209876543-1|=0.012345679012345734
+El término 82 de la sucesión es 0.9878048780487805, |0.9878048780487805-1|=0.012195121951219523
+El término 83 de la sucesión es 0.9879518072289156, |0.9879518072289156-1|=0.012048192771084376
+El término 84 de la sucesión es 0.9880952380952381, |0.9880952380952381-1|=0.011904761904761862
+El término 85 de la sucesión es 0.9882352941176471, |0.9882352941176471-1|=0.0117647058823529
+El término 86 de la sucesión es 0.9883720930232558, |0.9883720930232558-1|=0.011627906976744207
+El término 87 de la sucesión es 0.9885057471264368, |0.9885057471264368-1|=0.011494252873563204
+El término 88 de la sucesión es 0.9886363636363636, |0.9886363636363636-1|=0.011363636363636354
+El término 89 de la sucesión es 0.9887640449438202, |0.9887640449438202-1|=0.011235955056179803
+El término 90 de la sucesión es 0.9888888888888889, |0.9888888888888889-1|=0.011111111111111072
+El término 91 de la sucesión es 0.989010989010989, |0.989010989010989-1|=0.01098901098901095
+El término 92 de la sucesión es 0.9891304347826086, |0.9891304347826086-1|=0.010869565217391353
+El término 93 de la sucesión es 0.989247311827957, |0.989247311827957-1|=0.010752688172043001
+El término 94 de la sucesión es 0.9893617021276596, |0.9893617021276596-1|=0.010638297872340385
+El término 95 de la sucesión es 0.9894736842105263, |0.9894736842105263-1|=0.010526315789473717
+El término 96 de la sucesión es 0.9895833333333334, |0.9895833333333334-1|=0.01041666666666663
+El término 97 de la sucesión es 0.9896907216494846, |0.9896907216494846-1|=0.010309278350515427
+El término 98 de la sucesión es 0.9897959183673469, |0.9897959183673469-1|=0.010204081632653073
+El término 99 de la sucesión es 0.98989898989899, |0.98989898989899-1|=0.010101010101010055
+El término 100 de la sucesión es 0.99, |0.99-1|=0.010000000000000009
+El término 101 de la sucesión es 0.9900990099009901, |0.9900990099009901-1|=0.00990099009900991
+El término 102 de la sucesión es 0.9901960784313726, |0.9901960784313726-1|=0.009803921568627416
+El término 103 de la sucesión es 0.9902912621359223, |0.9902912621359223-1|=0.009708737864077666
+El término 104 de la sucesión es 0.9903846153846154, |0.9903846153846154-1|=0.009615384615384581
+El término 105 de la sucesión es 0.9904761904761905, |0.9904761904761905-1|=0.00952380952380949
+El término 106 de la sucesión es 0.9905660377358491, |0.9905660377358491-1|=0.009433962264150941
+El término 107 de la sucesión es 0.9906542056074766, |0.9906542056074766-1|=0.009345794392523366
+El término 108 de la sucesión es 0.9907407407407407, |0.9907407407407407-1|=0.0092592592592593
+El término 109 de la sucesión es 0.9908256880733946, |0.9908256880733946-1|=0.00917431192660545
+El término 110 de la sucesión es 0.990909090909091, |0.990909090909091-1|=0.009090909090909038
+El término 111 de la sucesión es 0.990990990990991, |0.990990990990991-1|=0.009009009009009028
+El término 112 de la sucesión es 0.9910714285714286, |0.9910714285714286-1|=0.008928571428571397
+El término 113 de la sucesión es 0.9911504424778761, |0.9911504424778761-1|=0.008849557522123908
+El término 114 de la sucesión es 0.9912280701754386, |0.9912280701754386-1|=0.00877192982456143
+El término 115 de la sucesión es 0.991304347826087, |0.991304347826087-1|=0.008695652173912993
+El término 116 de la sucesión es 0.9913793103448276, |0.9913793103448276-1|=0.008620689655172376
+El término 117 de la sucesión es 0.9914529914529915, |0.9914529914529915-1|=0.008547008547008517
+El término 118 de la sucesión es 0.9915254237288136, |0.9915254237288136-1|=0.008474576271186418
+El término 119 de la sucesión es 0.9915966386554622, |0.9915966386554622-1|=0.008403361344537785
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 4</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="mf">1e-2</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">120</span><span class="p">):</span>
+  <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="o">&lt;</span> <span class="n">epsilon</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El término </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> de la sucesión es </span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">, |</span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">L</span><span class="si">}</span><span class="s2">|=</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El término 101 de la sucesión es 0.9900990099009901, |0.9900990099009901-1|=0.00990099009900991
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 5</span>
+<span class="n">L</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">epsilon1</span> <span class="o">=</span> <span class="mf">1e-3</span>
+<span class="n">epsilon2</span> <span class="o">=</span> <span class="mf">1e-4</span>
+<span class="n">epsilon3</span> <span class="o">=</span><span class="mf">1e-6</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10000000000</span><span class="p">):</span>
+  <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="o">&lt;</span> <span class="n">epsilon3</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El término </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2"> de la sucesión es </span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">, |</span><span class="si">{</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">L</span><span class="si">}</span><span class="s2">|=</span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">Sucesion_1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">-</span><span class="n">L</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El término 1000001 de la sucesión es 0.999999000001, |0.999999000001-1|=9.999990000508774e-07
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="practica-3-2">
+<h2>Práctica 3.2<a class="headerlink" href="#practica-3-2" title="Link to this heading">#</a></h2>
+<p><strong>Actividades.</strong></p>
+<p>Para las siguientes sucesiones:</p>
+<p>a) <span class="math notranslate nohighlight">\(\displaystyle S_n =\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-ab9134e0-3b65-4b6e-8675-c7011cadc3fc">
+<span class="eqno">(4)<a class="headerlink" href="#equation-ab9134e0-3b65-4b6e-8675-c7011cadc3fc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\displaystyle S_n= 1-\frac{1}{n}
+\end{equation}\]</div>
+<ol class="arabic simple" start="2">
+<li><p>Obtén la gráfica de dichos puntos. De acuerdo a la gráfica, ¿a qué valor se acercan los términos de la sucesión con el incremento de <span class="math notranslate nohighlight">\(n\)</span>?, es decir, ¿cuál dirías que es el límite <span class="math notranslate nohighlight">\(L\)</span> de la sucesión?.</p></li>
+<li><p>Dado el valor de <span class="math notranslate nohighlight">\(\epsilon=1\times 10^{-2}\)</span>, calcula tantos términos de la sucesión <span class="math notranslate nohighlight">\(S_n\)</span> como necesites para encontrar el que cumpla que
+\begin{equation}
+\displaystyle |S_n-L|&lt;\epsilon
+\end{equation}</p></li>
+<li><p>Escribe un código que imprima únicamente el término <span class="math notranslate nohighlight">\(S_n\)</span> que cumple la condición anterior.</p></li>
+<li><p>Toma valores más pequeños de <span class="math notranslate nohighlight">\(\epsilon\)</span>, a saber, <span class="math notranslate nohighlight">\(1\times 10^{-3}\)</span>,  <span class="math notranslate nohighlight">\(1\times 10^{-4}\)</span> y <span class="math notranslate nohighlight">\(1\times 10^{-6}\)</span> y halla el término Sn que cumple la condición <span class="math notranslate nohighlight">\(|S_n-L|&lt;\epsilon\)</span> en cada caso.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "matquim/Practicas-Calculo-I",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="practica2b.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Funciones en Python.</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Calculo_1_Practica_3_Corregida.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Operaciones simbólicas</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-sucesiones">Gráficas de Sucesiones</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Ejercicios</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limite-de-una-sucesion">Límite de una sucesión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-2">Práctica 3.2</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Oscar Enrique Pérez González, Juan Felipe Huan Lew Yee, Laura Michelle Jiménez Díaz, Departamento de Matemáticas, Facultad de Química, Universidad Nacional Autónoma de México
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<img src="https://raw.githubusercontent.com/matquim/Practicas-Calculo-I/refs/heads/main/logo_unam.png" alt="logo_UNAM", style="width: 5%">
+<img src="https://raw.githubusercontent.com/matquim/Practicas-Calculo-I/refs/heads/main/logoFacultadQuimica.jpg" alt="logo_FQ", style="width: 5%">
+    <br>© D.R. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO 2022<br>Universidad Nacional Autónoma de México<br>Facultad de Química<br>Prohibida la reproducción total o parcial por cualquier medio, sin la autorización escrita del titular de los derechos patrimoniales.<br>Hecho en México<br>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
