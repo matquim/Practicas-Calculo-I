@@ -1,18 +1,14 @@
 format: jb-book
 root: intro
-parts:
-- caption: Python
-  numbered: true
-  chapters:
-  - file: Tutorial-Basico
-  - file: Tutorial-Avanzado
-- caption: Sistemas Sencillos
-  numbered: true
-  chapters:
-  - file: practica1_fixed2
-  - file: practica1_fixed2a
 
-- caption: Funciones:
-  numbered: true
-  chapters:
-  - file: Calculo_1_Practica_3_Corregida
+parts:
+  - caption: Python
+    chapters:
+      - file: Tutorial-Basico
+      - file: Tutorial-Avanzado
+
+  - caption: Sistemas Sencillos
+    chapters:
+      - file: practica1_fixed2
+      - file: practica1_fixed2a
+      - file: Calculo_1_Practica_3_Corregida
