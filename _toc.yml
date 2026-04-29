@@ -2,12 +2,12 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: Python
+  - caption: TEMPORAL (Quitar)
     chapters:
       - file: Tutorial-Basico
       - file: Tutorial-Avanzado
 
-  - caption: Sistemas Sencillos
+  - caption: Prácticas
     chapters:
     - file: practica2a
     - file: practica2b
