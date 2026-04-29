@@ -15,27 +15,70 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd
+# Bibliotecas necesarias para realizar una gráfica animada
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+from IPython.display import HTML
 
-val = np.arange(0, 5.1, 0.5)
-y = [fun3.subs(x, i) for i in val]
+# Valores de la variable v (antes x)
+v = np.linspace(0, 2 * np.pi, 200)
 
-tabla = pd.DataFrame({
-    'x': val,
-    'f(x)': y
-})
+# Definición de la función
+def fun(v):
+    return np.sin(v)
 
-display(tabla)
-#display(tabla.style.hide(axis='index'))
+# Evaluación de la función en los valores de v
+y = fun(v)
+
+# Creación de la gráfica
+fig, ax = plt.subplots()
+line, = ax.plot(v, y)
+title = ax.set_title(r"$f(x)=\text{sen}(x)$")  # Se actualizará dinámicamente
+plt.xlabel("x")
+plt.ylabel(r"f(x)")
+plt.grid(True)
+
+# Función de animación
+def update(cua):
+    m = cua / 10
+    line.set_ydata(fun(v + m))
+    title.set_text(rf"$f(x)=sen(x + {m:.1f})$")
+    return line, title
+
+# Crear animación
+ani = FuncAnimation(fig, update, frames=100, interval=50, blit=True)
+
+# Evita mostrar la gráfica estática
+plt.close(fig)
+
+# Mostrar animación en Colab
+HTML(ani.to_html5_video())
+
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[14], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mpandas[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mpd[39;00m
-[1;32m      3[0m val [38;5;241m=[39m np[38;5;241m.[39marange([38;5;241m0[39m, [38;5;241m5.1[39m, [38;5;241m0.5[39m)
-[1;32m      4[0m y [38;5;241m=[39m [fun3[38;5;241m.[39msubs(x, i) [38;5;28;01mfor[39;00m i [38;5;129;01min[39;00m val]
+[0;31mRuntimeError[0m                              Traceback (most recent call last)
+Cell [0;32mIn[18], line 39[0m
+[1;32m     36[0m plt[38;5;241m.[39mclose(fig)
+[1;32m     38[0m [38;5;66;03m# Mostrar animación en Colab[39;00m
+[0;32m---> 39[0m HTML([43mani[49m[38;5;241;43m.[39;49m[43mto_html5_video[49m[43m([49m[43m)[49m)
 
-[0;31mModuleNotFoundError[0m: No module named 'pandas'
+File [0;32m/opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/matplotlib/animation.py:1314[0m, in [0;36mAnimation.to_html5_video[0;34m(self, embed_limit)[0m
+[1;32m   1311[0m path [38;5;241m=[39m Path(tmpdir, [38;5;124m"[39m[38;5;124mtemp.m4v[39m[38;5;124m"[39m)
+[1;32m   1312[0m [38;5;66;03m# We create a writer manually so that we can get the[39;00m
+[1;32m   1313[0m [38;5;66;03m# appropriate size for the tag[39;00m
+[0;32m-> 1314[0m Writer [38;5;241m=[39m [43mwriters[49m[43m[[49m[43mmpl[49m[38;5;241;43m.[39;49m[43mrcParams[49m[43m[[49m[38;5;124;43m'[39;49m[38;5;124;43manimation.writer[39;49m[38;5;124;43m'[39;49m[43m][49m[43m][49m
+[1;32m   1315[0m writer [38;5;241m=[39m Writer(codec[38;5;241m=[39m[38;5;124m'[39m[38;5;124mh264[39m[38;5;124m'[39m,
+[1;32m   1316[0m                 bitrate[38;5;241m=[39mmpl[38;5;241m.[39mrcParams[[38;5;124m'[39m[38;5;124manimation.bitrate[39m[38;5;124m'[39m],
+[1;32m   1317[0m                 fps[38;5;241m=[39m[38;5;241m1000.[39m [38;5;241m/[39m [38;5;28mself[39m[38;5;241m.[39m_interval)
+[1;32m   1318[0m [38;5;28mself[39m[38;5;241m.[39msave([38;5;28mstr[39m(path), writer[38;5;241m=[39mwriter)
+
+File [0;32m/opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/matplotlib/animation.py:121[0m, in [0;36mMovieWriterRegistry.__getitem__[0;34m(self, name)[0m
+[1;32m    119[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39mis_available(name):
+[1;32m    120[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_registered[name]
+[0;32m--> 121[0m [38;5;28;01mraise[39;00m [38;5;167;01mRuntimeError[39;00m([38;5;124mf[39m[38;5;124m"[39m[38;5;124mRequested MovieWriter ([39m[38;5;132;01m{[39;00mname[38;5;132;01m}[39;00m[38;5;124m) not available[39m[38;5;124m"[39m)
+
+[0;31mRuntimeError[0m: Requested MovieWriter (ffmpeg) not available
 
