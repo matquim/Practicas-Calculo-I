@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>4. Uso del condicional if. &#8212; Practicas Cálculo I</title>
+    <title>Uso del condicional if. &#8212; Practicas Cálculo I</title>
   
   
   
@@ -62,7 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'practica1_fixed2a';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="3. Uso del condicional if." href="practica1_fixed2.html" />
+    <link rel="next" title="Práctica: Manejo simbólico de funciones" href="Calculo_1_Practica_3_Corregida.html" />
+    <link rel="prev" title="Uso del condicional if." href="practica1_fixed2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,16 +183,17 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Tutorial-Basico.html">1. Tutorial Básico</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Tutorial-Avanzado.html">2. Tutorial Avanzado</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial-Basico.html">Tutorial Básico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial-Avanzado.html">Tutorial Avanzado</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas Sencillos</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="practica1_fixed2.html">3. Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="practica1_fixed2.html">Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</a></li>
 
 
 
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Calculo_1_Practica_3_Corregida.html">Práctica: Manejo simbólico de funciones</a></li>
 </ul>
 
     </div>
@@ -407,8 +409,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">4.1. Representación de Números Reales en Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">4.2. Convertir un número real en un número flotante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">Representación de Números Reales en Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">Convertir un número real en un número flotante</a></li>
 </ul>
             </nav>
         </div>
@@ -421,9 +423,9 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="uso-del-condicional-if">
-<h1><span class="section-number">4. </span>Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.<a class="headerlink" href="#uso-del-condicional-if" title="Link to this heading">#</a></h1>
+<h1>Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.<a class="headerlink" href="#uso-del-condicional-if" title="Link to this heading">#</a></h1>
 <section id="representacion-de-numeros-reales-en-python">
-<h2><span class="section-number">4.1. </span>Representación de Números Reales en Python<a class="headerlink" href="#representacion-de-numeros-reales-en-python" title="Link to this heading">#</a></h2>
+<h2>Representación de Números Reales en Python<a class="headerlink" href="#representacion-de-numeros-reales-en-python" title="Link to this heading">#</a></h2>
 <p>Los números que la computadora puede representar, en particular usando el lenguaje de Python, es limitada comparada con la cardinalidad del conjunto de números reales. Por ejemplo, la representación exacta del número  <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> requiere que almacenemos una cantidad infinita de números decimales, lo mismo que los números <span class="math notranslate nohighlight">\(\frac{1}{3}= 0.\bar{3}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{7}= 0.\overline{142857}\)</span>, etc.</p>
 <p>El número de bits en donde la computadora almacena información, en particular un número real, es limitado y fijo para una computadora dada. Para poder almacenar el rango más grande posible de números dado un número fijo de bits, se utilizan números de  <em><strong>punto flotante</strong></em>  (también llamados <em>flotantes</em>). En casi todas las plataformas en donde se utiliza Pyhton, los flotantes se almacenan con doble precisión (IEEE754), esto quiere decir que se designan un total de 64 bits para almacenar cada uno de ellos. Los números de punto flotante son una aproximación computacional a los números reales.</p>
 <p>Un número flotante asigna una cantidad fija de bits a tres partes distintas de un número real:</p>
@@ -453,7 +455,7 @@ n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
 </div>
 </section>
 <section id="convertir-un-numero-real-en-un-numero-flotante">
-<h2><span class="section-number">4.2. </span>Convertir un número real en un número flotante<a class="headerlink" href="#convertir-un-numero-real-en-un-numero-flotante" title="Link to this heading">#</a></h2>
+<h2>Convertir un número real en un número flotante<a class="headerlink" href="#convertir-un-numero-real-en-un-numero-flotante" title="Link to this heading">#</a></h2>
 <p>Convertir un número real a uno flotante (IEEE754) para su almacenamiento en la computadora consiste en determinar los elementos: signo (<span class="math notranslate nohighlight">\(s\)</span>), exponente (<span class="math notranslate nohighlight">\(e\)</span>) y fracción (<span class="math notranslate nohighlight">\(f\)</span>) para su represnetación en la forma expresada en la sección anterior. A continuación se describe, con un ejemplo, el algoritmo que permite determinar estos elementos:</p>
 <p><em>Cálculo de <span class="math notranslate nohighlight">\(s\)</span>, <span class="math notranslate nohighlight">\(e\)</span> y <span class="math notranslate nohighlight">\(f\)</span> para el número <span class="math notranslate nohighlight">\(5.75\)</span>.</em></p>
 <ol class="arabic simple">
@@ -554,8 +556,17 @@ n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
+        <p class="prev-next-title">Uso del condicional <code class="docutils literal notranslate"><span class="pre">if</span></code>.</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Calculo_1_Practica_3_Corregida.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Práctica: Manejo simbólico de funciones</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -573,8 +584,8 @@ n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">4.1. Representación de Números Reales en Python</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">4.2. Convertir un número real en un número flotante</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">Representación de Números Reales en Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#convertir-un-numero-real-en-un-numero-flotante">Convertir un número real en un número flotante</a></li>
 </ul>
   </nav></div>
 
