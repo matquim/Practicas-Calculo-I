@@ -1,0 +1,1276 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lenguaje de programación Python &#8212; Practicas Cálculo I</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'practica1';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Práctica: Manejo simbólico de funciones" href="Calculo_1_Practica_3_Corregida.html" />
+    <link rel="prev" title="Tutorial Avanzado" href="Tutorial-Avanzado.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Practicas Cálculo I - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Practicas Cálculo I - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Prácticas Cálculo I
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tutorial-Basico.html">Tutorial Básico</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorial-Avanzado.html">Tutorial Avanzado</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Sistemas Sencillos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Lenguaje de programación Python</strong></a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Calculo_1_Practica_3_Corregida.html">Práctica: Manejo simbólico de funciones</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/practica1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/practica1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="initThebeSBT()"
+  class="btn btn-sm btn-launch-thebe dropdown-item"
+  title="Launch Thebe"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="btn__text-container">Live Code</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/practica1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lenguaje de programación Python</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lenguaje de programación Python</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliotecas">Bibliotecas</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#donde-puedo-usar-el-lenguaje-de-python">¿Dónde puedo usar el lenguaje de Python?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entorno-de-google-colab">Entorno de Google Colab</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inicio-en-colab">1. Inicio en Colab</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#celdas-de-texto">Celdas de texto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#celdas-de-codigo">Celdas de código</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-en-python">Variables en Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-representacion-de-los-numeros-y-operaciones-con-python"><strong>Práctica 1.  Representación de los números y operaciones con Python</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">Representación de números reales en Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-enteros">Números enteros</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-type">Funcion <strong>type()</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-basicas-de-numeros">Operaciones básicas de números .</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-matematicas-con-math">Funciones matemáticas con <code class="docutils literal notranslate"><span class="pre">math</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-1-operaciones"><strong>Actividad 1.1. Operaciones</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biblioteca-de-numpy">Biblioteca de Numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asignacion-de-variables">Asignación de variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-2-ley-de-los-gases-ideales"><strong>Actividad 1.2. Ley de los gases ideales</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errores-en-la-representacion-de-un-numero-real">Errores en la representación de un número real</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-3-errores"><strong>Actividad 1.3. Errores</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-orden-de-los-numeros-reales">Propiedades de orden de los números reales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-de-comparacion">Operadores de comparación.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-if">Estructura <strong>if</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-2-1-temperatura-a-condiciones-distintas"><strong>Actividad 2.1. Temperatura a condiciones distintas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-un-numero">Valor absoluto de un número</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-2-2-distancia-entre-dos-numeros"><strong>Actividad 2.2. Distancia entre dos números</strong></a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="lenguaje-de-programacion-python">
+<h1><strong>Lenguaje de programación Python</strong><a class="headerlink" href="#lenguaje-de-programacion-python" title="Link to this heading">#</a></h1>
+<p>Python es un lenguaje de programación de <strong>alto nivel</strong> (más parecido al lenguaje humano que al de la máquina). Fue creado por Guido van Rossum y la primera versión se lanzó en 1991. Es un lenguaje de propósito general  diseñado para ser fácil de leer y escribir. Su sintaxis clara y sencilla lo hace <strong>ideal tanto para principiantes como para expertos</strong>.</p>
+<p>Sus características principales son las siguientes:</p>
+<ul class="simple">
+<li><p><strong>Interpretado:</strong> No requiere compilación para ejecutarse.</p></li>
+<li><p><strong>Multiplataforma:</strong> funciona en Windows, Linux, macOS, etc.</p></li>
+<li><p><strong>Dinámico:</strong> no se necesita declarar el tipo de una variable.</p></li>
+<li><p><strong>Comunidad muy amplia y diversa:</strong> es un lenguaje de propósito general (cálculos numéricos eingeniería, desarrollo web, ciencia de datos, inteligencia artificial).</p></li>
+</ul>
+<p>Esto se logra através del uso de diversas bibiotecas.</p>
+<section id="bibliotecas">
+<h2>Bibliotecas<a class="headerlink" href="#bibliotecas" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Biblioteca Estándar</strong> (Python Stándar Library)
+Es un conjunto de módulos listos para usarse sin necesidad de instalar nada. Se pueden realizar:</p></li>
+</ol>
+<ul class="simple">
+<li><p>operaciones matemáticas básicas</p></li>
+<li><p>Leer y escribir archivos</p></li>
+<li><p>Medir tiempo y fechas</p></li>
+<li><p>Generación de módulos aleatorios</p></li>
+<li><p>Estadística básica</p></li>
+<li><p>Expresiones regulares</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p><strong>NumPy</strong></p></li>
+</ol>
+<p>Manejo eficiente de arreglos multidimensionales(similares a las matrices) y operaciones matemáticas/matriciales. Es una biblioteca base para otras como SciPy, Pandas o Scikit-learn</p>
+<ol class="arabic simple" start="2">
+<li><p><strong>SciPy</strong></p></li>
+</ol>
+<p>Funciones avanzadas para cálculo científico, optimización, integración y más. Amplía las capacidades de NumPy.</p>
+<ol class="arabic simple" start="3">
+<li><p><strong>Matplotlib</strong></p></li>
+</ol>
+<p>Para crear gráficas y visualizaciones de datos. Funciona con NumPy y Pandas</p>
+<ol class="arabic simple" start="4">
+<li><p><strong>SymPy</strong></p></li>
+</ol>
+<p>Realiza matemáticas simbólicas, como derivadas, integrales, álgebra, matrices.</p>
+<ol class="arabic simple" start="5">
+<li><p><strong>Pandas</strong></p></li>
+</ol>
+<p>Análisis y manipulación de datos en tablas (DataFrames).</p>
+<ol class="arabic simple" start="6">
+<li><p><strong>Scikit-learn</strong>
+Usada en aprendizaje automático (machine learning) para clasificación, regresión, etc.</p></li>
+<li><p><strong>TensorFlow</strong>
+Inteligencia artificial y redes neuronales profundas (deep learning).</p></li>
+<li><p><strong>Seaborn</strong>
+Extiende Matplotlib para hacer gráficas estadísticas más elegantes y fáciles.</p></li>
+<li><p><strong>Cantera</strong>
+Simular reacciones químicas, equilibrio químico, transporet, etc.</p></li>
+<li><p><strong>Rdkit</strong>
+Química computacional y quimioinformática. Soporte en modelado QSAR (Quantitative Structure-Activity Relationship)</p></li>
+</ol>
+<p>Y otras más…</p>
+<p>Únicamente la librería estándar no requiere instalación , el resto requieren instalarse.</p>
+<p>A lo largo de una serie de prácticas utilizaremos algunas de estas bibliotecas, específicamente NumPy, Matplotlib, SciPy y SymPy</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="donde-puedo-usar-el-lenguaje-de-python">
+<h1>¿Dónde puedo usar el lenguaje de Python?<a class="headerlink" href="#donde-puedo-usar-el-lenguaje-de-python" title="Link to this heading">#</a></h1>
+<p>La manera más sencilla de usar Python es mediante el entorno de Google Colab. \</p>
+<p>Para ingresar a esta plataforma, basta con dirigirse al sitio de <a class="reference external" href="https://colab.research.google.com">https://colab.research.google.com</a> y acceder con la cuenta &#64;quimica.unam.mx que te fue asignada o bien alguna cuenta de gmail a la que tengas acceso.</p>
+<p>Esta opción es la más simple debido a que el procesamiento de datos se realizará en un servidor remoto de Google, es decir, no depende del ordenador que se esté empleando. Una desventaja es que requerirás acceso a una red de Internet y no se podrá ejecutar de forma local.</p>
+<p>Existen alternativas para usar Python de forma local; la elección más popular es la distribución de ANACONDA, la cual está disponible para los sistemas operativos Windows, MacOS y Linux. Para instalar ANACONDA, elige la opción de instalación de acuerdo al sistema operativo con el que cuentes en la página:</p>
+<p><a class="reference external" href="https://docs.anaconda.com/anaconda/install/index.html">https://docs.anaconda.com/anaconda/install/index.html</a></p>
+<p>Sigue las instrucciones que ahí se decriben (se ven largas pero es sencillo).</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="entorno-de-google-colab">
+<h1>Entorno de Google Colab<a class="headerlink" href="#entorno-de-google-colab" title="Link to this heading">#</a></h1>
+<p><em>Google Colab</em> (Colaboratory) es una plataforma gratuita de Google que permite ejecutar código de Python en la nube desde el navegador sin instalar nada.</p>
+<p>El entorno de <em>Colab</em> está basado en Jupyter Notebook (o Bloc de Notas de Jupyter). Jupyter es una herramienta que permite escribir y ejecutar código de  varios lenguajes de programación, (principalmente <strong>Ju</strong>lia, <strong>Pyt</strong>hon y <strong>R</strong>, de ahí el nombre), ejecutar texto, fórmulas y gráficas en un mismo documento llamado <strong>notebook</strong>.</p>
+<p><strong>Jupyter Notebook</strong>:</p>
+<p>Aplicación web interactiva. Está dividida en celdas</p>
+<ul class="simple">
+<li><p>Código</p></li>
+<li><p>Texto con formato (usa Markdown)</p></li>
+<li><p>Gráficas</p></li>
+<li><p>Texto, fórmulas matemáticas (usa Latex)</p></li>
+</ul>
+<p>Si decides instalar ANACONDA podrás utilizar esta aplicación en tu computadora para crear los blocs.</p>
+<p>Si quieres conocer más puedes consultar la página oficial de la organización  <a class="reference external" href="https://jupyter.org">jupyter.org</a></p>
+<p><strong>En Google Colab ya están preinstaladas algunas bibliotecas como Numpy, Matplitlib, SciPy.</strong></p>
+<p>La lista completa de bibliotecas preinstaladas y sus versiones las puedes revisar ejecutando:</p>
+<p><code class="docutils literal notranslate"><span class="pre">!pip</span> <span class="pre">list</span></code></p>
+<p>Inserta una celda de código y ejecuta la instrucción que enlista las bibliotecas.</p>
+<section id="inicio-en-colab">
+<h2>1. Inicio en Colab<a class="headerlink" href="#inicio-en-colab" title="Link to this heading">#</a></h2>
+<p>Vamos a familiarizarnos con el entorno de <em>Colab</em></p>
+<ul class="simple">
+<li><p>Crear un Bloc de Notas (.ipynb)</p></li>
+<li><p>Cambiar el título del Bloc de notas</p></li>
+<li><p>Insertar celdas de texto y celdas de código</p></li>
+<li><p>Sección de herramientas rápidas para la celda (añadir comentario, borrar, duplicar, etc)</p></li>
+</ul>
+<section id="celdas-de-texto">
+<h3>Celdas de texto<a class="headerlink" href="#celdas-de-texto" title="Link to this heading">#</a></h3>
+<p>Puedes generar listas numeradas.</p>
+<ol class="arabic simple">
+<li><p>Gato</p></li>
+<li><p>Perro</p></li>
+<li><p>Pato</p></li>
+</ol>
+<p>Puedes dar formato al texto de la siguiente forma:</p>
+<ul class="simple">
+<li><p><strong>Negritas</strong>. Debes encerrar el texto deseado entre dos asteriscos.</p></li>
+<li><p><em>Italica</em>.    Debes encerrar el texto deseado entre un asterisco.</p></li>
+<li><p><em>Cursiva</em>.    Debes encerrar el texto deseado entre entre un guión bajos.</p></li>
+<li><p>*<em><strong>Cursiva y negritas</strong></em>. Debes encerrar el texto deseado entre tres asteriscos.</p></li>
+</ul>
+</section>
+<section id="celdas-de-codigo">
+<h3>Celdas de código<a class="headerlink" href="#celdas-de-codigo" title="Link to this heading">#</a></h3>
+<p>Para insertar comentarios en una celda de código se antecede con “#”</p>
+</section>
+<section id="variables-en-python">
+<h3>Variables en Python<a class="headerlink" href="#variables-en-python" title="Link to this heading">#</a></h3>
+<p>En Python podemos asignar “valores”****</p>
+<ul class="simple">
+<li><p>Números enteros (int)</p></li>
+<li><p>Números reales (float)</p></li>
+<li><p>Números complejos (complex)</p></li>
+<li><p>Cadenas de caracteres (str)</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="practica-1-representacion-de-los-numeros-y-operaciones-con-python">
+<h1><strong>Práctica 1.  Representación de los números y operaciones con Python</strong><a class="headerlink" href="#practica-1-representacion-de-los-numeros-y-operaciones-con-python" title="Link to this heading">#</a></h1>
+<p><strong>Objetivo</strong>. Comprender cómo se representan y almacenan los números reales en Python,  cómo se operan y los errores que pueden surgir debido a las limitaciones de la representación de números flotantes en binario.</p>
+<section id="representacion-de-numeros-reales-en-python">
+<h2>Representación de números reales en Python<a class="headerlink" href="#representacion-de-numeros-reales-en-python" title="Link to this heading">#</a></h2>
+<p>Los números que la computadora puede representar, en particular usando el lenguaje de Python, es limitada comparada con la cardinalidad del conjunto de números reales. Por ejemplo, la representación exacta del número  <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> requiere que almacenemos una cantidad infinita de números decimales, lo mismo que los números <span class="math notranslate nohighlight">\(\frac{1}{3}= 0.\bar{3}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{7}= 0.\overline{142857}\)</span>, etc.</p>
+<p>El número de bits en donde la computadora almacena información, en particular un número real, es limitado y fijo para una computadora dada. Para poder almacenar el rango más grande posible de números dado un número fijo de bits, se utilizan números de  <em><strong>punto flotante</strong></em>  (también llamados <em>flotantes</em>). En casi todas las plataformas en donde se utiliza Pyhton, los flotantes se almacenan con doble precisión (IEEE754), esto quiere decir que se designan un total de 64 bits para almacenar cada uno de ellos. Los números de punto flotante son una aproximación computacional a los números reales.</p>
+<p>Un número flotante asigna una cantidad fija de bits a tres partes distintas de un número real:</p>
+<ol class="arabic simple">
+<li><p>El <strong>signo</strong>, llamado <span class="math notranslate nohighlight">\(s\)</span>, indica si es un número positivo o negativo, éste se almacena en 1 bit.</p></li>
+<li><p>Un exponente o <strong>característica</strong>, llamado <span class="math notranslate nohighlight">\(e\)</span>, es una  potencia de 2, el cual se almacena en 11 bits.</p></li>
+<li><p>La fracción o <strong>mantisa</strong> <span class="math notranslate nohighlight">\(f\)</span> es el coeficiente del exponente y se almacena en 52 bits.</p></li>
+</ol>
+<p>Con esta información, un número flotante se representa de la siguiente forma:</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{equation*}
+n_f = (-1)^s2^{e-1023}\Big( 1+f\Big)
+\end{equation*}\]</div>
+<p>En Python, la información de un número flotante se obtiene usando el paquete <code class="docutils literal notranslate"><span class="pre">sys</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">float_info</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="numeros-enteros">
+<h2>Números enteros<a class="headerlink" href="#numeros-enteros" title="Link to this heading">#</a></h2>
+<p>En Python también podemos reprsentar números enteros.</p>
+</section>
+<section id="funcion-type">
+<h2>Funcion <strong>type()</strong><a class="headerlink" href="#funcion-type" title="Link to this heading">#</a></h2>
+<p>Para ver qué tipo de número almacena Python usamos la función
+<code class="docutils literal notranslate"><span class="pre">type()</span></code></p>
+</section>
+<section id="operaciones-basicas-de-numeros">
+<h2>Operaciones básicas de números .<a class="headerlink" href="#operaciones-basicas-de-numeros" title="Link to this heading">#</a></h2>
+<p>La librería estándar no requiere instalación, podemos realizar las operaciones básicas:</p>
+<ul class="simple">
+<li><p>Suma</p></li>
+<li><p>Resta</p></li>
+<li><p>Multiplicación</p></li>
+<li><p>División</p></li>
+<li><p>Potenciación</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Suma</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Resta</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Multiplicación</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># División</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># División entera</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Módulo (residuo)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Potencias (**)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Potencias (pow)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Raíces</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Redondear</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="funciones-matematicas-con-math">
+<h2>Funciones matemáticas con <code class="docutils literal notranslate"><span class="pre">math</span></code><a class="headerlink" href="#funciones-matematicas-con-math" title="Link to this heading">#</a></h2>
+<p>El modulo <code class="docutils literal notranslate"><span class="pre">math</span></code> forma parte de la biblioteca estándar y permite incorporar funciones matemáticas y números irracionales “conocidos” (cálculos matemáticos comunes).</p>
+<p>Para usar este modulo debemos importarlo:</p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">math</span></code></p>
+<p>Veamos algunos ejemplos:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Números racionales &quot;famosos&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Raíz cuadrada</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Funciones seno, coseno, tangente</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Funcion exponencial y logaritmica</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Conversión de ángulos</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividad-1-1-operaciones">
+<h2><strong>Actividad 1.1. Operaciones</strong><a class="headerlink" href="#actividad-1-1-operaciones" title="Link to this heading">#</a></h2>
+<p>Redondea los siguientes números a 3 digitos:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\displaystyle \frac{1}{3}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sqrt{2}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\sin(\pi/3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tan(\pi/6)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\ln(5)+\ln(2)\)</span></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>DATO</strong></p>
+<p>La biblioteca de Numpy ofrece funciones más avanzadas que math con la ventaja de que permite usar estas funciones (y muchas otras más) en arreglos y matrices.</p>
+</section>
+<section id="biblioteca-de-numpy">
+<h2>Biblioteca de Numpy<a class="headerlink" href="#biblioteca-de-numpy" title="Link to this heading">#</a></h2>
+<p>La biblioteca de Numpy se debe importar en Google Colab, esto puede hacerse de varias formas:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span></code>: para llamar cualquier función debe escribirse numpy.funcion()</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span></code>: para llamar cualquier función debe escribirse np.funcion()</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">numpy</span> <span class="pre">import</span> </code>: puede llamarse la función sólo usando su nombre (sin prefijo). Puede genera conflictos si se usan librerias que tienen funciones con el mismo nombre.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#4</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#5</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="asignacion-de-variables">
+<h2>Asignación de variables<a class="headerlink" href="#asignacion-de-variables" title="Link to this heading">#</a></h2>
+<p>En cualquier lenguaje de programación es posible y muy recomendable guardar información dentro de variables. Una variable es un conjunto de números y/o de carácteres asociados a una información. Para realizar esto en Python se emplea el simbolo <code class="docutils literal notranslate"><span class="pre">=</span></code>.
+Por ejemplo, cuando se escribe la línea <code class="docutils literal notranslate"><span class="pre">x=3</span></code> y se  ejecuta la celda, la variable <span class="math notranslate nohighlight">\(x\)</span> ahora tomará el comportamiento del número 3 cada vez que se utilice en alguna celda de código.</p>
+<p>Python es un lenguaje que distingue entre mayúsculas y minúsculas, <strong>tén cuidado al nombrar variables</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Asignemos a la variable x el valor de 3</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Asignemos a la variable numero el valor de 3.5</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Usemos funciones de numpy con las variables asignadas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Asignación de varias variables en una línea</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Asignación de una cadena de caracteres a una variable</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>##Función  <strong>print( )</strong></p>
+<p>El comando para indicarle a Python que “imprima” algo que se desea, es <code class="docutils literal notranslate"><span class="pre">print(</span> <span class="pre">)</span></code></p>
+<ol class="arabic simple">
+<li><p>Si se desea imprimir texto se emplean los caracteres ’ ’ dentro de <code class="docutils literal notranslate"><span class="pre">print(</span> <span class="pre">)</span></code></p></li>
+<li><p>Si se desea imprimir variables basta con escribirlas.</p></li>
+</ol>
+<p>Un número se puede imprimir con “formato”, es decir, con un número dado de cifras decimales.</p>
+<p>Para hacer esto escribimos:</p>
+<p><code class="docutils literal notranslate"><span class="pre">print(f&quot;{variable:.nf}&quot;)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imprime la frase &quot;Hola mundo&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imprime el valor guardado en las variables: x, numero, a, b y saludo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imprime qué tipo de variable es cada una de las anteriores</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imprime un número con tantas cifras decimales</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividad-1-2-ley-de-los-gases-ideales">
+<h2><strong>Actividad 1.2. Ley de los gases ideales</strong><a class="headerlink" href="#actividad-1-2-ley-de-los-gases-ideales" title="Link to this heading">#</a></h2>
+<p>La relación que guardan la presión <span class="math notranslate nohighlight">\(P\)</span>, el volúmen <span class="math notranslate nohighlight">\(V\)</span> y la temperatura <span class="math notranslate nohighlight">\(T\)</span> para un gas ideal está dada por:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-f7be97cf-1fcb-40bc-8ca6-88edf0787256">
+<span class="eqno">(1)<a class="headerlink" href="#equation-f7be97cf-1fcb-40bc-8ca6-88edf0787256" title="Permalink to this equation">#</a></span>\[\begin{align}
+PV=nRT
+\end{align}\]</div>
+<p>Haz un código que realice lo siguiente:</p>
+<ol class="arabic simple">
+<li><p>Se almacenen los valores de presión <span class="math notranslate nohighlight">\(P\)</span>, volúmen <span class="math notranslate nohighlight">\(V\)</span>, número de moles <span class="math notranslate nohighlight">\(n\)</span> y la constante universal de los gases <span class="math notranslate nohighlight">\(R\)</span>.</p></li>
+<li><p>Con estos valores, calcule la tempratura en K y guarda el valor en la variable <span class="math notranslate nohighlight">\(T\)</span>.</p></li>
+<li><p>Imprima este valor con 2 cifras decimales.</p></li>
+<li><p>Imprima la temperatura en <span class="math notranslate nohighlight">\(^\circ\)</span> C</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1 Asignación de P,V,n y R</span>
+
+<span class="c1">#2 Cálculo de T</span>
+
+<span class="c1">#3 Imprimir T con 4 cifras decimales</span>
+
+<span class="c1"># Calculo de T en C</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="errores-en-la-representacion-de-un-numero-real">
+<h2>Errores en la representación de un número real<a class="headerlink" href="#errores-en-la-representacion-de-un-numero-real" title="Link to this heading">#</a></h2>
+<p>Algunos números racionales tampoco pueden ser representados de forma exacta en el estándar IEEE754 de números flotantes. Un ejemplo clásico de de esto es la representación de los números  0.1  y el número  0.2.</p>
+</section>
+<section id="actividad-1-3-errores">
+<h2><strong>Actividad 1.3. Errores</strong><a class="headerlink" href="#actividad-1-3-errores" title="Link to this heading">#</a></h2>
+<p>Muchos números recionales no tienen una representación exacta en el sistema binario que usan la computadoras para representar números en el estándar de punto flotante. Un ejemplo clásico es la representación de los números <span class="math notranslate nohighlight">\(0.1\)</span> y el número <span class="math notranslate nohighlight">\(0.2\)</span>. Esto puede inducir errores en las operaciones.</p>
+<p><strong>Ejemplo</strong></p>
+<p>En un proceso se usan 0.1 L de reactivo A y 0.2 L de reactivo B. Si se producen 100 lotes al día, calcula el volúmen total usado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">volumen_total</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span><span class="o">+</span><span class="mf">0.2</span><span class="p">)</span><span class="o">*</span><span class="mi">1000</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">volumen_total</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>300.00000000000006
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Otro ejemplo</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Este tipo de errores se corrijen usando el formato</strong> <code class="docutils literal notranslate"><span class="pre">Decimal</span></code> <strong>en vez de</strong> <code class="docutils literal notranslate"><span class="pre">float</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">decimal</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;0.2&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="mf">0.1</span><span class="o">+</span><span class="mf">0.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3
+0.30000000000000004
+</pre></div>
+</div>
+</div>
+</div>
+<p>#Práctica 2. Propiedades de orden de los números reales. Desigualdades y valor absoluto.</p>
+<p><strong>Objetivo</strong>. Establecer cómo se comparan los números reales en Python y cómo se obtiene el valor absoluto de un número real.</p>
+</section>
+<section id="propiedades-de-orden-de-los-numeros-reales">
+<h2>Propiedades de orden de los números reales<a class="headerlink" href="#propiedades-de-orden-de-los-numeros-reales" title="Link to this heading">#</a></h2>
+<p>Para cuales quiera dos números reales, <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> sólo se cumple cualquiera de las tres afirmaciones siguientes:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2ecd76b2-848d-41ba-9c71-d9fe12a75510">
+<span class="eqno">(2)<a class="headerlink" href="#equation-2ecd76b2-848d-41ba-9c71-d9fe12a75510" title="Permalink to this equation">#</a></span>\[\begin{align}
+a&lt;b\,,\,\,\, a&gt;b\,\,\,\, ó\,\,\,\, a=b\,,\,\,\,
+\end{align}\]</div>
+<p>Python puede determinar el orden de dos números reales, es decir, determinar el valor de verdad de afirmaciones que involucren propiedades de orden.</p>
+<p>Para esto usamos expresiones lógicas (expresiones booleanas).</p>
+</section>
+<section id="operadores-de-comparacion">
+<h2>Operadores de comparación.<a class="headerlink" href="#operadores-de-comparacion" title="Link to this heading">#</a></h2>
+<p>Tenemos los siguientes operadores de comparación:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">==</span></code>: Igual a</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">!=</span></code>: Distinto de</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code>: Mayor que</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>: Menor que</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>: Mayor o igual</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span> </code>: Menor o igual</p></li>
+</ul>
+<p>Al siguiente código se comparan dos números flotantes:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">a</span><span class="o">&lt;</span><span class="n">b</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="estructura-if">
+<h2>Estructura <strong>if</strong><a class="headerlink" href="#estructura-if" title="Link to this heading">#</a></h2>
+<p>Dado el valor de verdad de una afirmación podemos usar la estructura de ``ìf```para comparar dos números reales.</p>
+<p>La estructura <code class="docutils literal notranslate"><span class="pre">if</span></code>ejecuta las líneas de código si la condición propuesta tiene un valor de <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>La sintaxis es las siguiente:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s2">&quot;expresión lógica a cumplirse&quot;</span><span class="p">:</span>
+  <span class="n">líneas</span> <span class="n">de</span> <span class="n">código</span> <span class="n">a</span> <span class="n">ejecutar</span>
+</pre></div>
+</div>
+<p>Observa los dos puntos <code class="docutils literal notranslate"><span class="pre">:</span></code>y la alineación del texto que corresponde a las líneas de código a ejecutar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividad-2-1-temperatura-a-condiciones-distintas">
+<h2><strong>Actividad 2.1. Temperatura a condiciones distintas</strong><a class="headerlink" href="#actividad-2-1-temperatura-a-condiciones-distintas" title="Link to this heading">#</a></h2>
+<p>Escribe un código que realice lo siguiente:</p>
+<ol class="arabic simple">
+<li><p>Evalúe la temperatura de un gas ideal para dos condiciones distintas de presión <span class="math notranslate nohighlight">\(P\)</span> y volúmen <span class="math notranslate nohighlight">\(V\)</span> dado un número de moles fijo <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p>Compare las temperaturas a las condiciones distintas e indique cuál es mayor.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1</span>
+
+<span class="c1">#2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="valor-absoluto-de-un-numero">
+<h2>Valor absoluto de un número<a class="headerlink" href="#valor-absoluto-de-un-numero" title="Link to this heading">#</a></h2>
+<p>El valor absoluto de un número real es siempre un número positivo que geométricamente nos da la distancia de dicho número real al origen, se define como:</p>
+<p><span class="math notranslate nohighlight">\(
+|x| = \left\{
+  \begin{array}{lcc}
+  -x &amp; si &amp; x &lt; 0 \\
+  x &amp; si &amp; x\geq 0 \\
+      \end{array} \right.
+\)</span></p>
+<p>Para calcular el valor absoluto de un número, ocupamos la función <code class="docutils literal notranslate"><span class="pre">abs()</span></code>. El siguiente código evalúa el valor absoluto de un núemero real.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valor absoluto de un número real</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="actividad-2-2-distancia-entre-dos-numeros">
+<h2><strong>Actividad 2.2. Distancia entre dos números</strong><a class="headerlink" href="#actividad-2-2-distancia-entre-dos-numeros" title="Link to this heading">#</a></h2>
+<p>La distancia entre dos números reales <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> se calcula como <span class="math notranslate nohighlight">\(|a-b|=|b-a|\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Escribe un código de dados dos números <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> determine la distancia entre ellos.</p></li>
+<li><p>Escribe un código que indique si la distancia entre los números reales <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> es menor a una distancia <span class="math notranslate nohighlight">\(d\)</span> dada.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "matquim/Practicas-Calculo-I",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Tutorial-Avanzado.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tutorial Avanzado</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Calculo_1_Practica_3_Corregida.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Práctica: Manejo simbólico de funciones</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Lenguaje de programación Python</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bibliotecas">Bibliotecas</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#donde-puedo-usar-el-lenguaje-de-python">¿Dónde puedo usar el lenguaje de Python?</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#entorno-de-google-colab">Entorno de Google Colab</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inicio-en-colab">1. Inicio en Colab</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#celdas-de-texto">Celdas de texto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#celdas-de-codigo">Celdas de código</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-en-python">Variables en Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-representacion-de-los-numeros-y-operaciones-con-python"><strong>Práctica 1.  Representación de los números y operaciones con Python</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representacion-de-numeros-reales-en-python">Representación de números reales en Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#numeros-enteros">Números enteros</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funcion-type">Funcion <strong>type()</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-basicas-de-numeros">Operaciones básicas de números .</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funciones-matematicas-con-math">Funciones matemáticas con <code class="docutils literal notranslate"><span class="pre">math</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-1-operaciones"><strong>Actividad 1.1. Operaciones</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#biblioteca-de-numpy">Biblioteca de Numpy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asignacion-de-variables">Asignación de variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-2-ley-de-los-gases-ideales"><strong>Actividad 1.2. Ley de los gases ideales</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#errores-en-la-representacion-de-un-numero-real">Errores en la representación de un número real</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-3-errores"><strong>Actividad 1.3. Errores</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propiedades-de-orden-de-los-numeros-reales">Propiedades de orden de los números reales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operadores-de-comparacion">Operadores de comparación.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estructura-if">Estructura <strong>if</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-2-1-temperatura-a-condiciones-distintas"><strong>Actividad 2.1. Temperatura a condiciones distintas</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-un-numero">Valor absoluto de un número</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-2-2-distancia-entre-dos-numeros"><strong>Actividad 2.2. Distancia entre dos números</strong></a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Oscar Enrique Pérez González, Juan Felipe Huan Lew Yee, Laura Michelle Jiménez Díaz, Departamento de Matemáticas, Facultad de Química, Universidad Nacional Autónoma de México
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<img src="https://raw.githubusercontent.com/matquim/Practicas-Calculo-I/refs/heads/main/logo_unam.png" alt="logo_UNAM", style="width: 5%">
+<img src="https://raw.githubusercontent.com/matquim/Practicas-Calculo-I/refs/heads/main/logoFacultadQuimica.jpg" alt="logo_FQ", style="width: 5%">
+    <br>© D.R. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO 2022<br>Universidad Nacional Autónoma de México<br>Facultad de Química<br>Prohibida la reproducción total o parcial por cualquier medio, sin la autorización escrita del titular de los derechos patrimoniales.<br>Hecho en México<br>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
