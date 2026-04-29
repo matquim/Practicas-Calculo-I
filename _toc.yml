@@ -9,5 +9,8 @@ parts:
 
   - caption: Sistemas Sencillos
     chapters:
-      - file: practica1
-      - file: Calculo_1_Practica_3_Corregida
+    - file: practica2a
+    - file: practica2b
+    - file: practica2c
+    - file: Calculo_1_Practica_3_Corregida
+
