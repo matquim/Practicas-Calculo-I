@@ -2,16 +2,27 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: TEMPORAL (Quitar)
+  - caption: Python
     chapters:
       - file: Tutorial-Basico
       - file: Tutorial-Avanzado
 
-  - caption: Prácticas
+  - caption: El campo de los números reales 
     chapters:
-    - file: practica2a
-    - file: practica2b
-    - file: practica2c
-    - file: Calculo_1_Practica_3_Corregida
-    - file: practica3
+      - file: practica2a
+
+  - caption: Funciones
+    chapters:
+      - file: practica2b
+      - file: practica2c
+      - file: Calculo_1_Practica_3_Corregida
+      - file: practica3
+
+  - caption: Límites y continuidad
+    chapters:
+      - file: practica_limites
+
+  - caption: Derivadas
+    chapters:
+      - file: practica_derivadas     
 
