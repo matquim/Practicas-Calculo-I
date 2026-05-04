@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Prácticas Cálculo I &#8212; Practicas Cálculo I</title>
+    <title>Derivadas &#8212; Practicas Cálculo I</title>
   
   
   
@@ -59,10 +59,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'practica_derivadas';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tutorial Básico" href="Tutorial-Basico.html" />
+    <link rel="prev" title="Límites y continuidad" href="practica_limites.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -125,8 +125,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -145,7 +143,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -176,8 +174,8 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Prácticas Cálculo I
                 </a>
             </li>
@@ -208,8 +206,8 @@
 <li class="toctree-l1"><a class="reference internal" href="practica_limites.html">Límites y continuidad</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Derivadas</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="practica_derivadas.html">Derivadas</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Derivadas</a></li>
 </ul>
 
     </div>
@@ -264,7 +262,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/intro.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/practica_derivadas.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -282,7 +280,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/intro.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/practica_derivadas.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -331,7 +329,7 @@
       
       
       
-      <li><a href="_sources/intro.ipynb" target="_blank"
+      <li><a href="_sources/practica_derivadas.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -415,7 +413,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Prácticas Cálculo I</h1>
+    <h1>Derivadas</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -425,7 +423,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecucion">Ejecución</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-aproximacion-numerica-de-la-derivada">Práctica 1: Aproximación numérica de la derivada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-2-derivadas-de-funciones">Práctica 2: Derivadas de funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-interpretacion-geometrica">Práctica 3: Interpretación geométrica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-4-aplicaciones">Práctica 4: Aplicaciones</a></li>
 </ul>
             </nav>
         </div>
@@ -437,72 +438,122 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="practicas-calculo-i">
-<h1>Prácticas Cálculo I<a class="headerlink" href="#practicas-calculo-i" title="Link to this heading">#</a></h1>
-<p>El presente libro digital tiene como objetivo ser un manual de prácticas para la asignatura de <a class="reference internal" href="#"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Cálculo</span> <span class="pre">I</span> <span class="pre">Clave</span> <span class="pre">1111)</span></code></span></a> de la Facultad de Química (UNAM).</p>
-<p>La primera vez que se presente una instrucción o un bloque de código se mostrará directamente para copiar y pegar en la celda, por ejemplo, el siguiente código muestra como realizar una impresión:</p>
-<div class="important admonition">
-<p class="admonition-title">Aprendizaje de código</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bienvenidos a Cálculo I&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<p>A lo largo de los ejercicios encontrará celdas vacías con una nota para indicar que debe ser llenada siguiendo alguna instrucción, <strong>como la siguiente</strong>:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="derivadas">
+<h1>Derivadas<a class="headerlink" href="#derivadas" title="Link to this heading">#</a></h1>
+<section id="practica-1-aproximacion-numerica-de-la-derivada">
+<h2>Práctica 1: Aproximación numérica de la derivada<a class="headerlink" href="#practica-1-aproximacion-numerica-de-la-derivada" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong></p>
+<p>Aproximar la derivada de una función mediante el cociente incremental.</p>
+<p><strong>Concepto teórico</strong></p>
+<p>La derivada de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un punto <span class="math notranslate nohighlight">\(x\)</span> se define como:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ba795ab7-6d6b-45d3-b0d6-9a292f0782cb">
+<span class="eqno">(7)<a class="headerlink" href="#equation-ba795ab7-6d6b-45d3-b0d6-9a292f0782cb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\end{equation}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Llene la siguiente celda con su código</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>La respuesta se encuentra oculta para permitir que se resuelva el ejercicio en la celda vacía por cuenta propia. Para revelar la respuesta hay que presionar botones como el siguiente:</p>
-<div class="cell tag_hide-cell docutils container">
-<details class="admonition hide above-input">
-<summary aria-label="Toggle hidden content">
-<p class="collapsed admonition-title">Show code cell content</p>
-<p class="expanded admonition-title">Hide code cell content</p>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bienvenidos a Cálculo I, esta es la respuesta oculta a una pregunta&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.001</span>
+
+<span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">derivada</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bienvenidos a Cálculo I, esta es la respuesta oculta a una pregunta
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.000999999999699
 </pre></div>
 </div>
 </div>
-</details>
 </div>
-<div class="attention admonition">
-<p class="admonition-title">¡Creemos en tí!</p>
-<p>Realmente queremos resaltar lo importante que es intentar resolver los problemas antes de revelar la respuesta. Al inicio puede ser complicado, pero se obtiene una gran recompensa en <code class="docutils literal notranslate"><span class="pre">conocimiento</span></code> y <code class="docutils literal notranslate"><span class="pre">habilidad</span></code>, y se volverá más sencillo con cada ejercicio resuelto. Confiamos en su <code class="docutils literal notranslate"><span class="pre">creatividad</span></code>, y si fuera necesario, siempre podemos aprender de la respuesta oculta.</p>
-</div>
-<section id="ejecucion">
-<h2>Ejecución<a class="headerlink" href="#ejecucion" title="Link to this heading">#</a></h2>
-<p>Este libro permite interactuar con el contenido. Seleccione la opción que le resulte más conveniente.</p>
-<div class="dropdown admonition">
-<p class="admonition-title">En la misma página web</p>
-<p>Puede ejecutar los notebooks directamente en el libro haciendo clic sobre el botón de la nave, y luego sobre el botón de <code class="docutils literal notranslate"><span class="pre">Live</span> <span class="pre">Code</span></code>.</p>
-<p><img alt="Live Code" src="images/live_code.png" /></p>
-</div>
-<div class="dropdown admonition">
-<p class="admonition-title">Google Colab</p>
-<p>Los notebooks pueden ejecutarse en línea desde <code class="docutils literal notranslate"><span class="pre">Google</span> <span class="pre">Colab</span></code> al presionar el ícono de la nave y dar clic sobre Colab, este ícono aparece en la parte superior de cada notebook. Los archivos generados en Google Colab se guardan automáticamente en su Google Drive.</p>
-<p><img alt="Google Colab example button" src="images/google_colab.png" /></p>
-</div>
-<p>Los ejercicios de este libro requieren un conocimiento básico de Python, mismo que puede adquirirse en el primer capítulo del libro.</p>
+<p><strong>Ejercicios</strong></p>
+<p>a) Aproximar la derivada de <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> en <span class="math notranslate nohighlight">\(x = 2\)</span> con distintos valores de <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<p>b) Analizar cómo cambia la aproximación cuando <span class="math notranslate nohighlight">\(h \to 0\)</span>.</p>
 </section>
-<div class="toctree-wrapper compound">
+<section id="practica-2-derivadas-de-funciones">
+<h2>Práctica 2: Derivadas de funciones<a class="headerlink" href="#practica-2-derivadas-de-funciones" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong></p>
+<p>Comparar derivadas analíticas con aproximaciones numéricas.</p>
+<p><strong>Ejemplo</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">df</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">1e-5</span>
+
+<span class="n">aprox</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="n">exacta</span> <span class="o">=</span> <span class="n">df</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aprox:&quot;</span><span class="p">,</span> <span class="n">aprox</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exacta:&quot;</span><span class="p">,</span> <span class="n">exacta</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
 </div>
-<div class="toctree-wrapper compound">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aprox: 0.7071032456451575
+Exacta: 0.7071067811865476
+</pre></div>
 </div>
-<div class="toctree-wrapper compound">
 </div>
-<div class="toctree-wrapper compound">
 </div>
+<p><strong>Ejercicios</strong></p>
+<p>a) Comparar derivadas para funciones polinomiales.</p>
+<p>b) Comparar derivadas para funciones trigonométricas.</p>
+</section>
+<section id="practica-3-interpretacion-geometrica">
+<h2>Práctica 3: Interpretación geométrica<a class="headerlink" href="#practica-3-interpretacion-geometrica" title="Link to this heading">#</a></h2>
+<p><strong>Concepto teórico</strong></p>
+<p>La derivada representa la pendiente de la recta tangente a la curva en un punto.</p>
+<p><strong>Ejemplo</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">x0</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">m</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x0</span>  <span class="c1"># derivada exacta</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">recta</span> <span class="o">=</span> <span class="n">m</span><span class="o">*</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">x0</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">x0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">recta</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="n">x0</span><span class="p">],</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">x0</span><span class="p">)])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/a4ea90c96845e8a8cafce8e7160d06d8b59427487e5b36aa594d873a22de5811.png" src="_images/a4ea90c96845e8a8cafce8e7160d06d8b59427487e5b36aa594d873a22de5811.png" />
+</div>
+</div>
+<p><strong>Ejercicios</strong></p>
+<p>a) Graficar la función y su recta tangente en distintos puntos.</p>
+<p>b) Interpretar el significado de la pendiente.</p>
+</section>
+<section id="practica-4-aplicaciones">
+<h2>Práctica 4: Aplicaciones<a class="headerlink" href="#practica-4-aplicaciones" title="Link to this heading">#</a></h2>
+<p><strong>Ejercicios</strong></p>
+<p>a) Calcular la velocidad instantánea si <span class="math notranslate nohighlight">\(x(t) = t^2\)</span>.</p>
+<p>b) Analizar crecimiento y decrecimiento de una función.</p>
+<p>c) Determinar máximos y mínimos aproximados.</p>
+<p>d) Explique con sus palabras el significado de la derivada en los problema</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -535,14 +586,14 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="Tutorial-Basico.html"
-       title="next page">
+    <a class="left-prev"
+       href="practica_limites.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial Básico</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Límites y continuidad</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -560,7 +611,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecucion">Ejecución</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-aproximacion-numerica-de-la-derivada">Práctica 1: Aproximación numérica de la derivada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-2-derivadas-de-funciones">Práctica 2: Derivadas de funciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-interpretacion-geometrica">Práctica 3: Interpretación geométrica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-4-aplicaciones">Práctica 4: Aplicaciones</a></li>
 </ul>
   </nav></div>
 
