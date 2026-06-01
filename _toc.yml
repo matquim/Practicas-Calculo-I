@@ -22,7 +22,23 @@ parts:
     chapters:
       - file: practica_limites
 
-  - caption: Derivadas
+  - caption: La Derivada
     chapters:
       - file: practica_derivadas     
+
+  - caption: Aplicaciones de la Derivada
+    chapters:
+      - file: u5p1     
+
+  - caption: La Integral
+    chapters:
+      - file: u6p1     
+
+  - caption: Métodos y Técnicas de Integración
+    chapters:
+      - file: u7p1     
+
+  - caption: Aplicaciones de la Integral
+    chapters:
+      - file: u8p1     
 
