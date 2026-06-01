@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tutorial Básico &#8212; Practicas Cálculo I</title>
+    <title>Práctica 1: Definición de Espacios Vectoriales &#8212; Practicas Cálculo I</title>
   
   
   
@@ -59,11 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'Tutorial-Basico';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u6p1';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Tutorial Avanzado" href="Tutorial-Avanzado.html" />
-    <link rel="prev" title="Prácticas Cálculo I" href="intro.html" />
+    <link rel="next" title="Práctica 1: Definición de Espacios Vectoriales" href="u7p1.html" />
+    <link rel="prev" title="Práctica 1: Definición de Espacios Vectoriales" href="u5p1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -182,8 +182,8 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Python</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tutorial Básico</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tutorial-Basico.html">Tutorial Básico</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Tutorial-Avanzado.html">Tutorial Avanzado</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">El campo de los números reales</span></p>
@@ -215,8 +215,8 @@
 <li class="toctree-l1"><a class="reference internal" href="u5p1.html">Práctica 1: Definición de Espacios Vectoriales</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Integral</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u6p1.html">Práctica 1: Definición de Espacios Vectoriales</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Práctica 1: Definición de Espacios Vectoriales</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Métodos y Técnicas de Integración</span></p>
 <ul class="nav bd-sidenav">
@@ -279,7 +279,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/Tutorial-Basico.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u6p1.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +297,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/Tutorial-Basico.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u6p1.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +346,7 @@
       
       
       
-      <li><a href="_sources/Tutorial-Basico.ipynb" target="_blank"
+      <li><a href="_sources/u6p1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -430,7 +430,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tutorial Básico</h1>
+    <h1>Práctica 1: Definición de Espacios Vectoriales</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -440,9 +440,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declarando-variables">Declarando variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-basicas">Operaciones Básicas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#librerias">Librerías</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivo">Objetivo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
 </ul>
             </nav>
         </div>
@@ -454,156 +453,36 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tutorial-basico">
-<h1>Tutorial Básico<a class="headerlink" href="#tutorial-basico" title="Link to this heading">#</a></h1>
-<p>A continuación aprenderá las funciones básicas de Python como declarar una variable, hacer operaciones básicas y utilizar librerías, así como lo necesario para seguir el manual. <strong>Para usarlo es necesario escribir en los cuadros vacíos y presionar el botón Run o las teclas “Shift” + “Enter”.</strong></p>
-<section id="declarando-variables">
-<h2>Declarando variables<a class="headerlink" href="#declarando-variables" title="Link to this heading">#</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Aprendizaje de código</p>
-<p>Al igual que en álgebra, en Python se pueden usar variables para <strong>almacenar valores numéricos</strong>. Por ejemplo:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">5.0</span>
-</pre></div>
-</div>
-</div>
-<p><strong>En el siguiente recuadro declare una variable llamada “x” y asígnele el valor que desee, recuerde dar “shift”+“enter” o Run.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Declare una variable x</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="important admonition">
-<p class="admonition-title">Aprendizaje de código</p>
-<p>Es posible <strong>ver (o imprimir) el valor de cualquier variable escribiendo</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>En nuestro ejemplo</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>imprimiría el valor 5.0.</p>
-</div>
-<p><strong>Imprima el valor de la variable que declaró anteriormente</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Imprima el valor de la variable x</span>
-</pre></div>
-</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="practica-1-definicion-de-espacios-vectoriales">
+<h1>Práctica 1: Definición de Espacios Vectoriales<a class="headerlink" href="#practica-1-definicion-de-espacios-vectoriales" title="Link to this heading">#</a></h1>
+<section id="objetivo">
+<h2>Objetivo<a class="headerlink" href="#objetivo" title="Link to this heading">#</a></h2>
+<p>Aprender a manejar espacios vectoriales</p>
+<div class="tip admonition">
+<p class="admonition-title">Concepto</p>
+<p>Una combinación lineal de vectores se forma sumando vectores y multiplicandolos por escalares, es decir:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fd227d0e-0288-41cb-b42b-c1037bad003d">
+<span class="eqno">(10)<a class="headerlink" href="#equation-fd227d0e-0288-41cb-b42b-c1037bad003d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+    \vec{w} = c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n
+\end{equation}\]</div>
+<p>Por ejemplo</p>
+<div class="amsmath math notranslate nohighlight" id="equation-77d3a492-3298-4d90-8147-052cb57976e7">
+<span class="eqno">(11)<a class="headerlink" href="#equation-77d3a492-3298-4d90-8147-052cb57976e7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+    w = 2 \begin{pmatrix}5 \\ 3 \\ 2\end{pmatrix} - \begin{pmatrix}1 \\ 3 \\ -2\end{pmatrix} = \begin{pmatrix}9 \\ 3 \\ 6\end{pmatrix}
+\end{equation}\]</div>
 </div>
 </section>
-<section id="operaciones-basicas">
-<h2>Operaciones Básicas<a class="headerlink" href="#operaciones-basicas" title="Link to this heading">#</a></h2>
-<div class="important admonition">
-<p class="admonition-title">Aprendizaje de código</p>
-<p>Las operaciones comunes del álgebra también pueden usarse en Python con una sintaxis muy similar.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head text-center"><p>Operación</p></th>
-<th class="head text-center"><p>Álgebra</p></th>
-<th class="head text-center"><p>Python</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td class="text-center"><p>Suma</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(z=x+y\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(z=x+y\)</span></p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>Resta</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(z=x-y\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(z=x-y\)</span></p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>Multiplicación</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(z=(x)(y)\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(x=x*y\)</span></p></td>
-</tr>
-<tr class="row-odd"><td class="text-center"><p>División</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(z=\frac{x}{y}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(z=x/y\)</span></p></td>
-</tr>
-<tr class="row-even"><td class="text-center"><p>Potencia</p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(z=x^{y}\)</span></p></td>
-<td class="text-center"><p><span class="math notranslate nohighlight">\(z=x**y\)</span></p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>En nuestro ejemplo, podemos declarar una nueva variable, hacer las operaciones anteriores, guardar el resultado e imprimirlo.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Declaramos la variable x</span>
-<span class="n">x</span> <span class="o">=</span> <span class="mf">5.0</span>
-<span class="c1">#Declaramos la variable y</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mf">2.0</span>
-
-<span class="c1">#Hacemos algunas operaciones con nuestras variables x, y; y guardamos el resultado</span>
-<span class="n">z_suma</span>  <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
-<span class="n">z_resta</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">y</span>
-<span class="n">z_mult</span>  <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
-<span class="n">z_div</span>   <span class="o">=</span> <span class="n">x</span><span class="o">/</span><span class="n">y</span>
-<span class="n">z_pot</span>   <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
-
-<span class="c1">#Imprimimos los resultados</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s2">&quot;y&quot;</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;suma&quot;</span><span class="p">,</span><span class="n">z_suma</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;resta&quot;</span><span class="p">,</span><span class="n">z_resta</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;multiplicación&quot;</span><span class="p">,</span><span class="n">z_mult</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;división&quot;</span><span class="p">,</span><span class="n">z_div</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;potencia&quot;</span><span class="p">,</span><span class="n">z_pot</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Los resultados se almacenan en las variables z_suma, z_resta, z_mult y z_div. Es importante notar que una variable puede tener un nombre más largo que una sola letra; y que también podemos imprimir texto.</p>
-</div>
-<p><strong>Declare una variable llamada “y”, asígnele el valor 10.0, calcule las 5 operaciones utilizando su variable ¨ “x” previamente definida, e imprima el resultado.</strong></p>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
+<p>Escriba el código para crear los siguientes vectores</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\vec{v}_1 = (1, 3, 5)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{v}_2 = (-4, 2, 1)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\vec{v}_3 = (-3, -7, 2)\)</span></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Declare variable</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="librerias">
-<h2>Librerías<a class="headerlink" href="#librerias" title="Link to this heading">#</a></h2>
-<p>La funcionalidad de Python se puede extender utilizando <strong>librerías</strong>. Existen 4 importantes para el curso, <strong>numpy</strong>, <strong>matplotlib</strong>, <strong>scipy</strong> y <strong>sympy</strong>.</p>
-<div class="important admonition">
-<p class="admonition-title">Aprendizaje de código</p>
-<p>Para activar una librería utilizamos la palabra <strong>import</strong>, seguida del nombre de la librería, por ejemplo</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">scipy</span>
-</pre></div>
-</div>
-<p>Frecuentemente utilizamos un alias para asignarle un nombre más corto a la librería. Esto se realiza con la palabra <strong>as</strong> seguida del <strong>alias</strong>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sym</span>
-</pre></div>
-</div>
-<p>También podemos tomar partes específicas de una librería, para ello utilizamos la palabra <strong>from</strong>. Por ejemplo, importaremos el subpaquete pyplot de la librería matplotlib, la cual nos sirve para graficar, y lo renombraremos como plt.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-</pre></div>
-</div>
-</div>
-<p><strong>Copie y pegue las instrucciones anteriores en el recuadro para importar las librerías</strong> numpy, matplotlib, scipy y sympy.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Importe librerías</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="important admonition">
-<p class="admonition-title">Aprendizaje de código</p>
-<p>Utilizaremos numpy para obtener la raíz cuadrada de la variable x. Para ello llamaremos a la función sqrt de la librería numpy, esto se realiza escribiendo el nombre de la librería, seguido por un punto, seguido del nombre de la función a usar.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">5.0</span>
-<span class="n">raiz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">raiz</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<p><strong>Defina una variable x y obtenga e imprima su raíz cuadrada.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Raíz cuadrada de x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código</span>
 </pre></div>
 </div>
 </div>
@@ -642,20 +521,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="u5p1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Prácticas Cálculo I</p>
+        <p class="prev-next-title">Práctica 1: Definición de Espacios Vectoriales</p>
       </div>
     </a>
     <a class="right-next"
-       href="Tutorial-Avanzado.html"
+       href="u7p1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial Avanzado</p>
+        <p class="prev-next-title">Práctica 1: Definición de Espacios Vectoriales</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -675,9 +554,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declarando-variables">Declarando variables</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-basicas">Operaciones Básicas</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#librerias">Librerías</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objetivo">Objetivo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
 </ul>
   </nav></div>
 
