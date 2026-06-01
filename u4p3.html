@@ -59,11 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'practica_limites';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u4p3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Derivadas" href="practica_derivadas.html" />
-    <link rel="prev" title="Gráficas de funciones usando Matplotlib" href="practica3.html" />
+    <link rel="next" title="Límites y continuidad" href="u4p4.html" />
+    <link rel="prev" title="Límites y continuidad" href="u4p2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -204,7 +204,10 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Límites y continuidad</span></p>
 <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="u4p1.html">Límites y continuidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p2.html">Límites y continuidad</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Límites y continuidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p4.html">Límites y continuidad</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Derivada</span></p>
 <ul class="nav bd-sidenav">
@@ -279,7 +282,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/practica_limites.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u4p3.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +300,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/practica_limites.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u4p3.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +349,7 @@
       
       
       
-      <li><a href="_sources/practica_limites.ipynb" target="_blank"
+      <li><a href="_sources/u4p3.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -440,10 +443,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-aproximacion-numerica-de-limites">Práctica 1: Aproximación numérica de límites</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-2-limites-laterales">Práctica 2: Límites laterales</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-continuidad">Práctica 3: Continuidad</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-4-visualizacion">Práctica 4: Visualización</a></li>
 </ul>
             </nav>
         </div>
@@ -457,86 +457,6 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="limites-y-continuidad">
 <h1>Límites y continuidad<a class="headerlink" href="#limites-y-continuidad" title="Link to this heading">#</a></h1>
-<section id="practica-1-aproximacion-numerica-de-limites">
-<h2>Práctica 1: Aproximación numérica de límites<a class="headerlink" href="#practica-1-aproximacion-numerica-de-limites" title="Link to this heading">#</a></h2>
-<p><strong>Objetivo</strong></p>
-<p>Aproximar límites evaluando funciones en valores cercanos a un punto.</p>
-<div class="tip admonition">
-<p class="admonition-title">Concepto</p>
-<p>El límite de una función <span class="math notranslate nohighlight">\(f(x)\)</span> cuando <span class="math notranslate nohighlight">\(x\)</span> tiende a <span class="math notranslate nohighlight">\(a\)</span> se escribe:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-38b440bd-63b0-4d96-bcba-785e49fa7faf">
-<span class="eqno">(6)<a class="headerlink" href="#equation-38b440bd-63b0-4d96-bcba-785e49fa7faf" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\lim_{x \to a} f(x)
-\end{equation}\]</div>
-<p>y describe el comportamiento de la función cerca de <span class="math notranslate nohighlight">\(a\)</span>.</p>
-</div>
-<p><strong>Ejemplo</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">valores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.999</span><span class="p">,</span> <span class="mf">1.001</span><span class="p">,</span> <span class="mf">1.01</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">valores</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9 1.9
-0.99 1.990000000000001
-0.999 1.9989999999999712
-1.001 2.0009999999999177
-1.01 2.009999999999999
-1.1 2.1
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Ejercicios</strong></p>
-<p>a) Aproximar el límite de <span class="math notranslate nohighlight">\(f(x) = \frac{x^2 - 4}{x - 2}\)</span> cuando <span class="math notranslate nohighlight">\(x \to 2\)</span>.</p>
-<p>b) Evaluar la función en valores cercanos a 2 por la izquierda y por la derecha.</p>
-</section>
-<section id="practica-2-limites-laterales">
-<h2>Práctica 2: Límites laterales<a class="headerlink" href="#practica-2-limites-laterales" title="Link to this heading">#</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Concepto</p>
-<p>Los límites laterales se definen como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce94bfdc-5d18-4e00-a373-39597f74d55a">
-<span class="eqno">(7)<a class="headerlink" href="#equation-ce94bfdc-5d18-4e00-a373-39597f74d55a" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\lim_{x \to a^-} f(x), \quad \lim_{x \to a^+} f(x)
-\end{equation}\]</div>
-</div>
-<p><strong>Ejemplo</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-
-<span class="n">valores</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">valores</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.1 -1
--0.01 -1
-0.01 1
-0.1 1
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Ejercicios</strong></p>
-<p>a) Analizar los límites laterales de una función definida por partes.</p>
-<p>b) Determinar si el límite existe.</p>
-</section>
 <section id="practica-3-continuidad">
 <h2>Práctica 3: Continuidad<a class="headerlink" href="#practica-3-continuidad" title="Link to this heading">#</a></h2>
 <div class="tip admonition">
@@ -565,33 +485,6 @@ document.write(`
 <p><strong>Ejercicios</strong></p>
 <p>a) Verificar si una función es continua en un punto dado.</p>
 <p>b) Identificar posibles discontinuidades.</p>
-</section>
-<section id="practica-4-visualizacion">
-<h2>Práctica 4: Visualización<a class="headerlink" href="#practica-4-visualizacion" title="Link to this heading">#</a></h2>
-<p><strong>Objetivo</strong></p>
-<p>Visualizar funciones para interpretar su comportamiento.</p>
-<p><strong>Ejemplo</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/02f248ee4625edab361db6ffa5fe4e0a5cbfe26ab07d1e27dd6ca285cebf5b67.png" src="_images/02f248ee4625edab361db6ffa5fe4e0a5cbfe26ab07d1e27dd6ca285cebf5b67.png" />
-</div>
-</div>
-<p><strong>Ejercicios</strong></p>
-<p>a) Graficar funciones con discontinuidades.</p>
-<p>b) Identificar visualmente el valor del límite.</p>
 </section>
 </section>
 
@@ -626,20 +519,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="practica3.html"
+       href="u4p2.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Gráficas de funciones usando <strong>Matplotlib</strong></p>
+        <p class="prev-next-title">Límites y continuidad</p>
       </div>
     </a>
     <a class="right-next"
-       href="practica_derivadas.html"
+       href="u4p4.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Derivadas</p>
+        <p class="prev-next-title">Límites y continuidad</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -659,10 +552,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-1-aproximacion-numerica-de-limites">Práctica 1: Aproximación numérica de límites</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-2-limites-laterales">Práctica 2: Límites laterales</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-3-continuidad">Práctica 3: Continuidad</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#practica-4-visualizacion">Práctica 4: Visualización</a></li>
 </ul>
   </nav></div>
 
