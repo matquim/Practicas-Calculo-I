@@ -21,6 +21,10 @@ parts:
   - caption: Límites y continuidad
     chapters:
       - file: practica_limites
+      - file: u4p1     
+      - file: u4p2 
+      - file: u4p3     
+      - file: u4p4     
 
   - caption: La Derivada
     chapters:
