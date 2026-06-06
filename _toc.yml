@@ -9,7 +9,9 @@ parts:
 
   - caption: El campo de los números reales 
     chapters:
-      - file: practica2a
+      - file: u1p1
+      - file: u1p2
+      - file: u1p3
 
   - caption: Funciones
     chapters:
