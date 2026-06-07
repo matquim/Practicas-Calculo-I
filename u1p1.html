@@ -547,24 +547,30 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 \end{equation*}\]</div>
 <p>Por ejemplo, para el <span class="math notranslate nohighlight">\(5.75\)</span> se haría lo siguiente:</p>
 <ol class="arabic simple">
-<li><p>Determinar el signo.</p></li>
-</ol>
+<li><p>Determinar el signo.</p>
 <ul class="simple">
-<li><p>Si es número es positivo el bit que almacena el signo es 0.</p></li>
-<li><p>Si es número es negativo el bit es 1.</p></li>
+<li><p>Si el número es positivo el bit que almacena el signo es 0.</p></li>
+<li><p>Si el número es negativo el bit es 1.</p></li>
+<li><p>El número <span class="math notranslate nohighlight">\(5.75\)</span> es positivo por lo que <span class="math notranslate nohighlight">\(s=0\)</span>.*</p></li>
 </ul>
-<p><em>El número <span class="math notranslate nohighlight">\(5.75\)</span> es positivo por lo que <span class="math notranslate nohighlight">\(s=0\)</span>.</em></p>
-<ol class="arabic simple" start="2">
-<li><p>Convertir la parte entera a binario.</p></li>
+</li>
+<li><p>Convertir la parte entera a binario.</p>
+<ul class="simple">
+<li><p>El número <span class="math notranslate nohighlight">\(5.75\)</span> tiene como parte entera <span class="math notranslate nohighlight">\(5\)</span>, que en binario es 101</p></li>
+</ul>
+</li>
+<li><p>La parte fraccionaria se multiplica por 2 repetidamente y se extrae el binario de la parte entera resultante (sólo puede ser 0 o 1).</p>
+<ul class="simple">
+<li><p>El número 0.75 se convierte a binario multiplicando por 2:</p></li>
+<li><p><span class="math notranslate nohighlight">\(0.75 \times 2 = 1.5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(0.5  \times 2 = 1.0\)</span></p>
+<ul>
+<li><p>Por lo que el número <span class="math notranslate nohighlight">\(0.75\)</span> en binario es <span class="math notranslate nohighlight">\(0.11\)</span>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
-<p><em>El número <span class="math notranslate nohighlight">\(5.75\)</span> tiene como parte entera <span class="math notranslate nohighlight">\(5\)</span>, que en binario es 101</em></p>
-<ol class="arabic simple" start="3">
-<li><p>La parte fraccionaria se multiplica por 2 repetidamente y se extrae el binario de la parte entera resultante (sólo puede ser 0 o 1) hasta conseguir la precisión deseada o hasta que el número se reduzca a cero.</p></li>
-</ol>
-<p><em>El número 0.75 se convierte a binario multiplicando por 2:</em></p>
-<p><span class="math notranslate nohighlight">\(0.75 \times 2 = 1.5\)</span></p>
-<p><span class="math notranslate nohighlight">\(0.5  \times 2 = 1.0\)</span></p>
-<p><em>Por lo que el número <span class="math notranslate nohighlight">\(0.75\)</span> en binario es <span class="math notranslate nohighlight">\(0.11\)</span>.</em></p>
 <p><strong>Conclusión:</strong> <em>El número <span class="math notranslate nohighlight">\(5.75\)</span> en binario es <span class="math notranslate nohighlight">\(101.11\)</span></em></p>
 <ol class="arabic simple" start="4">
 <li><p>Normalizar el número.</p></li>
@@ -572,8 +578,10 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 <ul class="simple">
 <li><p>Escribir el número en notación científica binaria:</p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\(1.(mantisa) \times 2^{exponente}\)</span>.</p>
-<p><em>El número <span class="math notranslate nohighlight">\(101.11\)</span> se convierte en <span class="math notranslate nohighlight">\(1.0111\times 2^{2}\)</span></em></p>
+<p><span class="math notranslate nohighlight">\(1.(\text{mantisa}) \times 2^{\text{exponente}}\)</span>.</p>
+<ul class="simple">
+<li><p>El número <span class="math notranslate nohighlight">\(101.11\)</span> se convierte en <span class="math notranslate nohighlight">\(1.0111\times 2^{2}\)</span></p></li>
+</ul>
 <p><em>Como el punto decimal se movió dos lugares, el exponente es <span class="math notranslate nohighlight">\(2\)</span> y la mantisa es <span class="math notranslate nohighlight">\(0111\)</span></em></p>
 <ol class="arabic simple" start="5">
 <li><p>Calcular el exponente con sesgo.</p></li>
