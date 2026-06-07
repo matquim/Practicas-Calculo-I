@@ -2,11 +2,6 @@ format: jb-book
 root: intro
 
 parts:
-  - caption: Python
-    chapters:
-      - file: Tutorial-Basico
-      - file: Tutorial-Avanzado
-
   - caption: El campo de los números reales 
     chapters:
       - file: u1p1
