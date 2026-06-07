@@ -460,13 +460,8 @@ document.write(`
 <p>En las computadoras, los números se representan mediante cadenas de unos y ceros. En particular, podemos manejar los números reales centrando nuestra atención en dos tipos de números, aquellos que pertenecen a los enteros (<em>int</em>) y aquellos que contienen punto decimal, también llamados de coma flotante (<em>float</em>).</p>
 <ul class="simple">
 <li><p>En el caso de los enteros, estos se representan mediante su notación binaria, por ejemplo, el número 17 se representa como: 10001</p></li>
-<li><p>En el caso de los números de coma flotante, estos se representan usando el estándar (IEEE 754). Un número flotante asigna una cantidad fija de bits (conmunmente 64) a tres partes distintas de un número real:</p></li>
+<li><p>En el caso de los números de coma flotante, estos se representan usando el estándar (IEEE 754), el cual asigna 64 bits para codificar el signo, el exponente y la parte fraccionaria.</p></li>
 </ul>
-<ol class="arabic simple">
-<li><p>El <strong>signo</strong>, llamado <span class="math notranslate nohighlight">\(s\)</span>, indica si es un número positivo o negativo, éste se almacena en 1 bit.</p></li>
-<li><p>Un exponente o <strong>característica</strong>, llamado <span class="math notranslate nohighlight">\(e\)</span>, es una  potencia de 2, el cual se almacena en 11 bits.</p></li>
-<li><p>La fracción o <strong>mantisa</strong> <span class="math notranslate nohighlight">\(f\)</span> es el coeficiente del exponente y se almacena en 52 bits.</p></li>
-</ol>
 </div>
 <p>En python, los números se almacenan en variables, por ejemplo:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
@@ -539,7 +534,13 @@ document.write(`
 <div class="note dropdown admonition">
 <p class="admonition-title">Para Saber Más: Convertir un número real en un número flotante</p>
 <p>Probar la función <code class="docutils literal notranslate"><span class="pre">bin</span></code> con un número de coma flotante (ej. <code class="docutils literal notranslate"><span class="pre">bin(5.4)</span></code>) conducirá directamente a un error.</p>
-<p>Convertir un número real a uno flotante (IEEE754) para su almacenamiento en la computadora consiste en determinar los elementos: signo (<span class="math notranslate nohighlight">\(s\)</span>), exponente (<span class="math notranslate nohighlight">\(e\)</span>) y fracción (<span class="math notranslate nohighlight">\(f\)</span>) para su representación en la forma:</p>
+<p>Convertir un número real a uno flotante (IEEE754) para su almacenamiento en la computadora consiste en determinar los elementos:</p>
+<ol class="arabic simple">
+<li><p>El <strong>signo</strong>, llamado <span class="math notranslate nohighlight">\(s\)</span>, indica si es un número positivo o negativo, éste se almacena en 1 bit.</p></li>
+<li><p>Un exponente o <strong>característica</strong>, llamado <span class="math notranslate nohighlight">\(e\)</span>, es una  potencia de 2, el cual se almacena en 11 bits.</p></li>
+<li><p>La fracción o <strong>mantisa</strong> <span class="math notranslate nohighlight">\(f\)</span> es el coeficiente del exponente y se almacena en 52 bits.</p></li>
+</ol>
+<p>Estos se usan para representar el número real en la forma:</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{equation*}
 n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
