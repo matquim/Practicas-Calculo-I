@@ -547,21 +547,11 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 \end{equation*}\]</div>
 <p>Por ejemplo, para el <span class="math notranslate nohighlight">\(5.75\)</span> se haría lo siguiente:</p>
 <ol class="arabic simple">
-<li><p>Determinar el signo.</p>
+<li><p>Determinar el signo: El número <span class="math notranslate nohighlight">\(5.75\)</span> es positivo por lo que <span class="math notranslate nohighlight">\(s=0\)</span>.*</p></li>
+<li><p>Convertir la parte entera a binario: El número <span class="math notranslate nohighlight">\(5.75\)</span> tiene como parte entera <span class="math notranslate nohighlight">\(5\)</span>, que en binario es 101</p></li>
+<li><p>Convertir la parte decimal a binario multiplica por 2 repetidamente y extrayendo la parte entera resultante:</p></li>
+</ol>
 <ul class="simple">
-<li><p>Si el número es positivo el bit que almacena el signo es 0.</p></li>
-<li><p>Si el número es negativo el bit es 1.</p></li>
-<li><p>El número <span class="math notranslate nohighlight">\(5.75\)</span> es positivo por lo que <span class="math notranslate nohighlight">\(s=0\)</span>.*</p></li>
-</ul>
-</li>
-<li><p>Convertir la parte entera a binario.</p>
-<ul class="simple">
-<li><p>El número <span class="math notranslate nohighlight">\(5.75\)</span> tiene como parte entera <span class="math notranslate nohighlight">\(5\)</span>, que en binario es 101</p></li>
-</ul>
-</li>
-<li><p>La parte fraccionaria se multiplica por 2 repetidamente y se extrae el binario de la parte entera resultante (sólo puede ser 0 o 1).</p>
-<ul class="simple">
-<li><p>El número 0.75 se convierte a binario multiplicando por 2:</p></li>
 <li><p><span class="math notranslate nohighlight">\(0.75 \times 2 = 1.5\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(0.5  \times 2 = 1.0\)</span></p>
 <ul>
@@ -569,42 +559,32 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 </ul>
 </li>
 </ul>
-</li>
-</ol>
 <p><strong>Conclusión:</strong> <em>El número <span class="math notranslate nohighlight">\(5.75\)</span> en binario es <span class="math notranslate nohighlight">\(101.11\)</span></em></p>
 <ol class="arabic simple" start="4">
-<li><p>Normalizar el número.</p></li>
+<li><p>Normalizar el número escribiéndolo como <span class="math notranslate nohighlight">\(1.(\text{mantisa}) \times 2^{\text{exponente}}\)</span>: El número <span class="math notranslate nohighlight">\(101.11\)</span> se convierte en <span class="math notranslate nohighlight">\(1.0111\times 2^{2}\)</span></p></li>
 </ol>
 <ul class="simple">
-<li><p>Escribir el número en notación científica binaria:</p></li>
+<li><p>Como el punto decimal se movió dos lugares, el exponente es <span class="math notranslate nohighlight">\(2\)</span></p></li>
+<li><p>La mantisa es <span class="math notranslate nohighlight">\(0111\)</span>*</p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\(1.(\text{mantisa}) \times 2^{\text{exponente}}\)</span>.</p>
-<ul class="simple">
-<li><p>El número <span class="math notranslate nohighlight">\(101.11\)</span> se convierte en <span class="math notranslate nohighlight">\(1.0111\times 2^{2}\)</span></p></li>
-</ul>
-<p><em>Como el punto decimal se movió dos lugares, el exponente es <span class="math notranslate nohighlight">\(2\)</span> y la mantisa es <span class="math notranslate nohighlight">\(0111\)</span></em></p>
 <ol class="arabic simple" start="5">
-<li><p>Calcular el exponente con sesgo.</p></li>
+<li><p>Calcular el exponente con sesgo, mediante la fórmula <span class="math notranslate nohighlight">\(e = \textit{exponente real} + 1023\)</span></p></li>
 </ol>
 <ul class="simple">
-<li><p>Puesto que el exponente se almacena en 11 bits, el sesgo es de 1023, esto quiere decir que el exponente que se almacena en binario está dado por:</p></li>
+<li><p>Convertir el exponente ajustado al sego en representación binaria de 11 bits.</p></li>
+<li><p>Si la representación binaria no ocupa 11 bits, se rellena con ceros.</p>
+<ul>
+<li><p>El exponente real del número <span class="math notranslate nohighlight">\(5.75\)</span> es <span class="math notranslate nohighlight">\(2\)</span>, por lo que el exponente segado está dado por: <span class="math notranslate nohighlight">\(e= 2+1023=1025\)</span></p></li>
+<li><p>El número <span class="math notranslate nohighlight">\(1025\)</span> en binario es <span class="math notranslate nohighlight">\(10000000001\)</span>. Como ocupa 11 bits no es necesario completar con ceros.*</p></li>
 </ul>
-<p><span class="math notranslate nohighlight">\(e = \textit{exponente real} + 1023\)</span></p>
-<p>*Convertir el exponente ajustado al sego en representación binaria de 11 bits.</p>
-<ul class="simple">
-<li><p>Si la representación binaria no ocupa 11 bits, se rellena con ceros.</p></li>
+</li>
 </ul>
-<p><em>El exponente real del número <span class="math notranslate nohighlight">\(5.75\)</span> es <span class="math notranslate nohighlight">\(2\)</span>, por lo que el exponente segado está dado por:</em></p>
-<p><span class="math notranslate nohighlight">\(e= 2+1023=1025\)</span></p>
-<p><em>El número <span class="math notranslate nohighlight">\(1025\)</span> en binario es <span class="math notranslate nohighlight">\(10000000001\)</span>. Como ocupa 11 bits no es necesario completar con ceros.</em></p>
 <ol class="arabic simple" start="6">
-<li><p>Obtener la fracción o mantisa.</p></li>
+<li><p>Tomar la parte fraccionaria de la representaciónn binaria normalizada, es decir lo que queda después del punto decimal y ajustar la mantisa para completar 52 bits. Si son menos, rellenar con ceros.</p></li>
 </ol>
 <ul class="simple">
-<li><p>Tomar la parte fraccionaria de la representaciónn binaria normalizada, es decir lo que queda después del punto decimal y ajustar la mantisa para completar 52 bits. Si son menos, rellenar con ceros.</p></li>
+<li><p>La parte fraccionaria del número <span class="math notranslate nohighlight">\(5.75\)</span> es <span class="math notranslate nohighlight">\(0111\)</span> por lo que la mantisa con 52 bits es: <span class="math notranslate nohighlight">\(0111000000000000000000000000000000000000000000000000\)</span></p></li>
 </ul>
-<p><em>La parte fraccionaria del número <span class="math notranslate nohighlight">\(5.75\)</span> es <span class="math notranslate nohighlight">\(0111\)</span> por lo que la mantisa con 52 bits es:</em></p>
-<p><span class="math notranslate nohighlight">\(0111000000000000000000000000000000000000000000000000\)</span></p>
 <ol class="arabic simple" start="7">
 <li><p>La representación final consiste de 64 bits distribuídos de la siguiente forma:</p></li>
 </ol>
@@ -663,8 +643,8 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">division</span>
 
 <span class="c1">#Entrada de dos números reales</span>
-<span class="n">numero_1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real: &quot;</span> <span class="p">))</span>
-<span class="n">numero_2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa otro número real: &quot;</span> <span class="p">))</span>
+<span class="n">numero_1</span> <span class="o">=</span> <span class="mf">1.4</span>
+<span class="n">numero_2</span> <span class="o">=</span> <span class="mf">2.4</span>
 
 <span class="c1">#Suma de los números</span>
 <span class="n">suma</span> <span class="o">=</span> <span class="n">numero_1</span><span class="o">+</span><span class="n">numero_2</span>
@@ -691,27 +671,11 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">division</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#Entrada de dos números reales</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">numero_1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real: &quot;</span> <span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">numero_2</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa otro número real: &quot;</span> <span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1">#Suma de los números</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/ipykernel/kernelbase.py:1402,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1400</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1401</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1402</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1403</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1404</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1405</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_get_shell_context_var</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_shell_parent_ident</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1406</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1407</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1408</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El resultado de la suma:  1.4 + 2.4 = 3.8
+El resultado de la resta:  1.4 - 2.4 = -1.0
+El resultado de la multipliación:  1.4 * 2.4 = 3.36
+El resultado de la división:  1.4 / 2.4 = 0.5833333333333334
+El resultado de la potencia:  1.4 ^ 2.4 = 2.2423700574830967
 </pre></div>
 </div>
 </div>
@@ -755,9 +719,27 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real en su expresión decimal: 0.1
-El número 0.1 en binario (IEEE 754, 64 bits) es:
-0011111110111001100110011001100110011001100110011001100110011010
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">13</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="k">return</span> <span class="n">binario_flotante</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">numero_real</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real en su expresión decimal: &quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="n">binario_flotante</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/ipykernel/kernelbase.py:1402,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1400</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1401</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1402</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1403</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1404</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1405</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_get_shell_context_var</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_shell_parent_ident</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1406</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1407</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1408</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
 </div>
 </div>
