@@ -622,7 +622,8 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 </pre></div>
 </div>
 </div>
-<p>El hecho de que se use un número determinado de bits para representar un número con decimales implica que la precisión es finita. Es decir, no todo número puede ser representado con los 64 bits y solo podemos usar una cantidad limitada de decimales. Esto quiere decir que se designan un total de 64 bits para almacenar cada uno de ellos. Los números de punto flotante son una aproximación computacional a los números reales. Cualquier número que requiera más decimales, será truncado, introduciendo un error por precisión numérica.</p>
+<p>El hecho de que se use un número determinado de bits para representar un número con decimales implica que la precisión es finita. Es decir, no todo número puede ser representado con los 64 bits y solo podemos usar una cantidad limitada de decimales. Esto quiere decir que se designan un total de 64 bits para almacenar cada uno de ellos.</p>
+<p>Los números de punto flotante son una aproximación computacional a los números reales. Cualquier número que requiera más decimales o cuya representación requiera más bits de los disponibles, será truncado, introduciendo un error por precisión numérica.</p>
 <p>Por ejemplo, la representación exacta del número  <span class="math notranslate nohighlight">\(\sqrt{2}\)</span> requiere que almacenemos una cantidad infinita de números decimales, lo mismo que los números <span class="math notranslate nohighlight">\(\frac{1}{3}= 0.\bar{3}\)</span>, <span class="math notranslate nohighlight">\(\frac{1}{7}= 0.\overline{142857}\)</span>, etc.</p>
 <p>En Python, la información de un número flotante se obtiene usando el paquete <code class="docutils literal notranslate"><span class="pre">sys</span></code>.</p>
 <div class="cell docutils container">
@@ -638,6 +639,8 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 </div>
 </div>
 </div>
+<p>Como puede ver, Python es capaz de almacenar números muy grandes y con una gran cantidad de decimales. Si bien el límite no es infinito, es lo suficiente amplio para que lo usemos y no nos volvamos a preocupar por esto.</p>
+<p>Sin embargo, es importante que conozca que todo tiene un límite y que esto puede volverse importante en situaciones más críticas más avanzadas, desde la trayectoria de un satélite hasta las ecuaciones diferenciales que modelan el comportamiento de un reactor, la solución de la química cuántica y la acumulación de errores en simulaciones computacionales de dinámica molecular.</p>
 <section id="operaciones-con-flotantes">
 <h2>Operaciones con flotantes.<a class="headerlink" href="#operaciones-con-flotantes" title="Link to this heading">#</a></h2>
 <p>Podemos realizar las siguientes operaciones aritméticas con Python</p>
@@ -648,36 +651,33 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 <li><p>División</p></li>
 <li><p>Potencias(reales)</p></li>
 </ol>
-<p>El siguiente código pide al usuario dos números reales, los almacena como un flotante y realiza las operaciones de suma, resta, multiplicación, división y los eleva a una potencia.</p>
+<p>El siguiente código declara dos variables y realiza las operaciones de suma, resta, multiplicación, división y los eleva a una potencia.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">__future__</span><span class="w"> </span><span class="kn">import</span> <span class="n">division</span>
-
-<span class="c1">#Entrada de dos números reales</span>
-<span class="n">numero_1</span> <span class="o">=</span> <span class="mf">1.4</span>
-<span class="n">numero_2</span> <span class="o">=</span> <span class="mf">2.4</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">2.4</span>
 
 <span class="c1">#Suma de los números</span>
-<span class="n">suma</span> <span class="o">=</span> <span class="n">numero_1</span><span class="o">+</span><span class="n">numero_2</span>
+<span class="n">suma</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
 
 <span class="c1">#Resta de los números</span>
-<span class="n">resta</span> <span class="o">=</span> <span class="n">numero_1</span><span class="o">-</span><span class="n">numero_2</span>
+<span class="n">resta</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">y</span>
 
 <span class="c1">#Producto de dos números</span>
-<span class="n">multiplicacion</span> <span class="o">=</span> <span class="n">numero_1</span><span class="o">*</span><span class="n">numero_2</span>
+<span class="n">multiplicacion</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
 
 <span class="c1">#División de dos números</span>
-<span class="n">division</span> <span class="o">=</span>  <span class="n">numero_1</span><span class="o">/</span><span class="n">numero_2</span>
+<span class="n">division</span> <span class="o">=</span>  <span class="n">x</span><span class="o">/</span><span class="n">y</span>
 
 <span class="c1">#Potencia</span>
-<span class="n">potencia</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">numero_1</span><span class="p">,</span><span class="n">numero_2</span><span class="p">)</span>
+<span class="n">potencia</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
 
 <span class="c1">#Impresión de resultados de las operaciones</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la suma:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">suma</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la resta:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">resta</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la multipliación:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">multiplicacion</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la división:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">division</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la potencia:  </span><span class="si">{</span><span class="n">numero_1</span><span class="si">}</span><span class="s2"> ^ </span><span class="si">{</span><span class="n">numero_2</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">potencia</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la suma:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">suma</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la resta:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">resta</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la multipliación:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">multiplicacion</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la división:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">division</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la potencia:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> ^ </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">potencia</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
