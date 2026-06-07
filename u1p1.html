@@ -441,7 +441,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-flotantes">Operaciones con flotantes.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-1-uso-de-numeros-de-punto-flotante-en-python">Actividad 1.1. Uso de Números de Punto Flotante en Python.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-adicionales">Actividad adicionales</a></li>
 </ul>
             </nav>
         </div>
@@ -649,35 +649,73 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 <li><p>Resta</p></li>
 <li><p>Multiplicación</p></li>
 <li><p>División</p></li>
-<li><p>Potencias(reales)</p></li>
+<li><p>Potencias</p></li>
 </ol>
-<p>El siguiente código declara dos variables y realiza las operaciones de suma, resta, multiplicación, división y los eleva a una potencia.</p>
+<p>El siguiente código declara dos variables y muestra como realizar estas operaciones:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">2.4</span>
+
+<span class="c1">#Suma</span>
+<span class="n">z1</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+
+<span class="c1">#Resta</span>
+<span class="n">z2</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">y</span>
+
+<span class="c1">#Producto de dos números</span>
+<span class="n">z3</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+
+<span class="c1">#División de dos números</span>
+<span class="n">z4</span> <span class="o">=</span>  <span class="n">x</span><span class="o">/</span><span class="n">y</span>
+
+<span class="c1">#Potencia</span>
+<span class="n">z5</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
+
+<span class="c1">#Impresión de resultados de las operaciones</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la suma:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la resta:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la multipliación:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la división:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la potencia:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> ^ </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
 <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">1.4</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mf">2.4</span>
 
-<span class="c1">#Suma de los números</span>
-<span class="n">suma</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+<span class="c1">#Suma</span>
+<span class="n">z1</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
 
-<span class="c1">#Resta de los números</span>
-<span class="n">resta</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">y</span>
+<span class="c1">#Resta</span>
+<span class="n">z2</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">y</span>
 
 <span class="c1">#Producto de dos números</span>
-<span class="n">multiplicacion</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
+<span class="n">z3</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span>
 
 <span class="c1">#División de dos números</span>
-<span class="n">division</span> <span class="o">=</span>  <span class="n">x</span><span class="o">/</span><span class="n">y</span>
+<span class="n">z4</span> <span class="o">=</span>  <span class="n">x</span><span class="o">/</span><span class="n">y</span>
 
 <span class="c1">#Potencia</span>
-<span class="n">potencia</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">z5</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="n">y</span>
 
 <span class="c1">#Impresión de resultados de las operaciones</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la suma:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">suma</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la resta:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">resta</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la multipliación:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">multiplicacion</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la división:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">division</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la potencia:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> ^ </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">potencia</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la suma:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> + </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la resta:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la multipliación:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> * </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la división:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> / </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El resultado de la potencia:  </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> ^ </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">z5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -690,60 +728,91 @@ El resultado de la potencia:  1.4 ^ 2.4 = 2.2423700574830967
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
-<section id="actividad-1-1-uso-de-numeros-de-punto-flotante-en-python">
-<h2>Actividad 1.1. Uso de Números de Punto Flotante en Python.<a class="headerlink" href="#actividad-1-1-uso-de-numeros-de-punto-flotante-en-python" title="Link to this heading">#</a></h2>
-<p>Un ejemplo clásico de errores que surgen por la rerpesentación de números reales en el estándar IEEE754 es la representación de los números <span class="math notranslate nohighlight">\(0.1\)</span> y el número <span class="math notranslate nohighlight">\(0.2\)</span>, entre otros.</p>
-<ol class="arabic simple">
-<li><p>De acuerdo al algoritmo presentado, obtén la representación de los números: <span class="math notranslate nohighlight">\(1.5\)</span>, <span class="math notranslate nohighlight">\(2.3\)</span>, <span class="math notranslate nohighlight">\(4.5\)</span>, <span class="math notranslate nohighlight">\(3.0\)</span>, <span class="math notranslate nohighlight">\(0.1\)</span> y <span class="math notranslate nohighlight">\(0.2\)</span> en el formato de punto flotante. Observa que algunos de estos números no pueden ser representados de forma exacta con <span class="math notranslate nohighlight">\(64\)</span> bits.</p></li>
-<li><p>Utiliza el programa proporcionado que emplea el módulo <code class="docutils literal notranslate"><span class="pre">struct</span></code> para comparar tu resultado.</p></li>
-<li><p>Escribe una celda de código en donde se realicen las siguientes operaciones:</p></li>
-</ol>
-<p><span class="math notranslate nohighlight">\(0.1+0.2\)</span></p>
-<p><span class="math notranslate nohighlight">\(1.5-1.1\)</span></p>
-<p><span class="math notranslate nohighlight">\(2.3\times 4.5\)</span></p>
-<p>De acuerdo a la aritmética tradicional, ¿Por qué ocurren errores en las operaciones realizadas con Python?</p>
-<ol class="arabic simple" start="4">
-<li><p>El siguiente código compara dos números flotantes, modifícalo y ejecútalo para comparar el resultado aritmético de las operaciones realizadas en el ejercicio 3 con el resultado numérico de dichas operaciones con Python.</p></li>
-</ol>
+<section id="actividad-adicionales">
+<h2>Actividad adicionales<a class="headerlink" href="#actividad-adicionales" title="Link to this heading">#</a></h2>
+<p>De acuerdo al algoritmo presentado en <code class="docutils literal notranslate"><span class="pre">Para</span> <span class="pre">saber</span> <span class="pre">más</span></code>, obtén la representación de los números: <span class="math notranslate nohighlight">\(1.5\)</span>, <span class="math notranslate nohighlight">\(2.3\)</span>, <span class="math notranslate nohighlight">\(4.5\)</span>, <span class="math notranslate nohighlight">\(3.0\)</span>, <span class="math notranslate nohighlight">\(0.1\)</span> y <span class="math notranslate nohighlight">\(0.2\)</span> en el formato de punto flotante. Observa que algunos de estos números no pueden ser representados de forma exacta con <span class="math notranslate nohighlight">\(64\)</span> bits.</p>
+<p>Utiliza el programa proporcionado que emplea el módulo <code class="docutils literal notranslate"><span class="pre">struct</span></code> para comparar tu resultado. El código de ejemplo se reproduce oculto como referencia.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 2</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba su código aquí.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">calculo_representacion_flotante</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="c1"># Empaquetar el número como flotante de 64 bits</span>
-    <span class="n">packed_x</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;d&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-    <span class="c1"># Convertir a un entero de 64 bits para ver los bits</span>
-    <span class="n">int_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">packed_x</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;big&#39;</span><span class="p">)</span>
-    <span class="c1"># Convertir a binario</span>
-    <span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">binario_flotante</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">5.75</span>
 
-<span class="n">numero_real</span> <span class="o">=</span> <span class="mf">0.1</span>
-<span class="n">binario_flotante</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">packed_x</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;d&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">int_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">packed_x</span><span class="p">)</span>
+<span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El número 0.1 en binario (IEEE 754, 64 bits) es:
-0011111110111001100110011001100110011001100110011001100110011010
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">5.75</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">packed_x</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;d&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">int_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">packed_x</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: from_bytes() missing required argument &#39;byteorder&#39; (pos 2)
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Un ejemplo clásico de errores que surgen por la rerpesentación de números reales en el estándar IEEE754 es la representación de los números <span class="math notranslate nohighlight">\(0.1\)</span> y el número <span class="math notranslate nohighlight">\(0.2\)</span>, entre otros.</p>
+<p>Escribe una celda de código en donde se realicen las siguientes operaciones:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(0.1+0.2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(1.5-1.1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2.4\times 4.5\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mf">2.4</span><span class="o">*</span><span class="mf">4.5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.799999999999999
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<p>Es evidente que el primer caso resulta en <span class="math notranslate nohighlight">\(0.3\)</span>, el segundo en <span class="math notranslate nohighlight">\(0.4\)</span> y el tercero es <span class="math notranslate nohighlight">\(10.8\)</span>, pero descubrirá que el resultado computacional varía (por muy poquito), ¿Por qué ocurren estos errores en las operaciones realizadas con Python?</p>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 3</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">0.1</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">0.2</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La suma de </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2">+</span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
 <span class="n">c</span> <span class="o">=</span> <span class="mf">1.5</span>
 <span class="n">d</span> <span class="o">=</span> <span class="mf">1.1</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La resta de </span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2"> menos </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">c</span><span class="o">-</span><span class="n">d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">e</span> <span class="o">=</span> <span class="mf">2.3</span>
+
+<span class="n">e</span> <span class="o">=</span> <span class="mf">2.4</span>
 <span class="n">f</span> <span class="o">=</span> <span class="mf">4.5</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El producto de </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2"> por </span><span class="si">{</span><span class="n">f</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">e</span><span class="o">*</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
@@ -752,15 +821,20 @@ El resultado de la potencia:  1.4 ^ 2.4 = 2.2423700574830967
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La suma de 0.1+0.2 es igual a 0.30000000000000004
 La resta de 1.5 menos 1.1 es igual a 0.3999999999999999
-El producto de 2.3 por 4.5 es igual a 10.35
+El producto de 2.4 por 4.5 es igual a 10.799999999999999
 </pre></div>
 </div>
 </div>
+</details>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 4</span>
-<span class="n">resultado_numerico_1</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">0.2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resultado_numerico_1</span> <span class="o">=</span> <span class="mf">0.1</span><span class="o">+</span><span class="mf">0.2</span>
 <span class="n">resultado_aritmético_1</span> <span class="o">=</span> <span class="mf">0.3</span>
 <span class="k">if</span> <span class="n">resultado_numerico_1</span> <span class="o">==</span> <span class="n">resultado_aritmético_1</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado_aritmético_1</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">resultado_numerico_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -774,7 +848,7 @@ El producto de 2.3 por 4.5 es igual a 10.35
 <span class="k">else</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado_aritmético_2</span><span class="si">}</span><span class="s2"> no es igual a </span><span class="si">{</span><span class="n">resultado_numerico_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="n">resultado_numerico_3</span> <span class="o">=</span> <span class="mf">2.3</span><span class="o">*</span><span class="mf">4.5</span>
+<span class="n">resultado_numerico_3</span> <span class="o">=</span> <span class="mf">2.4</span><span class="o">*</span><span class="mf">4.5</span>
 <span class="n">resultado_aritmético_3</span> <span class="o">=</span> <span class="mf">10.35</span>
 <span class="k">if</span> <span class="n">resultado_numerico_3</span> <span class="o">==</span> <span class="n">resultado_aritmético_3</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">resultado_aritmético_3</span><span class="si">}</span><span class="s2"> es igual a </span><span class="si">{</span><span class="n">resultado_numerico_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -786,10 +860,11 @@ El producto de 2.3 por 4.5 es igual a 10.35
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3 no es igual a 0.30000000000000004
 0.4 no es igual a 0.3999999999999999
-10.35 es igual a 10.35
+10.35 no es igual a 10.799999999999999
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 </section>
@@ -859,7 +934,7 @@ El producto de 2.3 por 4.5 es igual a 10.35
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operaciones-con-flotantes">Operaciones con flotantes.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-1-uso-de-numeros-de-punto-flotante-en-python">Actividad 1.1. Uso de Números de Punto Flotante en Python.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-adicionales">Actividad adicionales</a></li>
 </ul>
   </nav></div>
 
