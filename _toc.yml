@@ -10,9 +10,9 @@ parts:
 
   - caption: Funciones
     chapters:
-      - file: practica2b
-      - file: practica2c
-      - file: Calculo_1_Practica_3_Corregida
+      - file: u2p1
+      - file: u2p2
+      - file: u2p3
       - file: practica3
 
   - caption: Límites y continuidad
