@@ -441,7 +441,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-adicional-los-numeros-flotantes-son-un-campo">Actividad adicional. ¿Los números flotantes son un campo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#los-numeros-flotantes-son-un-campo">¿Los números flotantes son un campo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#promocion-de-tipos-de-datos">Promoción de tipos de datos</a></li>
 </ul>
             </nav>
         </div>
@@ -455,7 +456,16 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="propiedades-de-campo-de-los-numeros-reales">
 <h1>Propiedades de campo de los números reales<a class="headerlink" href="#propiedades-de-campo-de-los-numeros-reales" title="Link to this heading">#</a></h1>
-<p>Los números reales cumplen con las siguientes propiedades de campo :</p>
+<div class="tip admonition">
+<p class="admonition-title">Concepto</p>
+<p>Los números reales junto con las operaciones de suma y de multiplicación forman un campo. Esto significa que cumplen con 11 propiedades. Esto es:</p>
+<ul class="simple">
+<li><p>5 propiedades para la suma.</p></li>
+<li><p>5 propiedades para la multiplicación</p></li>
+<li><p>La propiedad de distributividad entre suma y multiplicación.</p></li>
+</ul>
+</div>
+<p>Las propiedades de campo de los números reales son:</p>
 <ul class="simple">
 <li><p><strong>Cerradura</strong> de la suma y del producto:</p></li>
 </ul>
@@ -486,69 +496,43 @@ document.write(`
 <li><p><strong>Distributividad</strong> de la operaciones de suma y producto.</p></li>
 </ul>
 <p>Para cualesquiera tres números <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(c\)</span> <span class="math notranslate nohighlight">\(\in \mathbb{R}\)</span>, <span class="math notranslate nohighlight">\(a\cdot(b+c)=a\cdot b + a\cdot b\)</span></p>
-<section id="actividad-adicional-los-numeros-flotantes-son-un-campo">
-<h2>Actividad adicional. ¿Los números flotantes son un campo?<a class="headerlink" href="#actividad-adicional-los-numeros-flotantes-son-un-campo" title="Link to this heading">#</a></h2>
+<section id="los-numeros-flotantes-son-un-campo">
+<h2>¿Los números flotantes son un campo?<a class="headerlink" href="#los-numeros-flotantes-son-un-campo" title="Link to this heading">#</a></h2>
 <p><strong>Objetivo:</strong> Que el estudiante comprenda las propiedades de campo que cumplen los números reales y cuáles sí y cuáles no cumplen los números de punto flotante en Python.</p>
 <p><strong>Actividad</strong></p>
 <p>Utiliza los códigos de Python que te permitan responder las siguientes preguntas:</p>
 <ol class="arabic simple">
 <li><p>¿La propiedad de cerradura en la suma y el producto se cumple para cualesquiera dos números flotantes?</p></li>
-<li><p>¿La propiedad de conmutatividad en la suma y el producto se cumpln para cualesquiera dos números flotantes?</p></li>
-<li><p>¿La propiedad de asociatividad en la suma y el producto se cumple en los números flotantes?</p></li>
-<li><p>¿Para cada número flotante existen los neutros en la suma y el producto,  y son números flotantes?</p></li>
-<li><p>¿Para cada número flotante existen los inversos en la suma y el producto, y son números flotantes?</p></li>
-<li><p>¿Para cualesquiera tres números flotantes se cumple la propiedad de distributividad?</p></li>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Actividad cero</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">calculo_representacion_flotante</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="c1"># Empaquetar el número como flotante de 64 bits</span>
-    <span class="n">packed_x</span> <span class="o">=</span> <span class="n">struct</span><span class="o">.</span><span class="n">pack</span><span class="p">(</span><span class="s1">&#39;&gt;d&#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-    <span class="c1"># Convertir a un entero de 64 bits para ver los bits</span>
-    <span class="n">int_rep</span> <span class="o">=</span> <span class="nb">int</span><span class="o">.</span><span class="n">from_bytes</span><span class="p">(</span><span class="n">packed_x</span><span class="p">,</span> <span class="n">byteorder</span><span class="o">=</span><span class="s1">&#39;big&#39;</span><span class="p">)</span>
-    <span class="c1"># Convertir a binario</span>
-    <span class="n">binario_flotante</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">int_rep</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span><span class="o">.</span><span class="n">zfill</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">binario_flotante</span>
-
-<span class="n">numero_real</span> <span class="o">=</span> <span class="mf">4.2</span>
-<span class="n">binario_flotante</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El número </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> en binario (IEEE 754, 64 bits) es:</span><span class="se">\n</span><span class="si">{</span><span class="n">binario_flotante</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El número 4.2 en binario (IEEE 754, 64 bits) es:
-0100000000010000110011001100110011001100110011001100110011001101
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 1</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">3.2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">3.2</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">5.2</span>
 <span class="n">suma</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span>
 <span class="n">producto</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span>
 
-<span class="n">a_f</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="n">b_f</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="n">suma_f</span> <span class="o">=</span> <span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">suma</span><span class="p">)</span>
-<span class="n">producto_f</span> <span class="o">=</span><span class="n">calculo_representacion_flotante</span><span class="p">(</span><span class="n">producto</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">suma</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">producto</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
 
 
-<span class="k">if</span> <span class="n">a_f</span><span class="o">+</span><span class="n">b_f</span> <span class="o">==</span> <span class="n">suma_f</span><span class="p">:</span>
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes es un número flotante&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes no es un número flotante&quot;</span><span class="p">)</span>
 
-<span class="k">if</span> <span class="n">a_f</span><span class="o">*</span><span class="n">b_f</span> <span class="o">==</span> <span class="n">producto_f</span><span class="p">:</span>
+<span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span> <span class="o">==</span> <span class="nb">float</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes es un número flotante&quot;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes no es un número flotante&quot;</span><span class="p">)</span>
@@ -558,27 +542,31 @@ document.write(`
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;float&#39;&gt;
 &lt;class &#39;float&#39;&gt;
-La suma de números flotantes no es un número flotante
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes no es un número flotante&quot;</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">21</span> <span class="k">if</span> <span class="n">a_f</span><span class="o">*</span><span class="n">b_f</span> <span class="o">==</span> <span class="n">producto_f</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La suma de números flotantes es un número flotante&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;str&#39;
+La suma de números flotantes es un número flotante
+La suma de números flotantes es un número flotante
 </pre></div>
 </div>
 </div>
+</details>
 </div>
+<ol class="arabic simple" start="2">
+<li><p>¿La propiedad de conmutatividad en la suma y el producto se cumpln para cualesquiera dos números flotantes?</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 2</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">1.3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">1.3</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">2.3</span>
 
 <span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span> <span class="o">==</span> <span class="n">b</span><span class="o">+</span><span class="n">a</span><span class="p">:</span>
@@ -594,18 +582,31 @@ La suma de números flotantes no es un número flotante
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 1
-Ingresa un número real b en expresión decimal b: 6
-La suma de dos números flotantes es conmutativa
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La suma de dos números flotantes es conmutativa
 El producto de dos números flotantes es conmutativo
 </pre></div>
 </div>
 </div>
+</details>
 </div>
+<ol class="arabic simple" start="3">
+<li><p>¿La propiedad de asociatividad en la suma y el producto se cumple en los números flotantes?</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 3</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">2.6</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">2.6</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">3.2</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mf">4.5</span>
 <span class="n">suma</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span>
@@ -624,19 +625,31 @@ El producto de dos números flotantes es conmutativo
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 1
-Ingresa un número real b en expresión decimal b: 3
-Ingresa un número real c en expresión decimal c: 7
-La suma de tres números flotantes es asociativa
-El producto de tres números flotantes es asociativa
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La suma de tres números flotantes es asociativa
+El producto de tres números flotantes NO es asociativo
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>¿Para cada número flotante existen los neutros en la suma y el producto,  y son números flotantes?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 4</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">1.2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">1.2</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">2.3</span>
 
 <span class="n">inverso_suma</span> <span class="o">=</span> <span class="o">-</span><span class="n">a</span>
@@ -657,20 +670,33 @@ El producto de tres números flotantes es asociativa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 4
-Ingresa un número real b distinto de cero en expresión decimal b: 3
--4.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-1.2
 1.0
-El inverso del número 4.0 es un número flotante
-El recíproco del número 3.0 es un número flotante
+El inverso del número 1.2 es un número flotante
+El recíproco del número 2.3 es un número flotante
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>¿Para cada número flotante existen los inversos en la suma y el producto, y son números flotantes?</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 5</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">5.2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">5.2</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">4.2</span>
 
 <span class="k">if</span> <span class="n">a</span><span class="o">+</span><span class="mi">0</span> <span class="o">==</span> <span class="n">a</span><span class="p">:</span>
@@ -686,18 +712,31 @@ El recíproco del número 3.0 es un número flotante
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 2.3
-Ingresa un número real b en expresión decimal b: 5.0
-El neutro de la suma es un número flotante
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El neutro de la suma es un número flotante
 El neutro de la suma es un número flotante
 </pre></div>
 </div>
 </div>
+</details>
 </div>
+<ol class="arabic simple" start="6">
+<li><p>¿Para cualesquiera tres números flotantes se cumple la propiedad de distributividad?</p></li>
+</ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Actividad 6</span>
-<span class="n">a</span> <span class="o">=</span> <span class="mf">3.2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">3.2</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mf">4.5</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mf">8.9</span>
 
@@ -709,10 +748,45 @@ El neutro de la suma es un número flotante
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ingresa un número real a en expresión decimal a: 3.4
-Ingresa un número real b en expresión decimal b: 5.6
-Ingresa un número real b en expresión decimal c: 1.2
-Los números flotantes cumplen la propiedad distributiva
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Los números flotantes cumplen la propiedad distributiva
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="promocion-de-tipos-de-datos">
+<h2>Promoción de tipos de datos<a class="headerlink" href="#promocion-de-tipos-de-datos" title="Link to this heading">#</a></h2>
+<p>Cuando se opera un <code class="docutils literal notranslate"><span class="pre">int</span></code> con un <code class="docutils literal notranslate"><span class="pre">float</span></code>, se trabaja con distintos tipos de datos. Para manejar esto, Python promueve el dato de <code class="docutils literal notranslate"><span class="pre">int</span></code> a <code class="docutils literal notranslate"><span class="pre">float</span></code>.</p>
+<p>Esto no ocurre cuando las operaciones involucran datos del mismo tipo.</p>
+<p>Use el código de la siguiente celda y vea la diferencia:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mf">2.0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>en el primer caso, el resultado es 3.0 (<code class="docutils literal notranslate"><span class="pre">float</span></code>), mientras que en el segundo caso, el resultado es 3 (<code class="docutils literal notranslate"><span class="pre">int</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En el caso de divisiones, Python promueve el resultado a float, independientemente del tipo de datos de los números originales.</p>
+<p>Puede recuperar la parte entera usando una barra de división doble, pero debe tener cuidado ya que perderá la parte decimal (es truncamiento, no redondeo).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="o">/</span><span class="mi">6</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">10</span><span class="o">//</span><span class="mi">6</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
 </pre></div>
 </div>
 </div>
@@ -784,7 +858,8 @@ Los números flotantes cumplen la propiedad distributiva
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-adicional-los-numeros-flotantes-son-un-campo">Actividad adicional. ¿Los números flotantes son un campo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#los-numeros-flotantes-son-un-campo">¿Los números flotantes son un campo?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#promocion-de-tipos-de-datos">Promoción de tipos de datos</a></li>
 </ul>
   </nav></div>
 
