@@ -440,7 +440,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orden">Orden</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto">Valor absoluto</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales">Valor absoluto de la diferencia de dos números reales.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-3-distancia-entre-dos-numeros-reales">Actividad 1.3. Distancia entre dos números reales.</a></li>
@@ -457,8 +456,6 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="propiedades-de-orden-de-los-numeros-reales">
 <h1>Propiedades de orden de los números reales.<a class="headerlink" href="#propiedades-de-orden-de-los-numeros-reales" title="Link to this heading">#</a></h1>
-<section id="orden">
-<h2>Orden<a class="headerlink" href="#orden" title="Link to this heading">#</a></h2>
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>Para cuales quiera dos números reales, <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> sólo se cumple cualquiera de las tres afirmaciones siguientes (solo una a la vez):</p>
@@ -539,7 +536,6 @@ a == b: False
 </div>
 </div>
 </div>
-</section>
 <section id="valor-absoluto">
 <h2>Valor absoluto<a class="headerlink" href="#valor-absoluto" title="Link to this heading">#</a></h2>
 <p>El valor absoluto de un número real es siempre un número positivo que geométricamente nos da la distancia de dicho número real al origen, se define como:</p>
@@ -550,40 +546,36 @@ a == b: False
   x &amp; si &amp; x\geq 0 \\
       \end{array} \right.
 \)</span></p>
-<p>Para calcular el valor absoluto de un un número real, ocupamos la función <code class="docutils literal notranslate"><span class="pre">abs()</span></code>. El siguiente código evalúa el valor absoluto de un núemero real.</p>
+<p>Para calcular el valor absoluto de un un número real, ocupamos la función <code class="docutils literal notranslate"><span class="pre">abs()</span></code>.</p>
+<p>A continuación, defina la variable <code class="docutils literal notranslate"><span class="pre">x</span></code> con un número negativo e imprima el valor absoluto de la variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numero_real</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real: &quot;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.2</span>
 
-<span class="n">valor_absoluto</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor absoluto del número real </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> es: </span><span class="si">{</span><span class="n">valor_absoluto</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor absoluto del número real </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> es: </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">numero_real</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Ingresa un número real: &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">valor_absoluto</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">numero_real</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El valor absoluto del número real </span><span class="si">{</span><span class="n">numero_real</span><span class="si">}</span><span class="s2"> es: </span><span class="si">{</span><span class="n">valor_absoluto</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/ipykernel/kernelbase.py:1402,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1400</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1401</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1402</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1403</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1404</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1405</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_get_shell_context_var</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_shell_parent_ident</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1406</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1407</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1408</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El valor absoluto del número real -3.2 es: 3.2
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 </section>
 <section id="valor-absoluto-de-la-diferencia-de-dos-numeros-reales">
@@ -637,7 +629,7 @@ a == b: False
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/cfa15ae1152c3be342b0a20b6a38b6ea165087268be6e40ee01a703266966fc6.png" src="_images/cfa15ae1152c3be342b0a20b6a38b6ea165087268be6e40ee01a703266966fc6.png" />
+<img alt="_images/dbc41b23cd2048983074dbb9246e233682cc2d8e2cf87079db909dfd8116e287.png" src="_images/dbc41b23cd2048983074dbb9246e233682cc2d8e2cf87079db909dfd8116e287.png" />
 </div>
 </div>
 </section>
@@ -721,7 +713,6 @@ a == b: False
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#orden">Orden</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto">Valor absoluto</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#valor-absoluto-de-la-diferencia-de-dos-numeros-reales">Valor absoluto de la diferencia de dos números reales.</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-1-3-distancia-entre-dos-numeros-reales">Actividad 1.3. Distancia entre dos números reales.</a></li>
