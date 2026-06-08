@@ -59,11 +59,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'practica2c';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u2p2';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Operaciones simbólicas" href="Calculo_1_Practica_3_Corregida.html" />
-    <link rel="prev" title="Funciones en Python." href="practica2b.html" />
+    <link rel="next" title="Operaciones simbólicas" href="u2p3.html" />
+    <link rel="prev" title="Funciones en Python." href="u2p1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,9 +189,10 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funciones</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="practica2b.html">Funciones en Python.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u2p1.html">Funciones en Python.</a></li>
+
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Sucesiones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Calculo_1_Practica_3_Corregida.html">Operaciones simbólicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u2p3.html">Operaciones simbólicas</a></li>
 
 
 
@@ -279,7 +280,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/practica2c.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u2p2.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -297,7 +298,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/practica2c.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u2p2.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -346,7 +347,7 @@
       
       
       
-      <li><a href="_sources/practica2c.ipynb" target="_blank"
+      <li><a href="_sources/u2p2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -477,8 +478,8 @@ S_n=f(n)
 \end{equation*}
 \]</div>
 <p>Por ejemplo:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb30341b-a7cf-4413-94fa-70a7fb386942">
-<span class="eqno">(1)<a class="headerlink" href="#equation-fb30341b-a7cf-4413-94fa-70a7fb386942" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-6157dd83-83a8-4912-a84a-c8488abc4bb1">
+<span class="eqno">(1)<a class="headerlink" href="#equation-6157dd83-83a8-4912-a84a-c8488abc4bb1" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 S_n      &amp;=&amp; \frac{1}{n}\\
 \alpha_n &amp;=&amp; n\\
 \beta_n  &amp;=&amp; (-1)^{n}\\
@@ -567,7 +568,7 @@ Para 20 el valor de Sn=1/n es: 0.05
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f02807a6560&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fc72dae6740&gt;
 </pre></div>
 </div>
 <img alt="_images/18cc165b834058588246d5827168100edf2d51d889952ac37466bf3f0e70e575.png" src="_images/18cc165b834058588246d5827168100edf2d51d889952ac37466bf3f0e70e575.png" />
@@ -593,13 +594,13 @@ Para 20 el valor de Sn=1/n es: 0.05
 <section id="limite-de-una-sucesion">
 <h2>Límite de una sucesión<a class="headerlink" href="#limite-de-una-sucesion" title="Link to this heading">#</a></h2>
 <p>Una sucesión <span class="math notranslate nohighlight">\(S_n\)</span> converge hacia el número <span class="math notranslate nohighlight">\(L\)</span>, y escribimos:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c054cfa8-1e13-4298-8e7d-51d7b3948d77">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c054cfa8-1e13-4298-8e7d-51d7b3948d77" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d7746e8a-0a4c-4d81-b4ed-ed86465078ca">
+<span class="eqno">(2)<a class="headerlink" href="#equation-d7746e8a-0a4c-4d81-b4ed-ed86465078ca" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle \lim_{n \to \infty}{S_n}=L
 \end{equation}\]</div>
 <p>Si ocurre que para cualquier valor razonablemente pequeño <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> existe un número natural <span class="math notranslate nohighlight">\(N\)</span> tal que para todos los términos <span class="math notranslate nohighlight">\(S_n\)</span> que siguen (es decir, se cumple que <span class="math notranslate nohighlight">\(n&gt;N\)</span>) ocurre que</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d5a13b7a-0248-47a4-9704-caaf270c0573">
-<span class="eqno">(3)<a class="headerlink" href="#equation-d5a13b7a-0248-47a4-9704-caaf270c0573" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-187177b1-d78d-4e93-91e1-53818de0733c">
+<span class="eqno">(3)<a class="headerlink" href="#equation-187177b1-d78d-4e93-91e1-53818de0733c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle |S_n-L|&lt;\epsilon
 \end{equation}\]</div>
 <p>##Práctica 3.1.</p>
@@ -608,8 +609,8 @@ Para 20 el valor de Sn=1/n es: 0.05
 <ol class="arabic simple">
 <li><p>Obtén los primeros 15 términos de la sucesión</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-f948b31c-092c-485d-8147-cde941b4083d">
-<span class="eqno">(4)<a class="headerlink" href="#equation-f948b31c-092c-485d-8147-cde941b4083d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-76d3a084-b430-4536-8318-291531c72f63">
+<span class="eqno">(4)<a class="headerlink" href="#equation-76d3a084-b430-4536-8318-291531c72f63" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle S_n= 1-\frac{1}{n}
 \end{equation}\]</div>
 <ol class="arabic simple" start="2">
@@ -673,7 +674,7 @@ Para 20 el valor de Sn=1/n es: 0.05
 [0.0, 0.5, 0.6666666666666667, 0.75, 0.8, 0.8333333333333334, 0.8571428571428572, 0.875, 0.8888888888888888, 0.9, 0.9090909090909091, 0.9166666666666666, 0.9230769230769231, 0.9285714285714286, 0.9333333333333333]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f02806c2350&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fc72b506440&gt;
 </pre></div>
 </div>
 <img alt="_images/5a5a66f00838e415b0f93b14de9f1a7c5fe1d6274815218ea09802fc0399e4d7.png" src="_images/5a5a66f00838e415b0f93b14de9f1a7c5fe1d6274815218ea09802fc0399e4d7.png" />
@@ -860,8 +861,8 @@ El término 119 de la sucesión es 0.9915966386554622, |0.9915966386554622-1|=0.
 <p><strong>Actividades.</strong></p>
 <p>Para las siguientes sucesiones:</p>
 <p>a) <span class="math notranslate nohighlight">\(\displaystyle S_n =\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-c2729b26-29f7-4f02-a790-2be82ea6ed8d">
-<span class="eqno">(5)<a class="headerlink" href="#equation-c2729b26-29f7-4f02-a790-2be82ea6ed8d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6d127112-0284-430a-a29a-0b4ed81f6c10">
+<span class="eqno">(5)<a class="headerlink" href="#equation-6d127112-0284-430a-a29a-0b4ed81f6c10" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle S_n= 1-\frac{1}{n}
 \end{equation}\]</div>
 <ol class="arabic simple" start="2">
@@ -907,7 +908,7 @@ El término 119 de la sucesión es 0.9915966386554622, |0.9915966386554622-1|=0.
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="practica2b.html"
+       href="u2p1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -916,7 +917,7 @@ El término 119 de la sucesión es 0.9915966386554622, |0.9915966386554622-1|=0.
       </div>
     </a>
     <a class="right-next"
-       href="Calculo_1_Practica_3_Corregida.html"
+       href="u2p3.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
