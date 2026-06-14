@@ -196,20 +196,13 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="practica3.html">Gráficas de funciones usando <strong>Matplotlib</strong></a></li>
-
-
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Límites y continuidad</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u4p1.html">Aproximación numérica de límites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p2.html">Límites laterales</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p3.html">Continuidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p4.html">Visualización</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Derivada</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="practica_derivadas.html">Derivadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p1.html">Práctica 1: Aproximación numérica de la derivada</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p2.html">Práctica 2: Derivadas de funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p3.html">Práctica 3: Interpretación geométrica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p4.html">Práctica 4: Aplicaciones</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Derivada</span></p>
 <ul class="nav bd-sidenav">
@@ -602,15 +595,33 @@ n_f = (-1)^s 2^{e-1023} \left( 1+f\right)
 <ol class="arabic simple" start="7">
 <li><p>La representación del número 5.75 consiste en 64 bits distribuidos de la siguiente forma:</p></li>
 </ol>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-0 &amp;  &amp; 10000000001 &amp; &amp; 0111000000000\\
-  &amp;  &amp;             &amp; &amp; 0000000000000\\
-  &amp;  &amp;             &amp; &amp; 0000000000000\\
-  &amp;  &amp;             &amp; &amp; 0000000000000
-\end{aligned}
-\end{split}\]</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-center"><p>Signo</p></th>
+<th class="head text-center"><p>Exponente</p></th>
+<th class="head text-left"><p>Mantisa / Fracción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-center"><p>0</p></td>
+<td class="text-center"><p>10000000001</p></td>
+<td class="text-left"><p>0111000000000</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-left"><p>0000000000000</p></td>
+</tr>
+<tr class="row-even"><td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-left"><p>0000000000000</p></td>
+</tr>
+<tr class="row-odd"><td class="text-center"><p></p></td>
+<td class="text-center"><p></p></td>
+<td class="text-left"><p>0000000000000</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p>Se proporciona el siguiente código para ver la representación binaria de un número de coma flotante:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">struct</span>
 

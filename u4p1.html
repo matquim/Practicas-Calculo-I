@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aproximación numérica de límites &#8212; Practicas Cálculo I</title>
+    <title>Práctica 1: Aproximación numérica de la derivada &#8212; Practicas Cálculo I</title>
   
   
   
@@ -62,8 +62,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'u4p1';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Límites laterales" href="u4p2.html" />
-    <link rel="prev" title="Gráficas de funciones usando Matplotlib" href="practica3.html" />
+    <link rel="next" title="Práctica 2: Derivadas de funciones" href="u4p2.html" />
+    <link rel="prev" title="Operaciones simbólicas" href="u2p3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -196,20 +196,13 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="practica3.html">Gráficas de funciones usando <strong>Matplotlib</strong></a></li>
-
-
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Límites y continuidad</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aproximación numérica de límites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p2.html">Límites laterales</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p3.html">Continuidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p4.html">Visualización</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Derivada</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="practica_derivadas.html">Derivadas</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Práctica 1: Aproximación numérica de la derivada</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p2.html">Práctica 2: Derivadas de funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p3.html">Práctica 3: Interpretación geométrica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p4.html">Práctica 4: Aplicaciones</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Derivada</span></p>
 <ul class="nav bd-sidenav">
@@ -429,7 +422,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Aproximación numérica de límites</h1>
+    <h1>Práctica 1: Aproximación numérica de la derivada</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -443,46 +436,40 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="aproximacion-numerica-de-limites">
-<h1>Aproximación numérica de límites<a class="headerlink" href="#aproximacion-numerica-de-limites" title="Link to this heading">#</a></h1>
+  <section id="practica-1-aproximacion-numerica-de-la-derivada">
+<h1>Práctica 1: Aproximación numérica de la derivada<a class="headerlink" href="#practica-1-aproximacion-numerica-de-la-derivada" title="Link to this heading">#</a></h1>
 <p><strong>Objetivo</strong></p>
-<p>Aproximar límites evaluando funciones en valores cercanos a un punto.</p>
+<p>Aproximar la derivada de una función mediante el cociente incremental.</p>
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
-<p>El límite de una función <span class="math notranslate nohighlight">\(f(x)\)</span> cuando <span class="math notranslate nohighlight">\(x\)</span> tiende a <span class="math notranslate nohighlight">\(a\)</span> se escribe:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-64f054be-1901-4fd7-9a5f-300e37c3c9dd">
-<span class="eqno">(6)<a class="headerlink" href="#equation-64f054be-1901-4fd7-9a5f-300e37c3c9dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\lim_{x \to a} f(x)
+<p>La derivada de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un punto <span class="math notranslate nohighlight">\(x\)</span> se define como:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-e38074a0-6be8-4fd8-b2d2-8e6162229272">
+<span class="eqno">(6)<a class="headerlink" href="#equation-e38074a0-6be8-4fd8-b2d2-8e6162229272" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 \end{equation}\]</div>
-<p>y describe el comportamiento de la función cerca de <span class="math notranslate nohighlight">\(a\)</span>.</p>
 </div>
-<p><strong>Ejemplo</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 
-<span class="n">valores</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.999</span><span class="p">,</span> <span class="mf">1.001</span><span class="p">,</span> <span class="mf">1.01</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.001</span>
 
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">valores</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">derivada</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9 1.9
-0.99 1.990000000000001
-0.999 1.9989999999999712
-1.001 2.0009999999999177
-1.01 2.009999999999999
-1.1 2.1
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.000999999999699
 </pre></div>
 </div>
 </div>
 </div>
 <p><strong>Ejercicios</strong></p>
-<p>a) Aproximar el límite de <span class="math notranslate nohighlight">\(f(x) = \frac{x^2 - 4}{x - 2}\)</span> cuando <span class="math notranslate nohighlight">\(x \to 2\)</span>.</p>
-<p>b) Evaluar la función en valores cercanos a 2 por la izquierda y por la derecha.</p>
+<p>a) Aproximar la derivada de <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> en <span class="math notranslate nohighlight">\(x = 2\)</span> con distintos valores de <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<p>b) Analizar cómo cambia la aproximación cuando <span class="math notranslate nohighlight">\(h \to 0\)</span>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -516,12 +503,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="practica3.html"
+       href="u2p3.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Gráficas de funciones usando <strong>Matplotlib</strong></p>
+        <p class="prev-next-title">Operaciones simbólicas</p>
       </div>
     </a>
     <a class="right-next"
@@ -529,7 +516,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Límites laterales</p>
+        <p class="prev-next-title">Práctica 2: Derivadas de funciones</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

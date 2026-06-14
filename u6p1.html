@@ -196,20 +196,13 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="practica3.html">Gráficas de funciones usando <strong>Matplotlib</strong></a></li>
-
-
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Límites y continuidad</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u4p1.html">Aproximación numérica de límites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p2.html">Límites laterales</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p3.html">Continuidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p4.html">Visualización</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Derivada</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="practica_derivadas.html">Derivadas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p1.html">Práctica 1: Aproximación numérica de la derivada</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p2.html">Práctica 2: Derivadas de funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p3.html">Práctica 3: Interpretación geométrica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p4.html">Práctica 4: Aplicaciones</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Derivada</span></p>
 <ul class="nav bd-sidenav">
@@ -474,8 +467,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 </ol>
 <p><strong>Fórmula general:</strong></p>
 <p>La suma de Riemann se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dff8a7a9-3fd4-4500-a7a1-62e63be2a7b6">
-<span class="eqno">(9)<a class="headerlink" href="#equation-dff8a7a9-3fd4-4500-a7a1-62e63be2a7b6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fe111cfb-ae6c-412a-922f-2ea9d41a8080">
+<span class="eqno">(7)<a class="headerlink" href="#equation-fe111cfb-ae6c-412a-922f-2ea9d41a8080" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=1}^{n}{f(x_{i})\Delta x}
 \end{align}\]</div>
 <p>donde:</p>
@@ -483,8 +476,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <li><p><span class="math notranslate nohighlight">\(n ≡\)</span> número de rectángulos</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta x ≡\)</span> ancho de cada rectángulo (tamaño de la partición):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-2d54e5ed-f0ab-400c-ae56-3c52f409aad3">
-<span class="eqno">(10)<a class="headerlink" href="#equation-2d54e5ed-f0ab-400c-ae56-3c52f409aad3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4a6e0fee-0019-4643-a1c1-354f2adba9e3">
+<span class="eqno">(8)<a class="headerlink" href="#equation-4a6e0fee-0019-4643-a1c1-354f2adba9e3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x = \frac{b-a}{n}
 \end{align}\]</div>
 <ul class="simple">
@@ -504,26 +497,26 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <h2>Integral definida<a class="headerlink" href="#integral-definida" title="Link to this heading">#</a></h2>
 <p>Las sumas de Riemann son una base de la integral definida.</p>
 <p>Cuando el número de rectángulos aumenta, la aproximáción de la suma de los rectángulos, se vuelve exactamente el área bajo la curva, es decir,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9d92c776-d0e5-4a9f-ad19-07b8939179ee">
-<span class="eqno">(11)<a class="headerlink" href="#equation-9d92c776-d0e5-4a9f-ad19-07b8939179ee" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8e85d27e-48d6-4980-a9c2-b2cc7e3d6417">
+<span class="eqno">(9)<a class="headerlink" href="#equation-8e85d27e-48d6-4980-a9c2-b2cc7e3d6417" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \lim_{n\to \infty}{\sum_{i=i}^{n}{f(x_i)\Delta x}}=\int_{a}^{b}{f(x)\,dx}
 \end{align}\]</div>
 </section>
 <section id="metodologia">
 <h2>Metodología<a class="headerlink" href="#metodologia" title="Link to this heading">#</a></h2>
 <p>Tomamos una partición de puntos de la forma:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-22a50240-3ba3-432f-84a6-027345293228">
-<span class="eqno">(12)<a class="headerlink" href="#equation-22a50240-3ba3-432f-84a6-027345293228" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-171ec87a-726c-4cb4-9762-da84769e8048">
+<span class="eqno">(10)<a class="headerlink" href="#equation-171ec87a-726c-4cb4-9762-da84769e8048" title="Permalink to this equation">#</a></span>\[\begin{align}
 x_i=a+i\Delta x
 \end{align}\]</div>
 <p>en donde</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c622e374-fe8b-4760-bf5d-aef451edbe4a">
-<span class="eqno">(13)<a class="headerlink" href="#equation-c622e374-fe8b-4760-bf5d-aef451edbe4a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b0de4396-f96e-4ee0-8069-c87170575f0d">
+<span class="eqno">(11)<a class="headerlink" href="#equation-b0de4396-f96e-4ee0-8069-c87170575f0d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x=\frac{b-a}{n}
 \end{align}\]</div>
 <p>La aproximación <span class="math notranslate nohighlight">\(I^*\)</span>  para la integral (suma de Riemann) está dada por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2eef3ce6-5d4d-4db1-a1f1-13aaaaea251d">
-<span class="eqno">(14)<a class="headerlink" href="#equation-2eef3ce6-5d4d-4db1-a1f1-13aaaaea251d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c1696f2c-c102-47a5-836f-fd5442ad4d55">
+<span class="eqno">(12)<a class="headerlink" href="#equation-c1696f2c-c102-47a5-836f-fd5442ad4d55" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=0}^{n}{f(x_{i})h}
 \end{align}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(x_i\)</span> es el extremo izquierdo, derecho o el punto medio.</p>
@@ -747,7 +740,7 @@ Las suma de Riemann media:     I_med = 2.6666659999999993
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f51409b6170&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f3ba659e3b0&gt;
 </pre></div>
 </div>
 <img alt="_images/2eaa29f114a2a87694ceff0d92154919f4133910c38bd01fc8b5e33c68015aff.png" src="_images/2eaa29f114a2a87694ceff0d92154919f4133910c38bd01fc8b5e33c68015aff.png" />
@@ -796,7 +789,7 @@ Las suma de Riemann media:     I_med = 2.6666659999999993
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f51408b1ed0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f3ba649a020&gt;
 </pre></div>
 </div>
 <img alt="_images/6c901ba74f955d10c51f2a9394f9faf8ba9daecf6f0a1e5b9e482e460d8bbdaa.png" src="_images/6c901ba74f955d10c51f2a9394f9faf8ba9daecf6f0a1e5b9e482e460d8bbdaa.png" />
@@ -843,7 +836,7 @@ Las suma de Riemann media:     I_med = 2.6666659999999993
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f51407588b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f3ba433cb50&gt;
 </pre></div>
 </div>
 <img alt="_images/915e6e600456c515c43de31a32a7a009955444dc28c138debd2c532d2337fbb8.png" src="_images/915e6e600456c515c43de31a32a7a009955444dc28c138debd2c532d2337fbb8.png" />
@@ -856,7 +849,7 @@ Las suma de Riemann media:     I_med = 2.6666659999999993
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f51407c7c40&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f3ba43b3df0&gt;
 </pre></div>
 </div>
 <img alt="_images/b35988c1ff326dbc77573b4f7362881997277b43321c4e87e8e59c62890855a2.png" src="_images/b35988c1ff326dbc77573b4f7362881997277b43321c4e87e8e59c62890855a2.png" />
@@ -904,7 +897,7 @@ Las suma de Riemann media:     I_med = 2.6666659999999993
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f514066e470&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f3ba424e6b0&gt;
 </pre></div>
 </div>
 <img alt="_images/e1e30705f6763b970491992d8b631b867f7792cd868911192011ed385c9b783f.png" src="_images/e1e30705f6763b970491992d8b631b867f7792cd868911192011ed385c9b783f.png" />
@@ -922,8 +915,8 @@ De acuerdo a los ejercicios anteriores, ¿Cuál dirías que es la función <span
 <section id="variacion-del-limite-inferior">
 <h2>Variación del límite inferior<a class="headerlink" href="#variacion-del-limite-inferior" title="Link to this heading">#</a></h2>
 <p>Vamos a observar qué ocurre  si en el cálculo numérico de la función</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f96e9a93-5eac-4c32-8109-45485959a2c6">
-<span class="eqno">(15)<a class="headerlink" href="#equation-f96e9a93-5eac-4c32-8109-45485959a2c6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-47eba657-a2a6-4738-92ed-8348198edc06">
+<span class="eqno">(13)<a class="headerlink" href="#equation-47eba657-a2a6-4738-92ed-8348198edc06" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle G(x) = \int_{a}^{x}{f(t)\,dt}
 \end{align}\]</div>
 <p>tomamos valores distintos del límite inferior.</p>
