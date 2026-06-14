@@ -7,26 +7,20 @@ parts:
       - file: u1p1
       - file: u1p2
       - file: u1p3
-
   - caption: Funciones
     chapters:
       - file: u2p1
       - file: u2p2
       - file: u2p3
-      - file: practica3
-
   - caption: Límites y continuidad
     chapters:
       - file: practica_limites
+  - caption: La Derivada
+    chapters:
       - file: u4p1     
       - file: u4p2 
       - file: u4p3     
       - file: u4p4     
-
-  - caption: La Derivada
-    chapters:
-      - file: practica_derivadas     
-
   - caption: Aplicaciones de la Derivada
     chapters:
       - file: u5p1     
