@@ -1,6 +1,6 @@
 # Book settings
 title: Practicas Cálculo I
-author: Oscar Enrique Pérez González, Juan Felipe Huan Lew Yee, Laura Michelle Jiménez Díaz, Departamento de Matemáticas, Facultad de Química, Universidad Nacional Autónoma de México
+author: Oscar Enrique Pérez González, Juan Felipe Huan Lew Yee, Laura Michelle Jiménez Díaz, Julien Michel Joseph Lombard, Departamento de Matemáticas, Facultad de Química, Universidad Nacional Autónoma de México
 html:
   extra_footer : |
       <div>
@@ -12,6 +12,7 @@ logo: logo.png
 
 sphinx:
   config:
+    language: es
     html_show_copyright: false
 
 launch_buttons:
