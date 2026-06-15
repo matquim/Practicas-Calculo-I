@@ -28,7 +28,7 @@ parts:
   - caption: La Integral
     chapters:
       - file: u6p1     
-
+      - file: u6p2     
   - caption: Métodos y Técnicas de Integración
     chapters:
       - file: u7p1     
