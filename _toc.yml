@@ -32,7 +32,6 @@ parts:
   - caption: Métodos y Técnicas de Integración
     chapters:
       - file: u7p1     
-
   - caption: Aplicaciones de la Integral
     chapters:
       - file: u8p1     
