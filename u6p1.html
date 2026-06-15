@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'u6p1';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="En Construcción 🚧" href="u7p1.html" />
+    <link rel="next" title="Integral indefinida" href="u6p2.html" />
     <link rel="prev" title="En Construcción 🚧" href="u5p1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
@@ -212,6 +212,12 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Integral</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Sumas de Riemann</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u6p2.html">Integral indefinida</a></li>
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Métodos y Técnicas de Integración</span></p>
 <ul class="nav bd-sidenav">
@@ -438,12 +444,6 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-valor-de-f-x-i">El valor de <span class="math notranslate nohighlight">\(f(x_i)\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-definida">Integral definida</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodologia">Metodología</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-indefinida">Integral indefinida</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaystyle-f-t-t"><span class="math notranslate nohighlight">\(\displaystyle f(t) = t\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-t-cos-t"><span class="math notranslate nohighlight">\(f(t) = cos(t)\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaystyle-f-t-frac-1-t"><span class="math notranslate nohighlight">\(\displaystyle f(t) = \frac{1}{t}\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaystyle-f-t-e-t"><span class="math notranslate nohighlight">\(\displaystyle f(t) = e^t\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variacion-del-limite-inferior">Variación del límite inferior</a></li>
 </ul>
             </nav>
         </div>
@@ -468,8 +468,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 </ol>
 <p><strong>Fórmula general:</strong></p>
 <p>La suma de Riemann se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-adf72d75-edd2-4816-a74a-1b115790d8c8">
-<span class="eqno">(7)<a class="headerlink" href="#equation-adf72d75-edd2-4816-a74a-1b115790d8c8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bce0b57c-0c20-4917-9a16-6d4399dfcbc9">
+<span class="eqno">(7)<a class="headerlink" href="#equation-bce0b57c-0c20-4917-9a16-6d4399dfcbc9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=1}^{n}{f(x_{i})\Delta x}
 \end{align}\]</div>
 <p>donde:</p>
@@ -477,8 +477,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <li><p><span class="math notranslate nohighlight">\(n ≡\)</span> número de rectángulos</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta x ≡\)</span> ancho de cada rectángulo (tamaño de la partición):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-e181eeb6-bb4e-4f03-829a-ba8ea071a99c">
-<span class="eqno">(8)<a class="headerlink" href="#equation-e181eeb6-bb4e-4f03-829a-ba8ea071a99c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bdb28a4a-6e8c-466a-9aa4-30cc433fe0e5">
+<span class="eqno">(8)<a class="headerlink" href="#equation-bdb28a4a-6e8c-466a-9aa4-30cc433fe0e5" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x = \frac{b-a}{n}
 \end{align}\]</div>
 <ul class="simple">
@@ -498,26 +498,26 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <h2>Integral definida<a class="headerlink" href="#integral-definida" title="Link to this heading">#</a></h2>
 <p>Las sumas de Riemann son una base de la integral definida.</p>
 <p>Cuando el número de rectángulos aumenta, la aproximáción de la suma de los rectángulos, se vuelve exactamente el área bajo la curva, es decir,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-abd8cb7c-42dc-4329-bb70-d5669216ea95">
-<span class="eqno">(9)<a class="headerlink" href="#equation-abd8cb7c-42dc-4329-bb70-d5669216ea95" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-9ff87110-3b5a-4156-b138-f74eddeb10cd">
+<span class="eqno">(9)<a class="headerlink" href="#equation-9ff87110-3b5a-4156-b138-f74eddeb10cd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \lim_{n\to \infty}{\sum_{i=i}^{n}{f(x_i)\Delta x}}=\int_{a}^{b}{f(x)\,dx}
 \end{align}\]</div>
 </section>
 <section id="metodologia">
 <h2>Metodología<a class="headerlink" href="#metodologia" title="Link to this heading">#</a></h2>
 <p>Tomamos una partición de puntos de la forma:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-975475fb-6113-4f1f-abe7-a70c2072cb83">
-<span class="eqno">(10)<a class="headerlink" href="#equation-975475fb-6113-4f1f-abe7-a70c2072cb83" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-35fbaa27-e23d-42e4-b2cd-08e6f9913b41">
+<span class="eqno">(10)<a class="headerlink" href="#equation-35fbaa27-e23d-42e4-b2cd-08e6f9913b41" title="Permalink to this equation">#</a></span>\[\begin{align}
 x_i=a+i\Delta x
 \end{align}\]</div>
 <p>en donde</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f67b6fb6-62e6-4009-960e-aa2f3988abf0">
-<span class="eqno">(11)<a class="headerlink" href="#equation-f67b6fb6-62e6-4009-960e-aa2f3988abf0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-698ac27a-efed-4c37-a9c3-9137317b8570">
+<span class="eqno">(11)<a class="headerlink" href="#equation-698ac27a-efed-4c37-a9c3-9137317b8570" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x=\frac{b-a}{n}
 \end{align}\]</div>
 <p>La aproximación <span class="math notranslate nohighlight">\(I^*\)</span>  para la integral (suma de Riemann) está dada por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fac73f5f-a8b9-4c64-8497-ca922b8b7bf5">
-<span class="eqno">(12)<a class="headerlink" href="#equation-fac73f5f-a8b9-4c64-8497-ca922b8b7bf5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-414b8990-ec73-4e4e-9a98-364606af2ddc">
+<span class="eqno">(12)<a class="headerlink" href="#equation-414b8990-ec73-4e4e-9a98-364606af2ddc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=0}^{n}{f(x_{i})h}
 \end{align}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(x_i\)</span> es el extremo izquierdo, derecho o el punto medio.</p>
@@ -696,402 +696,6 @@ Las suma de Riemann media:     I_med = 2.6666659999999993
 </div>
 </div>
 </section>
-<section id="integral-indefinida">
-<h2>Integral indefinida<a class="headerlink" href="#integral-indefinida" title="Link to this heading">#</a></h2>
-<p>Se define la función <span class="math notranslate nohighlight">\(\displaystyle G(x) = \int_a^x{f(t)\,dt}\)</span>. Notamos que <span class="math notranslate nohighlight">\(G\)</span> es una función en donde al variar el valor del límite superior de la integral, cambia el valor de la integral. Calculemos dicha función para varios ejemplos:</p>
-</section>
-<section id="displaystyle-f-t-t">
-<h2><span class="math notranslate nohighlight">\(\displaystyle f(t) = t\)</span><a class="headerlink" href="#displaystyle-f-t-t" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\displaystyle G(x) = \int_0^x{t\,dt}\)</span>, con <span class="math notranslate nohighlight">\(x \in [0, 5]\)</span></p>
-<p>¿Qué función es?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">t</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="n">Gx</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c1">#integración de f(t)</span>
-<span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-    <span class="c1">#Extremos del intervalo</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">xi</span>
-    <span class="c1">#Número de subintervalos</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-    <span class="c1">#Tamaño de la partición</span>
-    <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
-    <span class="c1">#Puntos de la partición</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">t_med</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span> <span class="c1">#t medios</span>
-    <span class="n">A_med</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">t_med</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">#medias</span>
-    <span class="c1">#Suma de Riemann</span>
-    <span class="n">Suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A_med</span><span class="p">)</span>
-    <span class="n">Gx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Suma</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Gx</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f760e979120&gt;
-</pre></div>
-</div>
-<img alt="_images/2eaa29f114a2a87694ceff0d92154919f4133910c38bd01fc8b5e33c68015aff.png" src="_images/2eaa29f114a2a87694ceff0d92154919f4133910c38bd01fc8b5e33c68015aff.png" />
-</div>
-</div>
-</section>
-<section id="f-t-cos-t">
-<h2><span class="math notranslate nohighlight">\(f(t) = cos(t)\)</span><a class="headerlink" href="#f-t-cos-t" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\displaystyle G(x) = \int_0^x{cos(t)\,dt}\)</span>, con <span class="math notranslate nohighlight">\(x \in [0, 2\pi]\)</span></p>
-<p>¿Qué función es?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="n">Gx</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c1">#integración de f(t)</span>
-<span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-    <span class="c1">#Extremos del intervalo</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">xi</span>
-    <span class="c1">#Número de subintervalos</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-    <span class="c1">#Tamaño de la partición</span>
-    <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
-    <span class="c1">#Puntos de la partición</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">t_med</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span> <span class="c1">#t medios</span>
-    <span class="n">A_med</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">t_med</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">#medias</span>
-    <span class="c1">#Suma de Riemann</span>
-    <span class="n">Suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A_med</span><span class="p">)</span>
-    <span class="n">Gx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Suma</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Gx</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f760e888ac0&gt;
-</pre></div>
-</div>
-<img alt="_images/6c901ba74f955d10c51f2a9394f9faf8ba9daecf6f0a1e5b9e482e460d8bbdaa.png" src="_images/6c901ba74f955d10c51f2a9394f9faf8ba9daecf6f0a1e5b9e482e460d8bbdaa.png" />
-</div>
-</div>
-</section>
-<section id="displaystyle-f-t-frac-1-t">
-<h2><span class="math notranslate nohighlight">\(\displaystyle f(t) = \frac{1}{t}\)</span><a class="headerlink" href="#displaystyle-f-t-frac-1-t" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\displaystyle G(x) = \int_0^x{\frac{1}{t}\,dt}\)</span>, con <span class="math notranslate nohighlight">\(x \in [0.001, 2]\)</span></p>
-<p>¿Qué función es?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="n">t</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.001</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="n">Gx</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c1">#integración de f(t)</span>
-<span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-    <span class="c1">#Extremos del intervalo</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mf">0.001</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">xi</span>
-    <span class="c1">#Número de subintervalos</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-    <span class="c1">#Tamaño de la partición</span>
-    <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
-    <span class="c1">#Puntos de la partición</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">t_med</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span> <span class="c1">#t medios</span>
-    <span class="n">A_med</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">t_med</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">#medias</span>
-    <span class="c1">#Suma de Riemann</span>
-    <span class="n">Suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A_med</span><span class="p">)</span>
-    <span class="n">Gx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Suma</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Gx</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f760e8ff4c0&gt;
-</pre></div>
-</div>
-<img alt="_images/915e6e600456c515c43de31a32a7a009955444dc28c138debd2c532d2337fbb8.png" src="_images/915e6e600456c515c43de31a32a7a009955444dc28c138debd2c532d2337fbb8.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f760c78a7a0&gt;
-</pre></div>
-</div>
-<img alt="_images/b35988c1ff326dbc77573b4f7362881997277b43321c4e87e8e59c62890855a2.png" src="_images/b35988c1ff326dbc77573b4f7362881997277b43321c4e87e8e59c62890855a2.png" />
-</div>
-</div>
-</section>
-<section id="displaystyle-f-t-e-t">
-<h2><span class="math notranslate nohighlight">\(\displaystyle f(t) = e^t\)</span><a class="headerlink" href="#displaystyle-f-t-e-t" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(\displaystyle G(x) = \int_0^x{e^t\,dt}\)</span>, con <span class="math notranslate nohighlight">\(x \in [0, 5]\)</span></p>
-<p>¿Qué función es?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
-<span class="n">Gx</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c1">#integración de f(t)</span>
-<span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-    <span class="c1">#Extremos del intervalo</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="mf">0.001</span>
-    <span class="n">b</span> <span class="o">=</span> <span class="n">xi</span>
-    <span class="c1">#Número de subintervalos</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-    <span class="c1">#Tamaño de la partición</span>
-    <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
-    <span class="c1">#Puntos de la partición</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">t_med</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span> <span class="c1">#t medios</span>
-    <span class="n">A_med</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">t_med</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">#medias</span>
-    <span class="c1">#Suma de Riemann</span>
-    <span class="n">Suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A_med</span><span class="p">)</span>
-    <span class="n">Gx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Suma</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">Gx</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f760c62ce20&gt;
-</pre></div>
-</div>
-<img alt="_images/e1e30705f6763b970491992d8b631b867f7792cd868911192011ed385c9b783f.png" src="_images/e1e30705f6763b970491992d8b631b867f7792cd868911192011ed385c9b783f.png" />
-</div>
-</div>
-<p>#<strong>Preguntas</strong>
-De acuerdo a los ejercicios anteriores, ¿Cuál dirías que es la función <span class="math notranslate nohighlight">\(G(x)\)</span> si:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(f(t)=t\)</span>?</p></li>
-<li><p><span class="math notranslate nohighlight">\(f(t)=cos(t)\)</span>?</p></li>
-<li><p><span class="math notranslate nohighlight">\(f(t)=\frac{1}{t}\)</span>?</p></li>
-<li><p><span class="math notranslate nohighlight">\(f(t)=e^t\)</span>?</p></li>
-</ol>
-</section>
-<section id="variacion-del-limite-inferior">
-<h2>Variación del límite inferior<a class="headerlink" href="#variacion-del-limite-inferior" title="Link to this heading">#</a></h2>
-<p>Vamos a observar qué ocurre  si en el cálculo numérico de la función</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df7a2916-a041-4ae1-8937-1cd08f35ad61">
-<span class="eqno">(13)<a class="headerlink" href="#equation-df7a2916-a041-4ae1-8937-1cd08f35ad61" title="Permalink to this equation">#</a></span>\[\begin{align}
-\displaystyle G(x) = \int_{a}^{x}{f(t)\,dt}
-\end{align}\]</div>
-<p>tomamos valores distintos del límite inferior.</p>
-<p>##Actividad
-Grafica la función <span class="math notranslate nohighlight">\(G(x)\)</span> tomando los valores <span class="math notranslate nohighlight">\(a = 0,1,2,3,4\)</span> para cada una de las siguientes funciones:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(\displaystyle G(x) = \int_{a}^{x}{t\,dt}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\displaystyle G(x) = \int_{a}^{x}{t^2\,dt}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\displaystyle G(x) = \int_{a}^{x}{\cos(t)\,dt}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\displaystyle G(x) = \int_{a}^{x}{e^t\,dt}\)</span></p></li>
-</ol>
-<p>¿Qué ocurre al cambiar el límite inferior?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#1.</span>
-
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">t</span>
-
-<span class="k">for</span> <span class="n">ak</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-    <span class="n">Gx</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1">#integración de f(t)</span>
-    <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-        <span class="c1">#Extremos del intervalo</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">ak</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">xi</span>
-        <span class="c1">#Número de subintervalos</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-        <span class="c1">#Tamaño de la partición</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
-        <span class="c1">#Puntos de la partición</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">t_med</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span> <span class="c1">#t medios</span>
-        <span class="n">A_med</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">t_med</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">#medias</span>
-        <span class="c1">#Suma de Riemann</span>
-        <span class="n">Suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A_med</span><span class="p">)</span>
-        <span class="n">Gx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Suma</span><span class="p">)</span>
-    <span class="c1">#Graficacion de Gx para un valor de a dado</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Gx</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/786d90b6fa298f7f57b11070cf05484084131e9d7d1ac518d8adf58b6b143ca2.png" src="_images/786d90b6fa298f7f57b11070cf05484084131e9d7d1ac518d8adf58b6b143ca2.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2.</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">t</span><span class="o">**</span><span class="mi">2</span>
-
-<span class="k">for</span> <span class="n">ak</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-    <span class="n">Gx</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1">#integración de f(t)</span>
-    <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-        <span class="c1">#Extremos del intervalo</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">ak</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">xi</span>
-        <span class="c1">#Número de subintervalos</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-        <span class="c1">#Tamaño de la partición</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
-        <span class="c1">#Puntos de la partición</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">t_med</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span> <span class="c1">#t medios</span>
-        <span class="n">A_med</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">t_med</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">#medias</span>
-        <span class="c1">#Suma de Riemann</span>
-        <span class="n">Suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A_med</span><span class="p">)</span>
-        <span class="n">Gx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Suma</span><span class="p">)</span>
-    <span class="c1">#Graficacion de Gx para un valor de a dado</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Gx</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/970c7f4fdd188765aab2ab26ceafb632bff0544f065c7be8621cd10c91ba67da.png" src="_images/970c7f4fdd188765aab2ab26ceafb632bff0544f065c7be8621cd10c91ba67da.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#3.</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">ak</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ak</span><span class="p">)</span>
-    <span class="n">Gx</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1">#integración de f(t)</span>
-    <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-        <span class="c1">#Extremos del intervalo</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">ak</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">xi</span>
-        <span class="c1">#Número de subintervalos</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-        <span class="c1">#Tamaño de la partición</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
-        <span class="c1">#Puntos de la partición</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">t_med</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span> <span class="c1">#t medios</span>
-        <span class="n">A_med</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">t_med</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">#medias</span>
-        <span class="c1">#Suma de Riemann</span>
-        <span class="n">Suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A_med</span><span class="p">)</span>
-        <span class="n">Gx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Suma</span><span class="p">)</span>
-    <span class="c1">#Graficacion de Gx para un valor de a dado</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Gx</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4
-</pre></div>
-</div>
-<img alt="_images/9985273f551e9065a85f0ef2d80b73907840d68d80a32c228d706e8943ba4bee.png" src="_images/9985273f551e9065a85f0ef2d80b73907840d68d80a32c228d706e8943ba4bee.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#4.</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">t</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">ak</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ak</span><span class="p">)</span>
-    <span class="n">Gx</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="c1">#integración de f(t)</span>
-    <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
-        <span class="c1">#Extremos del intervalo</span>
-        <span class="n">a</span> <span class="o">=</span> <span class="n">ak</span>
-        <span class="n">b</span> <span class="o">=</span> <span class="n">xi</span>
-        <span class="c1">#Número de subintervalos</span>
-        <span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
-        <span class="c1">#Tamaño de la partición</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">n</span>
-        <span class="c1">#Puntos de la partición</span>
-        <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="n">t_med</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span> <span class="c1">#t medios</span>
-        <span class="n">A_med</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">t_med</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span> <span class="c1">#medias</span>
-        <span class="c1">#Suma de Riemann</span>
-        <span class="n">Suma</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">A_med</span><span class="p">)</span>
-        <span class="n">Gx</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Suma</span><span class="p">)</span>
-    <span class="c1">#Graficacion de Gx para un valor de a dado</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">Gx</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4
-</pre></div>
-</div>
-<img alt="_images/bcd3ca4f10f1a432ed209750822906fb76890cbd7ff82214ac65d6c6f66a9c56.png" src="_images/bcd3ca4f10f1a432ed209750822906fb76890cbd7ff82214ac65d6c6f66a9c56.png" />
-</div>
-</div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1134,11 +738,11 @@ Grafica la función <span class="math notranslate nohighlight">\(G(x)\)</span> t
       </div>
     </a>
     <a class="right-next"
-       href="u7p1.html"
+       href="u6p2.html"
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">En Construcción 🚧</p>
+        <p class="prev-next-title">Integral indefinida</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1161,12 +765,6 @@ Grafica la función <span class="math notranslate nohighlight">\(G(x)\)</span> t
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-valor-de-f-x-i">El valor de <span class="math notranslate nohighlight">\(f(x_i)\)</span></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-definida">Integral definida</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metodologia">Metodología</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integral-indefinida">Integral indefinida</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaystyle-f-t-t"><span class="math notranslate nohighlight">\(\displaystyle f(t) = t\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#f-t-cos-t"><span class="math notranslate nohighlight">\(f(t) = cos(t)\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaystyle-f-t-frac-1-t"><span class="math notranslate nohighlight">\(\displaystyle f(t) = \frac{1}{t}\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#displaystyle-f-t-e-t"><span class="math notranslate nohighlight">\(\displaystyle f(t) = e^t\)</span></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variacion-del-limite-inferior">Variación del límite inferior</a></li>
 </ul>
   </nav></div>
 
