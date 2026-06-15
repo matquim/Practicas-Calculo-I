@@ -207,7 +207,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Derivada</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u5p1.html">En Construcción 🚧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u5p1.html">Series de Taylor</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Integral</span></p>
 <ul class="nav bd-sidenav">
@@ -476,8 +476,8 @@ S_n: \mathbb N \longmapsto \mathbb D \subset R
 S_n=f(n)
 \end{equation*}\]</div>
 <p>Por ejemplo:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-06ce3abf-1a2e-41b5-951a-8d1c6a7f196e">
-<span class="eqno">(1)<a class="headerlink" href="#equation-06ce3abf-1a2e-41b5-951a-8d1c6a7f196e" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
+<div class="amsmath math notranslate nohighlight" id="equation-324c0b10-d3ac-4f21-932a-5158ab93db94">
+<span class="eqno">(1)<a class="headerlink" href="#equation-324c0b10-d3ac-4f21-932a-5158ab93db94" title="Permalink to this equation">#</a></span>\[\begin{eqnarray}
 S_n      &amp;=&amp; \frac{1}{n}\\
 \alpha_n &amp;=&amp; n\\
 \beta_n  &amp;=&amp; (-1)^{n}\\
@@ -566,7 +566,7 @@ Para 20 el valor de Sn=1/n es: 0.05
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f1b15de6ce0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f33ee7aeaa0&gt;
 </pre></div>
 </div>
 <img alt="_images/18cc165b834058588246d5827168100edf2d51d889952ac37466bf3f0e70e575.png" src="_images/18cc165b834058588246d5827168100edf2d51d889952ac37466bf3f0e70e575.png" />
@@ -592,13 +592,13 @@ Para 20 el valor de Sn=1/n es: 0.05
 <section id="limite-de-una-sucesion">
 <h2>Límite de una sucesión<a class="headerlink" href="#limite-de-una-sucesion" title="Link to this heading">#</a></h2>
 <p>Una sucesión <span class="math notranslate nohighlight">\(S_n\)</span> converge hacia el número <span class="math notranslate nohighlight">\(L\)</span>, y escribimos:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c39d6f50-f6a0-452a-9872-a4d67b6da544">
-<span class="eqno">(2)<a class="headerlink" href="#equation-c39d6f50-f6a0-452a-9872-a4d67b6da544" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-27238d2b-f0df-4686-a0c1-438dca76a1ba">
+<span class="eqno">(2)<a class="headerlink" href="#equation-27238d2b-f0df-4686-a0c1-438dca76a1ba" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle \lim_{n \to \infty}{S_n}=L
 \end{equation}\]</div>
 <p>Si ocurre que para cualquier valor razonablemente pequeño <span class="math notranslate nohighlight">\(\epsilon &gt;0\)</span> existe un número natural <span class="math notranslate nohighlight">\(N\)</span> tal que para todos los términos <span class="math notranslate nohighlight">\(S_n\)</span> que siguen (es decir, se cumple que <span class="math notranslate nohighlight">\(n&gt;N\)</span>) ocurre que</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d285fede-9839-4aea-8a9d-9a92e918731e">
-<span class="eqno">(3)<a class="headerlink" href="#equation-d285fede-9839-4aea-8a9d-9a92e918731e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-69af384a-b5fe-4ea5-9f6e-639246e341b8">
+<span class="eqno">(3)<a class="headerlink" href="#equation-69af384a-b5fe-4ea5-9f6e-639246e341b8" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle |S_n-L|&lt;\epsilon
 \end{equation}\]</div>
 <p>##Práctica 3.1.</p>
@@ -607,8 +607,8 @@ Para 20 el valor de Sn=1/n es: 0.05
 <ol class="arabic simple">
 <li><p>Obtén los primeros 15 términos de la sucesión</p></li>
 </ol>
-<div class="amsmath math notranslate nohighlight" id="equation-bb353f2d-432b-474b-871a-7042ee430e3e">
-<span class="eqno">(4)<a class="headerlink" href="#equation-bb353f2d-432b-474b-871a-7042ee430e3e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c9d31192-e668-4c6d-8993-74ee713b24e5">
+<span class="eqno">(4)<a class="headerlink" href="#equation-c9d31192-e668-4c6d-8993-74ee713b24e5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle S_n= 1-\frac{1}{n}
 \end{equation}\]</div>
 <ol class="arabic simple" start="2">
@@ -672,7 +672,7 @@ Para 20 el valor de Sn=1/n es: 0.05
 [0.0, 0.5, 0.6666666666666667, 0.75, 0.8, 0.8333333333333334, 0.8571428571428572, 0.875, 0.8888888888888888, 0.9, 0.9090909090909091, 0.9166666666666666, 0.9230769230769231, 0.9285714285714286, 0.9333333333333333]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f1b15b26650&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f33ee6be8c0&gt;
 </pre></div>
 </div>
 <img alt="_images/5a5a66f00838e415b0f93b14de9f1a7c5fe1d6274815218ea09802fc0399e4d7.png" src="_images/5a5a66f00838e415b0f93b14de9f1a7c5fe1d6274815218ea09802fc0399e4d7.png" />
@@ -859,8 +859,8 @@ El término 119 de la sucesión es 0.9915966386554622, |0.9915966386554622-1|=0.
 <p><strong>Actividades.</strong></p>
 <p>Para las siguientes sucesiones:</p>
 <p>a) <span class="math notranslate nohighlight">\(\displaystyle S_n =\)</span></p>
-<div class="amsmath math notranslate nohighlight" id="equation-85836b84-8d78-4ac6-9716-534ab6789a11">
-<span class="eqno">(5)<a class="headerlink" href="#equation-85836b84-8d78-4ac6-9716-534ab6789a11" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ec053da0-af63-42f1-8695-e3019acfa845">
+<span class="eqno">(5)<a class="headerlink" href="#equation-ec053da0-af63-42f1-8695-e3019acfa845" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \displaystyle S_n= 1-\frac{1}{n}
 \end{equation}\]</div>
 <ol class="arabic simple" start="2">

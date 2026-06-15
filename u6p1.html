@@ -64,7 +64,7 @@
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Integral indefinida" href="u6p2.html" />
-    <link rel="prev" title="En Construcción 🚧" href="u5p1.html" />
+    <link rel="prev" title="Series de Taylor" href="u5p1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -207,7 +207,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Derivada</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u5p1.html">En Construcción 🚧</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u5p1.html">Series de Taylor</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Integral</span></p>
 <ul class="current nav bd-sidenav">
@@ -468,8 +468,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 </ol>
 <p><strong>Fórmula general:</strong></p>
 <p>La suma de Riemann se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bce0b57c-0c20-4917-9a16-6d4399dfcbc9">
-<span class="eqno">(7)<a class="headerlink" href="#equation-bce0b57c-0c20-4917-9a16-6d4399dfcbc9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a5ebc4a8-a49a-4e32-91d4-2b5004ce1f73">
+<span class="eqno">(7)<a class="headerlink" href="#equation-a5ebc4a8-a49a-4e32-91d4-2b5004ce1f73" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=1}^{n}{f(x_{i})\Delta x}
 \end{align}\]</div>
 <p>donde:</p>
@@ -477,8 +477,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <li><p><span class="math notranslate nohighlight">\(n ≡\)</span> número de rectángulos</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta x ≡\)</span> ancho de cada rectángulo (tamaño de la partición):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-bdb28a4a-6e8c-466a-9aa4-30cc433fe0e5">
-<span class="eqno">(8)<a class="headerlink" href="#equation-bdb28a4a-6e8c-466a-9aa4-30cc433fe0e5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4e4bad0a-f6e7-4e1a-a040-ed8b0352d75c">
+<span class="eqno">(8)<a class="headerlink" href="#equation-4e4bad0a-f6e7-4e1a-a040-ed8b0352d75c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x = \frac{b-a}{n}
 \end{align}\]</div>
 <ul class="simple">
@@ -498,26 +498,26 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <h2>Integral definida<a class="headerlink" href="#integral-definida" title="Link to this heading">#</a></h2>
 <p>Las sumas de Riemann son una base de la integral definida.</p>
 <p>Cuando el número de rectángulos aumenta, la aproximáción de la suma de los rectángulos, se vuelve exactamente el área bajo la curva, es decir,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9ff87110-3b5a-4156-b138-f74eddeb10cd">
-<span class="eqno">(9)<a class="headerlink" href="#equation-9ff87110-3b5a-4156-b138-f74eddeb10cd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-23b99a11-835b-44ea-905e-4b769eeffce9">
+<span class="eqno">(9)<a class="headerlink" href="#equation-23b99a11-835b-44ea-905e-4b769eeffce9" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \lim_{n\to \infty}{\sum_{i=i}^{n}{f(x_i)\Delta x}}=\int_{a}^{b}{f(x)\,dx}
 \end{align}\]</div>
 </section>
 <section id="metodologia">
 <h2>Metodología<a class="headerlink" href="#metodologia" title="Link to this heading">#</a></h2>
 <p>Tomamos una partición de puntos de la forma:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-35fbaa27-e23d-42e4-b2cd-08e6f9913b41">
-<span class="eqno">(10)<a class="headerlink" href="#equation-35fbaa27-e23d-42e4-b2cd-08e6f9913b41" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dcc64d2c-e88a-4168-b135-f82eb455a576">
+<span class="eqno">(10)<a class="headerlink" href="#equation-dcc64d2c-e88a-4168-b135-f82eb455a576" title="Permalink to this equation">#</a></span>\[\begin{align}
 x_i=a+i\Delta x
 \end{align}\]</div>
 <p>en donde</p>
-<div class="amsmath math notranslate nohighlight" id="equation-698ac27a-efed-4c37-a9c3-9137317b8570">
-<span class="eqno">(11)<a class="headerlink" href="#equation-698ac27a-efed-4c37-a9c3-9137317b8570" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-489108d8-80ac-47c2-ae4b-0760659a255c">
+<span class="eqno">(11)<a class="headerlink" href="#equation-489108d8-80ac-47c2-ae4b-0760659a255c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x=\frac{b-a}{n}
 \end{align}\]</div>
 <p>La aproximación <span class="math notranslate nohighlight">\(I^*\)</span>  para la integral (suma de Riemann) está dada por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-414b8990-ec73-4e4e-9a98-364606af2ddc">
-<span class="eqno">(12)<a class="headerlink" href="#equation-414b8990-ec73-4e4e-9a98-364606af2ddc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-618aeb5f-fdde-4e8f-98f6-9d71e1962f34">
+<span class="eqno">(12)<a class="headerlink" href="#equation-618aeb5f-fdde-4e8f-98f6-9d71e1962f34" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=0}^{n}{f(x_{i})h}
 \end{align}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(x_i\)</span> es el extremo izquierdo, derecho o el punto medio.</p>
@@ -734,7 +734,7 @@ Las suma de Riemann media:     I_med = 2.6666659999999993
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">En Construcción 🚧</p>
+        <p class="prev-next-title">Series de Taylor</p>
       </div>
     </a>
     <a class="right-next"
