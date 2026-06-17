@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aproximación numérica de la derivada &#8212; Practicas Cálculo I</title>
+    <title>Puntos Críticos &#8212; Practicas Cálculo I</title>
   
   
   
@@ -58,13 +58,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'u4p1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u5p2';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Derivadas de funciones" href="u4p2.html" />
-    <link rel="prev" title="Operaciones simbólicas" href="u2p3.html" />
+    <link rel="next" title="Sumas de Riemann" href="u6p1.html" />
+    <link rel="prev" title="Series de Taylor" href="u5p1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -199,16 +197,16 @@
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Derivada</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aproximación numérica de la derivada</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="u4p1.html">Aproximación numérica de la derivada</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u4p2.html">Derivadas de funciones</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u4p3.html">Interpretación geométrica</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u4p4.html">Aplicaciones</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Derivada</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="u5p1.html">Series de Taylor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u5p2.html">Puntos Críticos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Puntos Críticos</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Integral</span></p>
 <ul class="nav bd-sidenav">
@@ -277,7 +275,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u4p1.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u5p2.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +293,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u4p1.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u5p2.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -344,7 +342,7 @@
       
       
       
-      <li><a href="_sources/u4p1.ipynb" target="_blank"
+      <li><a href="_sources/u5p2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -415,7 +413,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -426,11 +426,20 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Aproximación numérica de la derivada</h1>
+    <h1>Puntos Críticos</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximos-y-minimos">Máximos y Mínimos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puntos-de-inflexion">Puntos de Inflexión</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -440,40 +449,78 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="aproximacion-numerica-de-la-derivada">
-<h1>Aproximación numérica de la derivada<a class="headerlink" href="#aproximacion-numerica-de-la-derivada" title="Link to this heading">#</a></h1>
-<p><strong>Objetivo</strong></p>
-<p>Aproximar la derivada de una función mediante el cociente incremental.</p>
-<div class="tip admonition">
-<p class="admonition-title">Concepto</p>
-<p>La derivada de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un punto <span class="math notranslate nohighlight">\(x\)</span> se define como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0045bbec-0da1-4fa5-9e87-73c4e2d7e22f">
-<span class="eqno">(6)<a class="headerlink" href="#equation-0045bbec-0da1-4fa5-9e87-73c4e2d7e22f" title="Permalink to this equation">#</a></span>\[\begin{equation}
-f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
-\end{equation}\]</div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="puntos-criticos">
+<h1>Puntos Críticos<a class="headerlink" href="#puntos-criticos" title="Link to this heading">#</a></h1>
+<section id="maximos-y-minimos">
+<h2>Máximos y Mínimos<a class="headerlink" href="#maximos-y-minimos" title="Link to this heading">#</a></h2>
+<p>El criterio de la primera y segunda derivada permite identificar los máximos y mínimos de una función.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">h</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
 
-<span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">derivada</span><span class="p">)</span>
+<span class="n">f_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">9</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Función: f(x) = </span><span class="si">{</span><span class="n">f_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">f_prime_x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f_x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Primera derivada: f&#39;(x) = </span><span class="si">{</span><span class="n">f_prime_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">critical_points</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">f_prime_x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Puntos críticos: </span><span class="si">{</span><span class="n">critical_points</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">f_double_prime_x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f_prime_x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Segunda derivada: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">f_double_prime_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">critical_points</span><span class="p">:</span>
+    <span class="n">second_deriv_at_point</span> <span class="o">=</span> <span class="n">f_double_prime_x</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">point</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">second_deriv_at_point</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;En x = </span><span class="si">{</span><span class="n">point</span><span class="si">}</span><span class="s2">: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">second_deriv_at_point</span><span class="si">}</span><span class="s2"> (Máximo local). Valor de la función: </span><span class="si">{</span><span class="n">f_x</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">second_deriv_at_point</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;En x = </span><span class="si">{</span><span class="n">point</span><span class="si">}</span><span class="s2">: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">second_deriv_at_point</span><span class="si">}</span><span class="s2"> (Mínimo local). Valor de la función: </span><span class="si">{</span><span class="n">f_x</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;En x = </span><span class="si">{</span><span class="n">point</span><span class="si">}</span><span class="s2">: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">second_deriv_at_point</span><span class="si">}</span><span class="s2"> (Criterio no concluyente. Se necesita un análisis adicional).&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.000999999999699
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Función: f(x) = x**3 - 6*x**2 + 9*x + 1
+Primera derivada: f&#39;(x) = 3*x**2 - 12*x + 9
+Puntos críticos: [1, 3]
+Segunda derivada: f&#39;&#39;(x) = 6*x - 12
+En x = 1: f&#39;&#39;(x) = -6 (Máximo local). Valor de la función: 5
+En x = 3: f&#39;&#39;(x) = 6 (Mínimo local). Valor de la función: 1
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Ejercicios</strong></p>
-<p>a) Aproximar la derivada de <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> en <span class="math notranslate nohighlight">\(x = 2\)</span> con distintos valores de <span class="math notranslate nohighlight">\(h\)</span>.</p>
-<p>b) Analizar cómo cambia la aproximación cuando <span class="math notranslate nohighlight">\(h \to 0\)</span>.</p>
+</section>
+<section id="puntos-de-inflexion">
+<h2>Puntos de Inflexión<a class="headerlink" href="#puntos-de-inflexion" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">f_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">9</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">f_double_prime_x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f_x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Función: f(x) = </span><span class="si">{</span><span class="n">f_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Segunda derivada: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">f_double_prime_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">inflection_candidates</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">f_double_prime_x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Candidatos a puntos de inflexión (f&#39;&#39;(x) = 0): </span><span class="si">{</span><span class="n">inflection_candidates</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Función: f(x) = x**3 - 6*x**2 + 9*x + 1
+Segunda derivada: f&#39;&#39;(x) = 6*(x - 2)
+Candidatos a puntos de inflexión (f&#39;&#39;(x) = 0): [2]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -507,20 +554,20 @@ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="u2p3.html"
+       href="u5p1.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Operaciones simbólicas</p>
+        <p class="prev-next-title">Series de Taylor</p>
       </div>
     </a>
     <a class="right-next"
-       href="u4p2.html"
+       href="u6p1.html"
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Derivadas de funciones</p>
+        <p class="prev-next-title">Sumas de Riemann</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -530,6 +577,22 @@ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximos-y-minimos">Máximos y Mínimos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puntos-de-inflexion">Puntos de Inflexión</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
