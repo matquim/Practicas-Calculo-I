@@ -454,18 +454,21 @@ document.write(`
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
 <p><strong>Contexto Teórico</strong>
-El <strong>centro de masa</strong> <span class="math notranslate nohighlight">\( x_{\text{cm}} \)</span> de un sistema de partículas se calcula como:
-$<span class="math notranslate nohighlight">\(
+El <strong>centro de masa</strong> <span class="math notranslate nohighlight">\( x_{\text{cm}} \)</span> de un sistema de partículas se calcula como:</p>
+<div class="math notranslate nohighlight">
+\[
 x_{\text{cm}} = \frac{\int x \, \lambda(x) \, dx}{\int \lambda(x) \, dx}
-\)</span><span class="math notranslate nohighlight">\(
-Donde \)</span> \lambda(x) $ es la densidad lineal de masa.</p>
+\]</div>
+<p>Donde <span class="math notranslate nohighlight">\( \lambda(x) \)</span> es la densidad lineal de masa.</p>
 <p><strong>Enunciado</strong></p>
-<ol class="arabic simple">
-<li><p>Modelar la densidad lineal de masa <span class="math notranslate nohighlight">\( \lambda(x) \)</span> de una molécula de <span class="math notranslate nohighlight">\( \text{CO} \)</span> como dos funciones gaussianas centradas en <span class="math notranslate nohighlight">\( x = -d/2 \)</span> (carbono) y <span class="math notranslate nohighlight">\( x = d/2 \)</span> (oxígeno), donde <span class="math notranslate nohighlight">\( d = 1.13 \, \text{Å} \)</span>:
-$<span class="math notranslate nohighlight">\(
-\lambda(x) = A \left( m_C e^{-\frac{(x + d/2)^2}{2 \sigma^2}} + m_O e^{-\frac{(x - d/2)^2}{2 \sigma^2}} \right)
-\)</span><span class="math notranslate nohighlight">\(
-Donde \)</span> A = 1 , \text{u/Å} <span class="math notranslate nohighlight">\(, \)</span> \sigma = 0.1 , \text{Å} <span class="math notranslate nohighlight">\(, \)</span> m_C = 12 , \text{u} <span class="math notranslate nohighlight">\(, y \)</span> m_O = 16 , \text{u} $.</p></li>
+<ol class="arabic">
+<li><p>Modelar la densidad lineal de masa <span class="math notranslate nohighlight">\( \lambda(x) \)</span> de una molécula de <span class="math notranslate nohighlight">\( \text{CO} \)</span> como dos funciones gaussianas centradas en <span class="math notranslate nohighlight">\( x = -d/2 \)</span> (carbono) y <span class="math notranslate nohighlight">\( x = d/2 \)</span> (oxígeno), donde <span class="math notranslate nohighlight">\( d = 1.13 \, \text{Å} \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+   \lambda(x) = A \left( m_C e^{-\frac{(x + d/2)^2}{2 \sigma^2}} + m_O e^{-\frac{(x - d/2)^2}{2 \sigma^2}} \right)
+   \]</div>
+<p>Donde <span class="math notranslate nohighlight">\( A = 1 \, \text{u/Å} \)</span>, <span class="math notranslate nohighlight">\( \sigma = 0.1 \, \text{Å} \)</span>, <span class="math notranslate nohighlight">\( m_C = 12 \, \text{u} \)</span>, y <span class="math notranslate nohighlight">\( m_O = 16 \, \text{u} \)</span>.</p>
+</li>
 <li><p>Calcular el <strong>centro de masa <span class="math notranslate nohighlight">\( x_{\text{cm}} \)</span></strong> de la molécula.</p></li>
 <li><p><strong>Graficar</strong> <span class="math notranslate nohighlight">\( \lambda(x) \)</span> y marcar la posición del centro de masa.</p></li>
 <li><p><strong>Interpretar físicamente</strong>:</p>
@@ -476,14 +479,16 @@ Donde \)</span> A = 1 , \text{u/Å} <span class="math notranslate nohighlight">\
 </li>
 </ol>
 <p><strong>Solución</strong></p>
-<p><strong>1. Cálculo del Centro de Masa <span class="math notranslate nohighlight">\( x_{\text{cm}} \)</span></strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>1. Cálculo del Centro de Masa <span class="math notranslate nohighlight">\( x_{\text{cm}} \)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[
 x_{\text{cm}} = \frac{(m_O - m_C) d}{2 (m_C + m_O)} = \frac{(16 - 12) \times 1.13}{2 (12 + 16)} \approx 0.0807 \, \text{Å}
-\)</span>$</p>
-<p><strong>Resultado:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Resultado:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 x_{\text{cm}} \approx 0.0807 \, \text{Å}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>

@@ -454,15 +454,17 @@ document.write(`
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
 <p><strong>Contexto Teórico</strong></p>
-<p>En un <strong>proceso adiabático</strong> (sin transferencia de calor), la relación entre presión <span class="math notranslate nohighlight">\( P \)</span> y volumen <span class="math notranslate nohighlight">\( V \)</span> para un gas ideal está dada por:
-$<span class="math notranslate nohighlight">\(
+<p>En un <strong>proceso adiabático</strong> (sin transferencia de calor), la relación entre presión <span class="math notranslate nohighlight">\( P \)</span> y volumen <span class="math notranslate nohighlight">\( V \)</span> para un gas ideal está dada por:</p>
+<div class="math notranslate nohighlight">
+\[
 P V^\gamma = \text{constante}
-\)</span><span class="math notranslate nohighlight">\(
-Donde \)</span> \gamma = \frac{C_p}{C_v} $ es el <strong>coeficiente adiabático</strong>.</p>
-<p>El <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por el gas durante una expansión adiabática es:
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Donde <span class="math notranslate nohighlight">\( \gamma = \frac{C_p}{C_v} \)</span> es el <strong>coeficiente adiabático</strong>.</p>
+<p>El <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por el gas durante una expansión adiabática es:</p>
+<div class="math notranslate nohighlight">
+\[
 W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1}
-\)</span>$</p>
+\]</div>
 <p><strong>Enunciado</strong></p>
 <ol class="arabic simple">
 <li><p>Un gas ideal diatómico (<span class="math notranslate nohighlight">\( \gamma = \frac{7}{5} \)</span>) se expande adiabáticamente desde <span class="math notranslate nohighlight">\( V_1 = 1 \, \text{L} \)</span> y <span class="math notranslate nohighlight">\( P_1 = 10 \, \text{atm} \)</span> hasta <span class="math notranslate nohighlight">\( V_2 = 4 \, \text{L} \)</span>. Calcular el <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por el gas.</p></li>
@@ -477,18 +479,21 @@ W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1}
 </ol>
 <p><strong>Solución</strong></p>
 <p><strong>1. Cálculo del Trabajo Adiabático <span class="math notranslate nohighlight">\( W \)</span></strong>
-Primero, calculamos <span class="math notranslate nohighlight">\( P_2 \)</span> usando la relación adiabática:
-$<span class="math notranslate nohighlight">\(
+Primero, calculamos <span class="math notranslate nohighlight">\( P_2 \)</span> usando la relación adiabática:</p>
+<div class="math notranslate nohighlight">
+\[
 P_2 = P_1 \left( \frac{V_1}{V_2} \right)^\gamma \approx 1.892 \, \text{atm}
-\)</span><span class="math notranslate nohighlight">\(
-Ahora, calculamos \)</span> W <span class="math notranslate nohighlight">\(:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Ahora, calculamos <span class="math notranslate nohighlight">\( W \)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
 W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1} \approx 616.2 \, \text{J}
-\)</span>$</p>
-<p><strong>Resultado:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Resultado:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 W \approx 616.2 \, \text{J}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>

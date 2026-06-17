@@ -454,17 +454,20 @@ document.write(`
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
 <p><strong>Contexto Teórico</strong>
-Si la <strong>densidad lineal de masa</strong> <span class="math notranslate nohighlight">\( \lambda(x) \)</span> (masa por unidad de longitud) varía con la posición <span class="math notranslate nohighlight">\( x \)</span>, la <strong>masa total <span class="math notranslate nohighlight">\( M \)</span></strong> en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> se calcula como:
-$<span class="math notranslate nohighlight">\(
+Si la <strong>densidad lineal de masa</strong> <span class="math notranslate nohighlight">\( \lambda(x) \)</span> (masa por unidad de longitud) varía con la posición <span class="math notranslate nohighlight">\( x \)</span>, la <strong>masa total <span class="math notranslate nohighlight">\( M \)</span></strong> en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> se calcula como:</p>
+<div class="math notranslate nohighlight">
+\[
 M = \int_{a}^{b} \lambda(x) \, dx
-\)</span>$</p>
+\]</div>
 <p><strong>Enunciado</strong></p>
-<ol class="arabic simple">
-<li><p>La densidad lineal de masa de una barra de material radiactivo varía con la posición <span class="math notranslate nohighlight">\( x \)</span> (en cm) como:
-$<span class="math notranslate nohighlight">\(
-\lambda(x) = \lambda_0 e^{-k x}
-\)</span><span class="math notranslate nohighlight">\(
-Donde \)</span> \lambda_0 = 0.5 , \text{g/cm} <span class="math notranslate nohighlight">\( y \)</span> k = 0.1 , \text{cm}^{-1} <span class="math notranslate nohighlight">\(. Calcular la **masa total \)</span> M <span class="math notranslate nohighlight">\(** de la barra si su longitud es \)</span> L = 20 , \text{cm} $.</p></li>
+<ol class="arabic">
+<li><p>La densidad lineal de masa de una barra de material radiactivo varía con la posición <span class="math notranslate nohighlight">\( x \)</span> (en cm) como:</p>
+<div class="math notranslate nohighlight">
+\[
+   \lambda(x) = \lambda_0 e^{-k x}
+   \]</div>
+<p>Donde <span class="math notranslate nohighlight">\( \lambda_0 = 0.5 \, \text{g/cm} \)</span> y <span class="math notranslate nohighlight">\( k = 0.1 \, \text{cm}^{-1} \)</span>. Calcular la <strong>masa total <span class="math notranslate nohighlight">\( M \)</span></strong> de la barra si su longitud es <span class="math notranslate nohighlight">\( L = 20 \, \text{cm} \)</span>.</p>
+</li>
 <li><p><strong>Graficar</strong> <span class="math notranslate nohighlight">\( \lambda(x) \)</span> y el área bajo la curva (que representa la masa total).</p></li>
 <li><p><strong>Interpretar físicamente</strong>:</p>
 <ul class="simple">
@@ -474,18 +477,21 @@ Donde \)</span> \lambda_0 = 0.5 , \text{g/cm} <span class="math notranslate nohi
 </li>
 </ol>
 <p>** Solución**</p>
-<p><strong>1. Cálculo de la Masa Total <span class="math notranslate nohighlight">\( M \)</span></strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>1. Cálculo de la Masa Total <span class="math notranslate nohighlight">\( M \)</span></strong></p>
+<div class="math notranslate nohighlight">
+\[
 M = \int_{0}^{L} \lambda_0 e^{-k x} \, dx = \frac{\lambda_0}{k} \left( 1 - e^{-k L} \right)
-\)</span><span class="math notranslate nohighlight">\(
-Sustituyendo los valores:
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Sustituyendo los valores:</p>
+<div class="math notranslate nohighlight">
+\[
 M = \frac{0.5}{0.1} \left( 1 - e^{-0.1 \times 20} \right) \approx 4.32 \, \text{g}
-\)</span>$</p>
-<p><strong>Resultado:</strong>
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Resultado:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 M \approx 4.32 \, \text{g}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
