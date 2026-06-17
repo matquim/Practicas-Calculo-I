@@ -58,6 +58,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'u7p2';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -225,8 +227,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p4.html">Probabilidad en una Distribución Continua (Primera Ley de Fick)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Centro de Masa de una Molécula (CO)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs</a></li>
@@ -469,54 +470,54 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="cambio-de-energia-interna-en-un-proceso-a-volumen-constante">
 <h1>Cambio de Energía Interna en un Proceso a Volumen Constante<a class="headerlink" href="#cambio-de-energia-interna-en-un-proceso-a-volumen-constante" title="Link to this heading">#</a></h1>
 <p><strong>Contexto Teórico</strong>
-Para un gas ideal, el <strong>cambio de energía interna ( \Delta U )</strong> a volumen constante está dado por:
-[
-\Delta U = \int_{T_1}^{T_2} n C_v , dT
-]
+Para un gas ideal, el <strong>cambio de energía interna <span class="math notranslate nohighlight">\( \Delta U \)</span></strong> a volumen constante está dado por:
+$<span class="math notranslate nohighlight">\(
+\Delta U = \int_{T_1}^{T_2} n C_v \, dT
+\)</span>$
 Donde:</p>
 <ul class="simple">
-<li><p>( C_v ): Capacidad calorífica molar a volumen constante.</p></li>
-<li><p>( n ): Número de moles.</p></li>
+<li><p><span class="math notranslate nohighlight">\( C_v \)</span>: Capacidad calorífica molar a volumen constante.</p></li>
+<li><p><span class="math notranslate nohighlight">\( n \)</span>: Número de moles.</p></li>
 </ul>
-<p>Si ( C_v ) es constante:
-[
+<p>Si <span class="math notranslate nohighlight">\( C_v \)</span> es constante:
+$<span class="math notranslate nohighlight">\(
 \Delta U = n C_v (T_2 - T_1)
-]</p>
+\)</span>$</p>
 <p><strong>Instrucciones</strong></p>
 <ol class="arabic simple">
-<li><p>Un gas ideal con ( n = 3 , \text{moles} ) y ( C_v = 20.8 , \text{J/mol·K} ) (constante) se calienta de ( T_1 = 298 , \text{K} ) a ( T_2 = 350 , \text{K} ) a volumen constante. Calcular el <strong>cambio de energía interna ( \Delta U )</strong>.</p></li>
-<li><p>Si ( C_v ) varía con la temperatura como ( C_v(T) = a + bT ) (con ( a = 15.0 , \text{J/mol·K} ) y ( b = 0.02 , \text{J/mol·K}^2 )), recalcular ( \Delta U ).</p></li>
-<li><p><strong>Graficar</strong> ( C_v(T) ) y comparar el cambio de energía interna para ambos casos.</p></li>
+<li><p>Un gas ideal con <span class="math notranslate nohighlight">\( n = 3 \, \text{moles} \)</span> y <span class="math notranslate nohighlight">\( C_v = 20.8 \, \text{J/mol·K} \)</span> (constante) se calienta de <span class="math notranslate nohighlight">\( T_1 = 298 \, \text{K} \)</span> a <span class="math notranslate nohighlight">\( T_2 = 350 \, \text{K} \)</span> a volumen constante. Calcular el <strong>cambio de energía interna <span class="math notranslate nohighlight">\( \Delta U \)</span></strong>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\( C_v \)</span> varía con la temperatura como <span class="math notranslate nohighlight">\( C_v(T) = a + bT \)</span> (con <span class="math notranslate nohighlight">\( a = 15.0 \, \text{J/mol·K} \)</span> y <span class="math notranslate nohighlight">\( b = 0.02 \, \text{J/mol·K}^2 \)</span>), recalcular <span class="math notranslate nohighlight">\( \Delta U \)</span>.</p></li>
+<li><p><strong>Graficar</strong> <span class="math notranslate nohighlight">\( C_v(T) \)</span> y comparar el cambio de energía interna para ambos casos.</p></li>
 <li><p><strong>Interpretar físicamente</strong>:</p>
 <ul class="simple">
-<li><p>¿Por qué ( \Delta U ) es <strong>positivo</strong> en este proceso?</p></li>
-<li><p>¿Cómo afecta la dependencia de ( C_v ) con ( T ) al valor de ( \Delta U )?</p></li>
+<li><p>¿Por qué <span class="math notranslate nohighlight">\( \Delta U \)</span> es <strong>positivo</strong> en este proceso?</p></li>
+<li><p>¿Cómo afecta la dependencia de <span class="math notranslate nohighlight">\( C_v \)</span> con <span class="math notranslate nohighlight">\( T \)</span> al valor de <span class="math notranslate nohighlight">\( \Delta U \)</span>?</p></li>
 </ul>
 </li>
 </ol>
 <p><strong>Solución</strong></p>
-<p><strong>1. ( C_v ) Constante</strong>
-Usamos la integral para ( \Delta U ):
-[
-\Delta U = n C_v (T_2 - T_1) = 3 \times 20.8 \times (350 - 298) = 3244.8 , \text{J}
-]</p>
+<p><strong>1. <span class="math notranslate nohighlight">\( C_v \)</span> Constante</strong>
+Usamos la integral para <span class="math notranslate nohighlight">\( \Delta U \)</span>:
+$<span class="math notranslate nohighlight">\(
+\Delta U = n C_v (T_2 - T_1) = 3 \times 20.8 \times (350 - 298) = 3244.8 \, \text{J}
+\)</span>$</p>
 <p><strong>Resultado:</strong>
-[
-\boxed{\Delta U = 3244.8 , \text{J}}
-]</p>
-<p><strong>2. ( C_v(T) = a + bT )</strong>
-Usamos la integral para ( \Delta U ):
-[
-\Delta U = n \int_{T_1}^{T_2} (a + bT) , dT = n \left[ a T + \frac{b T^2}{2} \right]_{T_1}^{T_2}
-]
+$<span class="math notranslate nohighlight">\(
+\boxed{\Delta U = 3244.8 \, \text{J}}
+\)</span>$</p>
+<p><strong>2. <span class="math notranslate nohighlight">\( C_v(T) = a + bT \)</span></strong>
+Usamos la integral para <span class="math notranslate nohighlight">\( \Delta U \)</span>:
+$<span class="math notranslate nohighlight">\(
+\Delta U = n \int_{T_1}^{T_2} (a + bT) \, dT = n \left[ a T + \frac{b T^2}{2} \right]_{T_1}^{T_2}
+\)</span><span class="math notranslate nohighlight">\(
 Sustituyendo los valores:
-[
-\Delta U = 3 \left[ 15.0 \times (350 - 298) + \frac{0.02}{2} \times (350^2 - 298^2) \right] \approx 3350.88 , \text{J}
-]</p>
+\)</span><span class="math notranslate nohighlight">\(
+\Delta U = 3 \left[ 15.0 \times (350 - 298) + \frac{0.02}{2} \times (350^2 - 298^2) \right] \approx 3350.88 \, \text{J}
+\)</span>$</p>
 <p><strong>Resultado:</strong>
-[
-\boxed{\Delta U = 3350.88 , \text{J}}
-]</p>
+$<span class="math notranslate nohighlight">\(
+\boxed{\Delta U = 3350.88 \, \text{J}}
+\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -576,7 +577,7 @@ Sustituyendo los valores:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2659/1829942280.py:49: UserWarning: Glyph 9 (	) missing from font(s) DejaVu Sans.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2501/1829942280.py:49: UserWarning: Glyph 9 (	) missing from font(s) DejaVu Sans.
   plt.tight_layout()
 /opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/IPython/core/pylabtools.py:170: UserWarning: Glyph 9 (	) missing from font(s) DejaVu Sans.
   fig.canvas.print_figure(bytes_io, **kw)

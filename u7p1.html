@@ -58,6 +58,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'u7p1';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -225,8 +227,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p4.html">Probabilidad en una Distribución Continua (Primera Ley de Fick)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Centro de Masa de una Molécula (CO)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs</a></li>
@@ -445,7 +446,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-trabajo-w"><strong>1. Cálculo del Trabajo ( W )</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-trabajo-w"><strong>1. Cálculo del Trabajo <span class="math notranslate nohighlight">\( W \)</span></strong></a></li>
 </ul>
             </nav>
         </div>
@@ -463,30 +464,30 @@ document.write(`
 <p class="admonition-title">ADVERTENCIA</p>
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
-<p>En termodinámica, el <strong>trabajo ( W )</strong> realizado por un gas durante una expansión o compresión se calcula como:
-[
-W = \int_{V_1}^{V_2} P , dV
-]
-Para un <strong>gas ideal</strong>, la ecuación de estado es:
-[
+<p>En termodinámica, el <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por un gas durante una expansión o compresión se calcula como:
+$<span class="math notranslate nohighlight">\(
+W = \int_{V_1}^{V_2} P \, dV
+\)</span><span class="math notranslate nohighlight">\(
+Para un **gas ideal**, la ecuación de estado es:
+\)</span><span class="math notranslate nohighlight">\(
 P = \frac{n R T}{V}
-]
+\)</span>$
 Donde:</p>
 <ul class="simple">
-<li><p>( P ): Presión del gas.</p></li>
-<li><p>( V ): Volumen del gas.</p></li>
-<li><p>( n ): Número de moles.</p></li>
-<li><p>( R ): Constante de los gases (( 8.314 , \text{J/mol·K} )).</p></li>
-<li><p>( T ): Temperatura (constante en un proceso isotérmico).</p></li>
+<li><p><span class="math notranslate nohighlight">\( P \)</span>: Presión del gas.</p></li>
+<li><p><span class="math notranslate nohighlight">\( V \)</span>: Volumen del gas.</p></li>
+<li><p><span class="math notranslate nohighlight">\( n \)</span>: Número de moles.</p></li>
+<li><p><span class="math notranslate nohighlight">\( R \)</span>: Constante de los gases (<span class="math notranslate nohighlight">\( 8.314 \, \text{J/mol·K} \)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\( T \)</span>: Temperatura (constante en un proceso isotérmico).</p></li>
 </ul>
 <p><strong>Trabajo en una expansión isotérmica</strong>:
-[
+$<span class="math notranslate nohighlight">\(
 W = n R T \ln \left( \frac{V_2}{V_1} \right)
-]</p>
+\)</span>$</p>
 <p><strong>Instrucciones</strong></p>
 <ol class="arabic simple">
-<li><p>Un gas ideal a temperatura ( T = 300 , \text{K} ) se expande isotérmicamente desde un volumen ( V_1 = 1 , \text{L} ) hasta ( V_2 = 5 , \text{L} ). Calcular el <strong>trabajo ( W )</strong> realizado por el gas si ( n = 2 , \text{moles} ).</p></li>
-<li><p><strong>Graficar</strong> la presión ( P ) vs. volumen ( V ) durante la expansión y el área bajo la curva (que representa el trabajo).</p></li>
+<li><p>Un gas ideal a temperatura <span class="math notranslate nohighlight">\( T = 300 \, \text{K} \)</span> se expande isotérmicamente desde un volumen <span class="math notranslate nohighlight">\( V_1 = 1 \, \text{L} \)</span> hasta <span class="math notranslate nohighlight">\( V_2 = 5 \, \text{L} \)</span>. Calcular el <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por el gas si <span class="math notranslate nohighlight">\( n = 2 \, \text{moles} \)</span>.</p></li>
+<li><p><strong>Graficar</strong> la presión <span class="math notranslate nohighlight">\( P \)</span> vs. volumen <span class="math notranslate nohighlight">\( V \)</span> durante la expansión y el área bajo la curva (que representa el trabajo).</p></li>
 <li><p><strong>Interpretar físicamente</strong>:</p>
 <ul class="simple">
 <li><p>¿Por qué el trabajo es <strong>positivo</strong> en una expansión?</p></li>
@@ -496,19 +497,19 @@ W = n R T \ln \left( \frac{V_2}{V_1} \right)
 </ol>
 <p>Solución</p>
 <section id="calculo-del-trabajo-w">
-<h2><strong>1. Cálculo del Trabajo ( W )</strong><a class="headerlink" href="#calculo-del-trabajo-w" title="Link to this heading">#</a></h2>
+<h2><strong>1. Cálculo del Trabajo <span class="math notranslate nohighlight">\( W \)</span></strong><a class="headerlink" href="#calculo-del-trabajo-w" title="Link to this heading">#</a></h2>
 <p>Usamos la integral para el trabajo en una expansión isotérmica:
-[
+$<span class="math notranslate nohighlight">\(
 W = n R T \ln \left( \frac{V_2}{V_1} \right)
-]
+\)</span><span class="math notranslate nohighlight">\(
 Sustituyendo los valores:
-[
-W = 2 , \text{mol} \times 8.314 , \text{J/mol·K} \times 300 , \text{K} \times \ln \left( \frac{5}{1} \right) \approx 8037.6 , \text{J}
-]</p>
+\)</span><span class="math notranslate nohighlight">\(
+W = 2 \, \text{mol} \times 8.314 \, \text{J/mol·K} \times 300 \, \text{K} \times \ln \left( \frac{5}{1} \right) \approx 8037.6 \, \text{J}
+\)</span>$</p>
 <p><strong>Resultado:</strong>
-[
-\boxed{W \approx 8037.6 , \text{J}}
-]</p>
+$<span class="math notranslate nohighlight">\(
+\boxed{W \approx 8037.6 \, \text{J}}
+\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -619,7 +620,7 @@ W = 2 , \text{mol} \times 8.314 , \text{J/mol·K} \times 300 , \text{K} \times \
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-trabajo-w"><strong>1. Cálculo del Trabajo ( W )</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-trabajo-w"><strong>1. Cálculo del Trabajo <span class="math notranslate nohighlight">\( W \)</span></strong></a></li>
 </ul>
   </nav></div>
 

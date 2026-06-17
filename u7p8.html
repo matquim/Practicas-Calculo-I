@@ -58,6 +58,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'u7p8';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -224,8 +226,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p4.html">Probabilidad en una Distribución Continua (Primera Ley de Fick)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Centro de Masa de una Molécula (CO)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs</a></li>
@@ -453,56 +454,56 @@ document.write(`
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
 <p><strong>Contexto Teórico</strong></p>
-<p>La <strong>constante de equilibrio ( K )</strong> de una reacción química está relacionada con la <strong>energía libre de Gibbs estándar ( \Delta G^\circ )</strong> por la ecuación:
-[
+<p>La <strong>constante de equilibrio <span class="math notranslate nohighlight">\( K \)</span></strong> de una reacción química está relacionada con la <strong>energía libre de Gibbs estándar <span class="math notranslate nohighlight">\( \Delta G^\circ \)</span></strong> por la ecuación:
+$<span class="math notranslate nohighlight">\(
 \Delta G^\circ = -R T \ln K
-]
+\)</span>$
 Donde:</p>
 <ul class="simple">
-<li><p>( R ): Constante de los gases (( 8.314 , \text{J/mol·K} )).</p></li>
-<li><p>( T ): Temperatura absoluta.</p></li>
+<li><p><span class="math notranslate nohighlight">\( R \)</span>: Constante de los gases (<span class="math notranslate nohighlight">\( 8.314 \, \text{J/mol·K} \)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\( T \)</span>: Temperatura absoluta.</p></li>
 </ul>
-<p>La <strong>energía libre de Gibbs ( G(T) )</strong> de un sistema puede expresarse como:
-[
+<p>La <strong>energía libre de Gibbs <span class="math notranslate nohighlight">\( G(T) \)</span></strong> de un sistema puede expresarse como:
+$<span class="math notranslate nohighlight">\(
 G(T) = H(T) - T S(T)
-]
+\)</span>$
 Donde:</p>
 <ul class="simple">
-<li><p>( H(T) ): Entalpía.</p></li>
-<li><p>( S(T) ): Entropía.</p></li>
+<li><p><span class="math notranslate nohighlight">\( H(T) \)</span>: Entalpía.</p></li>
+<li><p><span class="math notranslate nohighlight">\( S(T) \)</span>: Entropía.</p></li>
 </ul>
 <p><strong>Enunciado</strong></p>
 <ol class="arabic simple">
-<li><p>Para una reacción química, la <strong>entalpía estándar ( \Delta H^\circ )</strong> y la <strong>entropía estándar ( \Delta S^\circ )</strong> son constantes en un rango de temperaturas. Si ( \Delta H^\circ = -50 , \text{kJ/mol} ) y ( \Delta S^\circ = 0.1 , \text{kJ/mol·K} ), calcular la <strong>constante de equilibrio ( K )</strong> a ( T = 298 , \text{K} ) y ( T = 500 , \text{K} ).</p></li>
-<li><p><strong>Graficar</strong> ( K(T) ) en el rango ( T = [298, 1000] , \text{K} ) y analizar su comportamiento.</p></li>
+<li><p>Para una reacción química, la <strong>entalpía estándar <span class="math notranslate nohighlight">\( \Delta H^\circ \)</span></strong> y la <strong>entropía estándar <span class="math notranslate nohighlight">\( \Delta S^\circ \)</span></strong> son constantes en un rango de temperaturas. Si <span class="math notranslate nohighlight">\( \Delta H^\circ = -50 \, \text{kJ/mol} \)</span> y <span class="math notranslate nohighlight">\( \Delta S^\circ = 0.1 \, \text{kJ/mol·K} \)</span>, calcular la <strong>constante de equilibrio <span class="math notranslate nohighlight">\( K \)</span></strong> a <span class="math notranslate nohighlight">\( T = 298 \, \text{K} \)</span> y <span class="math notranslate nohighlight">\( T = 500 \, \text{K} \)</span>.</p></li>
+<li><p><strong>Graficar</strong> <span class="math notranslate nohighlight">\( K(T) \)</span> en el rango <span class="math notranslate nohighlight">\( T = [298, 1000] \, \text{K} \)</span> y analizar su comportamiento.</p></li>
 <li><p><strong>Interpretar físicamente</strong>:</p>
 <ul class="simple">
-<li><p>¿Cómo afecta la temperatura a la constante de equilibrio ( K )?</p></li>
-<li><p>¿Qué sugiere el signo de ( \Delta H^\circ ) y ( \Delta S^\circ ) sobre la espontaneidad de la reacción?</p></li>
+<li><p>¿Cómo afecta la temperatura a la constante de equilibrio <span class="math notranslate nohighlight">\( K \)</span>?</p></li>
+<li><p>¿Qué sugiere el signo de <span class="math notranslate nohighlight">\( \Delta H^\circ \)</span> y <span class="math notranslate nohighlight">\( \Delta S^\circ \)</span> sobre la espontaneidad de la reacción?</p></li>
 </ul>
 </li>
 </ol>
 <p><strong>Solución</strong></p>
-<p><strong>1. Cálculo de ( K ) a Diferentes Temperaturas</strong>
+<p><strong>1. Cálculo de <span class="math notranslate nohighlight">\( K \)</span> a Diferentes Temperaturas</strong>
 Usamos la ecuación:
-[
+$<span class="math notranslate nohighlight">\(
 \ln K = -\frac{\Delta H^\circ}{R T} + \frac{\Delta S^\circ}{R}
-]</p>
-<p><strong>A ( T = 298 , \text{K} ):</strong>
-[
+\)</span>$</p>
+<p><strong>A <span class="math notranslate nohighlight">\( T = 298 \, \text{K} \)</span>:</strong>
+$<span class="math notranslate nohighlight">\(
 \ln K \approx 32.21 \implies K \approx 1.3 \times 10^{14}
-]</p>
-<p><strong>A ( T = 500 , \text{K} ):</strong>
-[
+\)</span>$</p>
+<p><strong>A <span class="math notranslate nohighlight">\( T = 500 \, \text{K} \)</span>:</strong>
+$<span class="math notranslate nohighlight">\(
 \ln K \approx 24.06 \implies K \approx 2.6 \times 10^{10}
-]</p>
+\)</span>$</p>
 <p><strong>Resultados:</strong>
-[
-\boxed{K(298 , \text{K}) \approx 1.3 \times 10^{14}}
-]
-[
-\boxed{K(500 , \text{K}) \approx 2.6 \times 10^{10}}
-]</p>
+$<span class="math notranslate nohighlight">\(
+\boxed{K(298 \, \text{K}) \approx 1.3 \times 10^{14}}
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+\boxed{K(500 \, \text{K}) \approx 2.6 \times 10^{10}}
+\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -510,7 +511,7 @@ Usamos la ecuación:
 
 <span class="c1"># Parámetros</span>
 <span class="n">Delta_H</span> <span class="o">=</span> <span class="o">-</span><span class="mf">50e3</span>  <span class="c1"># J/mol (entalpía estándar)</span>
-<span class="n">Delta_S</span> <span class="o">=</span> <span class="mf">0.1e3</span>   <span class="c1"># J/mol·K (entropía estándar)</span>
+<span class="n">Delta_S</span> <span class="o">=</span> <span class="mf">0.1e3</span>  <span class="c1"># J/mol·K (entropía estándar)</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mf">8.314</span>        <span class="c1"># J/mol·K</span>
 
 <span class="c1"># Rango de temperaturas</span>

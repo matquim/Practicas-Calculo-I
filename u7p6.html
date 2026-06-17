@@ -58,11 +58,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'u7p6';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)" href="u7p7.html" />
-    <link rel="prev" title="Aplicaciones de la Integral" href="u7p5.html" />
+    <link rel="prev" title="Centro de Masa de una Molécula (CO)" href="u7p5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -225,8 +227,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p4.html">Probabilidad en una Distribución Continua (Primera Ley de Fick)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Centro de Masa de una Molécula (CO)</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Trabajo en una Expansión Adiabática</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs</a></li>
@@ -454,19 +455,19 @@ document.write(`
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
 <p><strong>Contexto Teórico</strong></p>
-<p>En un <strong>proceso adiabático</strong> (sin transferencia de calor), la relación entre presión ( P ) y volumen ( V ) para un gas ideal está dada por:
-[
+<p>En un <strong>proceso adiabático</strong> (sin transferencia de calor), la relación entre presión <span class="math notranslate nohighlight">\( P \)</span> y volumen <span class="math notranslate nohighlight">\( V \)</span> para un gas ideal está dada por:
+$<span class="math notranslate nohighlight">\(
 P V^\gamma = \text{constante}
-]
-Donde ( \gamma = \frac{C_p}{C_v} ) es el <strong>coeficiente adiabático</strong>.</p>
-<p>El <strong>trabajo ( W )</strong> realizado por el gas durante una expansión adiabática es:
-[
+\)</span><span class="math notranslate nohighlight">\(
+Donde \)</span> \gamma = \frac{C_p}{C_v} $ es el <strong>coeficiente adiabático</strong>.</p>
+<p>El <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por el gas durante una expansión adiabática es:
+$<span class="math notranslate nohighlight">\(
 W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1}
-]</p>
+\)</span>$</p>
 <p><strong>Enunciado</strong></p>
 <ol class="arabic simple">
-<li><p>Un gas ideal diatómico (( \gamma = \frac{7}{5} )) se expande adiabáticamente desde ( V_1 = 1 , \text{L} ) y ( P_1 = 10 , \text{atm} ) hasta ( V_2 = 4 , \text{L} ). Calcular el <strong>trabajo ( W )</strong> realizado por el gas.</p></li>
-<li><p><strong>Graficar</strong> ( P ) vs. ( V ) durante la expansión adiabática y el área bajo la curva (que representa el trabajo).</p></li>
+<li><p>Un gas ideal diatómico (<span class="math notranslate nohighlight">\( \gamma = \frac{7}{5} \)</span>) se expande adiabáticamente desde <span class="math notranslate nohighlight">\( V_1 = 1 \, \text{L} \)</span> y <span class="math notranslate nohighlight">\( P_1 = 10 \, \text{atm} \)</span> hasta <span class="math notranslate nohighlight">\( V_2 = 4 \, \text{L} \)</span>. Calcular el <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por el gas.</p></li>
+<li><p><strong>Graficar</strong> <span class="math notranslate nohighlight">\( P \)</span> vs. <span class="math notranslate nohighlight">\( V \)</span> durante la expansión adiabática y el área bajo la curva (que representa el trabajo).</p></li>
 <li><p><strong>Comparar</strong> el trabajo adiabático con el trabajo isotérmico para la misma expansión.</p></li>
 <li><p><strong>Interpretar físicamente</strong>:</p>
 <ul class="simple">
@@ -476,19 +477,19 @@ W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1}
 </li>
 </ol>
 <p><strong>Solución</strong></p>
-<p><strong>1. Cálculo del Trabajo Adiabático ( W )</strong>
-Primero, calculamos ( P_2 ) usando la relación adiabática:
-[
-P_2 = P_1 \left( \frac{V_1}{V_2} \right)^\gamma \approx 1.892 , \text{atm}
-]
-Ahora, calculamos ( W ):
-[
-W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1} \approx 616.2 , \text{J}
-]</p>
+<p><strong>1. Cálculo del Trabajo Adiabático <span class="math notranslate nohighlight">\( W \)</span></strong>
+Primero, calculamos <span class="math notranslate nohighlight">\( P_2 \)</span> usando la relación adiabática:
+$<span class="math notranslate nohighlight">\(
+P_2 = P_1 \left( \frac{V_1}{V_2} \right)^\gamma \approx 1.892 \, \text{atm}
+\)</span><span class="math notranslate nohighlight">\(
+Ahora, calculamos \)</span> W <span class="math notranslate nohighlight">\(:
+\)</span><span class="math notranslate nohighlight">\(
+W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1} \approx 616.2 \, \text{J}
+\)</span>$</p>
 <p><strong>Resultado:</strong>
-[
-\boxed{W \approx 616.2 , \text{J}}
-]</p>
+$<span class="math notranslate nohighlight">\(
+\boxed{W \approx 616.2 \, \text{J}}
+\)</span>$</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -573,7 +574,7 @@ W = \frac{P_1 V_1 - P_2 V_2}{\gamma - 1} \approx 616.2 , \text{J}
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Aplicaciones de la Integral</p>
+        <p class="prev-next-title">Centro de Masa de una Molécula (CO)</p>
       </div>
     </a>
     <a class="right-next"

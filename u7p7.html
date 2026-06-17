@@ -58,6 +58,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'u7p7';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
@@ -225,8 +227,7 @@
 
 <li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p4.html">Probabilidad en una Distribución Continua (Primera Ley de Fick)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Centro de Masa de una Molécula (CO)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs</a></li>
@@ -454,30 +455,30 @@ document.write(`
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
 <p>En un gas ideal, las partículas tienen una <strong>distribución de velocidades</strong> dada por la <strong>distribución de Maxwell-Boltzmann</strong>:
-[
+$<span class="math notranslate nohighlight">\(
 f(v) = 4 \pi \left( \frac{m}{2 \pi k T} \right)^{3/2} v^2 e^{-\frac{m v^2}{2 k T}}
-]
+\)</span>$
 Donde:</p>
 <ul class="simple">
-<li><p>( f(v) ): Función de distribución de velocidades.</p></li>
-<li><p>( m ): Masa de una partícula.</p></li>
-<li><p>( k ): Constante de Boltzmann (( 1.38 \times 10^{-23} , \text{J/K} )).</p></li>
-<li><p>( T ): Temperatura absoluta.</p></li>
-<li><p>( v ): Velocidad de una partícula.</p></li>
+<li><p><span class="math notranslate nohighlight">\( f(v) \)</span>: Función de distribución de velocidades.</p></li>
+<li><p><span class="math notranslate nohighlight">\( m \)</span>: Masa de una partícula.</p></li>
+<li><p><span class="math notranslate nohighlight">\( k \)</span>: Constante de Boltzmann (<span class="math notranslate nohighlight">\( 1.38 \times 10^{-23} \, \text{J/K} \)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\( T \)</span>: Temperatura absoluta.</p></li>
+<li><p><span class="math notranslate nohighlight">\( v \)</span>: Velocidad de una partícula.</p></li>
 </ul>
 <p>La <strong>energía cinética</strong> de una partícula es:
-[
+$<span class="math notranslate nohighlight">\(
 E = \frac{1}{2} m v^2
-]</p>
-<p>La <strong>energía promedio</strong> ( \langle E \rangle ) se calcula como:
-[
-\langle E \rangle = \frac{\int_{0}^{\infty} E \cdot f(v) , dv}{\int_{0}^{\infty} f(v) , dv}
-]</p>
+\)</span>$</p>
+<p>La <strong>energía promedio</strong> <span class="math notranslate nohighlight">\( \langle E \rangle \)</span> se calcula como:
+$<span class="math notranslate nohighlight">\(
+\langle E \rangle = \frac{\int_{0}^{\infty} E \cdot f(v) \, dv}{\int_{0}^{\infty} f(v) \, dv}
+\)</span>$</p>
 <p><strong>Enunciado</strong></p>
 <ol class="arabic simple">
-<li><p>Calcular la <strong>energía promedio ( \langle E \rangle )</strong> de una partícula en un gas ideal a temperatura ( T ), usando la distribución de Maxwell-Boltzmann.</p></li>
-<li><p><strong>Demostrar</strong> que ( \langle E \rangle = \frac{3}{2} k T ) mediante integración numérica.</p></li>
-<li><p><strong>Graficar</strong> la distribución de Maxwell-Boltzmann ( f(v) ) y la distribución de energías ( f(E) ) para un gas de nitrógeno (( m = 28 , \text{u} = 4.65 \times 10^{-26} , \text{kg} )) a ( T = 300 , \text{K} ).</p></li>
+<li><p>Calcular la <strong>energía promedio <span class="math notranslate nohighlight">\( \langle E \rangle \)</span></strong> de una partícula en un gas ideal a temperatura <span class="math notranslate nohighlight">\( T \)</span>, usando la distribución de Maxwell-Boltzmann.</p></li>
+<li><p><strong>Demostrar</strong> que <span class="math notranslate nohighlight">\( \langle E \rangle = \frac{3}{2} k T \)</span> mediante integración numérica.</p></li>
+<li><p><strong>Graficar</strong> la distribución de Maxwell-Boltzmann <span class="math notranslate nohighlight">\( f(v) \)</span> y la distribución de energías <span class="math notranslate nohighlight">\( f(E) \)</span> para un gas de nitrógeno (<span class="math notranslate nohighlight">\( m = 28 \, \text{u} = 4.65 \times 10^{-26} \, \text{kg} \)</span>) a <span class="math notranslate nohighlight">\( T = 300 \, \text{K} \)</span>.</p></li>
 <li><p><strong>Interpretar físicamente</strong>:</p>
 <ul class="simple">
 <li><p>¿Por qué la energía promedio depende <strong>solo de la temperatura</strong> y no de la masa de las partículas?</p></li>
@@ -486,12 +487,12 @@ E = \frac{1}{2} m v^2
 </li>
 </ol>
 <p><strong>Solución</strong></p>
-<p><strong>1. Cálculo de la Energía Promedio ( \langle E \rangle )</strong>
+<p><strong>1. Cálculo de la Energía Promedio <span class="math notranslate nohighlight">\( \langle E \rangle \)</span></strong>
 La energía promedio teórica para un gas ideal es:
-[
+$<span class="math notranslate nohighlight">\(
 \boxed{\langle E \rangle = \frac{3}{2} k T}
-]</p>
-<p><strong>2. Demostración Numérica de ( \langle E \rangle = \frac{3}{2} k T )</strong>
+\)</span>$</p>
+<p><strong>2. Demostración Numérica de <span class="math notranslate nohighlight">\( \langle E \rangle = \frac{3}{2} k T \)</span></strong>
 Usamos <strong>SciPy</strong> para calcular las integrales numéricamente y verificar el resultado teórico.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
