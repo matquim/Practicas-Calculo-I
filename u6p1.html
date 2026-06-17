@@ -223,8 +223,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Integral</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="u7p1.html">Trabajo en una Expansión Isotérmica de un Gas Ideal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p2.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p2.html">Cambio de Energía Interna en un Proceso a Volumen Constante</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p4.html">Probabilidad en una Distribución Continua (Primera Ley de Fick)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p5.html">Centro de Masa de una Molécula (CO)</a></li>
@@ -473,8 +472,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 </ol>
 <p><strong>Fórmula general:</strong></p>
 <p>La suma de Riemann se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3a6b2427-1ee5-43db-b33e-063e7801f800">
-<span class="eqno">(8)<a class="headerlink" href="#equation-3a6b2427-1ee5-43db-b33e-063e7801f800" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b92dc969-2a5a-47aa-8738-79704a4dc7b2">
+<span class="eqno">(8)<a class="headerlink" href="#equation-b92dc969-2a5a-47aa-8738-79704a4dc7b2" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=1}^{n}{f(x_{i})\Delta x}
 \end{align}\]</div>
 <p>donde:</p>
@@ -482,8 +481,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <li><p><span class="math notranslate nohighlight">\(n ≡\)</span> número de rectángulos</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta x ≡\)</span> ancho de cada rectángulo (tamaño de la partición):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-596e6521-ca00-4f39-803f-8c740b32dfdc">
-<span class="eqno">(9)<a class="headerlink" href="#equation-596e6521-ca00-4f39-803f-8c740b32dfdc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5f54e95a-855b-4fb6-bcc1-3b6a50459387">
+<span class="eqno">(9)<a class="headerlink" href="#equation-5f54e95a-855b-4fb6-bcc1-3b6a50459387" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x = \frac{b-a}{n}
 \end{align}\]</div>
 <ul class="simple">
@@ -503,26 +502,26 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <h2>Integral definida<a class="headerlink" href="#integral-definida" title="Link to this heading">#</a></h2>
 <p>Las sumas de Riemann son una base de la integral definida.</p>
 <p>Cuando el número de rectángulos aumenta, la aproximáción de la suma de los rectángulos, se vuelve exactamente el área bajo la curva, es decir,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9c2fd9e7-5da3-407a-ba38-40f107ece4b1">
-<span class="eqno">(10)<a class="headerlink" href="#equation-9c2fd9e7-5da3-407a-ba38-40f107ece4b1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a5d4bc58-4352-4889-b949-68039915670f">
+<span class="eqno">(10)<a class="headerlink" href="#equation-a5d4bc58-4352-4889-b949-68039915670f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \lim_{n\to \infty}{\sum_{i=i}^{n}{f(x_i)\Delta x}}=\int_{a}^{b}{f(x)\,dx}
 \end{align}\]</div>
 </section>
 <section id="metodologia">
 <h2>Metodología<a class="headerlink" href="#metodologia" title="Link to this heading">#</a></h2>
 <p>Tomamos una partición de puntos de la forma:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4cfd8ed8-b7bf-4ca4-ab99-203d478fd5bd">
-<span class="eqno">(11)<a class="headerlink" href="#equation-4cfd8ed8-b7bf-4ca4-ab99-203d478fd5bd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-01597e16-32d3-4ea2-85a2-d28338144c03">
+<span class="eqno">(11)<a class="headerlink" href="#equation-01597e16-32d3-4ea2-85a2-d28338144c03" title="Permalink to this equation">#</a></span>\[\begin{align}
 x_i=a+i\Delta x
 \end{align}\]</div>
 <p>en donde</p>
-<div class="amsmath math notranslate nohighlight" id="equation-416d4676-5cb2-407b-a260-f532bb22720d">
-<span class="eqno">(12)<a class="headerlink" href="#equation-416d4676-5cb2-407b-a260-f532bb22720d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cea442c2-04e8-468d-9853-aa4034294e88">
+<span class="eqno">(12)<a class="headerlink" href="#equation-cea442c2-04e8-468d-9853-aa4034294e88" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x=\frac{b-a}{n}
 \end{align}\]</div>
 <p>La aproximación <span class="math notranslate nohighlight">\(I^*\)</span>  para la integral (suma de Riemann) está dada por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a36a4e8-f104-4e4c-9363-6e8dfcd3c3c8">
-<span class="eqno">(13)<a class="headerlink" href="#equation-7a36a4e8-f104-4e4c-9363-6e8dfcd3c3c8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ffdfe808-5df6-43fb-9cd9-edb64026e80e">
+<span class="eqno">(13)<a class="headerlink" href="#equation-ffdfe808-5df6-43fb-9cd9-edb64026e80e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=0}^{n}{f(x_{i})h}
 \end{align}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(x_i\)</span> es el extremo izquierdo, derecho o el punto medio.</p>
