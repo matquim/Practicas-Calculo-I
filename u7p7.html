@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aplicaciones de la Integral &#8212; Practicas Cálculo I</title>
+    <title>Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann) &#8212; Practicas Cálculo I</title>
   
   
   
@@ -61,8 +61,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'u7p7';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Aplicaciones de la Integral" href="u7p8.html" />
-    <link rel="prev" title="Aplicaciones de la Integral" href="u7p6.html" />
+    <link rel="next" title="Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs" href="u7p8.html" />
+    <link rel="prev" title="Trabajo en una Expansión Adiabática" href="u7p6.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -220,22 +220,16 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Integral</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u7p1.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p1.html">Trabajo en una Expansión Isotérmica de un Gas Ideal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p2.html">Aplicaciones de la Integral</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="u7p3.html">Aplicaciones de la Integral</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Probabilidad en una Distribución Continua (Primera Ley de Fick)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p5.html">Aplicaciones de la Integral</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Aplicaciones de la Integral</a></li>
-
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aplicaciones de la Integral</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs</a></li>
 </ul>
 
     </div>
@@ -428,9 +422,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -441,21 +433,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Aplicaciones de la Integral</h1>
+    <h1>Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contenido </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aplicaciones de la Integral</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-promedio-de-un-gas-ideal-distribucion-de-maxwell-boltzmann">Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</a></li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -465,15 +447,12 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="aplicaciones-de-la-integral">
-<h1>Aplicaciones de la Integral<a class="headerlink" href="#aplicaciones-de-la-integral" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="energia-promedio-de-un-gas-ideal-distribucion-de-maxwell-boltzmann">
+<h1>Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)<a class="headerlink" href="#energia-promedio-de-un-gas-ideal-distribucion-de-maxwell-boltzmann" title="Link to this heading">#</a></h1>
 <div class="warning admonition">
 <p class="admonition-title">ADVERTENCIA</p>
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="energia-promedio-de-un-gas-ideal-distribucion-de-maxwell-boltzmann">
-<h1>Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)<a class="headerlink" href="#energia-promedio-de-un-gas-ideal-distribucion-de-maxwell-boltzmann" title="Link to this heading">#</a></h1>
 <p>En un gas ideal, las partículas tienen una <strong>distribución de velocidades</strong> dada por la <strong>distribución de Maxwell-Boltzmann</strong>:
 [
 f(v) = 4 \pi \left( \frac{m}{2 \pi k T} \right)^{3/2} v^2 e^{-\frac{m v^2}{2 k T}}
@@ -650,7 +629,7 @@ Diferencia relativa: 97.467418%
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Aplicaciones de la Integral</p>
+        <p class="prev-next-title">Trabajo en una Expansión Adiabática</p>
       </div>
     </a>
     <a class="right-next"
@@ -658,7 +637,7 @@ Diferencia relativa: 97.467418%
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Aplicaciones de la Integral</p>
+        <p class="prev-next-title">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -668,23 +647,6 @@ Diferencia relativa: 97.467418%
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenido
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aplicaciones de la Integral</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#energia-promedio-de-un-gas-ideal-distribucion-de-maxwell-boltzmann">Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</a></li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>

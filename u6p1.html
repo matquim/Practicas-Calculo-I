@@ -222,22 +222,16 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Integral</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u7p1.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p1.html">Trabajo en una Expansión Isotérmica de un Gas Ideal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p2.html">Aplicaciones de la Integral</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="u7p3.html">Aplicaciones de la Integral</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Probabilidad en una Distribución Continua (Primera Ley de Fick)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p5.html">Aplicaciones de la Integral</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Aplicaciones de la Integral</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="u7p7.html">Aplicaciones de la Integral</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Aplicaciones de la Integral</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal (Distribución de Maxwell-Boltzmann)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs</a></li>
 </ul>
 
     </div>
@@ -480,8 +474,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 </ol>
 <p><strong>Fórmula general:</strong></p>
 <p>La suma de Riemann se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fb52090a-67a2-4fe8-b96e-7fcc0619622d">
-<span class="eqno">(8)<a class="headerlink" href="#equation-fb52090a-67a2-4fe8-b96e-7fcc0619622d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-54ab7d6b-3799-4103-ab4f-fc03a2b256dc">
+<span class="eqno">(8)<a class="headerlink" href="#equation-54ab7d6b-3799-4103-ab4f-fc03a2b256dc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=1}^{n}{f(x_{i})\Delta x}
 \end{align}\]</div>
 <p>donde:</p>
@@ -489,8 +483,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <li><p><span class="math notranslate nohighlight">\(n ≡\)</span> número de rectángulos</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta x ≡\)</span> ancho de cada rectángulo (tamaño de la partición):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-97ca1241-90c7-4687-b23f-c9878e01d39c">
-<span class="eqno">(9)<a class="headerlink" href="#equation-97ca1241-90c7-4687-b23f-c9878e01d39c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1119b392-bea6-4f02-b543-2fdbe1a5938e">
+<span class="eqno">(9)<a class="headerlink" href="#equation-1119b392-bea6-4f02-b543-2fdbe1a5938e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x = \frac{b-a}{n}
 \end{align}\]</div>
 <ul class="simple">
@@ -510,26 +504,26 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <h2>Integral definida<a class="headerlink" href="#integral-definida" title="Link to this heading">#</a></h2>
 <p>Las sumas de Riemann son una base de la integral definida.</p>
 <p>Cuando el número de rectángulos aumenta, la aproximáción de la suma de los rectángulos, se vuelve exactamente el área bajo la curva, es decir,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f9d31811-2fb0-4433-ac00-c241a898da57">
-<span class="eqno">(10)<a class="headerlink" href="#equation-f9d31811-2fb0-4433-ac00-c241a898da57" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d9a27fe2-3596-4a39-b619-d944bd0b294f">
+<span class="eqno">(10)<a class="headerlink" href="#equation-d9a27fe2-3596-4a39-b619-d944bd0b294f" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \lim_{n\to \infty}{\sum_{i=i}^{n}{f(x_i)\Delta x}}=\int_{a}^{b}{f(x)\,dx}
 \end{align}\]</div>
 </section>
 <section id="metodologia">
 <h2>Metodología<a class="headerlink" href="#metodologia" title="Link to this heading">#</a></h2>
 <p>Tomamos una partición de puntos de la forma:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9edd6576-57b1-495c-8ffb-16ac2fd747af">
-<span class="eqno">(11)<a class="headerlink" href="#equation-9edd6576-57b1-495c-8ffb-16ac2fd747af" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4ef6969d-8912-449c-83f3-06b5c3ac4c05">
+<span class="eqno">(11)<a class="headerlink" href="#equation-4ef6969d-8912-449c-83f3-06b5c3ac4c05" title="Permalink to this equation">#</a></span>\[\begin{align}
 x_i=a+i\Delta x
 \end{align}\]</div>
 <p>en donde</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7241d425-f36a-4fda-aefe-36f694c49689">
-<span class="eqno">(12)<a class="headerlink" href="#equation-7241d425-f36a-4fda-aefe-36f694c49689" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2eee1d5c-3c38-4793-b82a-fa63b85a8912">
+<span class="eqno">(12)<a class="headerlink" href="#equation-2eee1d5c-3c38-4793-b82a-fa63b85a8912" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x=\frac{b-a}{n}
 \end{align}\]</div>
 <p>La aproximación <span class="math notranslate nohighlight">\(I^*\)</span>  para la integral (suma de Riemann) está dada por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-464cfd58-46bb-4994-b7d8-a288b1f35ce9">
-<span class="eqno">(13)<a class="headerlink" href="#equation-464cfd58-46bb-4994-b7d8-a288b1f35ce9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3b512739-aa8f-4960-82a0-431576bea95c">
+<span class="eqno">(13)<a class="headerlink" href="#equation-3b512739-aa8f-4960-82a0-431576bea95c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=0}^{n}{f(x_{i})h}
 \end{align}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(x_i\)</span> es el extremo izquierdo, derecho o el punto medio.</p>
