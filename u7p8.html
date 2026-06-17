@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aproximación numérica de la derivada &#8212; Practicas Cálculo I</title>
+    <title>Aplicaciones de la Integral &#8212; Practicas Cálculo I</title>
   
   
   
@@ -58,13 +58,9 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'u4p1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u7p8';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Derivadas de funciones" href="u4p2.html" />
-    <link rel="prev" title="Operaciones simbólicas" href="u2p3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -126,6 +122,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -199,8 +197,8 @@
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Derivada</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aproximación numérica de la derivada</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="u4p1.html">Aproximación numérica de la derivada</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u4p2.html">Derivadas de funciones</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u4p3.html">Interpretación geométrica</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u4p4.html">Aplicaciones</a></li>
@@ -278,7 +276,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u4p1.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u7p8.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +294,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u4p1.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u7p8.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -345,7 +343,7 @@
       
       
       
-      <li><a href="_sources/u4p1.ipynb" target="_blank"
+      <li><a href="_sources/u7p8.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -416,7 +414,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -427,11 +427,21 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Aproximación numérica de la derivada</h1>
+    <h1>Aplicaciones de la Integral</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aplicaciones de la Integral</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-de-la-constante-de-equilibrio-a-partir-de-la-energia-libre-de-gibbs">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs**</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -441,40 +451,101 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="aproximacion-numerica-de-la-derivada">
-<h1>Aproximación numérica de la derivada<a class="headerlink" href="#aproximacion-numerica-de-la-derivada" title="Link to this heading">#</a></h1>
-<p><strong>Objetivo</strong></p>
-<p>Aproximar la derivada de una función mediante el cociente incremental.</p>
-<div class="tip admonition">
-<p class="admonition-title">Concepto</p>
-<p>La derivada de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un punto <span class="math notranslate nohighlight">\(x\)</span> se define como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8e60c8a4-b50a-4fed-81b1-7fb017749658">
-<span class="eqno">(6)<a class="headerlink" href="#equation-8e60c8a4-b50a-4fed-81b1-7fb017749658" title="Permalink to this equation">#</a></span>\[\begin{equation}
-f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
-\end{equation}\]</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="aplicaciones-de-la-integral">
+<h1>Aplicaciones de la Integral<a class="headerlink" href="#aplicaciones-de-la-integral" title="Link to this heading">#</a></h1>
+<div class="warning admonition">
+<p class="admonition-title">ADVERTENCIA</p>
+<p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="calculo-de-la-constante-de-equilibrio-a-partir-de-la-energia-libre-de-gibbs">
+<h1>Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs**<a class="headerlink" href="#calculo-de-la-constante-de-equilibrio-a-partir-de-la-energia-libre-de-gibbs" title="Link to this heading">#</a></h1>
+<p><strong>Contexto Teórico</strong></p>
+<p>La <strong>constante de equilibrio ( K )</strong> de una reacción química está relacionada con la <strong>energía libre de Gibbs estándar ( \Delta G^\circ )</strong> por la ecuación:
+[
+\Delta G^\circ = -R T \ln K
+]
+Donde:</p>
+<ul class="simple">
+<li><p>( R ): Constante de los gases (( 8.314 , \text{J/mol·K} )).</p></li>
+<li><p>( T ): Temperatura absoluta.</p></li>
+</ul>
+<p>La <strong>energía libre de Gibbs ( G(T) )</strong> de un sistema puede expresarse como:
+[
+G(T) = H(T) - T S(T)
+]
+Donde:</p>
+<ul class="simple">
+<li><p>( H(T) ): Entalpía.</p></li>
+<li><p>( S(T) ): Entropía.</p></li>
+</ul>
+<p><strong>Enunciado</strong></p>
+<ol class="arabic simple">
+<li><p>Para una reacción química, la <strong>entalpía estándar ( \Delta H^\circ )</strong> y la <strong>entropía estándar ( \Delta S^\circ )</strong> son constantes en un rango de temperaturas. Si ( \Delta H^\circ = -50 , \text{kJ/mol} ) y ( \Delta S^\circ = 0.1 , \text{kJ/mol·K} ), calcular la <strong>constante de equilibrio ( K )</strong> a ( T = 298 , \text{K} ) y ( T = 500 , \text{K} ).</p></li>
+<li><p><strong>Graficar</strong> ( K(T) ) en el rango ( T = [298, 1000] , \text{K} ) y analizar su comportamiento.</p></li>
+<li><p><strong>Interpretar físicamente</strong>:</p>
+<ul class="simple">
+<li><p>¿Cómo afecta la temperatura a la constante de equilibrio ( K )?</p></li>
+<li><p>¿Qué sugiere el signo de ( \Delta H^\circ ) y ( \Delta S^\circ ) sobre la espontaneidad de la reacción?</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Solución</strong></p>
+<p><strong>1. Cálculo de ( K ) a Diferentes Temperaturas</strong>
+Usamos la ecuación:
+[
+\ln K = -\frac{\Delta H^\circ}{R T} + \frac{\Delta S^\circ}{R}
+]</p>
+<p><strong>A ( T = 298 , \text{K} ):</strong>
+[
+\ln K \approx 32.21 \implies K \approx 1.3 \times 10^{14}
+]</p>
+<p><strong>A ( T = 500 , \text{K} ):</strong>
+[
+\ln K \approx 24.06 \implies K \approx 2.6 \times 10^{10}
+]</p>
+<p><strong>Resultados:</strong>
+[
+\boxed{K(298 , \text{K}) \approx 1.3 \times 10^{14}}
+]
+[
+\boxed{K(500 , \text{K}) \approx 2.6 \times 10^{10}}
+]</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">h</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="c1"># Parámetros</span>
+<span class="n">Delta_H</span> <span class="o">=</span> <span class="o">-</span><span class="mf">50e3</span>  <span class="c1"># J/mol (entalpía estándar)</span>
+<span class="n">Delta_S</span> <span class="o">=</span> <span class="mf">0.1e3</span>   <span class="c1"># J/mol·K (entropía estándar)</span>
+<span class="n">R</span> <span class="o">=</span> <span class="mf">8.314</span>        <span class="c1"># J/mol·K</span>
 
-<span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">derivada</span><span class="p">)</span>
+<span class="c1"># Rango de temperaturas</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">298</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># ln K(T)</span>
+<span class="n">ln_K</span> <span class="o">=</span> <span class="o">-</span><span class="n">Delta_H</span> <span class="o">/</span> <span class="p">(</span><span class="n">R</span> <span class="o">*</span> <span class="n">T</span><span class="p">)</span> <span class="o">+</span> <span class="n">Delta_S</span> <span class="o">/</span> <span class="n">R</span>
+
+<span class="c1"># K(T)</span>
+<span class="n">K</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">ln_K</span><span class="p">)</span>
+
+<span class="c1"># Gráfica</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$K(T)$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Temperatura $T$ (K)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Constante de equilibrio $K$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Constante de Equilibrio $K(T)$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.000999999999699
-</pre></div>
+<img alt="_images/3453aaf304c6727ba43f3abb82b488b247be9e450560d1841524de6f152e4e21.png" src="_images/3453aaf304c6727ba43f3abb82b488b247be9e450560d1841524de6f152e4e21.png" />
 </div>
 </div>
-</div>
-<p><strong>Ejercicios</strong></p>
-<p>a) Aproximar la derivada de <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> en <span class="math notranslate nohighlight">\(x = 2\)</span> con distintos valores de <span class="math notranslate nohighlight">\(h\)</span>.</p>
-<p>b) Analizar cómo cambia la aproximación cuando <span class="math notranslate nohighlight">\(h \to 0\)</span>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -507,30 +578,29 @@ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="u2p3.html"
-       title="página anterior">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Operaciones simbólicas</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="u4p2.html"
-       title="siguiente página">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Derivadas de funciones</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aplicaciones de la Integral</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-de-la-constante-de-equilibrio-a-partir-de-la-energia-libre-de-gibbs">Cálculo de la Constante de Equilibrio a partir de la Energía Libre de Gibbs**</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>

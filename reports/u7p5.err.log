@@ -1,0 +1,58 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/nbclient/client.py", line 1323, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.10.20/x64/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Ejercicio 5: Centro de Masa de una Molécula (CO)
+
+**Contexto Teórico**
+El **centro de masa** \( x_{\text{cm}} \) de un sistema de partículas se calcula como:
+\[
+x_{\text{cm}} = \frac{\int x \, \lambda(x) \, dx}{\int \lambda(x) \, dx}
+\]
+Donde \( \lambda(x) \) es la densidad lineal de masa.
+
+**Enunciado**
+1. Modelar la densidad lineal de masa \( \lambda(x) \) de una molécula de \( \text{CO} \) como dos funciones gaussianas centradas en \( x = -d/2 \) (carbono) y \( x = d/2 \) (oxígeno), donde \( d = 1.13 \, \text{Å} \):
+   \[
+   \lambda(x) = A \left( m_C e^{-\frac{(x + d/2)^2}{2 \sigma^2}} + m_O e^{-\frac{(x - d/2)^2}{2 \sigma^2}} \right)
+   \]
+   Donde \( A = 1 \, \text{u/Å} \), \( \sigma = 0.1 \, \text{Å} \), \( m_C = 12 \, \text{u} \), y \( m_O = 16 \, \text{u} \).
+2. Calcular el **centro de masa \( x_{\text{cm}} \)** de la molécula.
+3. **Graficar** \( \lambda(x) \) y marcar la posición del centro de masa.
+4. **Interpretar físicamente**:
+   - ¿Por qué el centro de masa no está exactamente en \( x = 0 \)?
+   - ¿Cómo afecta la diferencia de masas atómicas al centro de masa?
+
+**Solución**
+
+**1. Cálculo del Centro de Masa \( x_{\text{cm}} \)**
+\[
+x_{\text{cm}} = \frac{(m_O - m_C) d}{2 (m_C + m_O)} = \frac{(16 - 12) \times 1.13}{2 (12 + 16)} \approx 0.0807 \, \text{Å}
+\]
+
+**Resultado:**
+\[
+\boxed{x_{\text{cm}} \approx 0.0807 \, \text{Å}}
+\]
+------------------
+
+
+[0;36m  Cell [0;32mIn[1], line 3[0;36m[0m
+[0;31m    **Contexto Teórico**[0m
+[0m    ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
+
+

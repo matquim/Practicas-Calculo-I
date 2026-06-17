@@ -58,10 +58,9 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'u7p1';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u7p5';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="prev" title="Integral indefinida" href="u6p2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -123,6 +122,8 @@
     <div class="bd-container__inner bd-page-width">
       
       
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -218,8 +219,8 @@
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Integral</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aplicaciones de la Integral</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="u7p1.html">Aplicaciones de la Integral</a></li>
 
 </ul>
 
@@ -275,7 +276,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u7p1.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u7p5.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +294,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u7p1.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u7p5.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +343,7 @@
       
       
       
-      <li><a href="_sources/u7p1.ipynb" target="_blank"
+      <li><a href="_sources/u7p5.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -413,9 +414,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -431,19 +430,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contenido </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aplicaciones de la Integral</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trabajo-en-una-expansion-isotermica-de-un-gas-ideal">Trabajo en una Expansión Isotérmica de un Gas Ideal</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-trabajo-w"><strong>1. Cálculo del Trabajo ( W )</strong></a></li>
-</ul>
-</li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -459,85 +445,83 @@ document.write(`
 <p class="admonition-title">ADVERTENCIA</p>
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="trabajo-en-una-expansion-isotermica-de-un-gas-ideal">
-<h1>Trabajo en una Expansión Isotérmica de un Gas Ideal<a class="headerlink" href="#trabajo-en-una-expansion-isotermica-de-un-gas-ideal" title="Link to this heading">#</a></h1>
-<p>En termodinámica, el <strong>trabajo ( W )</strong> realizado por un gas durante una expansión o compresión se calcula como:
-[
-W = \int_{V_1}^{V_2} P , dV
-]
-Para un <strong>gas ideal</strong>, la ecuación de estado es:
-[
-P = \frac{n R T}{V}
-]
-Donde:</p>
-<ul class="simple">
-<li><p>( P ): Presión del gas.</p></li>
-<li><p>( V ): Volumen del gas.</p></li>
-<li><p>( n ): Número de moles.</p></li>
-<li><p>( R ): Constante de los gases (( 8.314 , \text{J/mol·K} )).</p></li>
-<li><p>( T ): Temperatura (constante en un proceso isotérmico).</p></li>
-</ul>
-<p><strong>Trabajo en una expansión isotérmica</strong>:
-[
-W = n R T \ln \left( \frac{V_2}{V_1} \right)
-]</p>
-<p><strong>Instrucciones</strong></p>
-<ol class="arabic simple">
-<li><p>Un gas ideal a temperatura ( T = 300 , \text{K} ) se expande isotérmicamente desde un volumen ( V_1 = 1 , \text{L} ) hasta ( V_2 = 5 , \text{L} ). Calcular el <strong>trabajo ( W )</strong> realizado por el gas si ( n = 2 , \text{moles} ).</p></li>
-<li><p><strong>Graficar</strong> la presión ( P ) vs. volumen ( V ) durante la expansión y el área bajo la curva (que representa el trabajo).</p></li>
-<li><p><strong>Interpretar físicamente</strong>:</p>
-<ul class="simple">
-<li><p>¿Por qué el trabajo es <strong>positivo</strong> en una expansión?</p></li>
-<li><p>¿Cómo cambiaría el trabajo si la expansión fuera <strong>adiabática</strong>?</p></li>
-</ul>
-</li>
-</ol>
-<p>Solución</p>
-<section id="calculo-del-trabajo-w">
-<h2><strong>1. Cálculo del Trabajo ( W )</strong><a class="headerlink" href="#calculo-del-trabajo-w" title="Link to this heading">#</a></h2>
-<p>Usamos la integral para el trabajo en una expansión isotérmica:
-[
-W = n R T \ln \left( \frac{V_2}{V_1} \right)
-]
-Sustituyendo los valores:
-[
-W = 2 , \text{mol} \times 8.314 , \text{J/mol·K} \times 300 , \text{K} \times \ln \left( \frac{5}{1} \right) \approx 8037.6 , \text{J}
-]</p>
-<p><strong>Resultado:</strong>
-[
-\boxed{W \approx 8037.6 , \text{J}}
-]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ejercicio 5: Centro de Masa de una Molécula (CO)</span>
+
+<span class="o">**</span><span class="n">Contexto</span> <span class="n">Teórico</span><span class="o">**</span>
+<span class="n">El</span> <span class="o">**</span><span class="n">centro</span> <span class="n">de</span> <span class="n">masa</span><span class="o">**</span> \<span class="p">(</span> <span class="n">x_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">cm</span><span class="p">}}</span> \<span class="p">)</span> <span class="n">de</span> <span class="n">un</span> <span class="n">sistema</span> <span class="n">de</span> <span class="n">partículas</span> <span class="n">se</span> <span class="n">calcula</span> <span class="n">como</span><span class="p">:</span>
+\<span class="p">[</span>
+<span class="n">x_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">cm</span><span class="p">}}</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{</span>\<span class="nb">int</span> <span class="n">x</span> \<span class="p">,</span> \<span class="k">lambda</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> \<span class="p">,</span> <span class="n">dx</span><span class="p">}{</span>\<span class="nb">int</span> \<span class="k">lambda</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> \<span class="p">,</span> <span class="n">dx</span><span class="p">}</span>
+\<span class="p">]</span>
+<span class="n">Donde</span> \<span class="p">(</span> \<span class="k">lambda</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> \<span class="p">)</span> <span class="n">es</span> <span class="n">la</span> <span class="n">densidad</span> <span class="n">lineal</span> <span class="n">de</span> <span class="n">masa</span><span class="o">.</span>
+
+<span class="o">**</span><span class="n">Enunciado</span><span class="o">**</span>
+<span class="mf">1.</span> <span class="n">Modelar</span> <span class="n">la</span> <span class="n">densidad</span> <span class="n">lineal</span> <span class="n">de</span> <span class="n">masa</span> \<span class="p">(</span> \<span class="k">lambda</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> \<span class="p">)</span> <span class="n">de</span> <span class="n">una</span> <span class="n">molécula</span> <span class="n">de</span> \<span class="p">(</span> \<span class="n">text</span><span class="p">{</span><span class="n">CO</span><span class="p">}</span> \<span class="p">)</span> <span class="n">como</span> <span class="n">dos</span> <span class="n">funciones</span> <span class="n">gaussianas</span> <span class="n">centradas</span> <span class="n">en</span> \<span class="p">(</span> <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span> \<span class="p">)</span> <span class="p">(</span><span class="n">carbono</span><span class="p">)</span> <span class="n">y</span> \<span class="p">(</span> <span class="n">x</span> <span class="o">=</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span> \<span class="p">)</span> <span class="p">(</span><span class="n">oxígeno</span><span class="p">),</span> <span class="n">donde</span> \<span class="p">(</span> <span class="n">d</span> <span class="o">=</span> <span class="mf">1.13</span> \<span class="p">,</span> \<span class="n">text</span><span class="p">{</span><span class="n">Å</span><span class="p">}</span> \<span class="p">):</span>
+   \<span class="p">[</span>
+   \<span class="k">lambda</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">=</span> <span class="n">A</span> \<span class="n">left</span><span class="p">(</span> <span class="n">m_C</span> <span class="n">e</span><span class="o">^</span><span class="p">{</span><span class="o">-</span>\<span class="n">frac</span><span class="p">{(</span><span class="n">x</span> <span class="o">+</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">}{</span><span class="mi">2</span> \<span class="n">sigma</span><span class="o">^</span><span class="mi">2</span><span class="p">}}</span> <span class="o">+</span> <span class="n">m_O</span> <span class="n">e</span><span class="o">^</span><span class="p">{</span><span class="o">-</span>\<span class="n">frac</span><span class="p">{(</span><span class="n">x</span> <span class="o">-</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">}{</span><span class="mi">2</span> \<span class="n">sigma</span><span class="o">^</span><span class="mi">2</span><span class="p">}}</span> \<span class="n">right</span><span class="p">)</span>
+   \<span class="p">]</span>
+   <span class="n">Donde</span> \<span class="p">(</span> <span class="n">A</span> <span class="o">=</span> <span class="mi">1</span> \<span class="p">,</span> \<span class="n">text</span><span class="p">{</span><span class="n">u</span><span class="o">/</span><span class="n">Å</span><span class="p">}</span> \<span class="p">),</span> \<span class="p">(</span> \<span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.1</span> \<span class="p">,</span> \<span class="n">text</span><span class="p">{</span><span class="n">Å</span><span class="p">}</span> \<span class="p">),</span> \<span class="p">(</span> <span class="n">m_C</span> <span class="o">=</span> <span class="mi">12</span> \<span class="p">,</span> \<span class="n">text</span><span class="p">{</span><span class="n">u</span><span class="p">}</span> \<span class="p">),</span> <span class="n">y</span> \<span class="p">(</span> <span class="n">m_O</span> <span class="o">=</span> <span class="mi">16</span> \<span class="p">,</span> \<span class="n">text</span><span class="p">{</span><span class="n">u</span><span class="p">}</span> \<span class="p">)</span><span class="o">.</span>
+<span class="mf">2.</span> <span class="n">Calcular</span> <span class="n">el</span> <span class="o">**</span><span class="n">centro</span> <span class="n">de</span> <span class="n">masa</span> \<span class="p">(</span> <span class="n">x_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">cm</span><span class="p">}}</span> \<span class="p">)</span><span class="o">**</span> <span class="n">de</span> <span class="n">la</span> <span class="n">molécula</span><span class="o">.</span>
+<span class="mf">3.</span> <span class="o">**</span><span class="n">Graficar</span><span class="o">**</span> \<span class="p">(</span> \<span class="k">lambda</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> \<span class="p">)</span> <span class="n">y</span> <span class="n">marcar</span> <span class="n">la</span> <span class="n">posición</span> <span class="k">del</span> <span class="n">centro</span> <span class="n">de</span> <span class="n">masa</span><span class="o">.</span>
+<span class="mf">4.</span> <span class="o">**</span><span class="n">Interpretar</span> <span class="n">físicamente</span><span class="o">**</span><span class="p">:</span>
+   <span class="o">-</span> <span class="err">¿</span><span class="n">Por</span> <span class="n">qué</span> <span class="n">el</span> <span class="n">centro</span> <span class="n">de</span> <span class="n">masa</span> <span class="n">no</span> <span class="n">está</span> <span class="n">exactamente</span> <span class="n">en</span> \<span class="p">(</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> \<span class="p">)</span><span class="o">?</span>
+   <span class="o">-</span> <span class="err">¿</span><span class="n">Cómo</span> <span class="n">afecta</span> <span class="n">la</span> <span class="n">diferencia</span> <span class="n">de</span> <span class="n">masas</span> <span class="n">atómicas</span> <span class="n">al</span> <span class="n">centro</span> <span class="n">de</span> masa<span class="o">?</span>
+
+<span class="o">**</span><span class="n">Solución</span><span class="o">**</span>
+
+<span class="o">**</span><span class="mf">1.</span> <span class="n">Cálculo</span> <span class="k">del</span> <span class="n">Centro</span> <span class="n">de</span> <span class="n">Masa</span> \<span class="p">(</span> <span class="n">x_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">cm</span><span class="p">}}</span> \<span class="p">)</span><span class="o">**</span>
+\<span class="p">[</span>
+<span class="n">x_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">cm</span><span class="p">}}</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{(</span><span class="n">m_O</span> <span class="o">-</span> <span class="n">m_C</span><span class="p">)</span> <span class="n">d</span><span class="p">}{</span><span class="mi">2</span> <span class="p">(</span><span class="n">m_C</span> <span class="o">+</span> <span class="n">m_O</span><span class="p">)}</span> <span class="o">=</span> \<span class="n">frac</span><span class="p">{(</span><span class="mi">16</span> <span class="o">-</span> <span class="mi">12</span><span class="p">)</span> \<span class="n">times</span> <span class="mf">1.13</span><span class="p">}{</span><span class="mi">2</span> <span class="p">(</span><span class="mi">12</span> <span class="o">+</span> <span class="mi">16</span><span class="p">)}</span> \<span class="n">approx</span> <span class="mf">0.0807</span> \<span class="p">,</span> \<span class="n">text</span><span class="p">{</span><span class="n">Å</span><span class="p">}</span>
+\<span class="p">]</span>
+
+<span class="o">**</span><span class="n">Resultado</span><span class="p">:</span><span class="o">**</span>
+\<span class="p">[</span>
+\<span class="n">boxed</span><span class="p">{</span><span class="n">x_</span><span class="p">{</span>\<span class="n">text</span><span class="p">{</span><span class="n">cm</span><span class="p">}}</span> \<span class="n">approx</span> <span class="mf">0.0807</span> \<span class="p">,</span> \<span class="n">text</span><span class="p">{</span><span class="n">Å</span><span class="p">}}</span>
+\<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+    <span class="o">**</span><span class="n">Contexto</span> <span class="n">Teórico</span><span class="o">**</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
 
 <span class="c1"># Parámetros</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mf">2.0</span>       <span class="c1"># Moles</span>
-<span class="n">R</span> <span class="o">=</span> <span class="mf">8.314</span>     <span class="c1"># J/mol·K</span>
-<span class="n">T</span> <span class="o">=</span> <span class="mf">300.0</span>     <span class="c1"># K</span>
-<span class="n">V1</span> <span class="o">=</span> <span class="mf">1.0</span>      <span class="c1"># L (volumen inicial)</span>
-<span class="n">V2</span> <span class="o">=</span> <span class="mf">5.0</span>      <span class="c1"># L (volumen final)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="mf">1.0</span>          <span class="c1"># Amplitud (u/Å)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mf">1.13</span>         <span class="c1"># Distancia de enlace C-O (Å)</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.1</span>      <span class="c1"># Ancho de los picos (Å)</span>
+<span class="n">m_C</span> <span class="o">=</span> <span class="mf">12.0</span>       <span class="c1"># Masa atómica del carbono (u)</span>
+<span class="n">m_O</span> <span class="o">=</span> <span class="mf">16.0</span>       <span class="c1"># Masa atómica del oxígeno (u)</span>
 
-<span class="c1"># Volúmenes para la gráfica</span>
-<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">V1</span><span class="p">,</span> <span class="n">V2</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="c1"># Posiciones x</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 
-<span class="c1"># Presión P(V) = nRT / V</span>
-<span class="n">P</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">T</span> <span class="o">/</span> <span class="n">V</span>
+<span class="c1"># Densidad lineal de masa lambda(x)</span>
+<span class="n">lambda_x</span> <span class="o">=</span> <span class="n">A</span> <span class="o">*</span> <span class="p">(</span><span class="n">m_C</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="n">m_O</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
 
-<span class="c1"># Trabajo W (área bajo la curva)</span>
-<span class="n">W</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">V</span><span class="p">:</span> <span class="n">n</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">T</span> <span class="o">/</span> <span class="n">V</span><span class="p">,</span> <span class="n">V1</span><span class="p">,</span> <span class="n">V2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Trabajo W = </span><span class="si">{</span><span class="n">W</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> J&quot;</span><span class="p">)</span>
+<span class="c1"># Centro de masa x_cm</span>
+<span class="n">x_cm</span> <span class="o">=</span> <span class="p">(</span><span class="n">m_O</span> <span class="o">-</span> <span class="n">m_C</span><span class="p">)</span> <span class="o">*</span> <span class="n">d</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">m_C</span> <span class="o">+</span> <span class="n">m_O</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Centro de masa x_cm = </span><span class="si">{</span><span class="n">x_cm</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> Å&quot;</span><span class="p">)</span>
 
 <span class="c1"># Gráfica</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$P(V) = </span><span class="se">\\</span><span class="s2">frac</span><span class="si">{nRT}{V}</span><span class="s2">$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Área = Trabajo $W$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Volumen $V$ (L)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Presión $P$ (Pa)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Trabajo en una Expansión Isotérmica de un Gas Ideal&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lambda_x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">lambda(x)$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x_cm</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Centro de masa $x_</span><span class="se">{{</span><span class="s2">cm</span><span class="se">}}</span><span class="s2"> = </span><span class="si">{</span><span class="n">x_cm</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">$ Å&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="o">-</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Carbono ($x = -d/2$)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">d</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Oxígeno ($x = d/2$)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Posición $x$ (Å)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Densidad lineal de masa $</span><span class="se">\\</span><span class="s2">lambda(x)$ (u/Å)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución de Masa en la Molécula de CO&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -545,13 +529,12 @@ W = 2 , \text{mol} \times 8.314 , \text{J/mol·K} \times 300 , \text{K} \times \
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trabajo W = 8028.52 J
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Centro de masa x_cm = 0.0807 Å
 </pre></div>
 </div>
-<img alt="_images/853c4d11de1fa1cdc963f9ac2d8ff98addf7a7ec5c700777392c7698567e7f57.png" src="_images/853c4d11de1fa1cdc963f9ac2d8ff98addf7a7ec5c700777392c7698567e7f57.png" />
+<img alt="_images/d0ea029f32f1363a883019e677aa923741cea54a9e3e7d9437f69cadff21a2f4.png" src="_images/d0ea029f32f1363a883019e677aa923741cea54a9e3e7d9437f69cadff21a2f4.png" />
 </div>
 </div>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -584,41 +567,12 @@ W = 2 , \text{mol} \times 8.314 , \text{J/mol·K} \times 300 , \text{K} \times \
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="u6p2.html"
-       title="página anterior">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Integral indefinida</p>
-      </div>
-    </a>
 </div>
                 </footer>
               
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contenido
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aplicaciones de la Integral</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#trabajo-en-una-expansion-isotermica-de-un-gas-ideal">Trabajo en una Expansión Isotérmica de un Gas Ideal</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculo-del-trabajo-w"><strong>1. Cálculo del Trabajo ( W )</strong></a></li>
-</ul>
-</li>
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
