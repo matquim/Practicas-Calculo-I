@@ -24,7 +24,7 @@ parts:
   - caption: Aplicaciones de la Derivada
     chapters:
       - file: u5p1     
-
+      - file: u5p2     
   - caption: La Integral
     chapters:
       - file: u6p1     
