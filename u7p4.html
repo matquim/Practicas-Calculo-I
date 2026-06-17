@@ -481,7 +481,7 @@ P \propto \int_{a}^{b} c(x) \, dx
 </li>
 </ol>
 <p><strong>Solución</strong></p>
-<p><strong>1. Cálculo de la Probabilidad Relativa</strong></p>
+<p><strong>Cálculo de la Probabilidad Relativa</strong></p>
 <div class="math notranslate nohighlight">
 \[
 P \propto \int_{-1}^{1} \frac{M}{\sigma \sqrt{2 \pi}} e^{-\frac{x^2}{2 \sigma^2}} \, dx
@@ -491,10 +491,11 @@ P \propto \int_{-1}^{1} \frac{M}{\sigma \sqrt{2 \pi}} e^{-\frac{x^2}{2 \sigma^2}
 \[
 P \propto \frac{1}{\sqrt{2 \pi}} \int_{-1}^{1} e^{-\frac{x^2}{2}} \, dx \approx 0.6827
 \]</div>
-<p><strong>Resultado:</strong>
-$<span class="math notranslate nohighlight">\(
+<p><strong>Resultado:</strong></p>
+<div class="math notranslate nohighlight">
+\[
 P \approx 0.6827 \text{ (68.27%)}
-\)</span>$</p>
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
