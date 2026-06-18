@@ -34,8 +34,8 @@ parts:
       - file: u7p1     
       - file: u7p2     
       - file: u7p3     
-      - file: u7p4    
-      - file: u7p5     
+      - file: u7p4     
+      - file: u7p5  
       - file: u7p6     
       - file: u7p7     
       - file: u7p8     
