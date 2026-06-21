@@ -11,9 +11,11 @@ parts:
     chapters:
       - file: u2p1
       - file: u2p2
+      - file: u2p3
   - caption: Límites y continuidad
     chapters:
       - file: u3p1
+      - file: u3p2
   - caption: La Derivada
     chapters:
       - file: u4p1     
