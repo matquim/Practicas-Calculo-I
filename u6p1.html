@@ -191,15 +191,16 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funciones</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="u2p1.html">Funciones en Python.</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="u2p2.html">Operaciones simbólicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u2p2.html">Gráficas de funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u2p3.html">Operaciones simbólicas</a></li>
 
 
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Límites y continuidad</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u3p1.html">Sucesiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u3p1.html">El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u3p2.html">Sucesiones</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Derivada</span></p>
 <ul class="nav bd-sidenav">
@@ -475,8 +476,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 </ol>
 <p><strong>Fórmula general:</strong></p>
 <p>La suma de Riemann se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a56b22f9-d63a-4ce6-9df4-91f1b0287b0f">
-<span class="eqno">(9)<a class="headerlink" href="#equation-a56b22f9-d63a-4ce6-9df4-91f1b0287b0f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7c439872-f1bb-4c7c-9a3c-d25c233705c3">
+<span class="eqno">(9)<a class="headerlink" href="#equation-7c439872-f1bb-4c7c-9a3c-d25c233705c3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=1}^{n}{f(x_{i})\Delta x}
 \end{align}\]</div>
 <p>donde:</p>
@@ -484,8 +485,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <li><p><span class="math notranslate nohighlight">\(n ≡\)</span> número de rectángulos</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta x ≡\)</span> ancho de cada rectángulo (tamaño de la partición):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-b09f6c12-f9f4-4c8c-b466-40a7920804a8">
-<span class="eqno">(10)<a class="headerlink" href="#equation-b09f6c12-f9f4-4c8c-b466-40a7920804a8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c82d12f1-0118-447b-a580-bef283225a45">
+<span class="eqno">(10)<a class="headerlink" href="#equation-c82d12f1-0118-447b-a580-bef283225a45" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x = \frac{b-a}{n}
 \end{align}\]</div>
 <ul class="simple">
@@ -505,26 +506,26 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <h2>Integral definida<a class="headerlink" href="#integral-definida" title="Link to this heading">#</a></h2>
 <p>Las sumas de Riemann son una base de la integral definida.</p>
 <p>Cuando el número de rectángulos aumenta, la aproximáción de la suma de los rectángulos, se vuelve exactamente el área bajo la curva, es decir,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac611a44-7dae-4fbf-9f16-05ff06e225c6">
-<span class="eqno">(11)<a class="headerlink" href="#equation-ac611a44-7dae-4fbf-9f16-05ff06e225c6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5c27b73d-6db8-42ac-97be-3c7a5a053ac3">
+<span class="eqno">(11)<a class="headerlink" href="#equation-5c27b73d-6db8-42ac-97be-3c7a5a053ac3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \lim_{n\to \infty}{\sum_{i=i}^{n}{f(x_i)\Delta x}}=\int_{a}^{b}{f(x)\,dx}
 \end{align}\]</div>
 </section>
 <section id="metodologia">
 <h2>Metodología<a class="headerlink" href="#metodologia" title="Link to this heading">#</a></h2>
 <p>Tomamos una partición de puntos de la forma:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-02ba93a6-f406-449f-9324-8057bbc9ceeb">
-<span class="eqno">(12)<a class="headerlink" href="#equation-02ba93a6-f406-449f-9324-8057bbc9ceeb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7cc8068f-ff0e-48bf-90fb-db7f41daea68">
+<span class="eqno">(12)<a class="headerlink" href="#equation-7cc8068f-ff0e-48bf-90fb-db7f41daea68" title="Permalink to this equation">#</a></span>\[\begin{align}
 x_i=a+i\Delta x
 \end{align}\]</div>
 <p>en donde</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b12252f0-2926-4cf6-871a-bc94571bfbb6">
-<span class="eqno">(13)<a class="headerlink" href="#equation-b12252f0-2926-4cf6-871a-bc94571bfbb6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5389891e-7531-4bc8-886b-d6f9effdc7dc">
+<span class="eqno">(13)<a class="headerlink" href="#equation-5389891e-7531-4bc8-886b-d6f9effdc7dc" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x=\frac{b-a}{n}
 \end{align}\]</div>
 <p>La aproximación <span class="math notranslate nohighlight">\(I^*\)</span>  para la integral (suma de Riemann) está dada por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ac21e10d-9d31-4fca-8e21-e8dd8e5fbfd1">
-<span class="eqno">(14)<a class="headerlink" href="#equation-ac21e10d-9d31-4fca-8e21-e8dd8e5fbfd1" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1b28e23b-1ce8-4ab6-a0a3-a9fb32224393">
+<span class="eqno">(14)<a class="headerlink" href="#equation-1b28e23b-1ce8-4ab6-a0a3-a9fb32224393" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=0}^{n}{f(x_{i})h}
 \end{align}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(x_i\)</span> es el extremo izquierdo, derecho o el punto medio.</p>

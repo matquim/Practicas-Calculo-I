@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'u2p1';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Operaciones simbólicas" href="u2p2.html" />
+    <link rel="next" title="Gráficas de funciones" href="u2p2.html" />
     <link rel="prev" title="Propiedades de orden de los números reales." href="u1p3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
@@ -191,15 +191,16 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Funciones</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Funciones en Python.</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="u2p2.html">Operaciones simbólicas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u2p2.html">Gráficas de funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u2p3.html">Operaciones simbólicas</a></li>
 
 
 
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Límites y continuidad</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u3p1.html">Sucesiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u3p1.html">El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u3p2.html">Sucesiones</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Derivada</span></p>
 <ul class="nav bd-sidenav">
@@ -448,23 +449,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones en Python.</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion-de-la-funcion-en-varios-puntos">Evaluación de la función en varios puntos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-funciones">Gráficas de funciones</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#el-uso-del-ciclo-for">El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos-de-uso">Ejemplos de uso:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">2. Iterar sobre una lista de números.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecutar-codigo-repetidamente">3. Ejecutar código repetidamente.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-cadena-de-texto">4. Iterar sobre una cadena de texto</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumar-numeros-de-una-lista">5. Sumar números de una lista</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -536,8 +523,8 @@ La función en x=3 vale: 9
 </details>
 </div>
 <p>Defina la función:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e19f8b90-55f2-4abf-9b3c-ebd5be975e69">
-<span class="eqno">(1)<a class="headerlink" href="#equation-e19f8b90-55f2-4abf-9b3c-ebd5be975e69" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-878cdd9b-8989-4c2e-883a-8495322c3ed2">
+<span class="eqno">(1)<a class="headerlink" href="#equation-878cdd9b-8989-4c2e-883a-8495322c3ed2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 g(x) = x^3 + x^2 + x + 1
 \end{equation}\]</div>
 <p>y evaluela en:</p>
@@ -779,216 +766,6 @@ h(x): [  2.  17.  50. 101.]
 </div>
 </section>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="el-uso-del-ciclo-for">
-<h1>El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.<a class="headerlink" href="#el-uso-del-ciclo-for" title="Link to this heading">#</a></h1>
-<p>El ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> en python se utiliza para hacer una iteración sobre una secuencia de elementos, los cuales pueden ser una lista, una tupla, un diccionario, un conjunto o una cadena de texto. Se utiliza en programación para ejecutar líneas de código de forma repetida, una por nada elemento de la lista.</p>
-<p>La sintáxis es la siguiente:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">secuencia</span><span class="p">:</span>
-  <span class="c1"># Lineas de código a ejecutar</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>La palabra <code class="docutils literal notranslate"><span class="pre">for</span></code> es la palabra que indica el inicio del ciclio de iteración.</p></li>
-<li><p>La palabra <code class="docutils literal notranslate"><span class="pre">variable</span></code> es el nombre de la variable que tomará el valor de cada uno de los elementos de la secuencia en cada iteración. Puede ser nombrada de cualquier forma pero lo recomendable es que se le asigne un nombre que denote el tipo de datos sobre los que se está iterando.</p></li>
-<li><p>La palabra <code class="docutils literal notranslate"><span class="pre">in</span></code> indica que la variable tomará el valor de cada elemento en la secuencia.</p></li>
-<li><p>La palabra <code class="docutils literal notranslate"><span class="pre">secuencia</span></code> es la estructura de datos sobre la que se va a iterar. Puede ser uan lista, una tupla, etc.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">:</span></code> (dos puntos) indican el final de la declaración del ciclo y el inicio de las líneas que se ejecutarán.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Líneas</span> <span class="pre">de</span> <span class="pre">código</span> <span class="pre">a</span> <span class="pre">ejecutar</span></code> es el conjunto de líneas de código que se ejecutarán de forma repetida, una vez por cada elemento de la secuencia.  Es importante notar que estas líneas de código deben estar escritas de forma identada, con un número fijo de espacio o un tabulador.</p></li>
-</ul>
-<p>Veamos algunos ejemplos.</p>
-<section id="ejemplos-de-uso">
-<h2>Ejemplos de uso:<a class="headerlink" href="#ejemplos-de-uso" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Iterar sobre una lista.</p></li>
-</ol>
-<p>En el siguiente código se ha declado la lista</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">colores</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;azul&#39;</span><span class="p">,</span> <span class="s1">&#39;amarillo&#39;</span><span class="p">,</span> <span class="s1">&#39;rojo&#39;</span><span class="p">,</span> <span class="s1">&#39;verde&#39;</span><span class="p">,</span> <span class="s1">&#39;anaranjado&#39;</span><span class="p">,</span> <span class="s1">&#39;rosa&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>Ejecuta la celda de código y observa qué ocurre.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colores</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;azul&#39;</span><span class="p">,</span> <span class="s1">&#39;amarillo&#39;</span><span class="p">,</span> <span class="s1">&#39;rojo&#39;</span><span class="p">,</span> <span class="s1">&#39;verde&#39;</span><span class="p">,</span> <span class="s1">&#39;anaranjado&#39;</span><span class="p">,</span> <span class="s1">&#39;rosa&#39;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colores</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>azul
-amarillo
-rojo
-verde
-anaranjado
-rosa
-</pre></div>
-</div>
-</div>
-</div>
-<section id="iterar-sobre-una-lista-de-numeros">
-<h3>2. Iterar sobre una lista de números.<a class="headerlink" href="#iterar-sobre-una-lista-de-numeros" title="Link to this heading">#</a></h3>
-<p>En el siguiente código se ha declarado la lista</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>Ejecuta la celda de código y observa qué ocurre.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeros</span><span class="p">:</span>
-  <span class="n">numero_par</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">numero</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">numero_par</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-6
-8
-10
-12
-16
-20
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="ejecutar-codigo-repetidamente">
-<h3>3. Ejecutar código repetidamente.<a class="headerlink" href="#ejecutar-codigo-repetidamente" title="Link to this heading">#</a></h3>
-<p>Si sólo se desea ejecutar líneas de código de forma repetida, podemos usar</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">paso</span><span class="p">)</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">n</span></code> es el número donde comienza la secuencia. Si no se especifica, comienza en <span class="math notranslate nohighlight">\(0\)</span>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">m</span></code> es el número que indica que termina la secuencia y no se incluye, es decir, la secuancia termina en <span class="math notranslate nohighlight">\(n-1\)</span>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">paso</span></code> es el incremento entre cada número de la secuencia.</p></li>
-</ul>
-<p>Ejecuta las siguientes celdas de código y observa qué ocurre.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5 x&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s2">&quot;=&quot;</span><span class="p">,</span><span class="mi">5</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 x 1 = 5
-5 x 2 = 10
-5 x 3 = 15
-5 x 4 = 20
-5 x 5 = 25
-5 x 6 = 30
-5 x 7 = 35
-5 x 8 = 40
-5 x 9 = 45
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
-  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hola 1
-Hola 4
-Hola 7
-Hola 10
-Hola 13
-Hola 16
-Hola 19
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="iterar-sobre-una-cadena-de-texto">
-<h3>4. Iterar sobre una cadena de texto<a class="headerlink" href="#iterar-sobre-una-cadena-de-texto" title="Link to this heading">#</a></h3>
-<p>En el siguiente código se ha declarado una cadena de caracteres:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cadena</span><span class="o">=</span><span class="s2">&quot;HolaMundo&quot;</span>
-</pre></div>
-</div>
-<p>Ejecuta la celda de código y observa qué ocurre.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cadena</span><span class="o">=</span><span class="s2">&quot;HolaMundo&quot;</span>
-<span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">cadena</span><span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H
-o
-l
-a
-M
-u
-n
-d
-o
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="sumar-numeros-de-una-lista">
-<h3>5. Sumar números de una lista<a class="headerlink" href="#sumar-numeros-de-una-lista" title="Link to this heading">#</a></h3>
-<p>En el siguiente código se ha declarado la lista de números:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lista_numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
-</pre></div>
-</div>
-<p>se ha declarado la variable suma, con valor 0</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">suma</span><span class="o">=</span><span class="mi">0</span>
-</pre></div>
-</div>
-<p>Ejecuta el siguiente código y observa cómo con el ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> podemos sumar los números en la lista.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
-<span class="n">suma</span><span class="o">=</span><span class="mi">0</span>
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">lista_numeros</span><span class="p">:</span>
-  <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span><span class="o">+</span><span class="n">n</span> <span class="c1">#se puede abreviar suma=+n</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">suma</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>63
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-</section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1034,7 +811,7 @@ o
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Operaciones simbólicas</p>
+        <p class="prev-next-title">Gráficas de funciones</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1054,23 +831,9 @@ o
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones en Python.</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion-de-la-funcion-en-varios-puntos">Evaluación de la función en varios puntos</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-funciones">Gráficas de funciones</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#el-uso-del-ciclo-for">El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos-de-uso">Ejemplos de uso:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">2. Iterar sobre una lista de números.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ejecutar-codigo-repetidamente">3. Ejecutar código repetidamente.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-cadena-de-texto">4. Iterar sobre una cadena de texto</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sumar-numeros-de-una-lista">5. Sumar números de una lista</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
