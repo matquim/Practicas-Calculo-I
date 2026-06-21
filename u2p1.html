@@ -450,6 +450,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones en Python.</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion-de-la-funcion-en-varios-puntos">Evaluación de la función en varios puntos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-funciones">Gráficas de funciones</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#el-uso-del-ciclo-for">El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</a><ul class="visible nav section-nav flex-column">
@@ -535,8 +536,8 @@ La función en x=3 vale: 9
 </details>
 </div>
 <p>Defina la función:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5ef52053-02c3-423a-88a2-97a75cdaa0dd">
-<span class="eqno">(1)<a class="headerlink" href="#equation-5ef52053-02c3-423a-88a2-97a75cdaa0dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-e19f8b90-55f2-4abf-9b3c-ebd5be975e69">
+<span class="eqno">(1)<a class="headerlink" href="#equation-e19f8b90-55f2-4abf-9b3c-ebd5be975e69" title="Permalink to this equation">#</a></span>\[\begin{equation}
 g(x) = x^3 + x^2 + x + 1
 \end{equation}\]</div>
 <p>y evaluela en:</p>
@@ -645,11 +646,16 @@ La función en x=3 vale: 9
 </div>
 </div>
 </div>
-<p>Ahora podemos evaluar la función <span class="math notranslate nohighlight">\(h(x) = x + 1\)</span> en los cuatro números a la vez. En la siguiente celda, defina la función e imprima <span class="math notranslate nohighlight">\(h(x)\)</span></p>
-<div class="cell docutils container">
+<p>Ahora podemos evaluar la función <span class="math notranslate nohighlight">\(h(x) = x^2 + 1\)</span> en los cuatro números a la vez. En la siguiente celda, defina la función e imprima <span class="math notranslate nohighlight">\(h(x)\)</span></p>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;h(x):&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
@@ -658,9 +664,117 @@ La función en x=3 vale: 9
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x: [ 1.  4.  7. 10.]
-h(x): [ 2.  5.  8. 11.]
+h(x): [  2.  17.  50. 101.]
 </pre></div>
 </div>
+</div>
+</details>
+</div>
+</section>
+<section id="graficas-de-funciones">
+<h2>Gráficas de funciones<a class="headerlink" href="#graficas-de-funciones" title="Link to this heading">#</a></h2>
+<p>Nos resulta bastante útil usar la librería matplotlib para graficar. Para importarla, usaremos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+<p>copie y pegue el código en la siguiente celda</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Existen dos instrucciones importantes para realizar gráficas. La primera es una gráfica de puntos (scatter). El siguiente código haría las gráficas de <span class="math notranslate nohighlight">\(f(x) = x^2\)</span>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Eje X&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Eje Y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;f(x) = x^2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Eje X&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Eje Y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;f(x) = x^2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x) = x^2&#39;)
+</pre></div>
+</div>
+<img alt="_images/227268fcbe3c02ae4d9419846ff167e6df384a53eebc72fc6efffcfbb4a0d0a1.png" src="_images/227268fcbe3c02ae4d9419846ff167e6df384a53eebc72fc6efffcfbb4a0d0a1.png" />
+</div>
+</div>
+<p>La segunda manera es mediante el comando plot, por ejemplo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Eje X&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Eje Y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;f(x) = x^2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Eje X&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Eje Y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;f(x) = x^2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x) = x^2&#39;)
+</pre></div>
+</div>
+<img alt="_images/c5d172a186ada30a82caa49b74e1c9d9202e4675ecfb20b196c068d3296e9046.png" src="_images/c5d172a186ada30a82caa49b74e1c9d9202e4675ecfb20b196c068d3296e9046.png" />
+</div>
+</div>
+<p>Note que la gráfica no es suave. Esto se debe a que solo se usaron 9 puntos.</p>
+<p>Modifique el código anterior para realizar la misma gráfica, pero con 101 puntos. ¿Cuál es el tamaño del paso?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Eje X&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Eje Y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;f(x) = x^2&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x) = x^2&#39;)
+</pre></div>
+</div>
+<img alt="_images/582e854c8e4296f7312cfa9e57a8b6192854cb250bc5e35c2d8180e2198fa904.png" src="_images/582e854c8e4296f7312cfa9e57a8b6192854cb250bc5e35c2d8180e2198fa904.png" />
 </div>
 </div>
 </section>
@@ -942,6 +1056,7 @@ o
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones en Python.</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion-de-la-funcion-en-varios-puntos">Evaluación de la función en varios puntos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graficas-de-funciones">Gráficas de funciones</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#el-uso-del-ciclo-for">El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</a><ul class="visible nav section-nav flex-column">
