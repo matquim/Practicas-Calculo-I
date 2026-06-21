@@ -448,7 +448,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones en Python.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones en Python.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion-de-la-funcion-en-varios-puntos">Evaluación de la función en varios puntos</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#el-uso-del-ciclo-for">El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos-de-uso">Ejemplos de uso:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">2. Iterar sobre una lista de números.</a></li>
@@ -479,8 +482,188 @@ document.write(`
 <p><span class="math notranslate nohighlight">\(f: \mathbb D \subset \mathbb R \longmapsto \mathbb  R\)</span></p>
 <p>Donde <span class="math notranslate nohighlight">\(\mathbb D\)</span> es un subconjunto de los números reales y la función f asigna a cada número real <span class="math notranslate nohighlight">\(x\)</span> del conjunto <span class="math notranslate nohighlight">\(\mathbb D\)</span> a un solo valor real, denominado <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
 </div>
-<p>Es muy importante recorda que las funciones de variale real se expresan algebraicamente por medio una fórmula, la cual expresa la regla de correspondencia.</p>
-<p>La representación gráfica de funiciones es muy importante y en Python esto se realiza</p>
+<p>Es muy importante recordar que las funciones de variale real se expresan algebraicamente por medio una fórmula, la cual expresa la regla de correspondencia.</p>
+<p>En Python, podemos definir la función <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> mediante la palabra <code class="docutils literal notranslate"><span class="pre">def</span></code> y la estructura:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+
+    <span class="k">return</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>note la palabra <code class="docutils literal notranslate"><span class="pre">return</span></code> que devuelve el valor de evaluar la función.</p>
+<p>Una ventaja de hacer esto es que ahora podemos llamar a la función muchas veces sin tener que definirla de nuevo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La función en x=1 vale:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La función en x=2 vale:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La función en x=3 vale:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Copie y ejecute el código anterior para evaluar la función <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> en</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x=2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x=3\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba su código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La función en x=1 vale:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La función en x=2 vale:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La función en x=3 vale:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La función en x=1 vale: 1
+La función en x=2 vale: 4
+La función en x=3 vale: 9
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Defina la función:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-5ef52053-02c3-423a-88a2-97a75cdaa0dd">
+<span class="eqno">(1)<a class="headerlink" href="#equation-5ef52053-02c3-423a-88a2-97a75cdaa0dd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+g(x) = x^3 + x^2 + x + 1
+\end{equation}\]</div>
+<p>y evaluela en:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x=-1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x=0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x=3\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba su código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La función en x=-1 vale:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La función en x=0 vale:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La función en x=3 vale:&quot;</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La función en x=-1 vale: 1
+La función en x=0 vale: 0
+La función en x=3 vale: 9
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Defina la variable <span class="math notranslate nohighlight">\(x=4\)</span>, evalúe la función en esta variable y guarde el resultado en la variable <span class="math notranslate nohighlight">\(y\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<section id="evaluacion-de-la-funcion-en-varios-puntos">
+<h2>Evaluación de la función en varios puntos<a class="headerlink" href="#evaluacion-de-la-funcion-en-varios-puntos" title="Link to this heading">#</a></h2>
+<p>Resulta conveniente evaluar una función en varios puntos. Para ello nos auxiliaremos de la librería <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, esta añade funcionalidades numéricas al entorno. Copie y pegue el siguiente código para importar la librería, (solo es necesario hacerlo la primera vez que se usa en la sesión de Python):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Usamos la función np.linspace para generar los puntos del dominio en los que se evaluará la función.</p>
+<p>El siguiente código genera cuatro números en el intervalo del 1 al 10:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>el espaciado entre los valores se elige uniformemente acorde a la cantidad de puntos solicitados.</p>
+<p>Copie y pegue la instrucción anterior, e imprima los valores de <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 1.,  4.,  7., 10.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora podemos evaluar la función <span class="math notranslate nohighlight">\(h(x) = x + 1\)</span> en los cuatro números a la vez. En la siguiente celda, defina la función e imprima <span class="math notranslate nohighlight">\(h(x)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">h</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;h(x):&quot;</span><span class="p">,</span> <span class="n">h</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x: [ 1.  4.  7. 10.]
+h(x): [ 2.  5.  8. 11.]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="el-uso-del-ciclo-for">
 <h1>El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.<a class="headerlink" href="#el-uso-del-ciclo-for" title="Link to this heading">#</a></h1>
@@ -511,7 +694,7 @@ document.write(`
 <p>Ejecuta la celda de código y observa qué ocurre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">colores</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;azul&#39;</span><span class="p">,</span> <span class="s1">&#39;amarillo&#39;</span><span class="p">,</span> <span class="s1">&#39;rojo&#39;</span><span class="p">,</span> <span class="s1">&#39;verde&#39;</span><span class="p">,</span> <span class="s1">&#39;anaranjado&#39;</span><span class="p">,</span> <span class="s1">&#39;rosa&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colores</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;azul&#39;</span><span class="p">,</span> <span class="s1">&#39;amarillo&#39;</span><span class="p">,</span> <span class="s1">&#39;rojo&#39;</span><span class="p">,</span> <span class="s1">&#39;verde&#39;</span><span class="p">,</span> <span class="s1">&#39;anaranjado&#39;</span><span class="p">,</span> <span class="s1">&#39;rosa&#39;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">color</span> <span class="ow">in</span> <span class="n">colores</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
 </pre></div>
@@ -537,7 +720,7 @@ rosa
 <p>Ejecuta la celda de código y observa qué ocurre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">numero</span> <span class="ow">in</span> <span class="n">numeros</span><span class="p">:</span>
   <span class="n">numero_par</span><span class="o">=</span><span class="mi">2</span><span class="o">*</span><span class="n">numero</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">numero_par</span><span class="p">)</span>
@@ -571,7 +754,7 @@ rosa
 <p>Ejecuta las siguientes celdas de código y observa qué ocurre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -593,7 +776,7 @@ rosa
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;5 x&quot;</span><span class="p">,</span><span class="n">n</span><span class="p">,</span><span class="s2">&quot;=&quot;</span><span class="p">,</span><span class="mi">5</span><span class="o">*</span><span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -614,7 +797,7 @@ rosa
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -641,7 +824,7 @@ Hola 19
 <p>Ejecuta la celda de código y observa qué ocurre.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cadena</span><span class="o">=</span><span class="s2">&quot;HolaMundo&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cadena</span><span class="o">=</span><span class="s2">&quot;HolaMundo&quot;</span>
 <span class="k">for</span> <span class="n">letra</span> <span class="ow">in</span> <span class="n">cadena</span><span class="p">:</span>
   <span class="nb">print</span><span class="p">(</span><span class="n">letra</span><span class="p">)</span>
 </pre></div>
@@ -675,7 +858,7 @@ o
 <p>Ejecuta el siguiente código y observa cómo con el ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code> podemos sumar los números en la lista.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lista_numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lista_numeros</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">15</span><span class="p">]</span>
 <span class="n">suma</span><span class="o">=</span><span class="mi">0</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">lista_numeros</span><span class="p">:</span>
   <span class="n">suma</span> <span class="o">=</span> <span class="n">suma</span><span class="o">+</span><span class="n">n</span> <span class="c1">#se puede abreviar suma=+n</span>
@@ -757,7 +940,10 @@ o
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones en Python.</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Funciones en Python.</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion-de-la-funcion-en-varios-puntos">Evaluación de la función en varios puntos</a></li>
+</ul>
+</li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#el-uso-del-ciclo-for">El uso del ciclo <code class="docutils literal notranslate"><span class="pre">for</span></code>.</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejemplos-de-uso">Ejemplos de uso:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterar-sobre-una-lista-de-numeros">2. Iterar sobre una lista de números.</a></li>
