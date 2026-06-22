@@ -467,10 +467,18 @@ document.write(`
 <p><strong>Objetivo:</strong> Que el estudiante comprenda cómo los números reales se operan en Python, cómo se representan, almacenan y los errores que pueden surgir debido a las limitaciones de la representación de números flotantes en binario.</p>
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
-<p>En las computadoras, los números se representan mediante cadenas de unos y ceros. En particular, podemos manejar los números reales centrando nuestra atención en dos tipos de números, aquellos que pertenecen a los enteros (<em>int</em>) y aquellos que contienen punto decimal, también llamados de coma flotante (<em>float</em>).</p>
+<p>En las computadoras, los números se representan mediante cadenas de unos y ceros. En particular, podemos manejar los números reales centrando nuestra atención en dos tipos de números:</p>
 <ul class="simple">
-<li><p>En el caso de los enteros, estos se representan mediante su notación binaria, por ejemplo, el número 17 se representa como: 10001</p></li>
-<li><p>En el caso de los números de coma flotante, estos se representan usando el estándar (IEEE 754), el cual asigna 64 bits para codificar el signo, el exponente y la parte fraccionaria.</p></li>
+<li><p>Aquellos que pertenecen a los enteros (<code class="docutils literal notranslate"><span class="pre">int</span></code>)</p>
+<ul>
+<li><p>Estos se representan mediante su notación binaria, por ejemplo, el número 17 se representa como: 10001</p></li>
+</ul>
+</li>
+<li><p>Aquellos que contienen punto decimal, también llamados de coma flotante (<code class="docutils literal notranslate"><span class="pre">float</span></code>).</p>
+<ul>
+<li><p>Estos se representan usando el estándar (IEEE 754), el cual asigna 64 bits para codificar el signo, el exponente y la parte fraccionaria.</p></li>
+</ul>
+</li>
 </ul>
 </div>
 <p>En python, los números se almacenan en variables, por ejemplo:</p>

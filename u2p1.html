@@ -474,7 +474,7 @@ document.write(`
 <p>En Python, podemos definir la función <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> mediante la palabra <code class="docutils literal notranslate"><span class="pre">def</span></code> y la estructura:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
 
-    <span class="k">return</span> <span class="n">x</span><span class="o">^</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 </div>
 <p>note la palabra <code class="docutils literal notranslate"><span class="pre">return</span></code> que devuelve el valor de evaluar la función.</p>
@@ -523,8 +523,8 @@ La función en x=3 vale: 9
 </details>
 </div>
 <p>Defina la función:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-878cdd9b-8989-4c2e-883a-8495322c3ed2">
-<span class="eqno">(1)<a class="headerlink" href="#equation-878cdd9b-8989-4c2e-883a-8495322c3ed2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-94eaad44-7b01-49e8-84c5-035409703302">
+<span class="eqno">(1)<a class="headerlink" href="#equation-94eaad44-7b01-49e8-84c5-035409703302" title="Permalink to this equation">#</a></span>\[\begin{equation}
 g(x) = x^3 + x^2 + x + 1
 \end{equation}\]</div>
 <p>y evaluela en:</p>
@@ -622,6 +622,18 @@ La función en x=3 vale: 9
 <p>Copie y pegue la instrucción anterior, e imprima los valores de <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 <span class="n">x</span>
 </pre></div>
@@ -632,6 +644,7 @@ La función en x=3 vale: 9
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <p>Ahora podemos evaluar la función <span class="math notranslate nohighlight">\(h(x) = x^2 + 1\)</span> en los cuatro números a la vez. En la siguiente celda, defina la función e imprima <span class="math notranslate nohighlight">\(h(x)\)</span></p>
 <div class="cell tag_hide-cell docutils container">

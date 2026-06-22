@@ -457,7 +457,7 @@ document.write(`
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 </pre></div>
 </div>
-<p>copie y pegue el código en la siguiente celda</p>
+<p>copie y pegue el código en la siguiente celda para importar matplotlib. Tambiémn agregue el código para importar numpy.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
@@ -473,6 +473,7 @@ document.write(`
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 </pre></div>
 </div>
 </div>
@@ -501,16 +502,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">f</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x) = x^2&#39;)
 </pre></div>
 </div>
+<img alt="_images/227268fcbe3c02ae4d9419846ff167e6df384a53eebc72fc6efffcfbb4a0d0a1.png" src="_images/227268fcbe3c02ae4d9419846ff167e6df384a53eebc72fc6efffcfbb4a0d0a1.png" />
 </div>
 </div>
 <p>La segunda manera es mediante el comando plot, por ejemplo:</p>
@@ -539,7 +534,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x) = x^2&#39;)
 </pre></div>
 </div>
-<img alt="_images/919c7e683dfe601098b001c121c7759e27331af2e3dd2f85911e912542ed84e0.png" src="_images/919c7e683dfe601098b001c121c7759e27331af2e3dd2f85911e912542ed84e0.png" />
+<img alt="_images/c5d172a186ada30a82caa49b74e1c9d9202e4675ecfb20b196c068d3296e9046.png" src="_images/c5d172a186ada30a82caa49b74e1c9d9202e4675ecfb20b196c068d3296e9046.png" />
 </div>
 </div>
 <p>Note que la gráfica no es suave. Esto se debe a que solo se usaron 9 puntos.</p>
@@ -560,7 +555,7 @@ document.write(`
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x) = x^2&#39;)
 </pre></div>
 </div>
-<img alt="_images/92fc25e04e976fdd0d4d8f16a99e4cb79b6376066981642715b5082c5406df74.png" src="_images/92fc25e04e976fdd0d4d8f16a99e4cb79b6376066981642715b5082c5406df74.png" />
+<img alt="_images/582e854c8e4296f7312cfa9e57a8b6192854cb250bc5e35c2d8180e2198fa904.png" src="_images/582e854c8e4296f7312cfa9e57a8b6192854cb250bc5e35c2d8180e2198fa904.png" />
 </div>
 </div>
 </section>
