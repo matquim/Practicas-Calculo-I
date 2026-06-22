@@ -41,4 +41,7 @@ parts:
       - file: u7p6     
       - file: u7p7     
       - file: u7p8     
-
+  - caption: Reserva
+    chapters:
+      - file: u8p1
+      - file: u8p2
