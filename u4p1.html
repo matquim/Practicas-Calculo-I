@@ -213,20 +213,6 @@
 <li class="toctree-l1"><a class="reference internal" href="u5p1.html">Series de Taylor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p2.html">Puntos Críticos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p3.html">Casos Químicos</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Integral</span></p>
 <ul class="nav bd-sidenav">
@@ -485,14 +471,14 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>La derivada de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un punto <span class="math notranslate nohighlight">\(x\)</span> se define como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f8037d5-cd7c-48f3-9517-33ccff05aea9">
-<span class="eqno">(7)<a class="headerlink" href="#equation-2f8037d5-cd7c-48f3-9517-33ccff05aea9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3297bda4-2a11-439e-9670-45b6e3d13487">
+<span class="eqno">(7)<a class="headerlink" href="#equation-3297bda4-2a11-439e-9670-45b6e3d13487" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 \end{equation}\]</div>
 </div>
 <p>El siguiente código aproxima numéricamente el valor de la derivada de</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9bc7fc03-9e6c-4a49-8401-0a4ab43f782f">
-<span class="eqno">(8)<a class="headerlink" href="#equation-9bc7fc03-9e6c-4a49-8401-0a4ab43f782f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d8658266-af3c-42f3-b343-84f7ad112b8f">
+<span class="eqno">(8)<a class="headerlink" href="#equation-d8658266-af3c-42f3-b343-84f7ad112b8f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f(x) = x^2
 \end{equation}\]</div>
 <p>en <span class="math notranslate nohighlight">\(x=2\)</span>. Note que:</p>
@@ -522,13 +508,13 @@ f(x) = x^2
 </div>
 </div>
 <p>En este caso tan sencillo, sabemos que</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f4a5a322-0215-47db-9d2a-17144f1c6598">
-<span class="eqno">(9)<a class="headerlink" href="#equation-f4a5a322-0215-47db-9d2a-17144f1c6598" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9ef7caa8-8d7e-4c5d-837b-55ea4f83af7e">
+<span class="eqno">(9)<a class="headerlink" href="#equation-9ef7caa8-8d7e-4c5d-837b-55ea4f83af7e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{df(x)}{dx} = 2x
 \end{equation}\]</div>
 <p>por lo que</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6064d2a2-35f7-47e9-b1f2-cd19be9dc79a">
-<span class="eqno">(10)<a class="headerlink" href="#equation-6064d2a2-35f7-47e9-b1f2-cd19be9dc79a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9ca82f69-a658-4c0c-bba4-5d69f03a6e5c">
+<span class="eqno">(10)<a class="headerlink" href="#equation-9ca82f69-a658-4c0c-bba4-5d69f03a6e5c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{df(2)}{dx} = 2(2) = 4.
 \end{equation}\]</div>
 <p>Modifique el código anterior para aproximar la derivada con:
@@ -613,13 +599,13 @@ La derivada con h=0.00001 es: 4.000010000027032
 <p><strong>Objetivo</strong></p>
 <p>Comparar derivadas analíticas con aproximaciones numéricas.</p>
 <p>Podemos generalizar la idea anterior a otros tipos de funciones. Por ejemplo, el siguiente código usa la librería <code class="docutils literal notranslate"><span class="pre">math</span></code> para definir</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7dba951f-c21f-42df-80b9-11a7b9129a1e">
-<span class="eqno">(11)<a class="headerlink" href="#equation-7dba951f-c21f-42df-80b9-11a7b9129a1e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2f87b24d-7a2d-438f-b277-ed57b60d392e">
+<span class="eqno">(11)<a class="headerlink" href="#equation-2f87b24d-7a2d-438f-b277-ed57b60d392e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f(x) = \sin(x)
 \end{equation}\]</div>
 <p>así como su derivada analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf399057-6c65-4f17-996e-4b399a16c613">
-<span class="eqno">(12)<a class="headerlink" href="#equation-cf399057-6c65-4f17-996e-4b399a16c613" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-18f5ad59-294a-4012-be1b-20c6c5ba11b6">
+<span class="eqno">(12)<a class="headerlink" href="#equation-18f5ad59-294a-4012-be1b-20c6c5ba11b6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{df(x)}{dx} = \cos(x)
 \end{equation}\]</div>
 <p>luego evalúa la derivada numérica:</p>
