@@ -458,11 +458,18 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>La derivada de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un punto <span class="math notranslate nohighlight">\(x\)</span> se define como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3fa68dc3-4a94-4d57-aa06-e4d428d3fae9">
-<span class="eqno">(7)<a class="headerlink" href="#equation-3fa68dc3-4a94-4d57-aa06-e4d428d3fae9" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-758b3112-1f6a-4dbe-9e4a-68f508fd8a66">
+<span class="eqno">(7)<a class="headerlink" href="#equation-758b3112-1f6a-4dbe-9e4a-68f508fd8a66" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 \end{equation}\]</div>
 </div>
+<p>El siguiente código aproxima numéricamente el valor de la derivada de <span class="math notranslate nohighlight">\(f(x)\)</span> en <span class="math notranslate nohighlight">\(x=2\)</span>. Note que:</p>
+<ul class="simple">
+<li><p>Se define la función, <span class="math notranslate nohighlight">\(f(x)\)</span></p></li>
+<li><p>Definimos el punto donde evaluar la derivada, <span class="math notranslate nohighlight">\(x\)</span></p></li>
+<li><p>Definimos el tamaño de paso, <span class="math notranslate nohighlight">\(h\)</span></p></li>
+<li><p>Evaluamos la fórmula</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -482,9 +489,88 @@ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 </div>
 </div>
 </div>
+<p>En este caso tan sencillo</p>
+<div class="amsmath math notranslate nohighlight" id="equation-7c906de3-8ce7-4b8e-adb5-5865850f03ae">
+<span class="eqno">(8)<a class="headerlink" href="#equation-7c906de3-8ce7-4b8e-adb5-5865850f03ae" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f(x) = x^2
+\end{equation}\]</div>
+<p>sabemos que</p>
+<div class="amsmath math notranslate nohighlight" id="equation-ce3c1a84-c9b2-4e1c-b59e-5d2ebcc01d3e">
+<span class="eqno">(9)<a class="headerlink" href="#equation-ce3c1a84-c9b2-4e1c-b59e-5d2ebcc01d3e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{df(x)}{dx} = 2x
+\end{equation}\]</div>
+<p>por lo que
+\frac{df(2)}{dx} = 2(2) = 4.</p>
+<p>Modifique el código anterior para aproximar la derivada con:
+<span class="math notranslate nohighlight">\(h=0.1\)</span>
+<span class="math notranslate nohighlight">\(h=0.01\)</span>
+<span class="math notranslate nohighlight">\(h=0.001\)</span>
+<span class="math notranslate nohighlight">\(h=0.0001\)</span>
+<span class="math notranslate nohighlight">\(h=0.00001\)</span></p>
+<p>¿cómo afecta el tamaño del paso a la evaluación numérica de la derivada?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La derivada con h=0.1 es:&quot;</span><span class="p">,</span> <span class="n">derivada</span><span class="p">)</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La derivada con h=0.01 es:&quot;</span><span class="p">,</span> <span class="n">derivada</span><span class="p">)</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La derivada con h=0.001 es:&quot;</span><span class="p">,</span> <span class="n">derivada</span><span class="p">)</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.0001</span>
+<span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La derivada con h=0.0001 es:&quot;</span><span class="p">,</span> <span class="n">derivada</span><span class="p">)</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.00001</span>
+<span class="n">derivada</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;La derivada con h=0.00001 es:&quot;</span><span class="p">,</span> <span class="n">derivada</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La derivada con h=0.1 es: 4.100000000000001
+La derivada con h=0.01 es: 4.009999999999891
+La derivada con h=0.001 es: 4.000999999999699
+La derivada con h=0.0001 es: 4.0001000000078335
+La derivada con h=0.00001 es: 4.000010000027032
+</pre></div>
+</div>
+</div>
+</div>
 <p><strong>Ejercicios</strong></p>
 <p>a) Aproximar la derivada de <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> en <span class="math notranslate nohighlight">\(x = 2\)</span> con distintos valores de <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>b) Analizar cómo cambia la aproximación cuando <span class="math notranslate nohighlight">\(h \to 0\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
