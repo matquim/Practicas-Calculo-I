@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'u4p1';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Derivadas de funciones" href="u4p2.html" />
+    <link rel="next" title="Interpretación geométrica" href="u4p2.html" />
     <link rel="prev" title="Sucesiones" href="u3p2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
@@ -205,9 +205,8 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Derivada</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Aproximación numérica de la derivada</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p2.html">Derivadas de funciones</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p3.html">Interpretación geométrica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p4.html">Aplicaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p2.html">Interpretación geométrica</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u4p3.html">Aplicaciones</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Derivada</span></p>
 <ul class="nav bd-sidenav">
@@ -426,7 +425,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -442,6 +443,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-entre-derivada-analitica-y-numerica-para-varias-funciones">Comparación entre derivada analítica y numérica para varias funciones</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -458,12 +467,17 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>La derivada de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un punto <span class="math notranslate nohighlight">\(x\)</span> se define como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-758b3112-1f6a-4dbe-9e4a-68f508fd8a66">
-<span class="eqno">(7)<a class="headerlink" href="#equation-758b3112-1f6a-4dbe-9e4a-68f508fd8a66" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c836ddbc-e532-44ba-99af-80a1fd6ed76c">
+<span class="eqno">(7)<a class="headerlink" href="#equation-c836ddbc-e532-44ba-99af-80a1fd6ed76c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 \end{equation}\]</div>
 </div>
-<p>El siguiente código aproxima numéricamente el valor de la derivada de <span class="math notranslate nohighlight">\(f(x)\)</span> en <span class="math notranslate nohighlight">\(x=2\)</span>. Note que:</p>
+<p>El siguiente código aproxima numéricamente el valor de la derivada de</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1cf426e0-d1db-4001-94c6-e75b8eb4686b">
+<span class="eqno">(8)<a class="headerlink" href="#equation-1cf426e0-d1db-4001-94c6-e75b8eb4686b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f(x) = x^2
+\end{equation}\]</div>
+<p>en <span class="math notranslate nohighlight">\(x=2\)</span>. Note que:</p>
 <ul class="simple">
 <li><p>Se define la función, <span class="math notranslate nohighlight">\(f(x)\)</span></p></li>
 <li><p>Definimos el punto donde evaluar la derivada, <span class="math notranslate nohighlight">\(x\)</span></p></li>
@@ -489,14 +503,9 @@ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 </div>
 </div>
 </div>
-<p>En este caso tan sencillo</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7c906de3-8ce7-4b8e-adb5-5865850f03ae">
-<span class="eqno">(8)<a class="headerlink" href="#equation-7c906de3-8ce7-4b8e-adb5-5865850f03ae" title="Permalink to this equation">#</a></span>\[\begin{equation}
-f(x) = x^2
-\end{equation}\]</div>
-<p>sabemos que</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce3c1a84-c9b2-4e1c-b59e-5d2ebcc01d3e">
-<span class="eqno">(9)<a class="headerlink" href="#equation-ce3c1a84-c9b2-4e1c-b59e-5d2ebcc01d3e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p>En este caso tan sencillo, sabemos que</p>
+<div class="amsmath math notranslate nohighlight" id="equation-000bd524-876c-48d7-bf12-9fd14262845f">
+<span class="eqno">(9)<a class="headerlink" href="#equation-000bd524-876c-48d7-bf12-9fd14262845f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{df(x)}{dx} = 2x
 \end{equation}\]</div>
 <p>por lo que
@@ -571,6 +580,98 @@ La derivada con h=0.00001 es: 4.000010000027032
 </div>
 </div>
 </div>
+<section id="comparacion-entre-derivada-analitica-y-numerica-para-varias-funciones">
+<h2>Comparación entre derivada analítica y numérica para varias funciones<a class="headerlink" href="#comparacion-entre-derivada-analitica-y-numerica-para-varias-funciones" title="Link to this heading">#</a></h2>
+<p><strong>Objetivo</strong></p>
+<p>Comparar derivadas analíticas con aproximaciones numéricas.</p>
+<p>Podemos generalizar la idea anterior a otros tipos de funciones. Por ejemplo, el siguiente código usa la librería <code class="docutils literal notranslate"><span class="pre">math</span></code> para definir</p>
+<div class="amsmath math notranslate nohighlight" id="equation-22fe6971-82ec-4ad7-8e2f-ee437906df9a">
+<span class="eqno">(10)<a class="headerlink" href="#equation-22fe6971-82ec-4ad7-8e2f-ee437906df9a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f(x) = \sin(x)
+\end{equation}\]</div>
+<p>así como a la derivada analítica:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-fdd05805-7bff-439a-a4cd-d5e482c72f0a">
+<span class="eqno">(11)<a class="headerlink" href="#equation-fdd05805-7bff-439a-a4cd-d5e482c72f0a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{df(x)}{dx} = \cos(x)
+\end{equation}\]</div>
+<p>luego evalúa la derivada numérica:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">df</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">1e-5</span>
+
+<span class="n">aprox</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="n">exacta</span> <span class="o">=</span> <span class="n">df</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aprox:&quot;</span><span class="p">,</span> <span class="n">aprox</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exacta:&quot;</span><span class="p">,</span> <span class="n">exacta</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Copie y pegue el código en la siguiente celda:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">df</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">4</span>
+<span class="n">h</span> <span class="o">=</span> <span class="mf">1e-5</span>
+
+<span class="n">aprox</span> <span class="o">=</span> <span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">h</span><span class="p">)</span> <span class="o">-</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">/</span> <span class="n">h</span>
+<span class="n">exacta</span> <span class="o">=</span> <span class="n">df</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Aprox:&quot;</span><span class="p">,</span> <span class="n">aprox</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Exacta:&quot;</span><span class="p">,</span> <span class="n">exacta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aprox: 0.7071032456451575
+Exacta: 0.7071067811865476
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>Modifique el código anterior para calcular la derivada numérica de <span class="math notranslate nohighlight">\(f(x) = \frac{x^2 - 1}{x + 2}\)</span> en <span class="math notranslate nohighlight">\(x = 1\)</span>. Compárela con la derivada analítica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Calcule la derivada numérica de <span class="math notranslate nohighlight">\(f(x) = \exp(x)\)</span> en <span class="math notranslate nohighlight">\(x = 1\)</span>. Compárela con la derivada analítica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Escriba código aquí</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -617,7 +718,7 @@ La derivada con h=0.00001 es: 4.000010000027032
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Derivadas de funciones</p>
+        <p class="prev-next-title">Interpretación geométrica</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -627,6 +728,21 @@ La derivada con h=0.00001 es: 4.000010000027032
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-entre-derivada-analitica-y-numerica-para-varias-funciones">Comparación entre derivada analítica y numérica para varias funciones</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
