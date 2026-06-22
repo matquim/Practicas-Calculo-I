@@ -64,7 +64,7 @@
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Integral indefinida" href="u6p2.html" />
-    <link rel="prev" title="Ley de Enfriamiento de Newton" href="u5p4.html" />
+    <link rel="prev" title="Decaimiento Radiactivo" href="u5p5.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -213,6 +213,20 @@
 <li class="toctree-l1"><a class="reference internal" href="u5p2.html">Puntos Críticos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p3.html">Titulación Ácido-Base</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p4.html">Ley de Enfriamiento de Newton</a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="u5p5.html">Decaimiento Radiactivo</a></li>
+
+
+
 
 
 
@@ -520,8 +534,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 </ol>
 <p><strong>Fórmula general:</strong></p>
 <p>La suma de Riemann se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-686fde98-11b1-4b43-b8a0-ba4dac654dea">
-<span class="eqno">(47)<a class="headerlink" href="#equation-686fde98-11b1-4b43-b8a0-ba4dac654dea" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1a8263c1-8920-4b83-b9f7-9de0e36fe11d">
+<span class="eqno">(58)<a class="headerlink" href="#equation-1a8263c1-8920-4b83-b9f7-9de0e36fe11d" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=1}^{n}{f(x_{i})\Delta x}
 \end{align}\]</div>
 <p>donde:</p>
@@ -529,8 +543,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <li><p><span class="math notranslate nohighlight">\(n ≡\)</span> número de rectángulos</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta x ≡\)</span> ancho de cada rectángulo (tamaño de la partición):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-4a3e6108-35be-4eaf-bf70-01cfaa0a1405">
-<span class="eqno">(48)<a class="headerlink" href="#equation-4a3e6108-35be-4eaf-bf70-01cfaa0a1405" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-241d38c4-7ec5-4f23-89d7-acbc853006d4">
+<span class="eqno">(59)<a class="headerlink" href="#equation-241d38c4-7ec5-4f23-89d7-acbc853006d4" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x = \frac{b-a}{n}
 \end{align}\]</div>
 <ul class="simple">
@@ -550,26 +564,26 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <h2>Integral definida<a class="headerlink" href="#integral-definida" title="Link to this heading">#</a></h2>
 <p>Las sumas de Riemann son una base de la integral definida.</p>
 <p>Cuando el número de rectángulos aumenta, la aproximáción de la suma de los rectángulos, se vuelve exactamente el área bajo la curva, es decir,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fdb6258a-3d5f-40c3-9c44-caddd6117501">
-<span class="eqno">(49)<a class="headerlink" href="#equation-fdb6258a-3d5f-40c3-9c44-caddd6117501" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-62a49ec0-3be5-47fb-865e-7559b16cfb24">
+<span class="eqno">(60)<a class="headerlink" href="#equation-62a49ec0-3be5-47fb-865e-7559b16cfb24" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \lim_{n\to \infty}{\sum_{i=i}^{n}{f(x_i)\Delta x}}=\int_{a}^{b}{f(x)\,dx}
 \end{align}\]</div>
 </section>
 <section id="metodologia">
 <h2>Metodología<a class="headerlink" href="#metodologia" title="Link to this heading">#</a></h2>
 <p>Tomamos una partición de puntos de la forma:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b08ad9de-d645-4dd0-9664-13a768dd68b7">
-<span class="eqno">(50)<a class="headerlink" href="#equation-b08ad9de-d645-4dd0-9664-13a768dd68b7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-787478f1-5007-42e9-9c3e-3dab0d7c48bf">
+<span class="eqno">(61)<a class="headerlink" href="#equation-787478f1-5007-42e9-9c3e-3dab0d7c48bf" title="Permalink to this equation">#</a></span>\[\begin{align}
 x_i=a+i\Delta x
 \end{align}\]</div>
 <p>en donde</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b2051c92-2757-44a2-97a5-c06649cd7ad2">
-<span class="eqno">(51)<a class="headerlink" href="#equation-b2051c92-2757-44a2-97a5-c06649cd7ad2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5ba1ecd9-6e1b-4274-be86-de0aebef1eee">
+<span class="eqno">(62)<a class="headerlink" href="#equation-5ba1ecd9-6e1b-4274-be86-de0aebef1eee" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x=\frac{b-a}{n}
 \end{align}\]</div>
 <p>La aproximación <span class="math notranslate nohighlight">\(I^*\)</span>  para la integral (suma de Riemann) está dada por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-422e1ae7-72bb-4250-8a3a-5687edd65649">
-<span class="eqno">(52)<a class="headerlink" href="#equation-422e1ae7-72bb-4250-8a3a-5687edd65649" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d8188e79-6a43-4475-b348-de8a992c07d2">
+<span class="eqno">(63)<a class="headerlink" href="#equation-d8188e79-6a43-4475-b348-de8a992c07d2" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=0}^{n}{f(x_{i})h}
 \end{align}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(x_i\)</span> es el extremo izquierdo, derecho o el punto medio.</p>
@@ -781,12 +795,12 @@ Las suma de Riemann media:     I_med = 2.6666659999999993
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="u5p4.html"
+       href="u5p5.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Ley de Enfriamiento de Newton</p>
+        <p class="prev-next-title">Decaimiento Radiactivo</p>
       </div>
     </a>
     <a class="right-next"

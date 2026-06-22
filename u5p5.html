@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Ley de Enfriamiento de Newton &#8212; Practicas Cálculo I</title>
+    <title>Decaimiento Radiactivo &#8212; Practicas Cálculo I</title>
   
   
   
@@ -60,11 +60,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'u5p4';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u5p5';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Decaimiento Radiactivo" href="u5p5.html" />
-    <link rel="prev" title="Titulación Ácido-Base" href="u5p3.html" />
+    <link rel="next" title="Sumas de Riemann" href="u6p1.html" />
+    <link rel="prev" title="Ley de Enfriamiento de Newton" href="u5p4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -212,7 +212,7 @@
 <li class="toctree-l1"><a class="reference internal" href="u5p1.html">Series de Taylor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p2.html">Puntos Críticos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p3.html">Titulación Ácido-Base</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ley de Enfriamiento de Newton</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u5p4.html">Ley de Enfriamiento de Newton</a></li>
 
 
 
@@ -223,7 +223,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="u5p5.html">Decaimiento Radiactivo</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Decaimiento Radiactivo</a></li>
 
 
 
@@ -346,7 +346,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u5p4.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u5p5.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,7 +364,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u5p4.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u5p5.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -413,7 +413,7 @@
       
       
       
-      <li><a href="_sources/u5p4.ipynb" target="_blank"
+      <li><a href="_sources/u5p5.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -497,7 +497,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ley de Enfriamiento de Newton</h1>
+    <h1>Decaimiento Radiactivo</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -507,17 +507,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ley de Enfriamiento de Newton</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decaimiento-radiactivo">Decaimiento Radiactivo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Decaimiento Radiactivo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros">Parámetros</a></li>
@@ -542,194 +539,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ley-de-enfriamiento-de-newton">
-<h1>Ley de Enfriamiento de Newton<a class="headerlink" href="#ley-de-enfriamiento-de-newton" title="Link to this heading">#</a></h1>
-<div class="tip admonition">
-<p class="admonition-title">Concepto</p>
-<p>Cuando un objeto se calienta y se deja enfrir a temperatura ambiente <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>, su temperatura desciende gradualmente hasta alcanzar el equilibrio térmico con su entorno. Este fenómeno se modela mediante la Ley de enfriamento de Newton:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bf7d253d-0e2a-4a3b-898e-7986d8d1154b">
-<span class="eqno">(27)<a class="headerlink" href="#equation-bf7d253d-0e2a-4a3b-898e-7986d8d1154b" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{dT}{dt} = -k (T - T_{\text{amb}})
-\end{equation}\]</div>
-<p>Donde:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(T(t)\)</span>: Temperatura del objeto en el tiempo <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>: Temperatura ambiente (constante).</p></li>
-<li><p><span class="math notranslate nohighlight">\(k\)</span>: Constante de enfriamiento (depende del material y condiciones del medio).</p></li>
-</ul>
-</div>
-<p><strong>Solución analítica:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-ae4f410f-e0b8-4e35-96f2-b75233ac6442">
-<span class="eqno">(28)<a class="headerlink" href="#equation-ae4f410f-e0b8-4e35-96f2-b75233ac6442" title="Permalink to this equation">#</a></span>\[\begin{equation}
-T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}
-\end{equation}\]</div>
-<p>Donde <span class="math notranslate nohighlight">\( T_0 \)</span> es la temperatura inicial del objeto en <span class="math notranslate nohighlight">\(t = 0\)</span>.</p>
-<p>Instrucciones</p>
-<ol class="arabic simple">
-<li><p>Derivar la solución analítica de la Ley de Enfriamiento de Newton a partir de su ecuación diferencial.</p></li>
-<li><p>Calcular la derivada <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> y analizar su comportamiento en función del tiempo.</p></li>
-<li><p>Determinar el tiempo <span class="math notranslate nohighlight">\(t\)</span> en el que la temperatura del objeto es igual a la temperatura promedio entre <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>.</p></li>
-<li><p>Graficar <span class="math notranslate nohighlight">\(T(t)\)</span> y <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> en función del tiempo.</p></li>
-<li><p>Interpretar físicamente los resultados, incluyendo:</p>
-<ul class="simple">
-<li><p>¿Qué representa la constante <span class="math notranslate nohighlight">\(k\)</span> en términos físicos?</p></li>
-<li><p>¿Cómo afecta el valor de <span class="math notranslate nohighlight">\(k\)</span> a la velocidad de enfriamiento?</p></li>
-<li><p>¿Qué sugiere el signo de <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> sobre la dirección del flujo de calor?</p></li>
-</ul>
-</li>
-</ol>
-<p><strong>Solución</strong></p>
-<p><strong>Derivación de la Solución Analítica</strong>
-La ecuación diferencial de la Ley de Enfriamiento de Newton es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4948f73e-914e-449a-baeb-9614ef5be1f3">
-<span class="eqno">(29)<a class="headerlink" href="#equation-4948f73e-914e-449a-baeb-9614ef5be1f3" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{dT}{dt} = -k (T - T_{\text{amb}})
-\end{equation}\]</div>
-<ol class="arabic simple">
-<li><p>Separar variables:
-\begin{equation}
-\frac{dT}{T - T_{\text{amb}}} = -k , dt
-\end{equation}</p></li>
-<li><p>Integrar ambos lados:
-\begin{equation}
-\int \frac{1}{T - T_{\text{amb}}} , dT = -k \int dt
-\end{equation}
-\begin{equation}
-\ln T - T_{\text{amb}}| = -kt + C
-\end{equation}</p></li>
-<li><p>Exponenciar ambos lados:
-\begin{equation}
-T - T_{\text{amb}} = e^{-kt + C} = e^C e^{-kt}
-\end{equation}
-Usando la condición inicial <span class="math notranslate nohighlight">\(T(0) = T_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(e^C = T_0 - T_{\text{amb}}\)</span>:
-\begin{equation}
-T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}
-\end{equation}</p></li>
-</ol>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f17f1f9-0d5f-4eb4-b97c-59b504e65f4b">
-<span class="eqno">(30)<a class="headerlink" href="#equation-8f17f1f9-0d5f-4eb4-b97c-59b504e65f4b" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}}
-\end{equation}\]</div>
-<p><strong>Derivada de <span class="math notranslate nohighlight">\(T(t)\)</span> con Respecto al Tiempo</strong>
-Derivamos la solución analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-41f23eda-ae3a-4c8f-90bc-faf0e13bdeb6">
-<span class="eqno">(31)<a class="headerlink" href="#equation-41f23eda-ae3a-4c8f-90bc-faf0e13bdeb6" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{dT}{dt} = \frac{d}{dt} \left[ T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt} \right] = -k (T_0 - T_{\text{amb}}) e^{-kt}
-\end{equation}\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-af3e260c-ae25-4e21-95a9-b05777567494">
-<span class="eqno">(32)<a class="headerlink" href="#equation-af3e260c-ae25-4e21-95a9-b05777567494" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{\frac{dT}{dt} = -k (T_0 - T_{\text{amb}}) e^{-kt}}
-\end{equation}\]</div>
-<p><strong>Interpretación:</strong></p>
-<ul class="simple">
-<li><p>La derivada <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> es <strong>negativa</strong> si <span class="math notranslate nohighlight">\(T_0 &gt; T_{\text{amb}}\)</span> (el objeto se enfría).</p></li>
-<li><p>La magnitud de <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
-</ul>
-<p><strong>Tiempo en el que <span class="math notranslate nohighlight">\(T(t)\)</span> es Igual a la Temperatura Promedio</strong></p>
-<p>La temperatura promedio entre <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-78189f65-fca7-4989-8c1e-efadcf554d18">
-<span class="eqno">(33)<a class="headerlink" href="#equation-78189f65-fca7-4989-8c1e-efadcf554d18" title="Permalink to this equation">#</a></span>\[\begin{equation}
-T_{\text{prom}} = \frac{T_0 + T_{\text{amb}}}{2}
-\end{equation}\]</div>
-<p>Igualamos <span class="math notranslate nohighlight">\(T(t) = T_{\text{prom}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-21c70dd3-2a23-4645-8fe5-8c23f71f71b7">
-<span class="eqno">(34)<a class="headerlink" href="#equation-21c70dd3-2a23-4645-8fe5-8c23f71f71b7" title="Permalink to this equation">#</a></span>\[\begin{equation}
-T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt} = \frac{T_0 + T_{\text{amb}}}{2}
-\end{equation}\]</div>
-<p><strong>Solución:</strong></p>
-<ol class="arabic simple">
-<li><p>Restar <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span> a ambos lados:
-\begin{equation}
-(T_0 - T_{\text{amb}}) e^{-kt} = \frac{T_0 - T_{\text{amb}}}{2}
-\end{equation}</p></li>
-<li><p>Dividir entre <span class="math notranslate nohighlight">\(T_0 - T_{\text{amb}}\)</span>:
-\begin{equation}
-e^{-kt} = \frac{1}{2}
-\end{equation}</p></li>
-<li><p>Aplicar logaritmo natural:
-\begin{equation}
--kt = \ln \left( \frac{1}{2} \right) = -\ln 2 \implies t = \frac{\ln 2}{k}
-\end{equation}</p></li>
-</ol>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-7a3c9977-13c4-45c1-895e-24cd18dd4286">
-<span class="eqno">(35)<a class="headerlink" href="#equation-7a3c9977-13c4-45c1-895e-24cd18dd4286" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{t = \frac{\ln 2}{k}}
-\end{equation}\]</div>
-<p><strong>Interpretación:</strong></p>
-<ul class="simple">
-<li><p>Este tiempo es <strong>independiente de <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span></strong> y solo depende de <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
-<li><p>Es el tiempo en el que el objeto ha reducido su diferencia de temperatura con el ambiente a la mitad.</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-
-<span class="c1"># Parámetros</span>
-<span class="n">T0</span> <span class="o">=</span> <span class="mf">100.0</span>       <span class="c1"># Temperatura inicial del objeto (°C)</span>
-<span class="n">T_amb</span> <span class="o">=</span> <span class="mf">20.0</span>     <span class="c1"># Temperatura ambiente (°C)</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mf">0.1</span>          <span class="c1"># Constante de enfriamiento (min^-1)</span>
-
-<span class="c1"># Tiempo</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>  <span class="c1"># Rango de tiempo (min)</span>
-
-<span class="c1"># Temperatura T(t)</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">T_amb</span> <span class="o">+</span> <span class="p">(</span><span class="n">T0</span> <span class="o">-</span> <span class="n">T_amb</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
-
-<span class="c1"># Derivada dT/dt</span>
-<span class="n">dT_dt</span> <span class="o">=</span> <span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="n">T0</span> <span class="o">-</span> <span class="n">T_amb</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
-
-<span class="c1"># Temperatura promedio</span>
-<span class="n">T_prom</span> <span class="o">=</span> <span class="p">(</span><span class="n">T0</span> <span class="o">+</span> <span class="n">T_amb</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-
-<span class="c1"># Tiempo en el que T(t) = T_prom</span>
-<span class="n">t_prom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span>
-
-<span class="c1"># Gráfica</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-
-<span class="c1"># Gráfica de T(t)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$T(t)$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">T_amb</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$T_{</span><span class="se">\\</span><span class="s2">text</span><span class="si">{amb}</span><span class="s2">}$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">T_prom</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$T_{</span><span class="se">\\</span><span class="s2">text</span><span class="si">{prom}</span><span class="s2">}$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">t_prom</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$t = </span><span class="se">\\</span><span class="s2">frac{</span><span class="se">\\</span><span class="s2">ln 2}</span><span class="si">{k}</span><span class="s2">$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tiempo (min)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperatura (°C)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ley de Enfriamiento de Newton: $T(t)$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Gráfica de dT/dt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dT_dt</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">frac</span><span class="si">{dT}{dt}</span><span class="s2">$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tiempo (min)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Velocidad de cambio de temperatura (°C/min)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Derivada de $T(t)$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/69fe60b2b3d6229ef439019ad70baff29a377d06fb7bd5fcd10e51a37dfa5a8a.png" src="_images/69fe60b2b3d6229ef439019ad70baff29a377d06fb7bd5fcd10e51a37dfa5a8a.png" />
-</div>
-</div>
-<section id="decaimiento-radiactivo">
-<h2>Decaimiento Radiactivo<a class="headerlink" href="#decaimiento-radiactivo" title="Link to this heading">#</a></h2>
+  <section id="decaimiento-radiactivo">
+<h1>Decaimiento Radiactivo<a class="headerlink" href="#decaimiento-radiactivo" title="Link to this heading">#</a></h1>
 </section>
 <section id="contexto-teorico">
-<h2>📚 Contexto Teórico<a class="headerlink" href="#contexto-teorico" title="Link to this heading">#</a></h2>
+<h1>📚 Contexto Teórico<a class="headerlink" href="#contexto-teorico" title="Link to this heading">#</a></h1>
 <p>El <strong>decaimiento radiactivo</strong> describe cómo la cantidad de un <strong>isótopo radiactivo</strong> disminuye con el tiempo debido a la emisión de partículas o radiación. La ecuación diferencial que modela este fenómeno es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7194e449-777c-4281-96e8-7135c16cf1cd">
-<span class="eqno">(36)<a class="headerlink" href="#equation-7194e449-777c-4281-96e8-7135c16cf1cd" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b1d7674c-c0f2-47e8-9840-31d5d96c3a14">
+<span class="eqno">(47)<a class="headerlink" href="#equation-b1d7674c-c0f2-47e8-9840-31d5d96c3a14" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
 <p>Donde:</p>
@@ -738,20 +555,20 @@ e^{-kt} = \frac{1}{2}
 <li><p><span class="math notranslate nohighlight">\(\lambda\)</span>: Constante de decaimiento (probabilidad de decaimiento por unidad de tiempo).</p></li>
 </ul>
 <p><strong>Solución analítica:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-cd6374e8-d0c1-473e-a52c-c3c91c49fa29">
-<span class="eqno">(37)<a class="headerlink" href="#equation-cd6374e8-d0c1-473e-a52c-c3c91c49fa29" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-167e35ae-df8a-4b23-93c5-cc18050a2d9b">
+<span class="eqno">(48)<a class="headerlink" href="#equation-167e35ae-df8a-4b23-93c5-cc18050a2d9b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 N(t) = N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p>Donde <span class="math notranslate nohighlight">\(N_0\)</span> es el número inicial de núcleos radiactivos en <span class="math notranslate nohighlight">\(t = 0\)</span>.</p>
 <p><strong>Tiempo de vida media (<span class="math notranslate nohighlight">\(t_{1/2}\)</span>):</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-66517dcf-61fc-4afe-beac-d41b004cb622">
-<span class="eqno">(38)<a class="headerlink" href="#equation-66517dcf-61fc-4afe-beac-d41b004cb622" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-13a527d7-597c-489c-a9d1-2353650fd0cc">
+<span class="eqno">(49)<a class="headerlink" href="#equation-13a527d7-597c-489c-a9d1-2353650fd0cc" title="Permalink to this equation">#</a></span>\[\begin{equation}
 t_{1/2} = \frac{\ln 2}{\lambda}
 \end{equation}\]</div>
-</section>
 <hr class="docutils" />
+</section>
 <section id="enunciado">
-<h2>💡 Enunciado<a class="headerlink" href="#enunciado" title="Link to this heading">#</a></h2>
+<h1>💡 Enunciado<a class="headerlink" href="#enunciado" title="Link to this heading">#</a></h1>
 <p><strong>Título:</strong> <em>Análisis del Decaimiento Radiactivo usando Derivadas</em></p>
 <p><strong>Objetivos:</strong></p>
 <ol class="arabic simple">
@@ -768,16 +585,16 @@ t_{1/2} = \frac{\ln 2}{\lambda}
 </ul>
 </li>
 </ol>
-</section>
 <hr class="docutils" />
+</section>
 <section id="solucion">
-<h2>📝 Solución<a class="headerlink" href="#solucion" title="Link to this heading">#</a></h2>
+<h1>📝 Solución<a class="headerlink" href="#solucion" title="Link to this heading">#</a></h1>
 <hr class="docutils" />
 <section id="derivacion-de-la-solucion-analitica">
-<h3>1. Derivación de la Solución Analítica<a class="headerlink" href="#derivacion-de-la-solucion-analitica" title="Link to this heading">#</a></h3>
+<h2>1. Derivación de la Solución Analítica<a class="headerlink" href="#derivacion-de-la-solucion-analitica" title="Link to this heading">#</a></h2>
 <p>La ecuación diferencial del decaimiento radiactivo es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bad1a607-a83c-461f-901f-0c4257f012df">
-<span class="eqno">(39)<a class="headerlink" href="#equation-bad1a607-a83c-461f-901f-0c4257f012df" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c058039f-d090-4821-a39d-9c41991a2c6f">
+<span class="eqno">(50)<a class="headerlink" href="#equation-c058039f-d090-4821-a39d-9c41991a2c6f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
 <p><strong>Solución:</strong></p>
@@ -803,22 +620,22 @@ N(t) = N_0 e^{-\lambda t}
 \end{equation}</p></li>
 </ol>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-f15744c1-5e70-45f2-9e35-af7e83f22919">
-<span class="eqno">(40)<a class="headerlink" href="#equation-f15744c1-5e70-45f2-9e35-af7e83f22919" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-7f30e8a2-9286-4c62-8dc6-eea0abb06e92">
+<span class="eqno">(51)<a class="headerlink" href="#equation-7f30e8a2-9286-4c62-8dc6-eea0abb06e92" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{N(t) = N_0 e^{-\lambda t}}
 \end{equation}\]</div>
 </section>
 <hr class="docutils" />
 <section id="derivada-de-n-t-con-respecto-al-tiempo">
-<h3>2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo<a class="headerlink" href="#derivada-de-n-t-con-respecto-al-tiempo" title="Link to this heading">#</a></h3>
+<h2>2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo<a class="headerlink" href="#derivada-de-n-t-con-respecto-al-tiempo" title="Link to this heading">#</a></h2>
 <p>Derivamos la solución analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c35eb836-f4c1-41a1-bc85-1b6f2cdd1aa0">
-<span class="eqno">(41)<a class="headerlink" href="#equation-c35eb836-f4c1-41a1-bc85-1b6f2cdd1aa0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-39d14478-4f4b-47fe-8587-aedcab6c7bd0">
+<span class="eqno">(52)<a class="headerlink" href="#equation-39d14478-4f4b-47fe-8587-aedcab6c7bd0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = \frac{d}{dt} \left[ N_0 e^{-\lambda t} \right] = -\lambda N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b7bd19e8-8eb5-46f5-9841-d34c83b9438e">
-<span class="eqno">(42)<a class="headerlink" href="#equation-b7bd19e8-8eb5-46f5-9841-d34c83b9438e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a8931d33-9546-47e2-bdde-33b88ab157f3">
+<span class="eqno">(53)<a class="headerlink" href="#equation-a8931d33-9546-47e2-bdde-33b88ab157f3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{\frac{dN}{dt} = -\lambda N_0 e^{-\lambda t}}
 \end{equation}\]</div>
 <p><strong>Interpretación:</strong></p>
@@ -829,7 +646,7 @@ N(t) = N_0 e^{-\lambda t}
 </section>
 <hr class="docutils" />
 <section id="tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">
-<h3>3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima<a class="headerlink" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima" title="Link to this heading">#</a></h3>
+<h2>3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima<a class="headerlink" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><strong>Máxima velocidad de decaimiento</strong>:
 \begin{equation}
@@ -848,24 +665,24 @@ N(t) = N_0 e^{-\lambda t}
 </section>
 <hr class="docutils" />
 <section id="actividad-radiactiva-y-su-derivada">
-<h3>4. Actividad Radiactiva y su Derivada<a class="headerlink" href="#actividad-radiactiva-y-su-derivada" title="Link to this heading">#</a></h3>
+<h2>4. Actividad Radiactiva y su Derivada<a class="headerlink" href="#actividad-radiactiva-y-su-derivada" title="Link to this heading">#</a></h2>
 <p>La <strong>actividad radiactiva</strong> <span class="math notranslate nohighlight">\(A(t)\)</span> se define como el número de decaimientos por unidad de tiempo:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f01d83f7-c7c9-400d-8b14-2f00ef6938cf">
-<span class="eqno">(43)<a class="headerlink" href="#equation-f01d83f7-c7c9-400d-8b14-2f00ef6938cf" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-10c5b994-dc1f-4fde-8614-58026efacd26">
+<span class="eqno">(54)<a class="headerlink" href="#equation-10c5b994-dc1f-4fde-8614-58026efacd26" title="Permalink to this equation">#</a></span>\[\begin{equation}
 A(t) = \lambda N(t) = \lambda N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p><strong>Derivada de <span class="math notranslate nohighlight">\(A(t)\)</span></strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2de60aa5-cd33-4669-96ea-7f6932cf2776">
-<span class="eqno">(44)<a class="headerlink" href="#equation-2de60aa5-cd33-4669-96ea-7f6932cf2776" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c60cac88-25ae-4f56-810e-9cb4ba3804b5">
+<span class="eqno">(55)<a class="headerlink" href="#equation-c60cac88-25ae-4f56-810e-9cb4ba3804b5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dA}{dt} = \frac{d}{dt} \left[ \lambda N_0 e^{-\lambda t} \right] = -\lambda^2 N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b24ebd49-f543-468e-8291-d358bf920252">
-<span class="eqno">(45)<a class="headerlink" href="#equation-b24ebd49-f543-468e-8291-d358bf920252" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-51a06b55-c9f8-451a-a6d6-44ece3ae8a0e">
+<span class="eqno">(56)<a class="headerlink" href="#equation-51a06b55-c9f8-451a-a6d6-44ece3ae8a0e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{A(t) = \lambda N_0 e^{-\lambda t}}
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-fba1d331-6975-4ba8-8589-23be651e2cf3">
-<span class="eqno">(46)<a class="headerlink" href="#equation-fba1d331-6975-4ba8-8589-23be651e2cf3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c842b922-bef6-4880-a16b-ad1dc5833879">
+<span class="eqno">(57)<a class="headerlink" href="#equation-c842b922-bef6-4880-a16b-ad1dc5833879" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{\frac{dA}{dt} = -\lambda^2 N_0 e^{-\lambda t}}
 \end{equation}\]</div>
 <p><strong>Interpretación:</strong></p>
@@ -875,7 +692,6 @@ A(t) = \lambda N(t) = \lambda N_0 e^{-\lambda t}
 </ul>
 <p>import numpy as np
 import matplotlib.pyplot as plt</p>
-</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="parametros">
@@ -975,20 +791,20 @@ plt.show()</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="u5p3.html"
+       href="u5p4.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Titulación Ácido-Base</p>
+        <p class="prev-next-title">Ley de Enfriamiento de Newton</p>
       </div>
     </a>
     <a class="right-next"
-       href="u5p5.html"
+       href="u6p1.html"
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Decaimiento Radiactivo</p>
+        <p class="prev-next-title">Sumas de Riemann</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1008,17 +824,14 @@ plt.show()</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ley de Enfriamiento de Newton</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decaimiento-radiactivo">Decaimiento Radiactivo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Decaimiento Radiactivo</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros">Parámetros</a></li>
