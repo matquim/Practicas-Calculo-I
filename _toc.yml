@@ -20,7 +20,6 @@ parts:
     chapters:
       - file: u4p1     
       - file: u4p2 
-      - file: u4p3     
   - caption: Aplicaciones de la Derivada
     chapters:
       - file: u5p1     
@@ -45,3 +44,4 @@ parts:
     chapters:
       - file: u8p1
       - file: u8p2
+      - file: u8p3
