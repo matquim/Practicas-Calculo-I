@@ -58,10 +58,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'u5p2';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Sumas de Riemann" href="u6p1.html" />
+    <link rel="next" title="Casos Químicos" href="u5p3.html" />
     <link rel="prev" title="Series de Taylor" href="u5p1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
@@ -210,6 +212,21 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="u5p1.html">Series de Taylor</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Puntos Críticos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u5p3.html">Casos Químicos</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Integral</span></p>
 <ul class="nav bd-sidenav">
@@ -446,8 +463,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximos-y-minimos">Máximos y Mínimos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puntos-de-inflexion">Puntos de Inflexión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-de-la-primera-derivada">Criterio de la Primera Derivada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-de-la-segunda-derivada">Criterio de la Segunda derivada</a></li>
 </ul>
             </nav>
         </div>
@@ -461,79 +478,153 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="puntos-criticos">
 <h1>Puntos Críticos<a class="headerlink" href="#puntos-criticos" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">ADVERTENCIA</p>
-<p>Esto es una propuesta y todavía tiene que editarse</p>
+<section id="criterio-de-la-primera-derivada">
+<h2>Criterio de la Primera Derivada<a class="headerlink" href="#criterio-de-la-primera-derivada" title="Link to this heading">#</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Concepto</p>
+<p>Los puntos críticos de una función son aquellos donde la primera derivada se vuelve cero. Estos pueden clasificarse según el cambio de signo de la primera derivada en la vecindad del punto crítico:</p>
+<ul class="simple">
+<li><p>Máximo: (+) -&gt; (-)</p></li>
+<li><p>Mínimo: (-) -&gt; (+)</p></li>
+</ul>
 </div>
-<section id="maximos-y-minimos">
-<h2>Máximos y Mínimos<a class="headerlink" href="#maximos-y-minimos" title="Link to this heading">#</a></h2>
-<p>El criterio de la primera y segunda derivada permite identificar los máximos y mínimos de una función.</p>
+<p>Considere la función:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-eb700e1a-4187-4d10-93f0-9c0bfdb7c8e2">
+<span class="eqno">(22)<a class="headerlink" href="#equation-eb700e1a-4187-4d10-93f0-9c0bfdb7c8e2" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f(x) = x^3 - 3x^2
+\end{equation}\]</div>
+<p>la primera derivada de la función es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-2e47b907-c633-4286-a74d-00ffa96854a4">
+<span class="eqno">(23)<a class="headerlink" href="#equation-2e47b907-c633-4286-a74d-00ffa96854a4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f'(x) = 3x^2 - 6x = x(3x - 6)
+\end{equation}\]</div>
+<p>la que se hace cero cuando:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(x = 2\)</span></p></li>
+</ul>
+<p>los cuales son los puntos críticos de la función.</p>
+<p>Realice la gráfica de esta función en el intervalo <span class="math notranslate nohighlight">\(x \in [-1, 3]\)</span>, señalando los puntos críticos:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 
-<span class="n">f_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">9</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Función: f(x) = </span><span class="si">{</span><span class="n">f_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">f_prime_x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f_x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Primera derivada: f&#39;(x) = </span><span class="si">{</span><span class="n">f_prime_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">critical_points</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">f_prime_x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Puntos críticos: </span><span class="si">{</span><span class="n">critical_points</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="n">f_double_prime_x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f_prime_x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Segunda derivada: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">f_double_prime_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">critical_points</span><span class="p">:</span>
-    <span class="n">second_deriv_at_point</span> <span class="o">=</span> <span class="n">f_double_prime_x</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">point</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">second_deriv_at_point</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;En x = </span><span class="si">{</span><span class="n">point</span><span class="si">}</span><span class="s2">: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">second_deriv_at_point</span><span class="si">}</span><span class="s2"> (Máximo local). Valor de la función: </span><span class="si">{</span><span class="n">f_x</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">second_deriv_at_point</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;En x = </span><span class="si">{</span><span class="n">point</span><span class="si">}</span><span class="s2">: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">second_deriv_at_point</span><span class="si">}</span><span class="s2"> (Mínimo local). Valor de la función: </span><span class="si">{</span><span class="n">f_x</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">point</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;En x = </span><span class="si">{</span><span class="n">point</span><span class="si">}</span><span class="s2">: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">second_deriv_at_point</span><span class="si">}</span><span class="s2"> (Criterio no concluyente. Se necesita un análisis adicional).&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Puntos críticos&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Función: f(x) = x**3 - 6*x**2 + 9*x + 1
-Primera derivada: f&#39;(x) = 3*x**2 - 12*x + 9
-Puntos críticos: [1, 3]
-Segunda derivada: f&#39;&#39;(x) = 6*x - 12
-En x = 1: f&#39;&#39;(x) = -6 (Máximo local). Valor de la función: 5
-En x = 3: f&#39;&#39;(x) = 6 (Mínimo local). Valor de la función: 1
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x72e10662ae40&gt;
+</pre></div>
+</div>
+<img alt="_images/2767666c9a988d5b688fafea4192021bc1b4da5ad700997f5624981828f6d8db.png" src="_images/2767666c9a988d5b688fafea4192021bc1b4da5ad700997f5624981828f6d8db.png" />
+</div>
+</div>
+<p>En la siguiente celda:</p>
+<ul class="simple">
+<li><p>Defina un <span class="math notranslate nohighlight">\(h\)</span> pequeño</p></li>
+<li><p>Para cada punto crítico: evalúe el valor de la derivada un poco antes y un poco después</p></li>
+<li><p>Use los cambios de signo para caracterizar los puntos críticos como máximos o mínimos.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">df</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">6</span><span class="o">*</span><span class="n">x</span>
+
+<span class="n">h</span> <span class="o">=</span> <span class="mf">0.01</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;==== Primer Punto Crítico ====&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = 0&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antes del punto crítico:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">(</span><span class="mi">0</span> <span class="o">-</span> <span class="n">h</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Punto Crítico: =&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Después del punto crítico:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">(</span><span class="mi">0</span> <span class="o">+</span> <span class="n">h</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conclusión: Máximo&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;==== Segundo Punto Crítico ====&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = 2&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Antes del punto crítico:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">(</span><span class="mi">2</span> <span class="o">-</span> <span class="n">h</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Punto Crítico: =&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Después del punto crítico:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="n">h</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conclusión: Mínimo&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Primer Punto Crítico ====
+x = 0
+Antes del punto crítico: 0.0603
+Punto Crítico: = 0
+Después del punto crítico: -0.059699999999999996
+
+==== Segundo Punto Crítico ====
+x = 2
+Antes del punto crítico: -0.05969999999999942
+Punto Crítico: = 0
+Después del punto crítico: 0.06029999999999802
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="puntos-de-inflexion">
-<h2>Puntos de Inflexión<a class="headerlink" href="#puntos-de-inflexion" title="Link to this heading">#</a></h2>
+<section id="criterio-de-la-segunda-derivada">
+<h2>Criterio de la Segunda derivada<a class="headerlink" href="#criterio-de-la-segunda-derivada" title="Link to this heading">#</a></h2>
+<p>La segunda derivada proporciona un procedimiento más práctico para caracterizar los puntos críticos, ya que solo hay que evaluar directamente la segunda derivada en el punto crítico y evaliar el signo:</p>
+<ul class="simple">
+<li><p>Máximo: (-)</p></li>
+<li><p>Mínimo: (+)</p></li>
+<li><p>Punto de Inflexión: Cero</p></li>
+</ul>
+<p>Regresando al ejemplo de <span class="math notranslate nohighlight">\(f(x) = x^3 - 3x^2\)</span>,</p>
+<p>la segunda derivada es:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-740f972e-8ff9-4d94-98a0-b16a31dbebe7">
+<span class="eqno">(24)<a class="headerlink" href="#equation-740f972e-8ff9-4d94-98a0-b16a31dbebe7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+f''(x) = 6x - 6
+\end{equation}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sympy</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">d2f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">6</span><span class="o">*</span><span class="n">x</span>
 
-<span class="n">x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
-<span class="n">f_x</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">6</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">9</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="n">f_double_prime_x</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">f_x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Función: f(x) = </span><span class="si">{</span><span class="n">f_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Segunda derivada: f&#39;&#39;(x) = </span><span class="si">{</span><span class="n">f_double_prime_x</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;==== Primer Punto Crítico ====&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = 0&quot;</span><span class="p">)</span>
 
-<span class="n">inflection_candidates</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="n">f_double_prime_x</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Candidatos a puntos de inflexión (f&#39;&#39;(x) = 0): </span><span class="si">{</span><span class="n">inflection_candidates</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Punto Crítico: =&quot;</span><span class="p">,</span> <span class="n">d2f</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conclusión: Máximo&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;==== Segundo Punto Crítico ====&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x = 2&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Punto Crítico: =&quot;</span><span class="p">,</span> <span class="n">d2f</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Conclusión: Mínimo&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Función: f(x) = x**3 - 6*x**2 + 9*x + 1
-Segunda derivada: f&#39;&#39;(x) = 6*(x - 2)
-Candidatos a puntos de inflexión (f&#39;&#39;(x) = 0): [2]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>==== Primer Punto Crítico ====
+x = 0
+Punto Crítico: = 0
+Conclusión: Máximo
+
+==== Segundo Punto Crítico ====
+x = 2
+Punto Crítico: = 0
+Conclusión: Mínimo
 </pre></div>
 </div>
 </div>
 </div>
+<p>Además, <span class="math notranslate nohighlight">\(f''(x) = 6x-6\)</span> se hace cero cuando <span class="math notranslate nohighlight">\(x=1\)</span>, este es un <code class="docutils literal notranslate"><span class="pre">punto</span> <span class="pre">de</span> <span class="pre">inflexión</span></code>, el cual indica un cambio en la concavidad de la curvatura de cóncavo a convexo.</p>
+<p>Note que este punto de inflexión solo pudo ser detectado con la segunda derivada y no con la primera derivada.</p>
 </section>
 </section>
 
@@ -577,11 +668,11 @@ Candidatos a puntos de inflexión (f&#39;&#39;(x) = 0): [2]
       </div>
     </a>
     <a class="right-next"
-       href="u6p1.html"
+       href="u5p3.html"
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Sumas de Riemann</p>
+        <p class="prev-next-title">Casos Químicos</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -601,8 +692,8 @@ Candidatos a puntos de inflexión (f&#39;&#39;(x) = 0): [2]
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maximos-y-minimos">Máximos y Mínimos</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#puntos-de-inflexion">Puntos de Inflexión</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-de-la-primera-derivada">Criterio de la Primera Derivada</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-de-la-segunda-derivada">Criterio de la Segunda derivada</a></li>
 </ul>
   </nav></div>
 
