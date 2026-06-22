@@ -64,7 +64,7 @@
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
     <link rel="next" title="Integral indefinida" href="u6p2.html" />
-    <link rel="prev" title="Ecuación de Michaelis-Menten" href="u5p4.html" />
+    <link rel="prev" title="Decaimiento Radiactivo" href="u5p4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -213,8 +213,7 @@
 <li class="toctree-l1"><a class="reference internal" href="u5p1.html">Series de Taylor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p2.html">Puntos Críticos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p3.html">Titulación Ácido-Base</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u5p4.html">Ecuación de Michaelis-Menten</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u5p4.html">Decaimiento Radiactivo</a></li>
 
 
 
@@ -249,6 +248,39 @@
 <li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reserva</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="u8p1.html">Ecuación de Michaelis-Menten</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="u8p2.html">Ecuación de Michaelis-Menten</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -491,8 +523,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 </ol>
 <p><strong>Fórmula general:</strong></p>
 <p>La suma de Riemann se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-19483a0b-7970-40f0-b69e-07d4b593bf4c">
-<span class="eqno">(27)<a class="headerlink" href="#equation-19483a0b-7970-40f0-b69e-07d4b593bf4c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ab1a4fe4-c3d1-49e7-81a4-082c39fa16d3">
+<span class="eqno">(47)<a class="headerlink" href="#equation-ab1a4fe4-c3d1-49e7-81a4-082c39fa16d3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=1}^{n}{f(x_{i})\Delta x}
 \end{align}\]</div>
 <p>donde:</p>
@@ -500,8 +532,8 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <li><p><span class="math notranslate nohighlight">\(n ≡\)</span> número de rectángulos</p></li>
 <li><p><span class="math notranslate nohighlight">\(\Delta x ≡\)</span> ancho de cada rectángulo (tamaño de la partición):</p></li>
 </ul>
-<div class="amsmath math notranslate nohighlight" id="equation-e1d41f23-d61c-49b5-912e-cba8d6fe0c16">
-<span class="eqno">(28)<a class="headerlink" href="#equation-e1d41f23-d61c-49b5-912e-cba8d6fe0c16" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-40771979-388a-49cb-9ae6-80fefda4c4c1">
+<span class="eqno">(48)<a class="headerlink" href="#equation-40771979-388a-49cb-9ae6-80fefda4c4c1" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x = \frac{b-a}{n}
 \end{align}\]</div>
 <ul class="simple">
@@ -521,26 +553,26 @@ Supongamos que tenemos una función <span class="math notranslate nohighlight">\
 <h2>Integral definida<a class="headerlink" href="#integral-definida" title="Link to this heading">#</a></h2>
 <p>Las sumas de Riemann son una base de la integral definida.</p>
 <p>Cuando el número de rectángulos aumenta, la aproximáción de la suma de los rectángulos, se vuelve exactamente el área bajo la curva, es decir,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-15a77f2b-26f1-438f-a074-c6910fb58486">
-<span class="eqno">(29)<a class="headerlink" href="#equation-15a77f2b-26f1-438f-a074-c6910fb58486" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c4957214-0607-44df-bc10-a3b3fb0d382e">
+<span class="eqno">(49)<a class="headerlink" href="#equation-c4957214-0607-44df-bc10-a3b3fb0d382e" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \lim_{n\to \infty}{\sum_{i=i}^{n}{f(x_i)\Delta x}}=\int_{a}^{b}{f(x)\,dx}
 \end{align}\]</div>
 </section>
 <section id="metodologia">
 <h2>Metodología<a class="headerlink" href="#metodologia" title="Link to this heading">#</a></h2>
 <p>Tomamos una partición de puntos de la forma:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-42fbcf75-c28d-4dfc-8cd6-98349245c7e0">
-<span class="eqno">(30)<a class="headerlink" href="#equation-42fbcf75-c28d-4dfc-8cd6-98349245c7e0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-18a91aae-5f42-49ce-a92b-a742b2daa6a3">
+<span class="eqno">(50)<a class="headerlink" href="#equation-18a91aae-5f42-49ce-a92b-a742b2daa6a3" title="Permalink to this equation">#</a></span>\[\begin{align}
 x_i=a+i\Delta x
 \end{align}\]</div>
 <p>en donde</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c4e74c56-53fc-4821-aba1-500aba17354b">
-<span class="eqno">(31)<a class="headerlink" href="#equation-c4e74c56-53fc-4821-aba1-500aba17354b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c006457c-bbfc-425d-a87d-1f6ca394d29a">
+<span class="eqno">(51)<a class="headerlink" href="#equation-c006457c-bbfc-425d-a87d-1f6ca394d29a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle \Delta x=\frac{b-a}{n}
 \end{align}\]</div>
 <p>La aproximación <span class="math notranslate nohighlight">\(I^*\)</span>  para la integral (suma de Riemann) está dada por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7cd6d9aa-4389-4edc-b8ed-d9e14442922a">
-<span class="eqno">(32)<a class="headerlink" href="#equation-7cd6d9aa-4389-4edc-b8ed-d9e14442922a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e3666519-4a8e-4240-b635-7087e12c87f8">
+<span class="eqno">(52)<a class="headerlink" href="#equation-e3666519-4a8e-4240-b635-7087e12c87f8" title="Permalink to this equation">#</a></span>\[\begin{align}
 \displaystyle I^*=\sum_{i=0}^{n}{f(x_{i})h}
 \end{align}\]</div>
 <p>donde <span class="math notranslate nohighlight">\(x_i\)</span> es el extremo izquierdo, derecho o el punto medio.</p>
@@ -757,7 +789,7 @@ Las suma de Riemann media:     I_med = 2.6666659999999993
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Ecuación de Michaelis-Menten</p>
+        <p class="prev-next-title">Decaimiento Radiactivo</p>
       </div>
     </a>
     <a class="right-next"

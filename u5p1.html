@@ -213,8 +213,7 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Series de Taylor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p2.html">Puntos Críticos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p3.html">Titulación Ácido-Base</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u5p4.html">Ecuación de Michaelis-Menten</a></li>
-
+<li class="toctree-l1"><a class="reference internal" href="u5p4.html">Decaimiento Radiactivo</a></li>
 
 
 
@@ -249,6 +248,39 @@
 <li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Reserva</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="u8p1.html">Ecuación de Michaelis-Menten</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="u8p2.html">Ecuación de Michaelis-Menten</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 
     </div>
@@ -471,15 +503,15 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>La serie de Taylor en torno a <span class="math notranslate nohighlight">\(x=a\)</span> permite aproximar una función <span class="math notranslate nohighlight">\(f(x)\)</span> como una suma infinita de potencias:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1103736c-ac1a-4bdd-8db2-8cdfd60b993e">
-<span class="eqno">(19)<a class="headerlink" href="#equation-1103736c-ac1a-4bdd-8db2-8cdfd60b993e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-086802a6-442a-4659-8742-fd76ac648601">
+<span class="eqno">(19)<a class="headerlink" href="#equation-086802a6-442a-4659-8742-fd76ac648601" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f(x) = f(a) + \left(f'(a)\right)(x-a) +  \left(\frac{f''(a)}{2!}\right)(x-a)^2 +  \left(\frac{f'''(a)}{3!}\right)(x-a)^3 + \cdots = \sum_{n=0}^\infty \left(\frac{f^{(n)}(a)}{n!}\right)(x-a)^n
 \end{equation}\]</div>
 <p>El caso especial de la serie de Taylor en torno a <span class="math notranslate nohighlight">\(x=0\)</span> se conoce como serie de Maclaurin.</p>
 </div>
 <p>La serie de Taylor, centrada en cero, para la función exponencial, es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9bd84c26-ab06-4985-8261-0b8d992ce3cb">
-<span class="eqno">(20)<a class="headerlink" href="#equation-9bd84c26-ab06-4985-8261-0b8d992ce3cb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9d283677-c458-4271-83f5-0aa41263d68b">
+<span class="eqno">(20)<a class="headerlink" href="#equation-9d283677-c458-4271-83f5-0aa41263d68b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \exp(x) = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots = \sum_{x=0}^\infty \frac{x^n}{n!}
 \end{equation}\]</div>
 <div class="cell docutils container">
@@ -591,8 +623,8 @@ f(x) = f(a) + \left(f'(a)\right)(x-a) +  \left(\frac{f''(a)}{2!}\right)(x-a)^2 +
 </div>
 </div>
 <p>La serie de Taylor, centrada en cero, para la función seno, es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26c144e1-84f2-4cb6-9133-fc30d82cdbb1">
-<span class="eqno">(21)<a class="headerlink" href="#equation-26c144e1-84f2-4cb6-9133-fc30d82cdbb1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-86fe89af-c1dc-4cbf-b4f7-23be8d9f4416">
+<span class="eqno">(21)<a class="headerlink" href="#equation-86fe89af-c1dc-4cbf-b4f7-23be8d9f4416" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \dots = \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!} x^{2n+1}
 \end{equation}\]</div>
 <p>Grafique:</p>

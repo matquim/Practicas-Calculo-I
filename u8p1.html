@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Decaimiento Radiactivo &#8212; Practicas Cálculo I</title>
+    <title>Ecuación de Michaelis-Menten &#8212; Practicas Cálculo I</title>
   
   
   
@@ -60,11 +60,11 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'u5p4';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'u8p1';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Sumas de Riemann" href="u6p1.html" />
-    <link rel="prev" title="Titulación Ácido-Base" href="u5p3.html" />
+    <link rel="next" title="Ecuación de Michaelis-Menten" href="u8p2.html" />
+    <link rel="prev" title="Cálculo de la Constante de Equilibrio" href="u7p8.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -209,11 +209,11 @@
 <li class="toctree-l1"><a class="reference internal" href="u4p3.html">Aplicaciones</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Derivada</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="u5p1.html">Series de Taylor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p2.html">Puntos Críticos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u5p3.html">Titulación Ácido-Base</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Decaimiento Radiactivo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u5p4.html">Decaimiento Radiactivo</a></li>
 
 
 
@@ -250,8 +250,8 @@
 <li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reserva</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="u8p1.html">Ecuación de Michaelis-Menten</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Ecuación de Michaelis-Menten</a></li>
 
 
 
@@ -335,7 +335,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u5p4.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/matquim/Practicas-Calculo-I/master?urlpath=tree/u8p1.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -353,7 +353,7 @@
       
       
       
-      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u5p4.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/matquim/Practicas-Calculo-I/blob/master/u8p1.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -402,7 +402,7 @@
       
       
       
-      <li><a href="_sources/u5p4.ipynb" target="_blank"
+      <li><a href="_sources/u8p1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Descargar archivo fuente"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -486,7 +486,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Decaimiento Radiactivo</h1>
+    <h1>Ecuación de Michaelis-Menten</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -496,14 +496,27 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Decaimiento Radiactivo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ecuación de Michaelis-Menten</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-la-ecuacion-de-michaelis-menten">1. Derivada de la Ecuación de Michaelis-Menten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion-de-la-derivada-en-puntos-clave">2. Evaluación de la Derivada en Puntos Clave</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocidad-de-reaccion">Velocidad de Reacción</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-variables">Definir variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada">Derivada</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluar-en-t-0-y-t-1">Evaluar en t=0 y t=1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recta-tangente-en-t-0">Recta tangente en t=0</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ley-de-enfriamiento-de-newton">Ley de Enfriamiento de Newton</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decaimiento-radiactivo">Decaimiento Radiactivo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de ( N(t) ) con Respecto al Tiempo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros">Parámetros</a></li>
@@ -528,120 +541,282 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>La <strong>Ley de Enfriamiento de Newton</strong> describe cómo la temperatura <span class="math notranslate nohighlight">\(T(t)\)</span> de un objeto cambia con el tiempo cuando está en contacto con un medio ambiente a temperatura constante <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>. La ecuación diferencial que modela este fenómeno es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6c8cac0c-b3e6-4874-8c2f-24b6b5cbfe65">
-<span class="eqno">(27)<a class="headerlink" href="#equation-6c8cac0c-b3e6-4874-8c2f-24b6b5cbfe65" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{dT}{dt} = -k (T - T_{\text{amb}})
+  <section class="tex2jax_ignore mathjax_ignore" id="ecuacion-de-michaelis-menten">
+<h1>Ecuación de Michaelis-Menten<a class="headerlink" href="#ecuacion-de-michaelis-menten" title="Link to this heading">#</a></h1>
+<p>:class: warning</p>
+<p>Estos son notebooks que falta desarrollar y ubicarlos en el tema que mejor quede.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Concepto</p>
+<p>La ecuación de Michaelis-Menten se usa en catálisis enzimática para modelar los cambios en la concentración de sustrato conforme avanza la reacción, es decir, <span class="math notranslate nohighlight">\(d[S]/dt\)</span>. A esta cantidad se le conoce como <code class="docutils literal notranslate"><span class="pre">velocidad</span> <span class="pre">de</span> <span class="pre">reacción</span></code>.</p>
+</div>
+<p>La ecuación de rapidez que sigue una reacción química en particular depende de varios factores. Un ejemplo es la siguiente ecuación:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b14e3294-ff29-4f81-b9b5-5310a225f7ff">
+<span class="eqno">(54)<a class="headerlink" href="#equation-b14e3294-ff29-4f81-b9b5-5310a225f7ff" title="Permalink to this equation">#</a></span>\[\begin{equation}
+v([S]) = \frac{V_{\text{max}} [S]}{K_m + [S]}
 \end{equation}\]</div>
 <p>Donde:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(T(t)\)</span>: Temperatura del objeto en el tiempo <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>: Temperatura ambiente (constante).</p></li>
-<li><p><span class="math notranslate nohighlight">\(k\)</span>: Constante de enfriamiento (depende del material y condiciones del medio).</p></li>
+<li><p><span class="math notranslate nohighlight">\( V_{\text{max}} \)</span>: Velocidad máxima de la reacción.</p></li>
+<li><p><span class="math notranslate nohighlight">\( K_m \)</span>: Constante de Michaelis (concentración de sustrato a la cual <span class="math notranslate nohighlight">\( v = V_{\text{max}} / 2 \)</span>).</p></li>
 </ul>
-<p><strong>Solución analítica:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-630280e0-e9b7-44a9-9115-445b8eef251e">
-<span class="eqno">(28)<a class="headerlink" href="#equation-630280e0-e9b7-44a9-9115-445b8eef251e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p><strong>Interpretación de <span class="math notranslate nohighlight">\(\frac{dv}{d[S]}\)</span>:</strong></p>
+<ul class="simple">
+<li><p>Representa la <strong>sensibilidad de la velocidad de reacción</strong> ante cambios en <span class="math notranslate nohighlight">\([S]\)</span>.</p></li>
+<li><p>En <span class="math notranslate nohighlight">\([S] = 0\)</span>, <span class="math notranslate nohighlight">\(\frac{dv}{d[S]} = \frac{V_{\text{max}}}{K_m}\)</span>.</p></li>
+<li><p>En <span class="math notranslate nohighlight">\([S] \to \infty\)</span>, <span class="math notranslate nohighlight">\(\frac{dv}{d[S]} \to 0\)</span>.</p></li>
+</ul>
+<p><strong>Instruccion</strong></p>
+<ol class="arabic simple">
+<li><p>Derivar la ecuación de Michaelis-Menten con respecto a ( [S] ) y simplificar el resultado.</p></li>
+<li><p>Evaluar la derivada en:</p>
+<ul class="simple">
+<li><p>( [S] = 0 )</p></li>
+<li><p>( [S] = K_m )</p></li>
+<li><p>( [S] \to \infty )</p></li>
+</ul>
+</li>
+<li><p>Interpretar físicamente cada resultado.</p></li>
+<li><p>Graficar ( v([S]) ) y ( \frac{dv}{d[S]} ) en el rango ( [S] = [0, 5K_m] ).</p></li>
+<li><p>Discutir:</p>
+<ul class="simple">
+<li><p>¿En qué rango de ( [S] ) la velocidad es más sensible a cambios en la concentración de sustrato?</p></li>
+<li><p>¿Qué implica que ( \frac{dv}{d[S]} ) sea máxima en ( [S] = 0 )?</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p><strong>Solución</strong></p>
+<section id="derivada-de-la-ecuacion-de-michaelis-menten">
+<h2>1. Derivada de la Ecuación de Michaelis-Menten<a class="headerlink" href="#derivada-de-la-ecuacion-de-michaelis-menten" title="Link to this heading">#</a></h2>
+<p>Usamos la <strong>regla del cociente</strong> para derivar ( v([S]) ):</p>
+<p>[
+v([S]) = \frac{V_{\text{max}} [S]}{K_m + [S]}
+]</p>
+<p>La derivada es:</p>
+<p>[
+\frac{dv}{d[S]} = \frac{V_{\text{max}} (K_m + [S]) - V_{\text{max}} [S] \cdot (1)}{(K_m + [S])^2} = \frac{V_{\text{max}} K_m}{(K_m + [S])^2}
+]</p>
+<p><strong>Resultado:</strong>
+[
+\boxed{\frac{dv}{d[S]} = \frac{V_{\text{max}} K_m}{(K_m + [S])^2}}
+]</p>
+<hr class="docutils" />
+</section>
+<section id="evaluacion-de-la-derivada-en-puntos-clave">
+<h2>2. Evaluación de la Derivada en Puntos Clave<a class="headerlink" href="#evaluacion-de-la-derivada-en-puntos-clave" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Punto</strong></p></th>
+<th class="head"><p><strong>Expresión</strong></p></th>
+<th class="head"><p><strong>Resultado</strong></p></th>
+<th class="head"><p><strong>Interpretación</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>( [S] = 0 )</p></td>
+<td><p>( \frac{V_{\text{max}} K_m}{K_m^2} )</p></td>
+<td><p>( \frac{V_{\text{max}}}{K_m} )</p></td>
+<td><p>Pendiente inicial de la curva ( v ) vs. ( [S] ). Eficiencia catalítica a bajas ( [S] ).</p></td>
+</tr>
+<tr class="row-odd"><td><p>( [S] = K_m )</p></td>
+<td><p>( \frac{V_{\text{max}} K_m}{4 K_m^2} )</p></td>
+<td><p>( \frac{V_{\text{max}}}{4 K_m} )</p></td>
+<td><p>Sensibilidad a ( [S] = K_m ) es un cuarto de la pendiente inicial.</p></td>
+</tr>
+<tr class="row-even"><td><p>( [S] \to \infty )</p></td>
+<td><p>( \lim_{[S] \to \infty} \frac{V_{\text{max}} K_m}{(K_m + [S])^2} )</p></td>
+<td><p>( 0 )</p></td>
+<td><p>La velocidad se satura y ya no depende de ( [S] ).</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Parámetros</span>
+<span class="n">Vmax</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">Km</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="c1"># Rango de [S]</span>
+<span class="n">S</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">Km</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+<span class="c1"># Función de Michaelis-Menten y su derivada</span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">Vmax</span> <span class="o">*</span> <span class="n">S</span> <span class="o">/</span> <span class="p">(</span><span class="n">Km</span> <span class="o">+</span> <span class="n">S</span><span class="p">)</span>
+<span class="n">dv_dS</span> <span class="o">=</span> <span class="n">Vmax</span> <span class="o">*</span> <span class="n">Km</span> <span class="o">/</span> <span class="p">(</span><span class="n">Km</span> <span class="o">+</span> <span class="n">S</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="c1"># Gráfica</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># v([S])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$v([S]) = </span><span class="se">\\</span><span class="s2">frac{V_</span><span class="si">{max}</span><span class="s2"> [S]}{K_m + [S]}$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;[S] (unidades de concentración)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Velocidad de reacción $v$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ecuación de Michaelis-Menten&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">Vmax</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$V_</span><span class="si">{max}</span><span class="s2">$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">Km</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$K_m$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># dv/d[S]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S</span><span class="p">,</span> <span class="n">dv_dS</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">frac</span><span class="si">{dv}{d[S]}</span><span class="s2">$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;[S] (unidades de concentración)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Derivada $dv/d[S]$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Sensibilidad de la velocidad a [S]&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">Km</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$K_m$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3bc4d4f73da169ea408fbb3c18985f209b69d8c5e1fa364d01d6247e8a342943.png" src="_images/3bc4d4f73da169ea408fbb3c18985f209b69d8c5e1fa364d01d6247e8a342943.png" />
+</div>
+</div>
+</section>
+<section id="velocidad-de-reaccion">
+<h2>Velocidad de Reacción<a class="headerlink" href="#velocidad-de-reaccion" title="Link to this heading">#</a></h2>
+<p>from sympy import symbols, exp, diff</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="definir-variables">
+<h1>Definir variables<a class="headerlink" href="#definir-variables" title="Link to this heading">#</a></h1>
+<p>A0, k, t = symbols(‘A0 k t’, positive=True)
+A = A0 * exp(-k * t)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="derivada">
+<h1>Derivada<a class="headerlink" href="#derivada" title="Link to this heading">#</a></h1>
+<p>dA_dt = diff(A, t)
+print(f»d[A]/dt = {dA_dt}»)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="evaluar-en-t-0-y-t-1">
+<h1>Evaluar en t=0 y t=1<a class="headerlink" href="#evaluar-en-t-0-y-t-1" title="Link to this heading">#</a></h1>
+<p>dA_dt_t0 = dA_dt.subs(t, 0)
+dA_dt_t1 = dA_dt.subs(t, 1)
+print(f»Velocidad en t=0: {dA_dt_t0}“)
+print(f»Velocidad en t=1: {dA_dt_t1}”)</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="recta-tangente-en-t-0">
+<h1>Recta tangente en t=0<a class="headerlink" href="#recta-tangente-en-t-0" title="Link to this heading">#</a></h1>
+<p>tangent_line = A0 - k * A0 * t
+print(f»Recta tangente: {tangent_line}»)</p>
+<section id="ley-de-enfriamiento-de-newton">
+<h2>Ley de Enfriamiento de Newton<a class="headerlink" href="#ley-de-enfriamiento-de-newton" title="Link to this heading">#</a></h2>
+<p>La <strong>Ley de Enfriamiento de Newton</strong> describe cómo la temperatura ( T(t) ) de un objeto cambia con el tiempo cuando está en contacto con un medio ambiente a temperatura constante ( T_{\text{amb}} ). La ecuación diferencial que modela este fenómeno es:</p>
+<p>[
+\frac{dT}{dt} = -k (T - T_{\text{amb}})
+]</p>
+<p>Donde:</p>
+<ul class="simple">
+<li><p>( T(t) ): Temperatura del objeto en el tiempo ( t ).</p></li>
+<li><p>( T_{\text{amb}} ): Temperatura ambiente (constante).</p></li>
+<li><p>( k ): Constante de enfriamiento (depende del material y condiciones del medio).</p></li>
+</ul>
+<p><strong>Solución analítica:</strong>
+[
 T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}
-\end{equation}\]</div>
-<p>Donde <span class="math notranslate nohighlight">\( T_0 \)</span> es la temperatura inicial del objeto en <span class="math notranslate nohighlight">\(t = 0\)</span>.</p>
+]
+Donde ( T_0 ) es la temperatura inicial del objeto en ( t = 0 ).</p>
 <p>Instrucciones</p>
 <ol class="arabic simple">
 <li><p>Derivar la solución analítica de la Ley de Enfriamiento de Newton a partir de su ecuación diferencial.</p></li>
-<li><p>Calcular la derivada <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> y analizar su comportamiento en función del tiempo.</p></li>
-<li><p>Determinar el tiempo <span class="math notranslate nohighlight">\(t\)</span> en el que la temperatura del objeto es igual a la temperatura promedio entre <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>.</p></li>
-<li><p>Graficar <span class="math notranslate nohighlight">\(T(t)\)</span> y <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> en función del tiempo.</p></li>
+<li><p>Calcular la derivada ( \frac{dT}{dt} ) y analizar su comportamiento en función del tiempo.</p></li>
+<li><p>Determinar el tiempo ( t ) en el que la temperatura del objeto es igual a la temperatura promedio entre ( T_0 ) y ( T_{\text{amb}} ).</p></li>
+<li><p>Graficar ( T(t) ) y ( \frac{dT}{dt} ) en función del tiempo.</p></li>
 <li><p>Interpretar físicamente los resultados, incluyendo:</p>
 <ul class="simple">
-<li><p>¿Qué representa la constante <span class="math notranslate nohighlight">\(k\)</span> en términos físicos?</p></li>
-<li><p>¿Cómo afecta el valor de <span class="math notranslate nohighlight">\(k\)</span> a la velocidad de enfriamiento?</p></li>
-<li><p>¿Qué sugiere el signo de <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> sobre la dirección del flujo de calor?</p></li>
+<li><p>¿Qué representa la constante ( k ) en términos físicos?</p></li>
+<li><p>¿Cómo afecta el valor de ( k ) a la velocidad de enfriamiento?</p></li>
+<li><p>¿Qué sugiere el signo de ( \frac{dT}{dt} ) sobre la dirección del flujo de calor?</p></li>
 </ul>
 </li>
 </ol>
 <p><strong>Solución</strong></p>
 <p><strong>Derivación de la Solución Analítica</strong>
-La ecuación diferencial de la Ley de Enfriamiento de Newton es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c342c5d9-ec2e-49df-ad3c-8be99a95e8fc">
-<span class="eqno">(29)<a class="headerlink" href="#equation-c342c5d9-ec2e-49df-ad3c-8be99a95e8fc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+La ecuación diferencial de la Ley de Enfriamiento de Newton es:
+[
 \frac{dT}{dt} = -k (T - T_{\text{amb}})
-\end{equation}\]</div>
+]</p>
 <ol class="arabic simple">
 <li><p>Separar variables:
-\begin{equation}
+[
 \frac{dT}{T - T_{\text{amb}}} = -k , dt
-\end{equation}</p></li>
+]</p></li>
 <li><p>Integrar ambos lados:
-\begin{equation}
+[
 \int \frac{1}{T - T_{\text{amb}}} , dT = -k \int dt
-\end{equation}
-\begin{equation}
+]
+[
 \ln T - T_{\text{amb}}| = -kt + C
-\end{equation}</p></li>
+]</p></li>
 <li><p>Exponenciar ambos lados:
-\begin{equation}
+[
 T - T_{\text{amb}} = e^{-kt + C} = e^C e^{-kt}
-\end{equation}
-Usando la condición inicial <span class="math notranslate nohighlight">\(T(0) = T_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(e^C = T_0 - T_{\text{amb}}\)</span>:
-\begin{equation}
+]
+Usando la condición inicial ( T(0) = T_0 ), obtenemos ( e^C = T_0 - T_{\text{amb}} ):
+[
 T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}
-\end{equation}</p></li>
+]</p></li>
 </ol>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b286c78d-9e02-47c1-af01-86d5bae46b4b">
-<span class="eqno">(30)<a class="headerlink" href="#equation-b286c78d-9e02-47c1-af01-86d5bae46b4b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p><strong>Resultado:</strong>
+[
 \boxed{T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}}
-\end{equation}\]</div>
-<p><strong>Derivada de <span class="math notranslate nohighlight">\(T(t)\)</span> con Respecto al Tiempo</strong>
-Derivamos la solución analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f545cbab-0e52-44c9-8f2b-d1d957b159f4">
-<span class="eqno">(31)<a class="headerlink" href="#equation-f545cbab-0e52-44c9-8f2b-d1d957b159f4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+]</p>
+<p><strong>Derivada de ( T(t) ) con Respecto al Tiempo</strong>
+Derivamos la solución analítica:
+[
 \frac{dT}{dt} = \frac{d}{dt} \left[ T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt} \right] = -k (T_0 - T_{\text{amb}}) e^{-kt}
-\end{equation}\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-983267fe-afb5-4a8f-8c16-ffdc8965295d">
-<span class="eqno">(32)<a class="headerlink" href="#equation-983267fe-afb5-4a8f-8c16-ffdc8965295d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+]</p>
+<p><strong>Resultado:</strong>
+[
 \boxed{\frac{dT}{dt} = -k (T_0 - T_{\text{amb}}) e^{-kt}}
-\end{equation}\]</div>
+]</p>
 <p><strong>Interpretación:</strong></p>
 <ul class="simple">
-<li><p>La derivada <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> es <strong>negativa</strong> si <span class="math notranslate nohighlight">\(T_0 &gt; T_{\text{amb}}\)</span> (el objeto se enfría).</p></li>
-<li><p>La magnitud de <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
+<li><p>La derivada ( \frac{dT}{dt} ) es <strong>negativa</strong> si ( T_0 &gt; T_{\text{amb}} ) (el objeto se enfría).</p></li>
+<li><p>La magnitud de ( \frac{dT}{dt} ) <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
 </ul>
-<p><strong>Tiempo en el que <span class="math notranslate nohighlight">\(T(t)\)</span> es Igual a la Temperatura Promedio</strong></p>
-<p>La temperatura promedio entre <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08f211da-5aec-4b27-b511-8367b495a6b8">
-<span class="eqno">(33)<a class="headerlink" href="#equation-08f211da-5aec-4b27-b511-8367b495a6b8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p><strong>Tiempo en el que ( T(t) ) es Igual a la Temperatura Promedio</strong></p>
+<p>La temperatura promedio entre ( T_0 ) y ( T_{\text{amb}} ) es:
+[
 T_{\text{prom}} = \frac{T_0 + T_{\text{amb}}}{2}
-\end{equation}\]</div>
-<p>Igualamos <span class="math notranslate nohighlight">\(T(t) = T_{\text{prom}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d7ea2879-f546-4d78-a8ff-26807ead99bc">
-<span class="eqno">(34)<a class="headerlink" href="#equation-d7ea2879-f546-4d78-a8ff-26807ead99bc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+]</p>
+<p>Igualamos ( T(t) = T_{\text{prom}} ):
+[
 T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt} = \frac{T_0 + T_{\text{amb}}}{2}
-\end{equation}\]</div>
+]</p>
 <p><strong>Solución:</strong></p>
 <ol class="arabic simple">
-<li><p>Restar <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span> a ambos lados:
-\begin{equation}
+<li><p>Restar ( T_{\text{amb}} ) a ambos lados:
+[
 (T_0 - T_{\text{amb}}) e^{-kt} = \frac{T_0 - T_{\text{amb}}}{2}
-\end{equation}</p></li>
-<li><p>Dividir entre <span class="math notranslate nohighlight">\(T_0 - T_{\text{amb}}\)</span>:
-\begin{equation}
+]</p></li>
+<li><p>Dividir entre ( T_0 - T_{\text{amb}} ):
+[
 e^{-kt} = \frac{1}{2}
-\end{equation}</p></li>
+]</p></li>
 <li><p>Aplicar logaritmo natural:
-\begin{equation}
+[
 -kt = \ln \left( \frac{1}{2} \right) = -\ln 2 \implies t = \frac{\ln 2}{k}
-\end{equation}</p></li>
+]</p></li>
 </ol>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-794e3076-bd16-492e-99a0-50fef8663e8d">
-<span class="eqno">(35)<a class="headerlink" href="#equation-794e3076-bd16-492e-99a0-50fef8663e8d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p><strong>Resultado:</strong>
+[
 \boxed{t = \frac{\ln 2}{k}}
-\end{equation}\]</div>
+]</p>
 <p><strong>Interpretación:</strong></p>
 <ul class="simple">
-<li><p>Este tiempo es <strong>independiente de <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span></strong> y solo depende de <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+<li><p>Este tiempo es <strong>independiente de ( T_0 ) y ( T_{\text{amb}} )</strong> y solo depende de ( k ).</p></li>
 <li><p>Es el tiempo en el que el objeto ha reducido su diferencia de temperatura con el ambiente a la mitad.</p></li>
 </ul>
 <div class="cell docutils container">
@@ -703,159 +878,150 @@ e^{-kt} = \frac{1}{2}
 <img alt="_images/69fe60b2b3d6229ef439019ad70baff29a377d06fb7bd5fcd10e51a37dfa5a8a.png" src="_images/69fe60b2b3d6229ef439019ad70baff29a377d06fb7bd5fcd10e51a37dfa5a8a.png" />
 </div>
 </div>
+</section>
 <section id="decaimiento-radiactivo">
-<h1>Decaimiento Radiactivo<a class="headerlink" href="#decaimiento-radiactivo" title="Link to this heading">#</a></h1>
+<h2>Decaimiento Radiactivo<a class="headerlink" href="#decaimiento-radiactivo" title="Link to this heading">#</a></h2>
 </section>
 <section id="contexto-teorico">
-<h1>📚 Contexto Teórico<a class="headerlink" href="#contexto-teorico" title="Link to this heading">#</a></h1>
+<h2>📚 Contexto Teórico<a class="headerlink" href="#contexto-teorico" title="Link to this heading">#</a></h2>
 <p>El <strong>decaimiento radiactivo</strong> describe cómo la cantidad de un <strong>isótopo radiactivo</strong> disminuye con el tiempo debido a la emisión de partículas o radiación. La ecuación diferencial que modela este fenómeno es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-85a5df72-e59b-4033-981e-397139bc7868">
-<span class="eqno">(36)<a class="headerlink" href="#equation-85a5df72-e59b-4033-981e-397139bc7868" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p>[
 \frac{dN}{dt} = -\lambda N
-\end{equation}\]</div>
+]</p>
 <p>Donde:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(N(t)\)</span>: Número de núcleos radiactivos en el tiempo <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\lambda\)</span>: Constante de decaimiento (probabilidad de decaimiento por unidad de tiempo).</p></li>
+<li><p>( N(t) ): Número de núcleos radiactivos en el tiempo ( t ).</p></li>
+<li><p>( \lambda ): Constante de decaimiento (probabilidad de decaimiento por unidad de tiempo).</p></li>
 </ul>
-<p><strong>Solución analítica:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-757bed38-ae32-45e7-8ef9-82cb3fae1826">
-<span class="eqno">(37)<a class="headerlink" href="#equation-757bed38-ae32-45e7-8ef9-82cb3fae1826" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p><strong>Solución analítica:</strong>
+[
 N(t) = N_0 e^{-\lambda t}
-\end{equation}\]</div>
-<p>Donde <span class="math notranslate nohighlight">\(N_0\)</span> es el número inicial de núcleos radiactivos en <span class="math notranslate nohighlight">\(t = 0\)</span>.</p>
-<p><strong>Tiempo de vida media (<span class="math notranslate nohighlight">\(t_{1/2}\)</span>):</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-77e556ff-272d-4f05-81ee-c5935a3d4741">
-<span class="eqno">(38)<a class="headerlink" href="#equation-77e556ff-272d-4f05-81ee-c5935a3d4741" title="Permalink to this equation">#</a></span>\[\begin{equation}
+]
+Donde ( N_0 ) es el número inicial de núcleos radiactivos en ( t = 0 ).</p>
+<p><strong>Tiempo de vida media (( t_{1/2} )):</strong>
+[
 t_{1/2} = \frac{\ln 2}{\lambda}
-\end{equation}\]</div>
-<hr class="docutils" />
+]</p>
 </section>
+<hr class="docutils" />
 <section id="enunciado">
-<h1>💡 Enunciado<a class="headerlink" href="#enunciado" title="Link to this heading">#</a></h1>
+<h2>💡 Enunciado<a class="headerlink" href="#enunciado" title="Link to this heading">#</a></h2>
 <p><strong>Título:</strong> <em>Análisis del Decaimiento Radiactivo usando Derivadas</em></p>
 <p><strong>Objetivos:</strong></p>
 <ol class="arabic simple">
 <li><p>Derivar la solución analítica de la ecuación de decaimiento radiactivo a partir de su ecuación diferencial.</p></li>
-<li><p>Calcular la derivada <span class="math notranslate nohighlight">\(\frac{dN}{dt}\)</span> y analizar su comportamiento en función del tiempo.</p></li>
-<li><p>Determinar el tiempo <span class="math notranslate nohighlight">\(t\)</span> en el que la <strong>velocidad de decaimiento</strong> <span class="math notranslate nohighlight">\(\left  \frac{dN}{dt} \right|\)</span> es máxima y mínima.</p></li>
-<li><p>Calcular la actividad radiactiva <span class="math notranslate nohighlight">\(A(t) = \lambda N(t)\)</span> y su derivada <span class="math notranslate nohighlight">\(\frac{dA}{dt}\)</span>.</p></li>
-<li><p>Graficar <span class="math notranslate nohighlight">\(N(t)\)</span>, <span class="math notranslate nohighlight">\(\frac{dN}{dt}\)</span>, y <span class="math notranslate nohighlight">\(A(t)\)</span> en función del tiempo.</p></li>
+<li><p>Calcular la derivada ( \frac{dN}{dt} ) y analizar su comportamiento en función del tiempo.</p></li>
+<li><p>Determinar el tiempo ( t ) en el que la <strong>velocidad de decaimiento</strong> ( \left  \frac{dN}{dt} \right| ) es máxima y mínima.</p></li>
+<li><p>Calcular la actividad radiactiva ( A(t) = \lambda N(t) ) y su derivada ( \frac{dA}{dt} ).</p></li>
+<li><p>Graficar ( N(t) ), ( \frac{dN}{dt} ), y ( A(t) ) en función del tiempo.</p></li>
 <li><p>Interpretar físicamente los resultados, incluyendo:</p>
 <ul class="simple">
-<li><p>¿Qué representa la constante <span class="math notranslate nohighlight">\(\lambda\)</span> en términos físicos?</p></li>
-<li><p>¿Cómo afecta el valor de <span class="math notranslate nohighlight">\(\lambda\)</span> a la velocidad de decaimiento?</p></li>
-<li><p>¿Qué sugiere el signo de <span class="math notranslate nohighlight">\(\frac{dN}{dt}\)</span> sobre el proceso de decaimiento?</p></li>
+<li><p>¿Qué representa la constante ( \lambda ) en términos físicos?</p></li>
+<li><p>¿Cómo afecta el valor de ( \lambda ) a la velocidad de decaimiento?</p></li>
+<li><p>¿Qué sugiere el signo de ( \frac{dN}{dt} ) sobre el proceso de decaimiento?</p></li>
 </ul>
 </li>
 </ol>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="solucion">
-<h1>📝 Solución<a class="headerlink" href="#solucion" title="Link to this heading">#</a></h1>
+<h2>📝 Solución<a class="headerlink" href="#solucion" title="Link to this heading">#</a></h2>
 <hr class="docutils" />
 <section id="derivacion-de-la-solucion-analitica">
-<h2>1. Derivación de la Solución Analítica<a class="headerlink" href="#derivacion-de-la-solucion-analitica" title="Link to this heading">#</a></h2>
-<p>La ecuación diferencial del decaimiento radiactivo es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba25f7a8-f580-4992-962b-bf8f585eb891">
-<span class="eqno">(39)<a class="headerlink" href="#equation-ba25f7a8-f580-4992-962b-bf8f585eb891" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<h3>1. Derivación de la Solución Analítica<a class="headerlink" href="#derivacion-de-la-solucion-analitica" title="Link to this heading">#</a></h3>
+<p>La ecuación diferencial del decaimiento radiactivo es:
+[
 \frac{dN}{dt} = -\lambda N
-\end{equation}\]</div>
+]</p>
 <p><strong>Solución:</strong></p>
 <ol class="arabic simple">
 <li><p>Separar variables:
-\begin{equation}
+[
 \frac{dN}{N} = -\lambda , dt
-\end{equation}</p></li>
+]</p></li>
 <li><p>Integrar ambos lados:
-\begin{equation}
+[
 \int \frac{1}{N} , dN = -\lambda \int dt
-\end{equation}
-\begin{equation}
+]
+[
 \ln|N| = -\lambda t + C
-\end{equation}</p></li>
+]</p></li>
 <li><p>Exponenciar ambos lados:
-\begin{equation}
+[
 N = e^{-\lambda t + C} = e^C e^{-\lambda t}
-\end{equation}
-Usando la condición inicial <span class="math notranslate nohighlight">\(N(0) = N_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(e^C = N_0\)</span>:
-\begin{equation}
+]
+Usando la condición inicial ( N(0) = N_0 ), obtenemos ( e^C = N_0 ):
+[
 N(t) = N_0 e^{-\lambda t}
-\end{equation}</p></li>
+]</p></li>
 </ol>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-754fa760-a465-4969-9003-98a7c370e5a7">
-<span class="eqno">(40)<a class="headerlink" href="#equation-754fa760-a465-4969-9003-98a7c370e5a7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p><strong>Resultado:</strong>
+[
 \boxed{N(t) = N_0 e^{-\lambda t}}
-\end{equation}\]</div>
+]</p>
 </section>
 <hr class="docutils" />
 <section id="derivada-de-n-t-con-respecto-al-tiempo">
-<h2>2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo<a class="headerlink" href="#derivada-de-n-t-con-respecto-al-tiempo" title="Link to this heading">#</a></h2>
-<p>Derivamos la solución analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8d26dcab-cec4-444a-ac9a-2a72b6735ca4">
-<span class="eqno">(41)<a class="headerlink" href="#equation-8d26dcab-cec4-444a-ac9a-2a72b6735ca4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<h3>2. Derivada de ( N(t) ) con Respecto al Tiempo<a class="headerlink" href="#derivada-de-n-t-con-respecto-al-tiempo" title="Link to this heading">#</a></h3>
+<p>Derivamos la solución analítica:
+[
 \frac{dN}{dt} = \frac{d}{dt} \left[ N_0 e^{-\lambda t} \right] = -\lambda N_0 e^{-\lambda t}
-\end{equation}\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-ddbaa10d-eb61-4671-b41f-a1fb4e0bc67c">
-<span class="eqno">(42)<a class="headerlink" href="#equation-ddbaa10d-eb61-4671-b41f-a1fb4e0bc67c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+]</p>
+<p><strong>Resultado:</strong>
+[
 \boxed{\frac{dN}{dt} = -\lambda N_0 e^{-\lambda t}}
-\end{equation}\]</div>
+]</p>
 <p><strong>Interpretación:</strong></p>
 <ul class="simple">
-<li><p>La derivada <span class="math notranslate nohighlight">\(\frac{dN}{dt}\)</span> es <strong>negativa</strong> para todo <span class="math notranslate nohighlight">\(t\)</span>, lo que indica que <span class="math notranslate nohighlight">\(N\)</span> <strong>siempre disminuye</strong> con el tiempo.</p></li>
-<li><p>La <strong>velocidad de decaimiento</strong> <span class="math notranslate nohighlight">\(\left| \frac{dN}{dt} \right| = \lambda N_0 e^{-\lambda t}\)</span> es <strong>máxima en <span class="math notranslate nohighlight">\(t = 0\)</span></strong> y <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
+<li><p>La derivada ( \frac{dN}{dt} ) es <strong>negativa</strong> para todo ( t ), lo que indica que ( N ) <strong>siempre disminuye</strong> con el tiempo.</p></li>
+<li><p>La <strong>velocidad de decaimiento</strong> ( \left| \frac{dN}{dt} \right| = \lambda N_0 e^{-\lambda t} ) es <strong>máxima en ( t = 0 )</strong> y <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
 </ul>
 </section>
 <hr class="docutils" />
 <section id="tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">
-<h2>3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima<a class="headerlink" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima" title="Link to this heading">#</a></h2>
+<h3>3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima<a class="headerlink" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Máxima velocidad de decaimiento</strong>:
-\begin{equation}
+[
 \left| \frac{dN}{dt} \right|_{t=0} = \lambda N_0
-\end{equation}</p></li>
+]</p></li>
 <li><p><strong>Mínima velocidad de decaimiento</strong>:
-\begin{equation}
+[
 \lim_{t \to \infty} \left| \frac{dN}{dt} \right| = 0
-\end{equation}</p></li>
+]</p></li>
 </ul>
 <p><strong>Interpretación:</strong></p>
 <ul class="simple">
-<li><p>Al inicio (<span class="math notranslate nohighlight">\(t = 0\)</span>), la velocidad de decaimiento es <strong>máxima</strong> porque hay más núcleos radiactivos disponibles para decaer.</p></li>
+<li><p>Al inicio (( t = 0 )), la velocidad de decaimiento es <strong>máxima</strong> porque hay más núcleos radiactivos disponibles para decaer.</p></li>
 <li><p>Con el tiempo, la velocidad de decaimiento <strong>disminuye</strong> porque hay menos núcleos radiactivos.</p></li>
 </ul>
 </section>
 <hr class="docutils" />
 <section id="actividad-radiactiva-y-su-derivada">
-<h2>4. Actividad Radiactiva y su Derivada<a class="headerlink" href="#actividad-radiactiva-y-su-derivada" title="Link to this heading">#</a></h2>
-<p>La <strong>actividad radiactiva</strong> <span class="math notranslate nohighlight">\(A(t)\)</span> se define como el número de decaimientos por unidad de tiempo:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6fd6cdd2-51b6-4c30-8fc3-ad686135316d">
-<span class="eqno">(43)<a class="headerlink" href="#equation-6fd6cdd2-51b6-4c30-8fc3-ad686135316d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<h3>4. Actividad Radiactiva y su Derivada<a class="headerlink" href="#actividad-radiactiva-y-su-derivada" title="Link to this heading">#</a></h3>
+<p>La <strong>actividad radiactiva</strong> ( A(t) ) se define como el número de decaimientos por unidad de tiempo:
+[
 A(t) = \lambda N(t) = \lambda N_0 e^{-\lambda t}
-\end{equation}\]</div>
-<p><strong>Derivada de <span class="math notranslate nohighlight">\(A(t)\)</span></strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa4f509a-b274-4686-a791-21e46d7076cb">
-<span class="eqno">(44)<a class="headerlink" href="#equation-aa4f509a-b274-4686-a791-21e46d7076cb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+]</p>
+<p><strong>Derivada de ( A(t) )</strong>:
+[
 \frac{dA}{dt} = \frac{d}{dt} \left[ \lambda N_0 e^{-\lambda t} \right] = -\lambda^2 N_0 e^{-\lambda t}
-\end{equation}\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ad9c4bc-a051-4a9d-8b25-d455eb1cff15">
-<span class="eqno">(45)<a class="headerlink" href="#equation-1ad9c4bc-a051-4a9d-8b25-d455eb1cff15" title="Permalink to this equation">#</a></span>\[\begin{equation}
+]</p>
+<p><strong>Resultado:</strong>
+[
 \boxed{A(t) = \lambda N_0 e^{-\lambda t}}
-\end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-967f2e88-8e11-42a3-b9a8-4f6899c25d3a">
-<span class="eqno">(46)<a class="headerlink" href="#equation-967f2e88-8e11-42a3-b9a8-4f6899c25d3a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+]
+[
 \boxed{\frac{dA}{dt} = -\lambda^2 N_0 e^{-\lambda t}}
-\end{equation}\]</div>
+]</p>
 <p><strong>Interpretación:</strong></p>
 <ul class="simple">
-<li><p>La actividad radiactiva <span class="math notranslate nohighlight">\(A(t)\)</span> <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
-<li><p>La derivada <span class="math notranslate nohighlight">\(\frac{dA}{dt}\)</span> es <strong>negativa</strong>, lo que indica que la actividad <strong>disminuye</strong> con el tiempo.</p></li>
+<li><p>La actividad radiactiva ( A(t) ) <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
+<li><p>La derivada ( \frac{dA}{dt} ) es <strong>negativa</strong>, lo que indica que la actividad <strong>disminuye</strong> con el tiempo.</p></li>
 </ul>
 <p>import numpy as np
 import matplotlib.pyplot as plt</p>
+</section>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="parametros">
@@ -955,20 +1121,20 @@ plt.show()</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="u5p3.html"
+       href="u7p8.html"
        title="página anterior">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Titulación Ácido-Base</p>
+        <p class="prev-next-title">Cálculo de la Constante de Equilibrio</p>
       </div>
     </a>
     <a class="right-next"
-       href="u6p1.html"
+       href="u8p2.html"
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Sumas de Riemann</p>
+        <p class="prev-next-title">Ecuación de Michaelis-Menten</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -988,14 +1154,27 @@ plt.show()</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Decaimiento Radiactivo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Ecuación de Michaelis-Menten</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-la-ecuacion-de-michaelis-menten">1. Derivada de la Ecuación de Michaelis-Menten</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluacion-de-la-derivada-en-puntos-clave">2. Evaluación de la Derivada en Puntos Clave</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#velocidad-de-reaccion">Velocidad de Reacción</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-variables">Definir variables</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada">Derivada</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluar-en-t-0-y-t-1">Evaluar en t=0 y t=1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#recta-tangente-en-t-0">Recta tangente en t=0</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ley-de-enfriamiento-de-newton">Ley de Enfriamiento de Newton</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#decaimiento-radiactivo">Decaimiento Radiactivo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de ( N(t) ) con Respecto al Tiempo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros">Parámetros</a></li>
