@@ -21,7 +21,6 @@ parts:
       - file: u4p1     
       - file: u4p2 
       - file: u4p3     
-      - file: u4p4     
   - caption: Aplicaciones de la Derivada
     chapters:
       - file: u5p1     
