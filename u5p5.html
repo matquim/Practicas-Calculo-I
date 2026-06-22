@@ -226,7 +226,6 @@
 
 
 
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Integral</span></p>
 <ul class="nav bd-sidenav">
@@ -252,16 +251,6 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reserva</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="u8p1.html">Ecuación de Michaelis-Menten</a></li>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -498,7 +487,6 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Decaimiento Radiactivo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
@@ -531,12 +519,11 @@ document.write(`
                   
   <section id="decaimiento-radiactivo">
 <h1>Decaimiento Radiactivo<a class="headerlink" href="#decaimiento-radiactivo" title="Link to this heading">#</a></h1>
-</section>
-<section id="contexto-teorico">
-<h1>📚 Contexto Teórico<a class="headerlink" href="#contexto-teorico" title="Link to this heading">#</a></h1>
-<p>El <strong>decaimiento radiactivo</strong> describe cómo la cantidad de un <strong>isótopo radiactivo</strong> disminuye con el tiempo debido a la emisión de partículas o radiación. La ecuación diferencial que modela este fenómeno es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5b74d1b2-027e-41bf-9a2b-d6539b69caa8">
-<span class="eqno">(28)<a class="headerlink" href="#equation-5b74d1b2-027e-41bf-9a2b-d6539b69caa8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="tip admonition">
+<p class="admonition-title">Concepto</p>
+<p>Los isótopos son átomos de un mismo elemento que sólo difieren en la cantidad de neutrones en el núcleo. Muchos de estos casos son radioactivos, es decir, que con el tiempo emiten partículas del núcleo para convertirse en átomos más estables. Este fenómeno se conoce como decaimiento radioactivo, y se modela mediante la ecuación:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-91a00a18-397e-44f1-86d7-3f4400762b1e">
+<span class="eqno">(28)<a class="headerlink" href="#equation-91a00a18-397e-44f1-86d7-3f4400762b1e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
 <p>Donde:</p>
@@ -544,15 +531,16 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(N(t)\)</span>: Número de núcleos radiactivos en el tiempo <span class="math notranslate nohighlight">\(t\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\lambda\)</span>: Constante de decaimiento (probabilidad de decaimiento por unidad de tiempo).</p></li>
 </ul>
+</div>
 <p><strong>Solución analítica:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-1230e4e1-385b-4921-b3d5-0f8498d117fa">
-<span class="eqno">(29)<a class="headerlink" href="#equation-1230e4e1-385b-4921-b3d5-0f8498d117fa" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-56bfcb08-40b3-4b36-9711-816d5f46be7b">
+<span class="eqno">(29)<a class="headerlink" href="#equation-56bfcb08-40b3-4b36-9711-816d5f46be7b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 N(t) = N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p>Donde <span class="math notranslate nohighlight">\(N_0\)</span> es el número inicial de núcleos radiactivos en <span class="math notranslate nohighlight">\(t = 0\)</span>.</p>
 <p><strong>Tiempo de vida media (<span class="math notranslate nohighlight">\(t_{1/2}\)</span>):</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-2ec3c4be-f7a5-4783-bfd8-eb6bc1ed32ef">
-<span class="eqno">(30)<a class="headerlink" href="#equation-2ec3c4be-f7a5-4783-bfd8-eb6bc1ed32ef" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-57ab0e7c-663d-4a96-af2a-c7ad0ad65daf">
+<span class="eqno">(30)<a class="headerlink" href="#equation-57ab0e7c-663d-4a96-af2a-c7ad0ad65daf" title="Permalink to this equation">#</a></span>\[\begin{equation}
 t_{1/2} = \frac{\ln 2}{\lambda}
 \end{equation}\]</div>
 <hr class="docutils" />
@@ -583,8 +571,8 @@ t_{1/2} = \frac{\ln 2}{\lambda}
 <section id="derivacion-de-la-solucion-analitica">
 <h2>1. Derivación de la Solución Analítica<a class="headerlink" href="#derivacion-de-la-solucion-analitica" title="Link to this heading">#</a></h2>
 <p>La ecuación diferencial del decaimiento radiactivo es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4134baca-7643-45ce-a58a-203c3b6b52a0">
-<span class="eqno">(31)<a class="headerlink" href="#equation-4134baca-7643-45ce-a58a-203c3b6b52a0" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-57eace94-419b-47e4-9384-b3b1235b0b93">
+<span class="eqno">(31)<a class="headerlink" href="#equation-57eace94-419b-47e4-9384-b3b1235b0b93" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
 <p><strong>Solución:</strong></p>
@@ -610,8 +598,8 @@ N(t) = N_0 e^{-\lambda t}
 \end{equation}</p></li>
 </ol>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-570bb511-9d49-4b0f-a057-002e194d21f4">
-<span class="eqno">(32)<a class="headerlink" href="#equation-570bb511-9d49-4b0f-a057-002e194d21f4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-b45a38e7-38f3-405f-92b7-20eca4aeafcd">
+<span class="eqno">(32)<a class="headerlink" href="#equation-b45a38e7-38f3-405f-92b7-20eca4aeafcd" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{N(t) = N_0 e^{-\lambda t}}
 \end{equation}\]</div>
 </section>
@@ -619,13 +607,13 @@ N(t) = N_0 e^{-\lambda t}
 <section id="derivada-de-n-t-con-respecto-al-tiempo">
 <h2>2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo<a class="headerlink" href="#derivada-de-n-t-con-respecto-al-tiempo" title="Link to this heading">#</a></h2>
 <p>Derivamos la solución analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-27283c6f-1d3d-4fd8-a78d-15c5b940f8c6">
-<span class="eqno">(33)<a class="headerlink" href="#equation-27283c6f-1d3d-4fd8-a78d-15c5b940f8c6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-314ad4b2-fb73-4f34-992b-dc50ffe8b6f6">
+<span class="eqno">(33)<a class="headerlink" href="#equation-314ad4b2-fb73-4f34-992b-dc50ffe8b6f6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = \frac{d}{dt} \left[ N_0 e^{-\lambda t} \right] = -\lambda N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f3e416e-f6a3-40cf-9845-82f92d7ec72b">
-<span class="eqno">(34)<a class="headerlink" href="#equation-2f3e416e-f6a3-40cf-9845-82f92d7ec72b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-093b6474-9ca4-413b-9a85-2934e2aa1d87">
+<span class="eqno">(34)<a class="headerlink" href="#equation-093b6474-9ca4-413b-9a85-2934e2aa1d87" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{\frac{dN}{dt} = -\lambda N_0 e^{-\lambda t}}
 \end{equation}\]</div>
 <p><strong>Interpretación:</strong></p>
@@ -657,22 +645,22 @@ N(t) = N_0 e^{-\lambda t}
 <section id="actividad-radiactiva-y-su-derivada">
 <h2>4. Actividad Radiactiva y su Derivada<a class="headerlink" href="#actividad-radiactiva-y-su-derivada" title="Link to this heading">#</a></h2>
 <p>La <strong>actividad radiactiva</strong> <span class="math notranslate nohighlight">\(A(t)\)</span> se define como el número de decaimientos por unidad de tiempo:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-97dfd9a2-09e3-4440-b7d2-4e4ddcc28e3b">
-<span class="eqno">(35)<a class="headerlink" href="#equation-97dfd9a2-09e3-4440-b7d2-4e4ddcc28e3b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c8a1415e-d535-4d3e-a61f-51a075ed2192">
+<span class="eqno">(35)<a class="headerlink" href="#equation-c8a1415e-d535-4d3e-a61f-51a075ed2192" title="Permalink to this equation">#</a></span>\[\begin{equation}
 A(t) = \lambda N(t) = \lambda N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p><strong>Derivada de <span class="math notranslate nohighlight">\(A(t)\)</span></strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-58f272ee-68e6-4a39-8bb6-7df140b659bf">
-<span class="eqno">(36)<a class="headerlink" href="#equation-58f272ee-68e6-4a39-8bb6-7df140b659bf" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-01f109aa-1c09-4ea1-82b5-76b1a667a800">
+<span class="eqno">(36)<a class="headerlink" href="#equation-01f109aa-1c09-4ea1-82b5-76b1a667a800" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dA}{dt} = \frac{d}{dt} \left[ \lambda N_0 e^{-\lambda t} \right] = -\lambda^2 N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-3b663847-9f98-4bb1-b09c-04ad13067ed1">
-<span class="eqno">(37)<a class="headerlink" href="#equation-3b663847-9f98-4bb1-b09c-04ad13067ed1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-33296f87-8076-476a-b921-54408945998c">
+<span class="eqno">(37)<a class="headerlink" href="#equation-33296f87-8076-476a-b921-54408945998c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{A(t) = \lambda N_0 e^{-\lambda t}}
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-ef64b32b-e2e9-47e5-a62e-9efa953a1e1f">
-<span class="eqno">(38)<a class="headerlink" href="#equation-ef64b32b-e2e9-47e5-a62e-9efa953a1e1f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-435a72ea-5b7b-483d-aa5c-41d42896d340">
+<span class="eqno">(38)<a class="headerlink" href="#equation-435a72ea-5b7b-483d-aa5c-41d42896d340" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{\frac{dA}{dt} = -\lambda^2 N_0 e^{-\lambda t}}
 \end{equation}\]</div>
 <p><strong>Interpretación:</strong></p>
@@ -815,7 +803,6 @@ plt.show()</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Decaimiento Radiactivo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#contexto-teorico">📚 Contexto Teórico</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
