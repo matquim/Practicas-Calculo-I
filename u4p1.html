@@ -448,6 +448,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-derivada">Definición de derivada</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-entre-derivada-analitica-y-numerica-para-varias-funciones">Comparación entre derivada analítica y numérica para varias funciones</a></li>
 </ul>
             </nav>
@@ -462,19 +463,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="aproximacion-numerica-de-la-derivada">
 <h1>Aproximación numérica de la derivada<a class="headerlink" href="#aproximacion-numerica-de-la-derivada" title="Link to this heading">#</a></h1>
+<section id="definicion-de-derivada">
+<h2>Definición de derivada<a class="headerlink" href="#definicion-de-derivada" title="Link to this heading">#</a></h2>
 <p><strong>Objetivo</strong></p>
 <p>Aproximar la derivada de una función mediante el cociente incremental.</p>
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>La derivada de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un punto <span class="math notranslate nohighlight">\(x\)</span> se define como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c836ddbc-e532-44ba-99af-80a1fd6ed76c">
-<span class="eqno">(7)<a class="headerlink" href="#equation-c836ddbc-e532-44ba-99af-80a1fd6ed76c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-864caf00-973d-4590-b9f1-2e7a4c25202e">
+<span class="eqno">(7)<a class="headerlink" href="#equation-864caf00-973d-4590-b9f1-2e7a4c25202e" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 \end{equation}\]</div>
 </div>
 <p>El siguiente código aproxima numéricamente el valor de la derivada de</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1cf426e0-d1db-4001-94c6-e75b8eb4686b">
-<span class="eqno">(8)<a class="headerlink" href="#equation-1cf426e0-d1db-4001-94c6-e75b8eb4686b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-84ff50ca-48b5-45bc-b497-760969703acb">
+<span class="eqno">(8)<a class="headerlink" href="#equation-84ff50ca-48b5-45bc-b497-760969703acb" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f(x) = x^2
 \end{equation}\]</div>
 <p>en <span class="math notranslate nohighlight">\(x=2\)</span>. Note que:</p>
@@ -504,12 +507,15 @@ f(x) = x^2
 </div>
 </div>
 <p>En este caso tan sencillo, sabemos que</p>
-<div class="amsmath math notranslate nohighlight" id="equation-000bd524-876c-48d7-bf12-9fd14262845f">
-<span class="eqno">(9)<a class="headerlink" href="#equation-000bd524-876c-48d7-bf12-9fd14262845f" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-0c81528e-35c5-412b-a709-c67b04d97ef0">
+<span class="eqno">(9)<a class="headerlink" href="#equation-0c81528e-35c5-412b-a709-c67b04d97ef0" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{df(x)}{dx} = 2x
 \end{equation}\]</div>
-<p>por lo que
-\frac{df(2)}{dx} = 2(2) = 4.</p>
+<p>por lo que</p>
+<div class="amsmath math notranslate nohighlight" id="equation-105b261e-1a9a-4586-97b3-59d014c9bc5e">
+<span class="eqno">(10)<a class="headerlink" href="#equation-105b261e-1a9a-4586-97b3-59d014c9bc5e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{df(2)}{dx} = 2(2) = 4.
+\end{equation}\]</div>
 <p>Modifique el código anterior para aproximar la derivada con:
 <span class="math notranslate nohighlight">\(h=0.1\)</span>
 <span class="math notranslate nohighlight">\(h=0.01\)</span>
@@ -524,7 +530,12 @@ f(x) = x^2
 </div>
 </div>
 </div>
-<div class="cell docutils container">
+<div class="cell tag_hide-cell docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell content</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
@@ -562,6 +573,7 @@ La derivada con h=0.00001 es: 4.000010000027032
 </pre></div>
 </div>
 </div>
+</details>
 </div>
 <p><strong>Ejercicios</strong></p>
 <p>a) Aproximar la derivada de <span class="math notranslate nohighlight">\(f(x) = x^2\)</span> en <span class="math notranslate nohighlight">\(x = 2\)</span> con distintos valores de <span class="math notranslate nohighlight">\(h\)</span>.</p>
@@ -580,18 +592,19 @@ La derivada con h=0.00001 es: 4.000010000027032
 </div>
 </div>
 </div>
+</section>
 <section id="comparacion-entre-derivada-analitica-y-numerica-para-varias-funciones">
 <h2>Comparación entre derivada analítica y numérica para varias funciones<a class="headerlink" href="#comparacion-entre-derivada-analitica-y-numerica-para-varias-funciones" title="Link to this heading">#</a></h2>
 <p><strong>Objetivo</strong></p>
 <p>Comparar derivadas analíticas con aproximaciones numéricas.</p>
 <p>Podemos generalizar la idea anterior a otros tipos de funciones. Por ejemplo, el siguiente código usa la librería <code class="docutils literal notranslate"><span class="pre">math</span></code> para definir</p>
-<div class="amsmath math notranslate nohighlight" id="equation-22fe6971-82ec-4ad7-8e2f-ee437906df9a">
-<span class="eqno">(10)<a class="headerlink" href="#equation-22fe6971-82ec-4ad7-8e2f-ee437906df9a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cae6e409-5e4e-4799-b1c3-35c6b88e8097">
+<span class="eqno">(11)<a class="headerlink" href="#equation-cae6e409-5e4e-4799-b1c3-35c6b88e8097" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f(x) = \sin(x)
 \end{equation}\]</div>
-<p>así como a la derivada analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fdd05805-7bff-439a-a4cd-d5e482c72f0a">
-<span class="eqno">(11)<a class="headerlink" href="#equation-fdd05805-7bff-439a-a4cd-d5e482c72f0a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p>así como su derivada analítica:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-1eedebdf-8bd5-4903-b107-65986c627d94">
+<span class="eqno">(12)<a class="headerlink" href="#equation-1eedebdf-8bd5-4903-b107-65986c627d94" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{df(x)}{dx} = \cos(x)
 \end{equation}\]</div>
 <p>luego evalúa la derivada numérica:</p>
@@ -738,6 +751,7 @@ Exacta: 0.7071067811865476
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-de-derivada">Definición de derivada</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-entre-derivada-analitica-y-numerica-para-varias-funciones">Comparación entre derivada analítica y numérica para varias funciones</a></li>
 </ul>
   </nav></div>
