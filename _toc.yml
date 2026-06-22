@@ -26,6 +26,7 @@ parts:
       - file: u5p2     
       - file: u5p3     
       - file: u5p4     
+      - file: u5p5
   - caption: La Integral
     chapters:
       - file: u6p1     
