@@ -206,7 +206,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="u4p1.html">Aproximación numérica de la derivada</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u4p2.html">Interpretación geométrica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u4p3.html">Aplicaciones</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Derivada</span></p>
 <ul class="current nav bd-sidenav">
@@ -281,6 +280,7 @@
 
 
 
+<li class="toctree-l1"><a class="reference internal" href="u8p3.html">Aplicaciones</a></li>
 </ul>
 
     </div>
@@ -529,8 +529,8 @@ document.write(`
                 <article class="bd-article">
                   
   <p>La <strong>Ley de Enfriamiento de Newton</strong> describe cómo la temperatura <span class="math notranslate nohighlight">\(T(t)\)</span> de un objeto cambia con el tiempo cuando está en contacto con un medio ambiente a temperatura constante <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>. La ecuación diferencial que modela este fenómeno es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6c8cac0c-b3e6-4874-8c2f-24b6b5cbfe65">
-<span class="eqno">(27)<a class="headerlink" href="#equation-6c8cac0c-b3e6-4874-8c2f-24b6b5cbfe65" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a8e90993-f84b-471c-94fe-00702f5f6d27">
+<span class="eqno">(27)<a class="headerlink" href="#equation-a8e90993-f84b-471c-94fe-00702f5f6d27" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dT}{dt} = -k (T - T_{\text{amb}})
 \end{equation}\]</div>
 <p>Donde:</p>
@@ -540,8 +540,8 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(k\)</span>: Constante de enfriamiento (depende del material y condiciones del medio).</p></li>
 </ul>
 <p><strong>Solución analítica:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-630280e0-e9b7-44a9-9115-445b8eef251e">
-<span class="eqno">(28)<a class="headerlink" href="#equation-630280e0-e9b7-44a9-9115-445b8eef251e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9e19e14c-9d8a-4c96-bf8b-50a1dd109ad9">
+<span class="eqno">(28)<a class="headerlink" href="#equation-9e19e14c-9d8a-4c96-bf8b-50a1dd109ad9" title="Permalink to this equation">#</a></span>\[\begin{equation}
 T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}
 \end{equation}\]</div>
 <p>Donde <span class="math notranslate nohighlight">\( T_0 \)</span> es la temperatura inicial del objeto en <span class="math notranslate nohighlight">\(t = 0\)</span>.</p>
@@ -562,8 +562,8 @@ T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}
 <p><strong>Solución</strong></p>
 <p><strong>Derivación de la Solución Analítica</strong>
 La ecuación diferencial de la Ley de Enfriamiento de Newton es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c342c5d9-ec2e-49df-ad3c-8be99a95e8fc">
-<span class="eqno">(29)<a class="headerlink" href="#equation-c342c5d9-ec2e-49df-ad3c-8be99a95e8fc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-33e5acec-16d8-4c36-bfef-73c993b1f3ab">
+<span class="eqno">(29)<a class="headerlink" href="#equation-33e5acec-16d8-4c36-bfef-73c993b1f3ab" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dT}{dt} = -k (T - T_{\text{amb}})
 \end{equation}\]</div>
 <ol class="arabic simple">
@@ -588,19 +588,19 @@ T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}
 \end{equation}</p></li>
 </ol>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b286c78d-9e02-47c1-af01-86d5bae46b4b">
-<span class="eqno">(30)<a class="headerlink" href="#equation-b286c78d-9e02-47c1-af01-86d5bae46b4b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1dab510c-9e23-4ad9-8870-059be2c3cb13">
+<span class="eqno">(30)<a class="headerlink" href="#equation-1dab510c-9e23-4ad9-8870-059be2c3cb13" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}}
 \end{equation}\]</div>
 <p><strong>Derivada de <span class="math notranslate nohighlight">\(T(t)\)</span> con Respecto al Tiempo</strong>
 Derivamos la solución analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f545cbab-0e52-44c9-8f2b-d1d957b159f4">
-<span class="eqno">(31)<a class="headerlink" href="#equation-f545cbab-0e52-44c9-8f2b-d1d957b159f4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ae83e0ae-fd6e-42d5-95c8-3df63d4123d2">
+<span class="eqno">(31)<a class="headerlink" href="#equation-ae83e0ae-fd6e-42d5-95c8-3df63d4123d2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dT}{dt} = \frac{d}{dt} \left[ T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt} \right] = -k (T_0 - T_{\text{amb}}) e^{-kt}
 \end{equation}\]</div>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-983267fe-afb5-4a8f-8c16-ffdc8965295d">
-<span class="eqno">(32)<a class="headerlink" href="#equation-983267fe-afb5-4a8f-8c16-ffdc8965295d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d6f0a81e-f3a6-4e3f-b53c-95b52bfb3bbd">
+<span class="eqno">(32)<a class="headerlink" href="#equation-d6f0a81e-f3a6-4e3f-b53c-95b52bfb3bbd" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{\frac{dT}{dt} = -k (T_0 - T_{\text{amb}}) e^{-kt}}
 \end{equation}\]</div>
 <p><strong>Interpretación:</strong></p>
@@ -610,13 +610,13 @@ Derivamos la solución analítica:</p>
 </ul>
 <p><strong>Tiempo en el que <span class="math notranslate nohighlight">\(T(t)\)</span> es Igual a la Temperatura Promedio</strong></p>
 <p>La temperatura promedio entre <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-08f211da-5aec-4b27-b511-8367b495a6b8">
-<span class="eqno">(33)<a class="headerlink" href="#equation-08f211da-5aec-4b27-b511-8367b495a6b8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-37a0dadf-76c8-43a7-8165-8c6fff2a1b45">
+<span class="eqno">(33)<a class="headerlink" href="#equation-37a0dadf-76c8-43a7-8165-8c6fff2a1b45" title="Permalink to this equation">#</a></span>\[\begin{equation}
 T_{\text{prom}} = \frac{T_0 + T_{\text{amb}}}{2}
 \end{equation}\]</div>
 <p>Igualamos <span class="math notranslate nohighlight">\(T(t) = T_{\text{prom}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d7ea2879-f546-4d78-a8ff-26807ead99bc">
-<span class="eqno">(34)<a class="headerlink" href="#equation-d7ea2879-f546-4d78-a8ff-26807ead99bc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2c24a960-4c8d-420f-ba85-e7c74c1eceaf">
+<span class="eqno">(34)<a class="headerlink" href="#equation-2c24a960-4c8d-420f-ba85-e7c74c1eceaf" title="Permalink to this equation">#</a></span>\[\begin{equation}
 T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt} = \frac{T_0 + T_{\text{amb}}}{2}
 \end{equation}\]</div>
 <p><strong>Solución:</strong></p>
@@ -635,8 +635,8 @@ e^{-kt} = \frac{1}{2}
 \end{equation}</p></li>
 </ol>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-794e3076-bd16-492e-99a0-50fef8663e8d">
-<span class="eqno">(35)<a class="headerlink" href="#equation-794e3076-bd16-492e-99a0-50fef8663e8d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-570e6708-7b80-4cfe-aaca-2abfb489af6c">
+<span class="eqno">(35)<a class="headerlink" href="#equation-570e6708-7b80-4cfe-aaca-2abfb489af6c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{t = \frac{\ln 2}{k}}
 \end{equation}\]</div>
 <p><strong>Interpretación:</strong></p>
@@ -709,8 +709,8 @@ e^{-kt} = \frac{1}{2}
 <section id="contexto-teorico">
 <h1>📚 Contexto Teórico<a class="headerlink" href="#contexto-teorico" title="Link to this heading">#</a></h1>
 <p>El <strong>decaimiento radiactivo</strong> describe cómo la cantidad de un <strong>isótopo radiactivo</strong> disminuye con el tiempo debido a la emisión de partículas o radiación. La ecuación diferencial que modela este fenómeno es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-85a5df72-e59b-4033-981e-397139bc7868">
-<span class="eqno">(36)<a class="headerlink" href="#equation-85a5df72-e59b-4033-981e-397139bc7868" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-3ed18efa-ada8-40d7-a46e-de67fb2a1533">
+<span class="eqno">(36)<a class="headerlink" href="#equation-3ed18efa-ada8-40d7-a46e-de67fb2a1533" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
 <p>Donde:</p>
@@ -719,14 +719,14 @@ e^{-kt} = \frac{1}{2}
 <li><p><span class="math notranslate nohighlight">\(\lambda\)</span>: Constante de decaimiento (probabilidad de decaimiento por unidad de tiempo).</p></li>
 </ul>
 <p><strong>Solución analítica:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-757bed38-ae32-45e7-8ef9-82cb3fae1826">
-<span class="eqno">(37)<a class="headerlink" href="#equation-757bed38-ae32-45e7-8ef9-82cb3fae1826" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-70a6a240-915d-4c3d-9ec1-98dcda434212">
+<span class="eqno">(37)<a class="headerlink" href="#equation-70a6a240-915d-4c3d-9ec1-98dcda434212" title="Permalink to this equation">#</a></span>\[\begin{equation}
 N(t) = N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p>Donde <span class="math notranslate nohighlight">\(N_0\)</span> es el número inicial de núcleos radiactivos en <span class="math notranslate nohighlight">\(t = 0\)</span>.</p>
 <p><strong>Tiempo de vida media (<span class="math notranslate nohighlight">\(t_{1/2}\)</span>):</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-77e556ff-272d-4f05-81ee-c5935a3d4741">
-<span class="eqno">(38)<a class="headerlink" href="#equation-77e556ff-272d-4f05-81ee-c5935a3d4741" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a74e03cc-203e-46e2-8645-6a7dcce47fef">
+<span class="eqno">(38)<a class="headerlink" href="#equation-a74e03cc-203e-46e2-8645-6a7dcce47fef" title="Permalink to this equation">#</a></span>\[\begin{equation}
 t_{1/2} = \frac{\ln 2}{\lambda}
 \end{equation}\]</div>
 <hr class="docutils" />
@@ -757,8 +757,8 @@ t_{1/2} = \frac{\ln 2}{\lambda}
 <section id="derivacion-de-la-solucion-analitica">
 <h2>1. Derivación de la Solución Analítica<a class="headerlink" href="#derivacion-de-la-solucion-analitica" title="Link to this heading">#</a></h2>
 <p>La ecuación diferencial del decaimiento radiactivo es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ba25f7a8-f580-4992-962b-bf8f585eb891">
-<span class="eqno">(39)<a class="headerlink" href="#equation-ba25f7a8-f580-4992-962b-bf8f585eb891" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1f179e16-763d-4f70-a08f-2488d31d4265">
+<span class="eqno">(39)<a class="headerlink" href="#equation-1f179e16-763d-4f70-a08f-2488d31d4265" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
 <p><strong>Solución:</strong></p>
@@ -784,8 +784,8 @@ N(t) = N_0 e^{-\lambda t}
 \end{equation}</p></li>
 </ol>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-754fa760-a465-4969-9003-98a7c370e5a7">
-<span class="eqno">(40)<a class="headerlink" href="#equation-754fa760-a465-4969-9003-98a7c370e5a7" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-787f3782-21ec-4f2f-9105-0397a710229c">
+<span class="eqno">(40)<a class="headerlink" href="#equation-787f3782-21ec-4f2f-9105-0397a710229c" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{N(t) = N_0 e^{-\lambda t}}
 \end{equation}\]</div>
 </section>
@@ -793,13 +793,13 @@ N(t) = N_0 e^{-\lambda t}
 <section id="derivada-de-n-t-con-respecto-al-tiempo">
 <h2>2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo<a class="headerlink" href="#derivada-de-n-t-con-respecto-al-tiempo" title="Link to this heading">#</a></h2>
 <p>Derivamos la solución analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8d26dcab-cec4-444a-ac9a-2a72b6735ca4">
-<span class="eqno">(41)<a class="headerlink" href="#equation-8d26dcab-cec4-444a-ac9a-2a72b6735ca4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-8acddb0e-8142-4605-a620-742f224381f3">
+<span class="eqno">(41)<a class="headerlink" href="#equation-8acddb0e-8142-4605-a620-742f224381f3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = \frac{d}{dt} \left[ N_0 e^{-\lambda t} \right] = -\lambda N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-ddbaa10d-eb61-4671-b41f-a1fb4e0bc67c">
-<span class="eqno">(42)<a class="headerlink" href="#equation-ddbaa10d-eb61-4671-b41f-a1fb4e0bc67c" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-ea37ec84-36eb-4052-bc0b-02dfe17e5841">
+<span class="eqno">(42)<a class="headerlink" href="#equation-ea37ec84-36eb-4052-bc0b-02dfe17e5841" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{\frac{dN}{dt} = -\lambda N_0 e^{-\lambda t}}
 \end{equation}\]</div>
 <p><strong>Interpretación:</strong></p>
@@ -831,22 +831,22 @@ N(t) = N_0 e^{-\lambda t}
 <section id="actividad-radiactiva-y-su-derivada">
 <h2>4. Actividad Radiactiva y su Derivada<a class="headerlink" href="#actividad-radiactiva-y-su-derivada" title="Link to this heading">#</a></h2>
 <p>La <strong>actividad radiactiva</strong> <span class="math notranslate nohighlight">\(A(t)\)</span> se define como el número de decaimientos por unidad de tiempo:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6fd6cdd2-51b6-4c30-8fc3-ad686135316d">
-<span class="eqno">(43)<a class="headerlink" href="#equation-6fd6cdd2-51b6-4c30-8fc3-ad686135316d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-53b47c77-5292-485b-b231-614eca822014">
+<span class="eqno">(43)<a class="headerlink" href="#equation-53b47c77-5292-485b-b231-614eca822014" title="Permalink to this equation">#</a></span>\[\begin{equation}
 A(t) = \lambda N(t) = \lambda N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p><strong>Derivada de <span class="math notranslate nohighlight">\(A(t)\)</span></strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-aa4f509a-b274-4686-a791-21e46d7076cb">
-<span class="eqno">(44)<a class="headerlink" href="#equation-aa4f509a-b274-4686-a791-21e46d7076cb" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-4900b60b-21ae-459e-afbe-05cbdc0d392b">
+<span class="eqno">(44)<a class="headerlink" href="#equation-4900b60b-21ae-459e-afbe-05cbdc0d392b" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dA}{dt} = \frac{d}{dt} \left[ \lambda N_0 e^{-\lambda t} \right] = -\lambda^2 N_0 e^{-\lambda t}
 \end{equation}\]</div>
 <p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-1ad9c4bc-a051-4a9d-8b25-d455eb1cff15">
-<span class="eqno">(45)<a class="headerlink" href="#equation-1ad9c4bc-a051-4a9d-8b25-d455eb1cff15" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-be333d2f-0aa0-48f0-a313-7478088a1fe2">
+<span class="eqno">(45)<a class="headerlink" href="#equation-be333d2f-0aa0-48f0-a313-7478088a1fe2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{A(t) = \lambda N_0 e^{-\lambda t}}
 \end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-967f2e88-8e11-42a3-b9a8-4f6899c25d3a">
-<span class="eqno">(46)<a class="headerlink" href="#equation-967f2e88-8e11-42a3-b9a8-4f6899c25d3a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-cc7d6eae-4d9d-4a39-a775-3cca135613f5">
+<span class="eqno">(46)<a class="headerlink" href="#equation-cc7d6eae-4d9d-4a39-a775-3cca135613f5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \boxed{\frac{dA}{dt} = -\lambda^2 N_0 e^{-\lambda t}}
 \end{equation}\]</div>
 <p><strong>Interpretación:</strong></p>
