@@ -503,9 +503,60 @@ document.write(`
 <h1>Ley de Enfriamiento de Newton<a class="headerlink" href="#ley-de-enfriamiento-de-newton" title="Link to this heading">#</a></h1>
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
-<p>Cuando un objeto se calienta y se deja enfrir a temperatura ambiente <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>, su temperatura desciende gradualmente hasta alcanzar el equilibrio térmico con su entorno. Este fenómeno se modela mediante la Ley de enfriamento de Newton:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d8ab011d-58e5-43b5-84b4-d8833d93802d">
-<span class="eqno">(27)<a class="headerlink" href="#equation-d8ab011d-58e5-43b5-84b4-d8833d93802d" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p>Cuando un objeto se calienta y se deja enfrir a temperatura ambiente <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>, su temperatura desciende gradualmente hasta alcanzar el equilibrio térmico con su entorno. Este fenómeno se modela mediante la Ley de enfriamento de Newton.</p>
+</div>
+<p>Los colegas del laboratorio de física prepararon su taza de café, llevando el agua hasta <span class="math notranslate nohighlight">\(85 ^\circ C\)</span>. Luego introdujeron un termómetro y anotaron en su bitácora la temperatura en función del tiempo (en minutos), obteniendo los siguientes datos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">21.0</span><span class="p">,</span> <span class="mf">24.0</span><span class="p">,</span> <span class="mf">27.0</span><span class="p">,</span> <span class="mf">30.0</span><span class="p">]</span>
+<span class="n">T</span> <span class="o">=</span> <span class="p">[</span><span class="mf">85.0</span><span class="p">,</span> <span class="mf">79.2</span><span class="p">,</span> <span class="mf">73.9</span><span class="p">,</span> <span class="mf">69.1</span><span class="p">,</span> <span class="mf">64.7</span><span class="p">,</span> <span class="mf">60.8</span><span class="p">,</span> <span class="mf">54.1</span><span class="p">,</span> <span class="mf">48.7</span><span class="p">,</span> <span class="mf">44.3</span><span class="p">,</span> <span class="mf">40.7</span><span class="p">,</span> <span class="mf">37.7</span><span class="p">,</span> <span class="mf">34.1</span><span class="p">,</span> <span class="mf">31.4</span><span class="p">,</span> <span class="mf">29.3</span><span class="p">,</span> <span class="mf">27.7</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>En la siguiente celda, describa gráficamente la temperatura en función del tiempo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">,</span> <span class="mf">13.0</span><span class="p">,</span> <span class="mf">15.0</span><span class="p">,</span> <span class="mf">18.0</span><span class="p">,</span> <span class="mf">21.0</span><span class="p">,</span> <span class="mf">24.0</span><span class="p">,</span> <span class="mf">27.0</span><span class="p">,</span> <span class="mf">30.0</span><span class="p">])</span>
+<span class="n">T</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">85.0</span><span class="p">,</span> <span class="mf">79.2</span><span class="p">,</span> <span class="mf">73.9</span><span class="p">,</span> <span class="mf">69.1</span><span class="p">,</span> <span class="mf">64.7</span><span class="p">,</span> <span class="mf">60.8</span><span class="p">,</span> <span class="mf">54.1</span><span class="p">,</span> <span class="mf">48.7</span><span class="p">,</span> <span class="mf">44.3</span><span class="p">,</span> <span class="mf">40.7</span><span class="p">,</span> <span class="mf">37.7</span><span class="p">,</span> <span class="mf">34.1</span><span class="p">,</span> <span class="mf">31.4</span><span class="p">,</span> <span class="mf">29.3</span><span class="p">,</span> <span class="mf">27.7</span><span class="p">,</span> <span class="mf">26.5</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="s2">&quot;o-&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x799b703fdd30&gt;]
+</pre></div>
+</div>
+<img alt="_images/5d9da84aac2aae9a5f7c38e9c5e2fe10cf8a7ce0d2b91e612b53d43e5864627e.png" src="_images/5d9da84aac2aae9a5f7c38e9c5e2fe10cf8a7ce0d2b91e612b53d43e5864627e.png" />
+</div>
+</div>
+<p>Grafique numéricamente la primera derivada, ¿qué forma tiene?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dT_dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tm</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span> <span class="n">dT_dt</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;teal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Primera derivada&#39;</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tiempo (min)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dT/dt (C)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/8208651e2fb56c336d8b4ea8fd41e4a68f2e7568887bebaa5bd158246ae18607.png" src="_images/8208651e2fb56c336d8b4ea8fd41e4a68f2e7568887bebaa5bd158246ae18607.png" />
+</div>
+</div>
+<p>La ley de enfriamiento de Newton sigue el siguiente modelo.</p>
+<div class="amsmath math notranslate nohighlight" id="equation-8677319a-2944-4faa-87f6-a30de69824f3">
+<span class="eqno">(27)<a class="headerlink" href="#equation-8677319a-2944-4faa-87f6-a30de69824f3" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dT}{dt} = -k (T - T_{\text{amb}})
 \end{equation}\]</div>
 <p>Donde:</p>
@@ -514,169 +565,46 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>: Temperatura ambiente (constante).</p></li>
 <li><p><span class="math notranslate nohighlight">\(k\)</span>: Constante de enfriamiento (depende del material y condiciones del medio).</p></li>
 </ul>
-</div>
-<p><strong>Solución analítica:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-77b964a3-374c-4eea-8600-cf919b4a3fba">
-<span class="eqno">(28)<a class="headerlink" href="#equation-77b964a3-374c-4eea-8600-cf919b4a3fba" title="Permalink to this equation">#</a></span>\[\begin{equation}
-T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}
-\end{equation}\]</div>
-<p>Donde <span class="math notranslate nohighlight">\( T_0 \)</span> es la temperatura inicial del objeto en <span class="math notranslate nohighlight">\(t = 0\)</span>.</p>
-<p>Instrucciones</p>
-<ol class="arabic simple">
-<li><p>Derivar la solución analítica de la Ley de Enfriamiento de Newton a partir de su ecuación diferencial.</p></li>
-<li><p>Calcular la derivada <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> y analizar su comportamiento en función del tiempo.</p></li>
-<li><p>Determinar el tiempo <span class="math notranslate nohighlight">\(t\)</span> en el que la temperatura del objeto es igual a la temperatura promedio entre <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span>.</p></li>
-<li><p>Graficar <span class="math notranslate nohighlight">\(T(t)\)</span> y <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> en función del tiempo.</p></li>
-<li><p>Interpretar físicamente los resultados, incluyendo:</p>
-<ul class="simple">
-<li><p>¿Qué representa la constante <span class="math notranslate nohighlight">\(k\)</span> en términos físicos?</p></li>
-<li><p>¿Cómo afecta el valor de <span class="math notranslate nohighlight">\(k\)</span> a la velocidad de enfriamiento?</p></li>
-<li><p>¿Qué sugiere el signo de <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> sobre la dirección del flujo de calor?</p></li>
-</ul>
-</li>
-</ol>
-<p><strong>Solución</strong></p>
-<p><strong>Derivación de la Solución Analítica</strong>
-La ecuación diferencial de la Ley de Enfriamiento de Newton es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-59b56ced-eeed-487e-bf53-37f5e8c17eb5">
-<span class="eqno">(29)<a class="headerlink" href="#equation-59b56ced-eeed-487e-bf53-37f5e8c17eb5" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{dT}{dt} = -k (T - T_{\text{amb}})
-\end{equation}\]</div>
-<ol class="arabic simple">
-<li><p>Separar variables:
-\begin{equation}
-\frac{dT}{T - T_{\text{amb}}} = -k , dt
-\end{equation}</p></li>
-<li><p>Integrar ambos lados:
-\begin{equation}
-\int \frac{1}{T - T_{\text{amb}}} , dT = -k \int dt
-\end{equation}
-\begin{equation}
-\ln T - T_{\text{amb}}| = -kt + C
-\end{equation}</p></li>
-<li><p>Exponenciar ambos lados:
-\begin{equation}
-T - T_{\text{amb}} = e^{-kt + C} = e^C e^{-kt}
-\end{equation}
-Usando la condición inicial <span class="math notranslate nohighlight">\(T(0) = T_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(e^C = T_0 - T_{\text{amb}}\)</span>:
-\begin{equation}
-T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}
-\end{equation}</p></li>
-</ol>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-5fdddfc2-1e56-4488-82f9-03c390f08697">
-<span class="eqno">(30)<a class="headerlink" href="#equation-5fdddfc2-1e56-4488-82f9-03c390f08697" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{T(t) = T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt}}
-\end{equation}\]</div>
-<p><strong>Derivada de <span class="math notranslate nohighlight">\(T(t)\)</span> con Respecto al Tiempo</strong>
-Derivamos la solución analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-dd084d30-f7ae-4e50-adf3-6c46e1700a90">
-<span class="eqno">(31)<a class="headerlink" href="#equation-dd084d30-f7ae-4e50-adf3-6c46e1700a90" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{dT}{dt} = \frac{d}{dt} \left[ T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt} \right] = -k (T_0 - T_{\text{amb}}) e^{-kt}
-\end{equation}\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-ee76e9df-ac62-4e44-9c8d-3b5f32529452">
-<span class="eqno">(32)<a class="headerlink" href="#equation-ee76e9df-ac62-4e44-9c8d-3b5f32529452" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{\frac{dT}{dt} = -k (T_0 - T_{\text{amb}}) e^{-kt}}
-\end{equation}\]</div>
-<p><strong>Interpretación:</strong></p>
-<ul class="simple">
-<li><p>La derivada <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> es <strong>negativa</strong> si <span class="math notranslate nohighlight">\(T_0 &gt; T_{\text{amb}}\)</span> (el objeto se enfría).</p></li>
-<li><p>La magnitud de <span class="math notranslate nohighlight">\(\frac{dT}{dt}\)</span> <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
-</ul>
-<p><strong>Tiempo en el que <span class="math notranslate nohighlight">\(T(t)\)</span> es Igual a la Temperatura Promedio</strong></p>
-<p>La temperatura promedio entre <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span> es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f55a3559-7ed0-4d01-b293-d878f4958367">
-<span class="eqno">(33)<a class="headerlink" href="#equation-f55a3559-7ed0-4d01-b293-d878f4958367" title="Permalink to this equation">#</a></span>\[\begin{equation}
-T_{\text{prom}} = \frac{T_0 + T_{\text{amb}}}{2}
-\end{equation}\]</div>
-<p>Igualamos <span class="math notranslate nohighlight">\(T(t) = T_{\text{prom}}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a35212ae-964c-45ca-82c3-ab8d2eaa5bc2">
-<span class="eqno">(34)<a class="headerlink" href="#equation-a35212ae-964c-45ca-82c3-ab8d2eaa5bc2" title="Permalink to this equation">#</a></span>\[\begin{equation}
-T_{\text{amb}} + (T_0 - T_{\text{amb}}) e^{-kt} = \frac{T_0 + T_{\text{amb}}}{2}
-\end{equation}\]</div>
-<p><strong>Solución:</strong></p>
-<ol class="arabic simple">
-<li><p>Restar <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span> a ambos lados:
-\begin{equation}
-(T_0 - T_{\text{amb}}) e^{-kt} = \frac{T_0 - T_{\text{amb}}}{2}
-\end{equation}</p></li>
-<li><p>Dividir entre <span class="math notranslate nohighlight">\(T_0 - T_{\text{amb}}\)</span>:
-\begin{equation}
-e^{-kt} = \frac{1}{2}
-\end{equation}</p></li>
-<li><p>Aplicar logaritmo natural:
-\begin{equation}
--kt = \ln \left( \frac{1}{2} \right) = -\ln 2 \implies t = \frac{\ln 2}{k}
-\end{equation}</p></li>
-</ol>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-847f57d3-3c41-4f74-9094-f08b4f888a4e">
-<span class="eqno">(35)<a class="headerlink" href="#equation-847f57d3-3c41-4f74-9094-f08b4f888a4e" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{t = \frac{\ln 2}{k}}
-\end{equation}\]</div>
-<p><strong>Interpretación:</strong></p>
-<ul class="simple">
-<li><p>Este tiempo es <strong>independiente de <span class="math notranslate nohighlight">\(T_0\)</span> y <span class="math notranslate nohighlight">\(T_{\text{amb}}\)</span></strong> y solo depende de <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
-<li><p>Es el tiempo en el que el objeto ha reducido su diferencia de temperatura con el ambiente a la mitad.</p></li>
-</ul>
+<p>Relice la gráfica correspondiente para obtener una línea recta, y determinar la pendiente (<span class="math notranslate nohighlight">\(m\)</span>) y la ordenada al origen <span class="math notranslate nohighlight">\(b\)</span>. ¿cuáles son los valores de <span class="math notranslate nohighlight">\(k\)</span> y de <span class="math notranslate nohighlight">\(T_{amb}\)</span>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tm</span> <span class="o">=</span> <span class="p">(</span><span class="n">T</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">T</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">2</span>
 
-<span class="c1"># Parámetros</span>
-<span class="n">T0</span> <span class="o">=</span> <span class="mf">100.0</span>       <span class="c1"># Temperatura inicial del objeto (°C)</span>
-<span class="n">T_amb</span> <span class="o">=</span> <span class="mf">20.0</span>     <span class="c1"># Temperatura ambiente (°C)</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mf">0.1</span>          <span class="c1"># Constante de enfriamiento (min^-1)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
-<span class="c1"># Tiempo</span>
-<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>  <span class="c1"># Rango de tiempo (min)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Tm</span><span class="p">,</span> <span class="n">dT_dt</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;teal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Primera derivada&#39;</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperatura (C)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dT/dt (C/min)&#39;</span><span class="p">)</span>
 
-<span class="c1"># Temperatura T(t)</span>
-<span class="n">T</span> <span class="o">=</span> <span class="n">T_amb</span> <span class="o">+</span> <span class="p">(</span><span class="n">T0</span> <span class="o">-</span> <span class="n">T_amb</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
-
-<span class="c1"># Derivada dT/dt</span>
-<span class="n">dT_dt</span> <span class="o">=</span> <span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="p">(</span><span class="n">T0</span> <span class="o">-</span> <span class="n">T_amb</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span>
-
-<span class="c1"># Temperatura promedio</span>
-<span class="n">T_prom</span> <span class="o">=</span> <span class="p">(</span><span class="n">T0</span> <span class="o">+</span> <span class="n">T_amb</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-
-<span class="c1"># Tiempo en el que T(t) = T_prom</span>
-<span class="n">t_prom</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="n">k</span>
-
-<span class="c1"># Gráfica</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-
-<span class="c1"># Gráfica de T(t)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">T</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$T(t)$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">T_amb</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$T_{</span><span class="se">\\</span><span class="s2">text</span><span class="si">{amb}</span><span class="s2">}$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">T_prom</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$T_{</span><span class="se">\\</span><span class="s2">text</span><span class="si">{prom}</span><span class="s2">}$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">t_prom</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;purple&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$t = </span><span class="se">\\</span><span class="s2">frac{</span><span class="se">\\</span><span class="s2">ln 2}</span><span class="si">{k}</span><span class="s2">$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tiempo (min)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Temperatura (°C)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ley de Enfriamiento de Newton: $T(t)$&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="c1"># Gráfica de dT/dt</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dT_dt</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">frac</span><span class="si">{dT}{dt}</span><span class="s2">$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;orange&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Tiempo (min)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Velocidad de cambio de temperatura (°C/min)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Derivada de $T(t)$&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/69fe60b2b3d6229ef439019ad70baff29a377d06fb7bd5fcd10e51a37dfa5a8a.png" src="_images/69fe60b2b3d6229ef439019ad70baff29a377d06fb7bd5fcd10e51a37dfa5a8a.png" />
+<img alt="_images/d9efbf9f6aa52f56dc68bddd28e877326d682b3a4c005c4405c1213c0e4540e8.png" src="_images/d9efbf9f6aa52f56dc68bddd28e877326d682b3a4c005c4405c1213c0e4540e8.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">Tm</span><span class="p">,</span> <span class="n">dT_dt</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span>
+<span class="n">T_amb</span> <span class="o">=</span> <span class="n">b</span><span class="o">/</span><span class="n">k</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La constante de enfriamiento aproximada k es: </span><span class="si">{</span><span class="n">k</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> min^-1&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La temperatura ambiente aproximada T_amb es: </span><span class="si">{</span><span class="n">T_amb</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> °C&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La constante de enfriamiento aproximada k es: 0.0998 min^-1
+La temperatura ambiente aproximada T_amb es: 23.73 °C
+</pre></div>
+</div>
 </div>
 </div>
 </section>
