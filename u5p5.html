@@ -494,8 +494,8 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>Los isótopos son átomos de un mismo elemento que sólo difieren en la cantidad de neutrones en el núcleo. Muchos de estos casos son radioactivos, es decir, que con el tiempo emiten partículas del núcleo para convertirse en átomos más estables. Este fenómeno se conoce como decaimiento radioactivo, y se modela mediante la ecuación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a27280ed-5a92-4975-8dc4-766a82619fa6">
-<span class="eqno">(28)<a class="headerlink" href="#equation-a27280ed-5a92-4975-8dc4-766a82619fa6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9603ae92-b3b5-4a1a-9424-205664bb713d">
+<span class="eqno">(28)<a class="headerlink" href="#equation-9603ae92-b3b5-4a1a-9424-205664bb713d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
 <p>Donde:</p>
@@ -504,7 +504,7 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(\lambda\)</span>: Constante de decaimiento (probabilidad de decaimiento por unidad de tiempo).</p></li>
 </ul>
 </div>
-<p>En la práctica, un instrumento mide la masa de los núcleos radioactivos.</p>
+<p>En la práctica, se puede usar un instrumento para medir la masa, la cuál es proporcional al número de partículas radioactivas.</p>
 <p>Los colegas del laboratorio tomaron un contador Geiger y midieron la masa de Iodo-131 radioactivo a varios tiempos, obteniendo los siguientes datos:</p>
 <p>Tiempo (en días)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">14.0</span><span class="p">,</span> <span class="mf">16.0</span><span class="p">,</span> <span class="mf">19.0</span><span class="p">,</span> <span class="mf">22.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">28.0</span><span class="p">,</span> <span class="mf">32.0</span><span class="p">]</span>
@@ -535,8 +535,8 @@ document.write(`
 </div>
 </div>
 <p>Evalúe numéricamente la velocidad de decaimiento:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6028bf16-4a21-4366-8e9e-2db95bf52ddc">
-<span class="eqno">(29)<a class="headerlink" href="#equation-6028bf16-4a21-4366-8e9e-2db95bf52ddc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1da8bdbb-ab2d-4280-8f44-f46dce8667e6">
+<span class="eqno">(29)<a class="headerlink" href="#equation-1da8bdbb-ab2d-4280-8f44-f46dce8667e6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} \approx \frac{N_{i+1} - N_{i}}{t_{i+1} - t_{i}}
 \end{equation}\]</div>
 <p>grafíque la derivada en función del tiempo.</p>
@@ -549,8 +549,8 @@ document.write(`
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span> <span class="n">dN_dt</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;teal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Primera derivada&#39;</span><span class="p">)</span>
     
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tiempo (min)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dN/dt (C/min)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tiempo (dias)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dN/dt (mg/días)&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
@@ -564,8 +564,8 @@ document.write(`
 </div>
 </div>
 <p>Este fenómeno se modela mediante</p>
-<div class="amsmath math notranslate nohighlight" id="equation-812cb6c4-618e-4e81-8318-bad27b3341d8">
-<span class="eqno">(30)<a class="headerlink" href="#equation-812cb6c4-618e-4e81-8318-bad27b3341d8" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-2c8ae162-d10e-43b2-ae99-3ed3449ee2b5">
+<span class="eqno">(30)<a class="headerlink" href="#equation-2c8ae162-d10e-43b2-ae99-3ed3449ee2b5" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
 <p>Realice la gráfica correspondiente y obtenga la constante de decaimiento mediante una regresión lineal.</p>
@@ -577,8 +577,8 @@ document.write(`
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Nm</span><span class="p">,</span> <span class="n">dN_dt</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;teal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Primera derivada&#39;</span><span class="p">)</span>
     
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperatura (C)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dN/dt (C/min)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;N (mg)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dN/dt (mg/días)&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
@@ -588,7 +588,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/1beff9fed024b21140898b71e630216a90b5ae3737019645b5546b1b8ff2df7f.png" src="_images/1beff9fed024b21140898b71e630216a90b5ae3737019645b5546b1b8ff2df7f.png" />
+<img alt="_images/457e48ad7c96a1741160266bb59c12691aa249824a777b6b31fed04ecb6eb40d.png" src="_images/457e48ad7c96a1741160266bb59c12691aa249824a777b6b31fed04ecb6eb40d.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -597,7 +597,7 @@ document.write(`
 
 <span class="n">l</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La constante de enfriamiento aproximada l es: </span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> nucleos/min^-1&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La constante de enfriamiento aproximada l es: </span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> mg/días^-1&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -608,8 +608,8 @@ document.write(`
 </div>
 </div>
 <p>El tiempo de vida media se define como aquel en el que se ha consumido exactamente la mitad de los núcleos, y se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cf34a3c0-c9f8-4553-a0bc-1899d4075685">
-<span class="eqno">(31)<a class="headerlink" href="#equation-cf34a3c0-c9f8-4553-a0bc-1899d4075685" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-6ae1e09f-d042-4faa-9fcd-38366c6822e2">
+<span class="eqno">(31)<a class="headerlink" href="#equation-6ae1e09f-d042-4faa-9fcd-38366c6822e2" title="Permalink to this equation">#</a></span>\[\begin{equation}
 t_{1/2} = \frac{\ln 2}{\lambda}
 \end{equation}\]</div>
 <p>estime el tiempo de vida media para este caso.</p>
