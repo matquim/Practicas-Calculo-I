@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Masa Total a partir de una Distribución de Densidad &#8212; Practicas Cálculo I</title>
+    <title>Primera Ley de Fick &#8212; Practicas Cálculo I</title>
   
   
   
@@ -63,8 +63,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'u7p3';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Primera Ley de Fick" href="u7p4.html" />
-    <link rel="prev" title="Proceso a Volumen Constante" href="u7p2.html" />
+    <link rel="next" title="Centro de Masa de una Molécula" href="u7p4.html" />
+    <link rel="prev" title="Masa Total a partir de una Distribución de Densidad" href="u7p2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
   </head>
@@ -229,13 +229,27 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Integral</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="u7p1.html">Trabajo en una Expansión Isotérmica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p2.html">Proceso a Volumen Constante</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Masa Total a partir de una Distribución de Densidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Primera Ley de Fick</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Centro de Masa de una Molécula</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p2.html">Masa Total a partir de una Distribución de Densidad</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Primera Ley de Fick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Centro de Masa de una Molécula</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Trabajo en una Expansión Adiabática</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Energía Promedio de un Gas Ideal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p7.html">Cálculo de la Constante de Equilibrio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Ecuación de Michaelis-Menten</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reserva</span></p>
 <ul class="nav bd-sidenav">
@@ -244,21 +258,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="u8p2.html">Ecuación de Michaelis-Menten</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="u8p2.html">Proceso a Volumen Constante</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u8p3.html">Aplicaciones</a></li>
 </ul>
 
@@ -463,7 +463,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Masa Total a partir de una Distribución de Densidad</h1>
+    <h1>Primera Ley de Fick</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -477,79 +477,84 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="masa-total-a-partir-de-una-distribucion-de-densidad">
-<h1>Masa Total a partir de una Distribución de Densidad<a class="headerlink" href="#masa-total-a-partir-de-una-distribucion-de-densidad" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="primera-ley-de-fick">
+<h1>Primera Ley de Fick<a class="headerlink" href="#primera-ley-de-fick" title="Link to this heading">#</a></h1>
 <div class="warning admonition">
 <p class="admonition-title">ADVERTENCIA</p>
 <p>Esto es una propuesta y todavía tiene que editarse</p>
 </div>
 <p><strong>Contexto Teórico</strong></p>
-<p>Si la <strong>densidad lineal de masa</strong> <span class="math notranslate nohighlight">\( \lambda(x) \)</span> (masa por unidad de longitud) varía con la posición <span class="math notranslate nohighlight">\( x \)</span>, la <strong>masa total <span class="math notranslate nohighlight">\( M \)</span></strong> en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> se calcula como:</p>
+<p>La <strong>primera ley de Fick</strong> describe el flujo de difusión <span class="math notranslate nohighlight">\( J \)</span> de una sustancia en un medio:</p>
 <div class="math notranslate nohighlight">
 \[
-M = \int_{a}^{b} \lambda(x) \, dx
+J = -D \frac{dc}{dx}
+\]</div>
+<p>En un <strong>proceso de difusión en estado estacionario</strong>, la concentración <span class="math notranslate nohighlight">\( c(x) \)</span> de una sustancia puede modelarse como una <strong>distribución normal</strong> (gaussiana):</p>
+<div class="math notranslate nohighlight">
+\[
+c(x) = \frac{M}{\sigma \sqrt{2 \pi}} e^{-\frac{(x - \mu)^2}{2 \sigma^2}}
+\]</div>
+<p>La <strong>probabilidad <span class="math notranslate nohighlight">\( P \)</span></strong> de encontrar una partícula en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> es proporcional a la integral de <span class="math notranslate nohighlight">\( c(x) \)</span> en ese intervalo:</p>
+<div class="math notranslate nohighlight">
+\[
+P \propto \int_{a}^{b} c(x) \, dx
 \]</div>
 <p><strong>Enunciado</strong></p>
-<ol class="arabic">
-<li><p>La densidad lineal de masa de una barra de material radiactivo varía con la posición <span class="math notranslate nohighlight">\( x \)</span> (en cm) como:</p>
-<div class="math notranslate nohighlight">
-\[
-   \lambda(x) = \lambda_0 e^{-k x}
-   \]</div>
-<p>Donde <span class="math notranslate nohighlight">\( \lambda_0 = 0.5 \, \text{g/cm} \)</span> y <span class="math notranslate nohighlight">\( k = 0.1 \, \text{cm}^{-1} \)</span>. Calcular la <strong>masa total <span class="math notranslate nohighlight">\( M \)</span></strong> de la barra si su longitud es <span class="math notranslate nohighlight">\( L = 20 \, \text{cm} \)</span>.</p>
-</li>
-<li><p><strong>Graficar</strong> <span class="math notranslate nohighlight">\( \lambda(x) \)</span> y el área bajo la curva (que representa la masa total).</p></li>
+<ol class="arabic simple">
+<li><p>La concentración <span class="math notranslate nohighlight">\( c(x) \)</span> de un soluto en una solución sigue una distribución normal con <span class="math notranslate nohighlight">\( \mu = 0 \, \text{cm} \)</span>, <span class="math notranslate nohighlight">\( \sigma = 1 \, \text{cm} \)</span>, y <span class="math notranslate nohighlight">\( M = 1 \, \text{g} \)</span>. Calcular la <strong>probabilidad relativa</strong> de encontrar el soluto en el intervalo <span class="math notranslate nohighlight">\([-1, 1] \, \text{cm}\)</span>.</p></li>
+<li><p><strong>Graficar</strong> <span class="math notranslate nohighlight">\( c(x) \)</span> y el área bajo la curva en el intervalo <span class="math notranslate nohighlight">\([-1, 1]\)</span>.</p></li>
 <li><p><strong>Interpretar físicamente</strong>:</p>
 <ul class="simple">
-<li><p>¿Por qué la masa total es <strong>finita</strong> a pesar de que la barra tiene una longitud infinita teórica?</p></li>
-<li><p>¿Cómo afecta el valor de <span class="math notranslate nohighlight">\( k \)</span> a la distribución de masa a lo largo de la barra?</p></li>
+<li><p>¿Qué representa el área bajo la curva de <span class="math notranslate nohighlight">\( c(x) \)</span>?</p></li>
+<li><p>¿Cómo afecta el valor de <span class="math notranslate nohighlight">\( \sigma \)</span> a la distribución de concentración?</p></li>
 </ul>
 </li>
 </ol>
 <p><strong>Solución</strong></p>
-<p><strong>Cálculo de la Masa Total <span class="math notranslate nohighlight">\( M \)</span></strong></p>
+<p><strong>Cálculo de la Probabilidad Relativa</strong></p>
 <div class="math notranslate nohighlight">
 \[
-M = \int_{0}^{L} \lambda_0 e^{-k x} \, dx = \frac{\lambda_0}{k} \left( 1 - e^{-k L} \right)
+P \propto \int_{-1}^{1} \frac{M}{\sigma \sqrt{2 \pi}} e^{-\frac{x^2}{2 \sigma^2}} \, dx
 \]</div>
-<p>Sustituyendo los valores:</p>
+<p>Sustituyendo los valores (<span class="math notranslate nohighlight">\( M = 1 \)</span>, <span class="math notranslate nohighlight">\( \sigma = 1 \)</span>):</p>
 <div class="math notranslate nohighlight">
 \[
-M = \frac{0.5}{0.1} \left( 1 - e^{-0.1 \times 20} \right) \approx 4.32 \, \text{g}
+P \propto \frac{1}{\sqrt{2 \pi}} \int_{-1}^{1} e^{-\frac{x^2}{2}} \, dx \approx 0.6827
 \]</div>
 <p><strong>Resultado:</strong></p>
 <div class="math notranslate nohighlight">
 \[
-M \approx 4.32 \, \text{g}
+P \approx 0.6827 \text{ (68.27\%)}
 \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
 
 <span class="c1"># Parámetros</span>
-<span class="n">lambda_0</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># g/cm</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mf">0.1</span>         <span class="c1"># cm^-1</span>
-<span class="n">L</span> <span class="o">=</span> <span class="mf">20.0</span>        <span class="c1"># cm</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mf">1.0</span>       <span class="c1"># Masa total (g)</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">1.0</span>   <span class="c1"># Desviación estándar (cm)</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mf">0.0</span>      <span class="c1"># Posición media (cm)</span>
 
-<span class="c1"># Posiciones x</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="c1"># Función de concentración c(x)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">M</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
 
-<span class="c1"># Densidad lineal de masa lambda(x)</span>
-<span class="n">lambda_x</span> <span class="o">=</span> <span class="n">lambda_0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
-
-<span class="c1"># Masa total M (área bajo la curva)</span>
-<span class="n">M</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">lambda_0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Masa total M = </span><span class="si">{</span><span class="n">M</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> g&quot;</span><span class="p">)</span>
+<span class="c1"># Probabilidad relativa en [-1, 1]</span>
+<span class="n">P</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Probabilidad relativa en [-1, 1] cm: </span><span class="si">{</span><span class="n">P</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># Gráfica</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+<span class="n">c_x</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lambda_x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">lambda(x) = </span><span class="se">\\</span><span class="s2">lambda_0 e^{-k x}$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lambda_x</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Área = Masa total $M$&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">c_x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$c(x)$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">c_x</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="p">((</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Área = Probabilidad en $[-1, 1]$&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Posición $x$ (cm)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Densidad lineal de masa $</span><span class="se">\\</span><span class="s2">lambda(x)$ (g/cm)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución de Densidad Lineal de Masa&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Concentración $c(x)$ (g/cm)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución de Concentración (Primera Ley de Fick)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
@@ -557,10 +562,10 @@ M \approx 4.32 \, \text{g}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Masa total M = 4.3233 g
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilidad relativa en [-1, 1] cm: 0.6827
 </pre></div>
 </div>
-<img alt="_images/434c8fd5e0e2e66dd2c27ae9185ef5539138b0020c61bb21d1a0687488591de6.png" src="_images/434c8fd5e0e2e66dd2c27ae9185ef5539138b0020c61bb21d1a0687488591de6.png" />
+<img alt="_images/aaa4a1182b3ed9a35cb7a36765746769bebc114fe124d5224eb693c6d368a630.png" src="_images/aaa4a1182b3ed9a35cb7a36765746769bebc114fe124d5224eb693c6d368a630.png" />
 </div>
 </div>
 </section>
@@ -601,7 +606,7 @@ M \approx 4.32 \, \text{g}
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">anterior</p>
-        <p class="prev-next-title">Proceso a Volumen Constante</p>
+        <p class="prev-next-title">Masa Total a partir de una Distribución de Densidad</p>
       </div>
     </a>
     <a class="right-next"
@@ -609,7 +614,7 @@ M \approx 4.32 \, \text{g}
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Primera Ley de Fick</p>
+        <p class="prev-next-title">Centro de Masa de una Molécula</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

@@ -229,13 +229,27 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Integral</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="u7p1.html">Trabajo en una Expansión Isotérmica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p2.html">Proceso a Volumen Constante</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Primera Ley de Fick</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Centro de Masa de una Molécula</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p2.html">Masa Total a partir de una Distribución de Densidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p3.html">Primera Ley de Fick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Centro de Masa de una Molécula</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Trabajo en una Expansión Adiabática</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Energía Promedio de un Gas Ideal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p7.html">Cálculo de la Constante de Equilibrio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Ecuación de Michaelis-Menten</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reserva</span></p>
 <ul class="nav bd-sidenav">
@@ -244,21 +258,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="u8p2.html">Ecuación de Michaelis-Menten</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="u8p2.html">Proceso a Volumen Constante</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u8p3.html">Aplicaciones</a></li>
 </ul>
 
@@ -497,14 +497,14 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>La derivada de una función <span class="math notranslate nohighlight">\(f(x)\)</span> en un punto <span class="math notranslate nohighlight">\(x\)</span> se define como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0db68f39-def5-4089-9067-9d97e6e16dca">
-<span class="eqno">(7)<a class="headerlink" href="#equation-0db68f39-def5-4089-9067-9d97e6e16dca" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-40644dbd-8162-488b-8545-65c3ff8c470d">
+<span class="eqno">(7)<a class="headerlink" href="#equation-40644dbd-8162-488b-8545-65c3ff8c470d" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 \end{equation}\]</div>
 </div>
 <p>El siguiente código aproxima numéricamente el valor de la derivada de</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f659b4f8-c896-4168-8767-f6c989f84dc1">
-<span class="eqno">(8)<a class="headerlink" href="#equation-f659b4f8-c896-4168-8767-f6c989f84dc1" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-c75e5337-a3cc-49e3-907e-ae35ccc8a513">
+<span class="eqno">(8)<a class="headerlink" href="#equation-c75e5337-a3cc-49e3-907e-ae35ccc8a513" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f(x) = x^2
 \end{equation}\]</div>
 <p>en <span class="math notranslate nohighlight">\(x=2\)</span>. Note que:</p>
@@ -534,13 +534,13 @@ f(x) = x^2
 </div>
 </div>
 <p>En este caso tan sencillo, sabemos que</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1b8a7e9c-9d83-4083-9467-0b4a840e50d3">
-<span class="eqno">(9)<a class="headerlink" href="#equation-1b8a7e9c-9d83-4083-9467-0b4a840e50d3" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-79f4ad4c-5bd2-47d8-8230-495ca4ec08da">
+<span class="eqno">(9)<a class="headerlink" href="#equation-79f4ad4c-5bd2-47d8-8230-495ca4ec08da" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{df(x)}{dx} = 2x
 \end{equation}\]</div>
 <p>por lo que</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d89e71d0-9eb9-4bb6-90ac-4bab4aa99916">
-<span class="eqno">(10)<a class="headerlink" href="#equation-d89e71d0-9eb9-4bb6-90ac-4bab4aa99916" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-05ec0c7b-724b-4752-b0be-7289e98359b7">
+<span class="eqno">(10)<a class="headerlink" href="#equation-05ec0c7b-724b-4752-b0be-7289e98359b7" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{df(2)}{dx} = 2(2) = 4.
 \end{equation}\]</div>
 <p>Modifique el código anterior para aproximar la derivada con:
@@ -625,13 +625,13 @@ La derivada con h=0.00001 es: 4.000010000027032
 <p><strong>Objetivo</strong></p>
 <p>Comparar derivadas analíticas con aproximaciones numéricas.</p>
 <p>Podemos generalizar la idea anterior a otros tipos de funciones. Por ejemplo, el siguiente código usa la librería <code class="docutils literal notranslate"><span class="pre">math</span></code> para definir</p>
-<div class="amsmath math notranslate nohighlight" id="equation-26898554-3d48-475b-8374-86a40e38652b">
-<span class="eqno">(11)<a class="headerlink" href="#equation-26898554-3d48-475b-8374-86a40e38652b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-67629956-82d3-4ee7-a479-1f21a90e0ac7">
+<span class="eqno">(11)<a class="headerlink" href="#equation-67629956-82d3-4ee7-a479-1f21a90e0ac7" title="Permalink to this equation">#</a></span>\[\begin{equation}
 f(x) = \sin(x)
 \end{equation}\]</div>
 <p>así como su derivada analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-94812aab-cf64-42c3-ae45-92116356e23a">
-<span class="eqno">(12)<a class="headerlink" href="#equation-94812aab-cf64-42c3-ae45-92116356e23a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-36d01e27-674b-46e5-8bd1-3aa0b3c2e509">
+<span class="eqno">(12)<a class="headerlink" href="#equation-36d01e27-674b-46e5-8bd1-3aa0b3c2e509" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{df(x)}{dx} = \cos(x)
 \end{equation}\]</div>
 <p>luego evalúa la derivada numérica:</p>

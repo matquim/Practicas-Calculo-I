@@ -63,7 +63,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'u7p1';</script>
     <link rel="index" title="Índice" href="genindex.html" />
     <link rel="search" title="Búsqueda" href="search.html" />
-    <link rel="next" title="Proceso a Volumen Constante" href="u7p2.html" />
+    <link rel="next" title="Masa Total a partir de una Distribución de Densidad" href="u7p2.html" />
     <link rel="prev" title="Integral indefinida" href="u6p2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="es"/>
@@ -229,13 +229,27 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Aplicaciones de la Integral</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Trabajo en una Expansión Isotérmica</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p2.html">Proceso a Volumen Constante</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p3.html">Masa Total a partir de una Distribución de Densidad</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Primera Ley de Fick</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Centro de Masa de una Molécula</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Trabajo en una Expansión Adiabática</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p7.html">Energía Promedio de un Gas Ideal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Cálculo de la Constante de Equilibrio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p2.html">Masa Total a partir de una Distribución de Densidad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p3.html">Primera Ley de Fick</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p4.html">Centro de Masa de una Molécula</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p5.html">Trabajo en una Expansión Adiabática</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p6.html">Energía Promedio de un Gas Ideal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p7.html">Cálculo de la Constante de Equilibrio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Ecuación de Michaelis-Menten</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reserva</span></p>
 <ul class="nav bd-sidenav">
@@ -244,21 +258,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="u8p2.html">Ecuación de Michaelis-Menten</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li class="toctree-l1"><a class="reference internal" href="u8p2.html">Proceso a Volumen Constante</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u8p3.html">Aplicaciones</a></li>
 </ul>
 
@@ -482,8 +482,8 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>En termodinámica, el <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por un gas durante una expansión o compresión se calcula como:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d6671f4c-5f19-4760-bb8c-cf0bc875210b">
-<span class="eqno">(39)<a class="headerlink" href="#equation-d6671f4c-5f19-4760-bb8c-cf0bc875210b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-61f8d51b-9798-4a89-a8e8-b36cc23c381a">
+<span class="eqno">(39)<a class="headerlink" href="#equation-61f8d51b-9798-4a89-a8e8-b36cc23c381a" title="Permalink to this equation">#</a></span>\[\begin{equation}
 W = \int_{V_i}^{V_f} P \, dV
 \end{equation}\]</div>
 <p>si la temperatura se mantiene constante, esto se conoce como el <code class="docutils literal notranslate"><span class="pre">trabajo</span> <span class="pre">en</span> <span class="pre">una</span> <span class="pre">expansión</span> <span class="pre">isotérmica</span></code>.</p>
@@ -551,8 +551,8 @@ P = \frac{n R T}{V}
 </div>
 </div>
 <p>Para el gas ideal, la expresión analítica para el trabajo está dada por:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-094fa62f-401e-4e56-bdc8-c14b7f8165e6">
-<span class="eqno">(40)<a class="headerlink" href="#equation-094fa62f-401e-4e56-bdc8-c14b7f8165e6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-41a5d168-a3ac-426c-9e7d-23bd14addd7f">
+<span class="eqno">(40)<a class="headerlink" href="#equation-41a5d168-a3ac-426c-9e7d-23bd14addd7f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 W = n R T \ln \left( \frac{V_f}{V_i} \right)
 \end{equation}\]</div>
 <p>Calcule el trabajo usando esta expresión, y compárelo con el resultado obtenido mediante integración numérica.</p>
@@ -615,7 +615,7 @@ W = n R T \ln \left( \frac{V_f}{V_i} \right)
        title="siguiente página">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">siguiente</p>
-        <p class="prev-next-title">Proceso a Volumen Constante</p>
+        <p class="prev-next-title">Masa Total a partir de una Distribución de Densidad</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
