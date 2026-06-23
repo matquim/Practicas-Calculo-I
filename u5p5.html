@@ -215,17 +215,6 @@
 <li class="toctree-l1"><a class="reference internal" href="u5p4.html">Ley de Enfriamiento de Newton</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Decaimiento Radiactivo</a></li>
 
-
-
-
-
-
-
-
-
-
-
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">La Integral</span></p>
 <ul class="nav bd-sidenav">
@@ -487,24 +476,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Decaimiento Radiactivo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros">Parámetros</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo">Tiempo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-nucleos-n-t">Número de núcleos N(t)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-dn-dt">Derivada dN/dt</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-a-t">Actividad radiactiva A(t)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-de-vida-media">Tiempo de vida media</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grafica">Gráfica</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grafica-de-n-t">Gráfica de N(t)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grafica-de-dn-dt">Gráfica de dN/dt</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grafica-de-a-t">Gráfica de A(t)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#escriba-codigo-aqui">Escriba código aquí</a></li>
 </ul>
 
             </nav>
@@ -522,8 +494,8 @@ document.write(`
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
 <p>Los isótopos son átomos de un mismo elemento que sólo difieren en la cantidad de neutrones en el núcleo. Muchos de estos casos son radioactivos, es decir, que con el tiempo emiten partículas del núcleo para convertirse en átomos más estables. Este fenómeno se conoce como decaimiento radioactivo, y se modela mediante la ecuación:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-91a00a18-397e-44f1-86d7-3f4400762b1e">
-<span class="eqno">(28)<a class="headerlink" href="#equation-91a00a18-397e-44f1-86d7-3f4400762b1e" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-a27280ed-5a92-4975-8dc4-766a82619fa6">
+<span class="eqno">(28)<a class="headerlink" href="#equation-a27280ed-5a92-4975-8dc4-766a82619fa6" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
 <p>Donde:</p>
@@ -532,210 +504,118 @@ document.write(`
 <li><p><span class="math notranslate nohighlight">\(\lambda\)</span>: Constante de decaimiento (probabilidad de decaimiento por unidad de tiempo).</p></li>
 </ul>
 </div>
-<p><strong>Solución analítica:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-56bfcb08-40b3-4b36-9711-816d5f46be7b">
-<span class="eqno">(29)<a class="headerlink" href="#equation-56bfcb08-40b3-4b36-9711-816d5f46be7b" title="Permalink to this equation">#</a></span>\[\begin{equation}
-N(t) = N_0 e^{-\lambda t}
+<p>En la práctica, un instrumento mide la masa de los núcleos radioactivos.</p>
+<p>Los colegas del laboratorio tomaron un contador Geiger y midieron la masa de Iodo-131 radioactivo a varios tiempos, obteniendo los siguientes datos:</p>
+<p>Tiempo (en días)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">14.0</span><span class="p">,</span> <span class="mf">16.0</span><span class="p">,</span> <span class="mf">19.0</span><span class="p">,</span> <span class="mf">22.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">28.0</span><span class="p">,</span> <span class="mf">32.0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Masa radioactiva (mg)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="p">[</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">91.8</span><span class="p">,</span> <span class="mf">84.2</span><span class="p">,</span> <span class="mf">74.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">,</span> <span class="mf">57.1</span><span class="p">,</span> <span class="mf">50.1</span><span class="p">,</span> <span class="mf">42.1</span><span class="p">,</span> <span class="mf">35.4</span><span class="p">,</span> <span class="mf">29.8</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">19.2</span><span class="p">,</span> <span class="mf">14.8</span><span class="p">,</span> <span class="mf">11.4</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">6.2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Grafique el número de partículas en función del tiempo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.5</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mf">12.0</span><span class="p">,</span> <span class="mf">14.0</span><span class="p">,</span> <span class="mf">16.0</span><span class="p">,</span> <span class="mf">19.0</span><span class="p">,</span> <span class="mf">22.0</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">28.0</span><span class="p">,</span> <span class="mf">32.0</span><span class="p">])</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">91.8</span><span class="p">,</span> <span class="mf">84.2</span><span class="p">,</span> <span class="mf">74.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">,</span> <span class="mf">57.1</span><span class="p">,</span> <span class="mf">50.1</span><span class="p">,</span> <span class="mf">42.1</span><span class="p">,</span> <span class="mf">35.4</span><span class="p">,</span> <span class="mf">29.8</span><span class="p">,</span> <span class="mf">25.0</span><span class="p">,</span> <span class="mf">19.2</span><span class="p">,</span> <span class="mf">14.8</span><span class="p">,</span> <span class="mf">11.4</span><span class="p">,</span> <span class="mf">8.8</span><span class="p">,</span> <span class="mf">6.2</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="s2">&quot;o-&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7e601d50a990&gt;]
+</pre></div>
+</div>
+<img alt="_images/1cb7f75853d6048d612196c661797f4a272b1cb8ee23476d054f0c625ee17104.png" src="_images/1cb7f75853d6048d612196c661797f4a272b1cb8ee23476d054f0c625ee17104.png" />
+</div>
+</div>
+<p>Evalúe numéricamente la velocidad de decaimiento:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6028bf16-4a21-4366-8e9e-2db95bf52ddc">
+<span class="eqno">(29)<a class="headerlink" href="#equation-6028bf16-4a21-4366-8e9e-2db95bf52ddc" title="Permalink to this equation">#</a></span>\[\begin{equation}
+\frac{dN}{dt} \approx \frac{N_{i+1} - N_{i}}{t_{i+1} - t_{i}}
 \end{equation}\]</div>
-<p>Donde <span class="math notranslate nohighlight">\(N_0\)</span> es el número inicial de núcleos radiactivos en <span class="math notranslate nohighlight">\(t = 0\)</span>.</p>
-<p><strong>Tiempo de vida media (<span class="math notranslate nohighlight">\(t_{1/2}\)</span>):</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-57ab0e7c-663d-4a96-af2a-c7ad0ad65daf">
-<span class="eqno">(30)<a class="headerlink" href="#equation-57ab0e7c-663d-4a96-af2a-c7ad0ad65daf" title="Permalink to this equation">#</a></span>\[\begin{equation}
-t_{1/2} = \frac{\ln 2}{\lambda}
-\end{equation}\]</div>
-<hr class="docutils" />
-</section>
-<section id="enunciado">
-<h1>💡 Enunciado<a class="headerlink" href="#enunciado" title="Link to this heading">#</a></h1>
-<p><strong>Título:</strong> <em>Análisis del Decaimiento Radiactivo usando Derivadas</em></p>
-<p><strong>Objetivos:</strong></p>
-<ol class="arabic simple">
-<li><p>Derivar la solución analítica de la ecuación de decaimiento radiactivo a partir de su ecuación diferencial.</p></li>
-<li><p>Calcular la derivada <span class="math notranslate nohighlight">\(\frac{dN}{dt}\)</span> y analizar su comportamiento en función del tiempo.</p></li>
-<li><p>Determinar el tiempo <span class="math notranslate nohighlight">\(t\)</span> en el que la <strong>velocidad de decaimiento</strong> <span class="math notranslate nohighlight">\(\left  \frac{dN}{dt} \right|\)</span> es máxima y mínima.</p></li>
-<li><p>Calcular la actividad radiactiva <span class="math notranslate nohighlight">\(A(t) = \lambda N(t)\)</span> y su derivada <span class="math notranslate nohighlight">\(\frac{dA}{dt}\)</span>.</p></li>
-<li><p>Graficar <span class="math notranslate nohighlight">\(N(t)\)</span>, <span class="math notranslate nohighlight">\(\frac{dN}{dt}\)</span>, y <span class="math notranslate nohighlight">\(A(t)\)</span> en función del tiempo.</p></li>
-<li><p>Interpretar físicamente los resultados, incluyendo:</p>
-<ul class="simple">
-<li><p>¿Qué representa la constante <span class="math notranslate nohighlight">\(\lambda\)</span> en términos físicos?</p></li>
-<li><p>¿Cómo afecta el valor de <span class="math notranslate nohighlight">\(\lambda\)</span> a la velocidad de decaimiento?</p></li>
-<li><p>¿Qué sugiere el signo de <span class="math notranslate nohighlight">\(\frac{dN}{dt}\)</span> sobre el proceso de decaimiento?</p></li>
-</ul>
-</li>
-</ol>
-<hr class="docutils" />
-</section>
-<section id="solucion">
-<h1>📝 Solución<a class="headerlink" href="#solucion" title="Link to this heading">#</a></h1>
-<hr class="docutils" />
-<section id="derivacion-de-la-solucion-analitica">
-<h2>1. Derivación de la Solución Analítica<a class="headerlink" href="#derivacion-de-la-solucion-analitica" title="Link to this heading">#</a></h2>
-<p>La ecuación diferencial del decaimiento radiactivo es:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-57eace94-419b-47e4-9384-b3b1235b0b93">
-<span class="eqno">(31)<a class="headerlink" href="#equation-57eace94-419b-47e4-9384-b3b1235b0b93" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<p>grafíque la derivada en función del tiempo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dN_dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">N</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">tm</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">tm</span><span class="p">,</span> <span class="n">dN_dt</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;teal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Primera derivada&#39;</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tiempo (min)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dN/dt (C/min)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/5ea27377a0e2092ff073bd0b4250656446508eb49d08ef5720693c55eb112a5a.png" src="_images/5ea27377a0e2092ff073bd0b4250656446508eb49d08ef5720693c55eb112a5a.png" />
+</div>
+</div>
+<p>Este fenómeno se modela mediante</p>
+<div class="amsmath math notranslate nohighlight" id="equation-812cb6c4-618e-4e81-8318-bad27b3341d8">
+<span class="eqno">(30)<a class="headerlink" href="#equation-812cb6c4-618e-4e81-8318-bad27b3341d8" title="Permalink to this equation">#</a></span>\[\begin{equation}
 \frac{dN}{dt} = -\lambda N
 \end{equation}\]</div>
-<p><strong>Solución:</strong></p>
-<ol class="arabic simple">
-<li><p>Separar variables:
-\begin{equation}
-\frac{dN}{N} = -\lambda , dt
-\end{equation}</p></li>
-<li><p>Integrar ambos lados:
-\begin{equation}
-\int \frac{1}{N} , dN = -\lambda \int dt
-\end{equation}
-\begin{equation}
-\ln|N| = -\lambda t + C
-\end{equation}</p></li>
-<li><p>Exponenciar ambos lados:
-\begin{equation}
-N = e^{-\lambda t + C} = e^C e^{-\lambda t}
-\end{equation}
-Usando la condición inicial <span class="math notranslate nohighlight">\(N(0) = N_0\)</span>, obtenemos <span class="math notranslate nohighlight">\(e^C = N_0\)</span>:
-\begin{equation}
-N(t) = N_0 e^{-\lambda t}
-\end{equation}</p></li>
-</ol>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b45a38e7-38f3-405f-92b7-20eca4aeafcd">
-<span class="eqno">(32)<a class="headerlink" href="#equation-b45a38e7-38f3-405f-92b7-20eca4aeafcd" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{N(t) = N_0 e^{-\lambda t}}
+<p>Realice la gráfica correspondiente y obtenga la constante de decaimiento mediante una regresión lineal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Nm</span> <span class="o">=</span> <span class="p">(</span><span class="n">N</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">N</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">/</span> <span class="mi">2</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Nm</span><span class="p">,</span> <span class="n">dN_dt</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;teal&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Primera derivada&#39;</span><span class="p">)</span>
+    
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temperatura (C)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;dN/dt (C/min)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/1beff9fed024b21140898b71e630216a90b5ae3737019645b5546b1b8ff2df7f.png" src="_images/1beff9fed024b21140898b71e630216a90b5ae3737019645b5546b1b8ff2df7f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">Nm</span><span class="p">,</span> <span class="n">dN_dt</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">l</span> <span class="o">=</span> <span class="o">-</span><span class="n">m</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;La constante de enfriamiento aproximada l es: </span><span class="si">{</span><span class="n">l</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> nucleos/min^-1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La constante de enfriamiento aproximada l es: 0.0859 nucleos/min^-1
+</pre></div>
+</div>
+</div>
+</div>
+<p>El tiempo de vida media se define como aquel en el que se ha consumido exactamente la mitad de los núcleos, y se calcula como:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-cf34a3c0-c9f8-4553-a0bc-1899d4075685">
+<span class="eqno">(31)<a class="headerlink" href="#equation-cf34a3c0-c9f8-4553-a0bc-1899d4075685" title="Permalink to this equation">#</a></span>\[\begin{equation}
+t_{1/2} = \frac{\ln 2}{\lambda}
 \end{equation}\]</div>
+<p>estime el tiempo de vida media para este caso.</p>
 </section>
-<hr class="docutils" />
-<section id="derivada-de-n-t-con-respecto-al-tiempo">
-<h2>2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo<a class="headerlink" href="#derivada-de-n-t-con-respecto-al-tiempo" title="Link to this heading">#</a></h2>
-<p>Derivamos la solución analítica:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-314ad4b2-fb73-4f34-992b-dc50ffe8b6f6">
-<span class="eqno">(33)<a class="headerlink" href="#equation-314ad4b2-fb73-4f34-992b-dc50ffe8b6f6" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{dN}{dt} = \frac{d}{dt} \left[ N_0 e^{-\lambda t} \right] = -\lambda N_0 e^{-\lambda t}
-\end{equation}\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-093b6474-9ca4-413b-9a85-2934e2aa1d87">
-<span class="eqno">(34)<a class="headerlink" href="#equation-093b6474-9ca4-413b-9a85-2934e2aa1d87" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{\frac{dN}{dt} = -\lambda N_0 e^{-\lambda t}}
-\end{equation}\]</div>
-<p><strong>Interpretación:</strong></p>
-<ul class="simple">
-<li><p>La derivada <span class="math notranslate nohighlight">\(\frac{dN}{dt}\)</span> es <strong>negativa</strong> para todo <span class="math notranslate nohighlight">\(t\)</span>, lo que indica que <span class="math notranslate nohighlight">\(N\)</span> <strong>siempre disminuye</strong> con el tiempo.</p></li>
-<li><p>La <strong>velocidad de decaimiento</strong> <span class="math notranslate nohighlight">\(\left| \frac{dN}{dt} \right| = \lambda N_0 e^{-\lambda t}\)</span> es <strong>máxima en <span class="math notranslate nohighlight">\(t = 0\)</span></strong> y <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">
-<h2>3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima<a class="headerlink" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p><strong>Máxima velocidad de decaimiento</strong>:
-\begin{equation}
-\left| \frac{dN}{dt} \right|_{t=0} = \lambda N_0
-\end{equation}</p></li>
-<li><p><strong>Mínima velocidad de decaimiento</strong>:
-\begin{equation}
-\lim_{t \to \infty} \left| \frac{dN}{dt} \right| = 0
-\end{equation}</p></li>
-</ul>
-<p><strong>Interpretación:</strong></p>
-<ul class="simple">
-<li><p>Al inicio (<span class="math notranslate nohighlight">\(t = 0\)</span>), la velocidad de decaimiento es <strong>máxima</strong> porque hay más núcleos radiactivos disponibles para decaer.</p></li>
-<li><p>Con el tiempo, la velocidad de decaimiento <strong>disminuye</strong> porque hay menos núcleos radiactivos.</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="actividad-radiactiva-y-su-derivada">
-<h2>4. Actividad Radiactiva y su Derivada<a class="headerlink" href="#actividad-radiactiva-y-su-derivada" title="Link to this heading">#</a></h2>
-<p>La <strong>actividad radiactiva</strong> <span class="math notranslate nohighlight">\(A(t)\)</span> se define como el número de decaimientos por unidad de tiempo:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c8a1415e-d535-4d3e-a61f-51a075ed2192">
-<span class="eqno">(35)<a class="headerlink" href="#equation-c8a1415e-d535-4d3e-a61f-51a075ed2192" title="Permalink to this equation">#</a></span>\[\begin{equation}
-A(t) = \lambda N(t) = \lambda N_0 e^{-\lambda t}
-\end{equation}\]</div>
-<p><strong>Derivada de <span class="math notranslate nohighlight">\(A(t)\)</span></strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-01f109aa-1c09-4ea1-82b5-76b1a667a800">
-<span class="eqno">(36)<a class="headerlink" href="#equation-01f109aa-1c09-4ea1-82b5-76b1a667a800" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\frac{dA}{dt} = \frac{d}{dt} \left[ \lambda N_0 e^{-\lambda t} \right] = -\lambda^2 N_0 e^{-\lambda t}
-\end{equation}\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="amsmath math notranslate nohighlight" id="equation-33296f87-8076-476a-b921-54408945998c">
-<span class="eqno">(37)<a class="headerlink" href="#equation-33296f87-8076-476a-b921-54408945998c" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{A(t) = \lambda N_0 e^{-\lambda t}}
-\end{equation}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-435a72ea-5b7b-483d-aa5c-41d42896d340">
-<span class="eqno">(38)<a class="headerlink" href="#equation-435a72ea-5b7b-483d-aa5c-41d42896d340" title="Permalink to this equation">#</a></span>\[\begin{equation}
-\boxed{\frac{dA}{dt} = -\lambda^2 N_0 e^{-\lambda t}}
-\end{equation}\]</div>
-<p><strong>Interpretación:</strong></p>
-<ul class="simple">
-<li><p>La actividad radiactiva <span class="math notranslate nohighlight">\(A(t)\)</span> <strong>disminuye exponencialmente</strong> con el tiempo.</p></li>
-<li><p>La derivada <span class="math notranslate nohighlight">\(\frac{dA}{dt}\)</span> es <strong>negativa</strong>, lo que indica que la actividad <strong>disminuye</strong> con el tiempo.</p></li>
-</ul>
-<p>import numpy as np
-import matplotlib.pyplot as plt</p>
-</section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="parametros">
-<h1>Parámetros<a class="headerlink" href="#parametros" title="Link to this heading">#</a></h1>
-<p>N0 = 1000.0       # Número inicial de núcleos radiactivos
-lambda_decay = 0.1  # Constante de decaimiento (min^-1)</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="tiempo">
-<h1>Tiempo<a class="headerlink" href="#tiempo" title="Link to this heading">#</a></h1>
-<p>t = np.linspace(0, 50, 500)  # Rango de tiempo (min)</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="numero-de-nucleos-n-t">
-<h1>Número de núcleos N(t)<a class="headerlink" href="#numero-de-nucleos-n-t" title="Link to this heading">#</a></h1>
-<p>N = N0 * np.exp(-lambda_decay * t)</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="derivada-dn-dt">
-<h1>Derivada dN/dt<a class="headerlink" href="#derivada-dn-dt" title="Link to this heading">#</a></h1>
-<p>dN_dt = -lambda_decay * N0 * np.exp(-lambda_decay * t)</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="actividad-radiactiva-a-t">
-<h1>Actividad radiactiva A(t)<a class="headerlink" href="#actividad-radiactiva-a-t" title="Link to this heading">#</a></h1>
-<p>A = lambda_decay * N</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="tiempo-de-vida-media">
-<h1>Tiempo de vida media<a class="headerlink" href="#tiempo-de-vida-media" title="Link to this heading">#</a></h1>
-<p>t_half = np.log(2) / lambda_decay</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="grafica">
-<h1>Gráfica<a class="headerlink" href="#grafica" title="Link to this heading">#</a></h1>
-<p>plt.figure(figsize=(15, 5))</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="grafica-de-n-t">
-<h1>Gráfica de N(t)<a class="headerlink" href="#grafica-de-n-t" title="Link to this heading">#</a></h1>
-<p>plt.subplot(1, 3, 1)
-plt.plot(t, N, label=“<span class="math notranslate nohighlight">\(N(t) = N_0 e^{-\\lambda t}\)</span>”, color=“blue”)
-plt.axhline(N0, color=“red”, linestyle=“–”, label=“<span class="math notranslate nohighlight">\(N_0\)</span>”)
-plt.axvline(t_half, color=“green”, linestyle=“–”, label=“<span class="math notranslate nohighlight">\(t_{1/2}\)</span>”)
-plt.xlabel(“Tiempo (min)”)
-plt.ylabel(“Número de núcleos <span class="math notranslate nohighlight">\(N(t)\)</span>”)
-plt.title(“Decaimiento Radiactivo: <span class="math notranslate nohighlight">\(N(t)\)</span>”)
-plt.legend()
-plt.grid(True)</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="grafica-de-dn-dt">
-<h1>Gráfica de dN/dt<a class="headerlink" href="#grafica-de-dn-dt" title="Link to this heading">#</a></h1>
-<p>plt.subplot(1, 3, 2)
-plt.plot(t, dN_dt, label=“<span class="math notranslate nohighlight">\(\\frac{dN}{dt}\)</span>”, color=“orange”)
-plt.axhline(0, color=“black”, linestyle=“–”)
-plt.xlabel(“Tiempo (min)”)
-plt.ylabel(“Velocidad de decaimiento <span class="math notranslate nohighlight">\(dN/dt\)</span>”)
-plt.title(“Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span>”)
-plt.legend()
-plt.grid(True)</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="grafica-de-a-t">
-<h1>Gráfica de A(t)<a class="headerlink" href="#grafica-de-a-t" title="Link to this heading">#</a></h1>
-<p>plt.subplot(1, 3, 3)
-plt.plot(t, A, label=“<span class="math notranslate nohighlight">\(A(t) = \\lambda N(t)\)</span>”, color=“green”)
-plt.axhline(0, color=“black”, linestyle=“–”)
-plt.xlabel(“Tiempo (min)”)
-plt.ylabel(“Actividad radiactiva <span class="math notranslate nohighlight">\(A(t)\)</span>”)
-plt.title(“Actividad Radiactiva”)
-plt.legend()
-plt.grid(True)</p>
-<p>plt.tight_layout()
-plt.show()</p>
+<section class="tex2jax_ignore mathjax_ignore" id="escriba-codigo-aqui">
+<h1>Escriba código aquí<a class="headerlink" href="#escriba-codigo-aqui" title="Link to this heading">#</a></h1>
 </section>
 
     <script type="text/x-thebe-config">
@@ -803,24 +683,7 @@ plt.show()</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Decaimiento Radiactivo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#enunciado">💡 Enunciado</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solucion">📝 Solución</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivacion-de-la-solucion-analitica">1. Derivación de la Solución Analítica</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-de-n-t-con-respecto-al-tiempo">2. Derivada de <span class="math notranslate nohighlight">\(N(t)\)</span> con Respecto al Tiempo</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-en-el-que-la-velocidad-de-decaimiento-es-maxima-y-minima">3. Tiempo en el que la Velocidad de Decaimiento es Máxima y Mínima</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-y-su-derivada">4. Actividad Radiactiva y su Derivada</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros">Parámetros</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo">Tiempo</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#numero-de-nucleos-n-t">Número de núcleos N(t)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#derivada-dn-dt">Derivada dN/dt</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#actividad-radiactiva-a-t">Actividad radiactiva A(t)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tiempo-de-vida-media">Tiempo de vida media</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grafica">Gráfica</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grafica-de-n-t">Gráfica de N(t)</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grafica-de-dn-dt">Gráfica de dN/dt</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#grafica-de-a-t">Gráfica de A(t)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#escriba-codigo-aqui">Escriba código aquí</a></li>
 </ul>
 
   </nav></div>
