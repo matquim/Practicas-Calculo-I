@@ -479,15 +479,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="trabajo-en-una-expansion-isotermica">
 <h1>Trabajo en una Expansión Isotérmica<a class="headerlink" href="#trabajo-en-una-expansion-isotermica" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">ADVERTENCIA</p>
-<p>Esto es una propuesta y todavía tiene que editarse</p>
-</div>
+<div class="tip admonition">
+<p class="admonition-title">Concepto</p>
 <p>En termodinámica, el <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por un gas durante una expansión o compresión se calcula como:</p>
-<div class="math notranslate nohighlight">
-\[
-W = \int_{V_1}^{V_2} P \, dV
-\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d6671f4c-5f19-4760-bb8c-cf0bc875210b">
+<span class="eqno">(39)<a class="headerlink" href="#equation-d6671f4c-5f19-4760-bb8c-cf0bc875210b" title="Permalink to this equation">#</a></span>\[\begin{equation}
+W = \int_{V_i}^{V_f} P \, dV
+\end{equation}\]</div>
+<p>si la temperatura se mantiene constante, esto se conoce como el <code class="docutils literal notranslate"><span class="pre">trabajo</span> <span class="pre">en</span> <span class="pre">una</span> <span class="pre">expansión</span> <span class="pre">isotérmica</span></code>.</p>
+</div>
 <p>Para un <strong>gas ideal</strong>, la ecuación de estado es:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -498,75 +498,49 @@ P = \frac{n R T}{V}
 <li><p><span class="math notranslate nohighlight">\( P \)</span>: Presión del gas.</p></li>
 <li><p><span class="math notranslate nohighlight">\( V \)</span>: Volumen del gas.</p></li>
 <li><p><span class="math notranslate nohighlight">\( n \)</span>: Número de moles.</p></li>
-<li><p><span class="math notranslate nohighlight">\( R \)</span>: Constante de los gases (<span class="math notranslate nohighlight">\( 8.314 \, \text{J/mol·K} \)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\( R \)</span>: Constante de los gases (<span class="math notranslate nohighlight">\(8.314 \, \text{J/mol·K}\)</span>).</p></li>
 <li><p><span class="math notranslate nohighlight">\( T \)</span>: Temperatura (constante en un proceso isotérmico).</p></li>
 </ul>
-<p><strong>Trabajo en una expansión isotérmica</strong>:</p>
-<div class="math notranslate nohighlight">
-\[
-W = n R T \ln \left( \frac{V_2}{V_1} \right)
-\]</div>
-<p><strong>Instrucciones</strong></p>
-<ol class="arabic simple">
-<li><p>Un gas ideal a temperatura <span class="math notranslate nohighlight">\( T = 300 \, \text{K} \)</span> se expande isotérmicamente desde un volumen <span class="math notranslate nohighlight">\( V_1 = 1 \, \text{L} \)</span> hasta <span class="math notranslate nohighlight">\( V_2 = 5 \, \text{L} \)</span>. Calcular el <strong>trabajo <span class="math notranslate nohighlight">\( W \)</span></strong> realizado por el gas si <span class="math notranslate nohighlight">\( n = 2 \, \text{moles} \)</span>.</p></li>
-<li><p><strong>Graficar</strong> la presión <span class="math notranslate nohighlight">\( P \)</span> vs. volumen <span class="math notranslate nohighlight">\( V \)</span> durante la expansión y el área bajo la curva (que representa el trabajo).</p></li>
-<li><p><strong>Interpretar físicamente</strong>:</p>
-<ul class="simple">
-<li><p>¿Por qué el trabajo es <strong>positivo</strong> en una expansión?</p></li>
-<li><p>¿Cómo cambiaría el trabajo si la expansión fuera <strong>adiabática</strong>?</p></li>
-</ul>
-</li>
-</ol>
-<p>Solución</p>
-<p><strong>Cálculo del Trabajo <span class="math notranslate nohighlight">\( W \)</span></strong>
-Usamos la integral para el trabajo en una expansión isotérmica:</p>
-<div class="math notranslate nohighlight">
-\[
-W = n R T \ln \left( \frac{V_2}{V_1} \right)
-\]</div>
-<p>Sustituyendo los valores:</p>
-<div class="math notranslate nohighlight">
-\[
-W = 2 \, \text{mol} \times 8.314 \, \text{J/mol·K} \times 300 \, \text{K} \times \ln \left( \frac{5}{1} \right) \approx 8037.6 \, \text{J}
-\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="math notranslate nohighlight">
-\[
-W \approx 8037.6 \, \text{J}
-\]</div>
+<p>Considere un gas ideal a temperatura <span class="math notranslate nohighlight">\(T = 300 \, \text{K}\)</span>, que se expande desde un volumen <span class="math notranslate nohighlight">\( V_i = 1 \, \text{L} \)</span> hasta <span class="math notranslate nohighlight">\( V_f = 5 \, \text{L} \)</span>.</p>
+<p>Realice la gráfica <span class="math notranslate nohighlight">\(P\)</span> vs #V<span class="math notranslate nohighlight">\( para \)</span>n = 2 moles$ y sombree el área bajo la curva (que representa el trabajo durante la expansión).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
 
-<span class="c1"># Parámetros</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mf">2.0</span>       <span class="c1"># Moles</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mf">8.314</span>     <span class="c1"># J/mol·K</span>
 <span class="n">T</span> <span class="o">=</span> <span class="mf">300.0</span>     <span class="c1"># K</span>
-<span class="n">V1</span> <span class="o">=</span> <span class="mf">1.0</span>      <span class="c1"># L (volumen inicial)</span>
-<span class="n">V2</span> <span class="o">=</span> <span class="mf">5.0</span>      <span class="c1"># L (volumen final)</span>
+<span class="n">Vi</span> <span class="o">=</span> <span class="mf">1.0</span>      <span class="c1"># L (volumen inicial)</span>
+<span class="n">Vf</span> <span class="o">=</span> <span class="mf">5.0</span>      <span class="c1"># L (volumen final)</span>
 
-<span class="c1"># Volúmenes para la gráfica</span>
-<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">V1</span><span class="p">,</span> <span class="n">V2</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
-
-<span class="c1"># Presión P(V) = nRT / V</span>
+<span class="n">V</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">Vi</span><span class="p">,</span> <span class="n">Vf</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 <span class="n">P</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">T</span> <span class="o">/</span> <span class="n">V</span>
 
-<span class="c1"># Trabajo W (área bajo la curva)</span>
-<span class="n">W</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">V</span><span class="p">:</span> <span class="n">n</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">T</span> <span class="o">/</span> <span class="n">V</span><span class="p">,</span> <span class="n">V1</span><span class="p">,</span> <span class="n">V2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Trabajo W = </span><span class="si">{</span><span class="n">W</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> J&quot;</span><span class="p">)</span>
-
-<span class="c1"># Gráfica</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$P(V) = </span><span class="se">\\</span><span class="s2">frac</span><span class="si">{nRT}{V}</span><span class="s2">$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">V</span><span class="p">,</span> <span class="n">P</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Área = Trabajo $W$&quot;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Volumen $V$ (L)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Presión $P$ (Pa)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Trabajo en una Expansión Isotérmica de un Gas Ideal&quot;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/cec10c6fc938e2f3eacf524f10fc88bc39b5d11a8e205b3766195be7c5498f87.png" src="_images/cec10c6fc938e2f3eacf524f10fc88bc39b5d11a8e205b3766195be7c5498f87.png" />
+</div>
+</div>
+<p>Utilice la función <code class="docutils literal notranslate"><span class="pre">scipy.quad</span></code> para integrar numéricamente el área bajo la  curva</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">V</span><span class="p">:</span> <span class="n">n</span> <span class="o">*</span> <span class="n">R</span> <span class="o">*</span> <span class="n">T</span> <span class="o">/</span> <span class="n">V</span><span class="p">,</span> <span class="n">Vi</span><span class="p">,</span> <span class="n">Vf</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Trabajo W = </span><span class="si">{</span><span class="n">W</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> J&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -574,7 +548,25 @@ W \approx 8037.6 \, \text{J}
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trabajo W = 8028.52 J
 </pre></div>
 </div>
-<img alt="_images/853c4d11de1fa1cdc963f9ac2d8ff98addf7a7ec5c700777392c7698567e7f57.png" src="_images/853c4d11de1fa1cdc963f9ac2d8ff98addf7a7ec5c700777392c7698567e7f57.png" />
+</div>
+</div>
+<p>Para el gas ideal, la expresión analítica para el trabajo está dada por:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-094fa62f-401e-4e56-bdc8-c14b7f8165e6">
+<span class="eqno">(40)<a class="headerlink" href="#equation-094fa62f-401e-4e56-bdc8-c14b7f8165e6" title="Permalink to this equation">#</a></span>\[\begin{equation}
+W = n R T \ln \left( \frac{V_f}{V_i} \right)
+\end{equation}\]</div>
+<p>Calcule el trabajo usando esta expresión, y compárelo con el resultado obtenido mediante integración numérica.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">W</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">R</span><span class="o">*</span> <span class="n">T</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">Vf</span> <span class="o">/</span> <span class="n">Vi</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Trabajo W = </span><span class="si">{</span><span class="n">W</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> J&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trabajo W = 8028.52 J
+</pre></div>
+</div>
 </div>
 </div>
 </section>
