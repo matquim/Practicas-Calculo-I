@@ -235,21 +235,6 @@
 <li class="toctree-l1"><a class="reference internal" href="u7p5.html">Trabajo en una Expansión Adiabática</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p6.html">Energía Promedio de un Gas Ideal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="u7p7.html">Cálculo de la Constante de Equilibrio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="u7p8.html">Ecuación de Michaelis-Menten</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Reserva</span></p>
 <ul class="nav bd-sidenav">
@@ -479,71 +464,38 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="primera-ley-de-fick">
 <h1>Primera Ley de Fick<a class="headerlink" href="#primera-ley-de-fick" title="Link to this heading">#</a></h1>
-<div class="warning admonition">
-<p class="admonition-title">ADVERTENCIA</p>
-<p>Esto es una propuesta y todavía tiene que editarse</p>
-</div>
-<p><strong>Contexto Teórico</strong></p>
+<div class="tip admonition">
+<p class="admonition-title">Concepto</p>
 <p>La <strong>primera ley de Fick</strong> describe el flujo de difusión <span class="math notranslate nohighlight">\( J \)</span> de una sustancia en un medio:</p>
-<div class="math notranslate nohighlight">
-\[
+<div class="amsmath math notranslate nohighlight" id="equation-45ff9e29-9b66-4950-9457-1984ea500337">
+<span class="eqno">(44)<a class="headerlink" href="#equation-45ff9e29-9b66-4950-9457-1984ea500337" title="Permalink to this equation">#</a></span>\[\begin{equation}
 J = -D \frac{dc}{dx}
-\]</div>
-<p>En un <strong>proceso de difusión en estado estacionario</strong>, la concentración <span class="math notranslate nohighlight">\( c(x) \)</span> de una sustancia puede modelarse como una <strong>distribución normal</strong> (gaussiana):</p>
-<div class="math notranslate nohighlight">
-\[
+\end{equation}\]</div>
+<p>En un proceso de difusión en estado estacionario, la concentración <span class="math notranslate nohighlight">\( c(x) \)</span> de una sustancia puede modelarse como una distribución normal (gaussiana):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3ab7b97e-f7a8-4563-be6f-0757878d1975">
+<span class="eqno">(45)<a class="headerlink" href="#equation-3ab7b97e-f7a8-4563-be6f-0757878d1975" title="Permalink to this equation">#</a></span>\[\begin{equation}
 c(x) = \frac{M}{\sigma \sqrt{2 \pi}} e^{-\frac{(x - \mu)^2}{2 \sigma^2}}
-\]</div>
-<p>La <strong>probabilidad <span class="math notranslate nohighlight">\( P \)</span></strong> de encontrar una partícula en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> es proporcional a la integral de <span class="math notranslate nohighlight">\( c(x) \)</span> en ese intervalo:</p>
-<div class="math notranslate nohighlight">
-\[
+\end{equation}\]</div>
+<p>La probabilidad <span class="math notranslate nohighlight">\( P \)</span> de encontrar una partícula en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> es proporcional a la integral de <span class="math notranslate nohighlight">\( c(x) \)</span> en ese intervalo:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b4d32c44-1507-4818-8cfb-9bfc55f1d29f">
+<span class="eqno">(46)<a class="headerlink" href="#equation-b4d32c44-1507-4818-8cfb-9bfc55f1d29f" title="Permalink to this equation">#</a></span>\[\begin{equation}
 P \propto \int_{a}^{b} c(x) \, dx
-\]</div>
-<p><strong>Enunciado</strong></p>
-<ol class="arabic simple">
-<li><p>La concentración <span class="math notranslate nohighlight">\( c(x) \)</span> de un soluto en una solución sigue una distribución normal con <span class="math notranslate nohighlight">\( \mu = 0 \, \text{cm} \)</span>, <span class="math notranslate nohighlight">\( \sigma = 1 \, \text{cm} \)</span>, y <span class="math notranslate nohighlight">\( M = 1 \, \text{g} \)</span>. Calcular la <strong>probabilidad relativa</strong> de encontrar el soluto en el intervalo <span class="math notranslate nohighlight">\([-1, 1] \, \text{cm}\)</span>.</p></li>
-<li><p><strong>Graficar</strong> <span class="math notranslate nohighlight">\( c(x) \)</span> y el área bajo la curva en el intervalo <span class="math notranslate nohighlight">\([-1, 1]\)</span>.</p></li>
-<li><p><strong>Interpretar físicamente</strong>:</p>
-<ul class="simple">
-<li><p>¿Qué representa el área bajo la curva de <span class="math notranslate nohighlight">\( c(x) \)</span>?</p></li>
-<li><p>¿Cómo afecta el valor de <span class="math notranslate nohighlight">\( \sigma \)</span> a la distribución de concentración?</p></li>
-</ul>
-</li>
-</ol>
-<p><strong>Solución</strong></p>
-<p><strong>Cálculo de la Probabilidad Relativa</strong></p>
-<div class="math notranslate nohighlight">
-\[
-P \propto \int_{-1}^{1} \frac{M}{\sigma \sqrt{2 \pi}} e^{-\frac{x^2}{2 \sigma^2}} \, dx
-\]</div>
-<p>Sustituyendo los valores (<span class="math notranslate nohighlight">\( M = 1 \)</span>, <span class="math notranslate nohighlight">\( \sigma = 1 \)</span>):</p>
-<div class="math notranslate nohighlight">
-\[
-P \propto \frac{1}{\sqrt{2 \pi}} \int_{-1}^{1} e^{-\frac{x^2}{2}} \, dx \approx 0.6827
-\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="math notranslate nohighlight">
-\[
-P \approx 0.6827 \text{ (68.27\%)}
-\]</div>
+\end{equation}\]</div>
+</div>
+<p>Considere un soluto en una solución sigue una distribución normal con <span class="math notranslate nohighlight">\( \mu = 0 \, \text{cm} \)</span>, <span class="math notranslate nohighlight">\( \sigma = 1 \, \text{cm} \)</span>, y <span class="math notranslate nohighlight">\( M = 1 \, \text{g} \)</span>.</p>
+<p>Grafique <span class="math notranslate nohighlight">\(c(x)\)</span> y el área bajo la curva en el intervalo <span class="math notranslate nohighlight">\([-1, 1]\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
-<span class="c1"># Parámetros</span>
 <span class="n">M</span> <span class="o">=</span> <span class="mf">1.0</span>       <span class="c1"># Masa total (g)</span>
 <span class="n">sigma</span> <span class="o">=</span> <span class="mf">1.0</span>   <span class="c1"># Desviación estándar (cm)</span>
 <span class="n">mu</span> <span class="o">=</span> <span class="mf">0.0</span>      <span class="c1"># Posición media (cm)</span>
 
-<span class="c1"># Función de concentración c(x)</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">M</span> <span class="o">/</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
-
-<span class="c1"># Probabilidad relativa en [-1, 1]</span>
-<span class="n">P</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Probabilidad relativa en [-1, 1] cm: </span><span class="si">{</span><span class="n">P</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># Gráfica</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
@@ -562,12 +514,37 @@ P \approx 0.6827 \text{ (68.27\%)}
 </div>
 </div>
 <div class="cell_output docutils container">
+<img alt="_images/96bb25e750622ecaa760728106384e5c26c188bd15faf070ba94f409552aee94.png" src="_images/96bb25e750622ecaa760728106384e5c26c188bd15faf070ba94f409552aee94.png" />
+</div>
+</div>
+<p>Utilice <code class="docutils literal notranslate"><span class="pre">scipy.quad</span></code> para calcular el área bajo la curva, la cual representa la probabilidad relativa de encontrar el soluto en el intervalo <span class="math notranslate nohighlight">\([-1, 1] \, \text{cm}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Probabilidad relativa en [-1, 1] cm: </span><span class="si">{</span><span class="n">P</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Probabilidad relativa en [-1, 1] cm: 0.6827
 </pre></div>
 </div>
-<img alt="_images/aaa4a1182b3ed9a35cb7a36765746769bebc114fe124d5224eb693c6d368a630.png" src="_images/aaa4a1182b3ed9a35cb7a36765746769bebc114fe124d5224eb693c6d368a630.png" />
 </div>
 </div>
+<p>Esto corresponde a realizar la integral:
+$<span class="math notranslate nohighlight">\(
+P \propto \int_{-1}^{1} \frac{M}{\sigma \sqrt{2 \pi}} e^{-\frac{x^2}{2 \sigma^2}} \, dx
+\)</span>$</p>
+<p>que, al sustituir los valores (<span class="math notranslate nohighlight">\( M = 1 \)</span>, <span class="math notranslate nohighlight">\( \sigma = 1 \)</span>) resulta en:</p>
+<div class="math notranslate nohighlight">
+\[
+P \propto \frac{1}{\sqrt{2 \pi}} \int_{-1}^{1} e^{-\frac{x^2}{2}} \, dx \approx 0.6827
+\]</div>
+<p>Es decir, la probabilidad es:</p>
+<div class="math notranslate nohighlight">
+\[
+P \approx 0.6827 \text{ (68.27\%)}
+\]</div>
 </section>
 
     <script type="text/x-thebe-config">
