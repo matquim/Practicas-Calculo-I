@@ -41,8 +41,8 @@ parts:
       - file: u8p1
       - file: u8p2
       - file: u8p3
-      - file: u7p4     
-      - file: u7p5  
-      - file: u7p6     
-      - file: u7p7     
-      - file: u7p8
+      - file: u8p4     
+      - file: u8p5  
+      - file: u8p6     
+      - file: u8p7     
+      - file: u8p8
