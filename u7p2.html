@@ -481,76 +481,56 @@ document.write(`
 <h1>Masa Total a partir de una Distribución de Densidad<a class="headerlink" href="#masa-total-a-partir-de-una-distribucion-de-densidad" title="Link to this heading">#</a></h1>
 <div class="tip admonition">
 <p class="admonition-title">Concepto</p>
-<p>Si la <strong>densidad lineal de masa</strong> <span class="math notranslate nohighlight">\( \lambda(x) \)</span> (masa por unidad de longitud) varía con la posición <span class="math notranslate nohighlight">\( x \)</span>, la <strong>masa total <span class="math notranslate nohighlight">\( M \)</span></strong> en el intervalo <span class="math notranslate nohighlight">\([a, b]\)</span> se calcula como:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>La densidad de masa lineal modela como varía la masa de un cuerpo por unidad de longitud. Si tenemos una función para la densidad de masa, entonces podemos obtener la masa del cuerpo en el intervalo de longotid <span class="math notranslate nohighlight">\([a, b]\)</span> mediante la integral:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-a5522150-c21b-4953-997f-5b224c1a4def">
+<span class="eqno">(41)<a class="headerlink" href="#equation-a5522150-c21b-4953-997f-5b224c1a4def" title="Permalink to this equation">#</a></span>\[\begin{equation}
 M = \int_{a}^{b} \lambda(x) dx
-\]</div>
+\end{equation}\]</div>
 </div>
-<p><strong>Enunciado</strong></p>
-<ol class="arabic">
-<li><p>La densidad lineal de masa de una barra de material radiactivo varía con la posición <span class="math notranslate nohighlight">\( x \)</span> (en cm) como:</p>
-<div class="math notranslate nohighlight">
-\[
+<p>Considere una barra de 20 cm de un material cuya densidad de masa varía con la posición como:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b3f56a5a-b2e0-42d6-9c07-0137a7665db9">
+<span class="eqno">(42)<a class="headerlink" href="#equation-b3f56a5a-b2e0-42d6-9c07-0137a7665db9" title="Permalink to this equation">#</a></span>\[\begin{equation}
    \lambda(x) = \lambda_0 e^{-k x}
-   \]</div>
-<p>Donde <span class="math notranslate nohighlight">\( \lambda_0 = 0.5 \, \text{g/cm} \)</span> y <span class="math notranslate nohighlight">\( k = 0.1 \, \text{cm}^{-1} \)</span>. Calcular la <strong>masa total <span class="math notranslate nohighlight">\( M \)</span></strong> de la barra si su longitud es <span class="math notranslate nohighlight">\( L = 20 \, \text{cm} \)</span>.</p>
-</li>
-<li><p><strong>Graficar</strong> <span class="math notranslate nohighlight">\( \lambda(x) \)</span> y el área bajo la curva (que representa la masa total).</p></li>
-<li><p><strong>Interpretar físicamente</strong>:</p>
-<ul class="simple">
-<li><p>¿Por qué la masa total es <strong>finita</strong> a pesar de que la barra tiene una longitud infinita teórica?</p></li>
-<li><p>¿Cómo afecta el valor de <span class="math notranslate nohighlight">\( k \)</span> a la distribución de masa a lo largo de la barra?</p></li>
-</ul>
-</li>
-</ol>
-<p><strong>Solución</strong></p>
-<p><strong>Cálculo de la Masa Total <span class="math notranslate nohighlight">\( M \)</span></strong></p>
-<div class="math notranslate nohighlight">
-\[
-M = \int_{0}^{L} \lambda_0 e^{-k x} \, dx = \frac{\lambda_0}{k} \left( 1 - e^{-k L} \right)
-\]</div>
-<p>Sustituyendo los valores:</p>
-<div class="math notranslate nohighlight">
-\[
-M = \frac{0.5}{0.1} \left( 1 - e^{-0.1 \times 20} \right) \approx 4.32 \, \text{g}
-\]</div>
-<p><strong>Resultado:</strong></p>
-<div class="math notranslate nohighlight">
-\[
-M \approx 4.32 \, \text{g}
-\]</div>
+\end{equation}\]</div>
+<p>donde <span class="math notranslate nohighlight">\( \lambda_0 = 0.5 \, \text{g/cm} \)</span> y <span class="math notranslate nohighlight">\( k = 0.1 \, \text{cm}^{-1} \)</span>.</p>
+<p>Realice la gráfica de <span class="math notranslate nohighlight">\(x\)</span> vs <span class="math notranslate nohighlight">\(\lamda(x)\)</span> y sombree el área bajo la curva (que representa la masa del material).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">scipy.integrate</span><span class="w"> </span><span class="kn">import</span> <span class="n">quad</span>
 
-<span class="c1"># Parámetros</span>
 <span class="n">lambda_0</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># g/cm</span>
 <span class="n">k</span> <span class="o">=</span> <span class="mf">0.1</span>         <span class="c1"># cm^-1</span>
 <span class="n">L</span> <span class="o">=</span> <span class="mf">20.0</span>        <span class="c1"># cm</span>
 
-<span class="c1"># Posiciones x</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
 
-<span class="c1"># Densidad lineal de masa lambda(x)</span>
 <span class="n">lambda_x</span> <span class="o">=</span> <span class="n">lambda_0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span>
 
-<span class="c1"># Masa total M (área bajo la curva)</span>
-<span class="n">M</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">lambda_0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Masa total M = </span><span class="si">{</span><span class="n">M</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> g&quot;</span><span class="p">)</span>
-
-<span class="c1"># Gráfica</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lambda_x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;$</span><span class="se">\\</span><span class="s2">lambda(x) = </span><span class="se">\\</span><span class="s2">lambda_0 e^{-k x}$&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">lambda_x</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Área = Masa total $M$&quot;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Posición $x$ (cm)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Densidad lineal de masa $</span><span class="se">\\</span><span class="s2">lambda(x)$ (g/cm)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución de Densidad Lineal de Masa&quot;</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/98a56d0d64a8f6d885ad24a22d7aa1296b89f8499dc2b4dbf292e74132335c1d.png" src="_images/98a56d0d64a8f6d885ad24a22d7aa1296b89f8499dc2b4dbf292e74132335c1d.png" />
+</div>
+</div>
+<p>Utilice <code class="docutils literal notranslate"><span class="pre">scipy.quad</span></code> para calcular el área bajo la curva, la cual representa la masa total de la barra.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">lambda_0</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">k</span> <span class="o">*</span> <span class="n">x</span><span class="p">),</span> <span class="mi">0</span><span class="p">,</span> <span class="n">L</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Masa total M = </span><span class="si">{</span><span class="n">M</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> g&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -558,7 +538,25 @@ M \approx 4.32 \, \text{g}
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Masa total M = 4.3233 g
 </pre></div>
 </div>
-<img alt="_images/434c8fd5e0e2e66dd2c27ae9185ef5539138b0020c61bb21d1a0687488591de6.png" src="_images/434c8fd5e0e2e66dd2c27ae9185ef5539138b0020c61bb21d1a0687488591de6.png" />
+</div>
+</div>
+<p>Podemos realizar la integral analítica para obtener:</p>
+<div class="amsmath math notranslate nohighlight" id="equation-6b227b4f-a585-415f-996c-6beace895e7a">
+<span class="eqno">(43)<a class="headerlink" href="#equation-6b227b4f-a585-415f-996c-6beace895e7a" title="Permalink to this equation">#</a></span>\[\begin{equation}
+M = \int_{0}^{L} \lambda_0 e^{-k x} \, dx = \frac{\lambda_0}{k} \left( 1 - e^{-k L} \right)
+\end{equation}\]</div>
+<p>Sustituya los valores y obtenga el valor de la masa de la barra:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">M</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">/</span><span class="mf">0.1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span> <span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Masa total M = </span><span class="si">{</span><span class="n">M</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> g&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Masa total M = 4.3233 g
+</pre></div>
+</div>
 </div>
 </div>
 </section>
